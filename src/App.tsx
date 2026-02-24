@@ -15,6 +15,12 @@ import {
   Smartphone,
   ChevronRight,
   ExternalLink,
+  Mail,
+  Phone,
+  MapPin,
+  Twitter,
+  Linkedin,
+  Github,
 } from 'lucide-react';
 
 export default function App() {
@@ -300,14 +306,81 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-white/10 text-center">
+      <footer className="py-20 px-6 border-t border-white/10 bg-[#050505]">
         <div className="max-w-7xl mx-auto">
-          <div className="font-display font-bold text-2xl tracking-tight mb-4">
-            ALLIANCE<span className="text-white/50">VENTURES</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            {/* Brand Column */}
+            <div className="space-y-6">
+              <div className="font-display font-bold text-2xl tracking-tight">
+                ALLIANCE<span className="text-white/50">VENTURES</span>
+              </div>
+              <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+                The founder-led, mission-aligned venture group that incubates, operates, and scales technology platforms addressing sustainability, commerce, and health-tech.
+              </p>
+              <div className="flex items-center gap-4">
+                <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
+                  <Twitter className="w-4 h-4 text-white/60" />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
+                  <Linkedin className="w-4 h-4 text-white/60" />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
+                  <Github className="w-4 h-4 text-white/60" />
+                </a>
+              </div>
+            </div>
+
+            {/* Ventures Column */}
+            <div>
+              <h4 className="font-display font-medium text-white mb-6 uppercase tracking-wider text-xs">Portfolio</h4>
+              <ul className="space-y-4 text-sm text-white/50">
+                <li><a href="https://www.rupaykg.com" target="_blank" rel="noopener" className="hover:text-white transition-colors">RupayKg</a></li>
+                <li><a href="https://www.vyaparkendra.com" target="_blank" rel="noopener" className="hover:text-white transition-colors">VyaparKendra</a></li>
+                <li><a href="https://www.ayushkendra.com" target="_blank" rel="noopener" className="hover:text-white transition-colors">AyushKendra</a></li>
+              </ul>
+            </div>
+
+            {/* Quick Links Column */}
+            <div>
+              <h4 className="font-display font-medium text-white mb-6 uppercase tracking-wider text-xs">Company</h4>
+              <ul className="space-y-4 text-sm text-white/50">
+                <li><a href="#identity" className="hover:text-white transition-colors">Our Identity</a></li>
+                <li><a href="#principles" className="hover:text-white transition-colors">Strategic Principles</a></li>
+                <li><a href="#backbone" className="hover:text-white transition-colors">Operations</a></li>
+                <li><a href="/login" className="hover:text-white transition-colors">Investor Portal</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Column */}
+            <div>
+              <h4 className="font-display font-medium text-white mb-6 uppercase tracking-wider text-xs">Contact</h4>
+              <ul className="space-y-4 text-sm text-white/50">
+                <li className="flex items-start gap-3">
+                  <Mail className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>contact@allianceventures.com</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Phone className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>+1 (555) 123-4567</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>Venture Hub, Innovation District<br />Silicon Valley, CA</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <p className="text-white/40 text-sm">
-            Incubating, operating, and scaling technology platforms.
-          </p>
+
+          <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+            <p className="text-white/30 text-xs">
+              © {new Date().getFullYear()} ALLIANCEVENTURES. All rights reserved.
+            </p>
+            <div className="flex items-center gap-8 text-xs text-white/30">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
