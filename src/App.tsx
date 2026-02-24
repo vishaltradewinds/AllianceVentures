@@ -14,6 +14,7 @@ import {
   FileText,
   Smartphone,
   ChevronRight,
+  ExternalLink,
 } from 'lucide-react';
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
             <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
             <a href="#principles" className="hover:text-white transition-colors">Principles</a>
             <a href="#backbone" className="hover:text-white transition-colors">Operations</a>
+            <a href="/login" className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">Investor Login</a>
           </div>
         </div>
       </nav>
@@ -129,20 +131,26 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* RupayKg */}
-            <motion.div
+            <motion.a
+              href="https://www.rupaykg.com"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
             >
               <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Leaf className="w-32 h-32" />
               </div>
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium uppercase tracking-wider mb-6">
-                  Sustainability
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium uppercase tracking-wider">
+                    Sustainability
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
                 </div>
-                <h3 className="font-display text-3xl font-medium mb-4">RupayKg</h3>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-emerald-400 transition-colors">RupayKg</h3>
                 <p className="text-white/60 leading-relaxed mb-8">
                   A "waste-to-wealth" ecosystem that uses technology to transform waste collection, recycling engagement, and economic incentives for citizens, businesses, and partners.
                 </p>
@@ -151,24 +159,30 @@ export default function App() {
                   <div className="text-sm text-white/80">Environmental impact, circular economy, community empowerment.</div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* VyaparKendra */}
-            <motion.div
+            <motion.a
+              href="https://www.vyaparkendra.com"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
             >
               <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Briefcase className="w-32 h-32" />
               </div>
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-medium uppercase tracking-wider mb-6">
-                  Commerce
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-medium uppercase tracking-wider">
+                    Commerce
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
                 </div>
-                <h3 className="font-display text-3xl font-medium mb-4">VyaparKendra</h3>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-blue-400 transition-colors">VyaparKendra</h3>
                 <p className="text-white/60 leading-relaxed mb-8">
                   A digital ecosystem designed to unify business services, commerce facilitation, and stakeholder engagement across national and state-level frameworks.
                 </p>
@@ -177,24 +191,30 @@ export default function App() {
                   <div className="text-sm text-white/80">Trade enablement, compliance, platformized service delivery.</div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* AyushKendra */}
-            <motion.div
+            <motion.a
+              href="https://www.ayushkendra.com"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
             >
               <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                 <Stethoscope className="w-32 h-32" />
               </div>
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 text-rose-400 text-xs font-medium uppercase tracking-wider mb-6">
-                  Health-Tech
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 text-rose-400 text-xs font-medium uppercase tracking-wider">
+                    Health-Tech
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
                 </div>
-                <h3 className="font-display text-3xl font-medium mb-4">AyushKendra</h3>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-rose-400 transition-colors">AyushKendra</h3>
                 <p className="text-white/60 leading-relaxed mb-8">
                   A focused venture in the medical devices and health-tech space with its own identity and domain, bringing innovation to healthcare accessibility.
                 </p>
@@ -203,7 +223,7 @@ export default function App() {
                   <div className="text-sm text-white/80">Healthcare innovation, accessibility, device-centric solutions.</div>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           </div>
         </div>
       </section>
