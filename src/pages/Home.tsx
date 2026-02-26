@@ -341,15 +341,15 @@ export default function Home() {
               <ul className="space-y-4 text-sm text-white/50">
                 <li className="flex items-start gap-3">
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>contact@allianceventures.com</span>
+                  <span>info.allianceventures@gmail.com</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 7610717111</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>Venture Hub, Innovation District<br />Silicon Valley, CA</span>
+                  <span>INDIA</span>
                 </li>
               </ul>
             </div>
