@@ -22,6 +22,9 @@ import {
   Twitter,
   Linkedin,
   Github,
+  Eye,
+  Compass,
+  Heart,
 } from 'lucide-react';
 
 export default function Home() {
@@ -34,6 +37,7 @@ export default function Home() {
             ALLIANCE<span className="text-white/50">VENTURES</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#identity" className="hover:text-white transition-colors">Identity</a>
             <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
             <a href="#principles" className="hover:text-white transition-colors">Principles</a>
@@ -81,11 +85,105 @@ export default function Home() {
               <a href="#portfolio" className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-colors">
                 Explore Portfolio
               </a>
-              <a href="#identity" className="inline-flex items-center justify-center h-12 px-8 rounded-full border border-white/20 hover:bg-white/5 transition-colors">
-                Our Identity
+              <a href="#about" className="inline-flex items-center justify-center h-12 px-8 rounded-full border border-white/20 hover:bg-white/5 transition-colors">
+                About Us
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* About Us */}
+      <section id="about" className="py-24 px-6 border-t border-white/10 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16 md:mb-24 text-center max-w-3xl mx-auto">
+            <h2 className="font-display text-3xl md:text-5xl font-medium tracking-tight mb-6">About Alliance Ventures</h2>
+            <p className="text-xl text-white/60 leading-relaxed">
+              We are a forward-thinking venture group dedicated to building and scaling platforms that solve real-world challenges. Our approach combines entrepreneurial agility with institutional scale.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Mission */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-8 rounded-3xl bg-[#050505] border border-white/10 relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Target className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-display text-2xl font-medium mb-4">Our Mission</h3>
+                <p className="text-white/60 leading-relaxed">
+                  To incubate, operate, and scale technology platforms that drive sustainable economic growth, empower communities, and transform traditional industries through digital innovation.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Vision */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-8 rounded-3xl bg-[#050505] border border-white/10 relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Eye className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                  <Eye className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-display text-2xl font-medium mb-4">Our Vision</h3>
+                <p className="text-white/60 leading-relaxed">
+                  To be the premier venture-holding entity recognized globally for creating interconnected ecosystems that balance financial viability with profound societal and environmental impact.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Values */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="p-8 rounded-3xl bg-[#050505] border border-white/10 relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Heart className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="font-display text-2xl font-medium mb-4">Our Values</h3>
+                <ul className="space-y-3 text-white/60">
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2 shrink-0" />
+                    <span><strong>Impact-Driven:</strong> Purpose before profit.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2 shrink-0" />
+                    <span><strong>Innovation:</strong> Leveraging tech for scale.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2 shrink-0" />
+                    <span><strong>Integrity:</strong> Transparent and ethical governance.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-white/40 mt-2 shrink-0" />
+                    <span><strong>Collaboration:</strong> Building synergistic ecosystems.</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -328,6 +426,7 @@ export default function Home() {
             <div>
               <h4 className="font-display font-medium text-white mb-6 uppercase tracking-wider text-xs">Company</h4>
               <ul className="space-y-4 text-sm text-white/50">
+                <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
                 <li><a href="#identity" className="hover:text-white transition-colors">Our Identity</a></li>
                 <li><a href="#principles" className="hover:text-white transition-colors">Strategic Principles</a></li>
                 <li><a href="#backbone" className="hover:text-white transition-colors">Operations</a></li>
