@@ -25,6 +25,9 @@ import {
   Eye,
   Compass,
   Heart,
+  Code,
+  Ship,
+  Sprout,
 } from 'lucide-react';
 
 export default function Home() {
@@ -312,6 +315,84 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            {/* CodesAI1 */}
+            <Link
+              to="/codesai1"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Code className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-medium uppercase tracking-wider">
+                    AI & Tech
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
+                </div>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-indigo-400 transition-colors">CodesAI1</h3>
+                <p className="text-white/60 leading-relaxed mb-8">
+                  A high-tech-led venture focusing on the development and scaling of AI-powered solutions to solve complex industrial and social problems.
+                </p>
+                <div className="pt-6 border-t border-white/10">
+                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
+                  <div className="text-sm text-white/80">Artificial Intelligence, automation, cognitive computing.</div>
+                </div>
+              </div>
+            </Link>
+
+            {/* ContainerBazaar */}
+            <Link
+              to="/containerbazaar"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Ship className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-medium uppercase tracking-wider">
+                    Logistics
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
+                </div>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-orange-400 transition-colors">ContainerBazaar</h3>
+                <p className="text-white/60 leading-relaxed mb-8">
+                  An end-to-end digital marketplace for container trading, leasing, and logistics, streamlining global supply chain efficiencies.
+                </p>
+                <div className="pt-6 border-t border-white/10">
+                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
+                  <div className="text-sm text-white/80">Supply chain, container commerce, maritime tech.</div>
+                </div>
+              </div>
+            </Link>
+
+            {/* KrishiKendra */}
+            <Link
+              to="/krishikendra"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Sprout className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-500/10 text-lime-400 text-xs font-medium uppercase tracking-wider">
+                    Agri-Tech
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
+                </div>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-lime-400 transition-colors">KrishiKendra</h3>
+                <p className="text-white/60 leading-relaxed mb-8">
+                  A digital ecosystem providing farmers with technology, market access, and data-driven insights to maximize agricultural output and sustainability.
+                </p>
+                <div className="pt-6 border-t border-white/10">
+                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
+                  <div className="text-sm text-white/80">Precision farming, market empowerment, sustainable agriculture.</div>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -419,6 +500,9 @@ export default function Home() {
                 <li><Link to="/rupaykg" className="hover:text-white transition-colors">RupayKg</Link></li>
                 <li><Link to="/vyaparkendra" className="hover:text-white transition-colors">VyaparKendra</Link></li>
                 <li><Link to="/ayushkendra" className="hover:text-white transition-colors">AyushKendra</Link></li>
+                <li><Link to="/codesai1" className="hover:text-white transition-colors">CodesAI1</Link></li>
+                <li><Link to="/containerbazaar" className="hover:text-white transition-colors">ContainerBazaar</Link></li>
+                <li><Link to="/krishikendra" className="hover:text-white transition-colors">KrishiKendra</Link></li>
               </ul>
             </div>
 
