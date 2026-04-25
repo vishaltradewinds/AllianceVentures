@@ -238,84 +238,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* RupayKg */}
-            <Link
-              to="/rupaykg"
-              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Leaf className="w-32 h-32" />
-              </div>
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium uppercase tracking-wider">
-                    Sustainability
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
-                </div>
-                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-emerald-400 transition-colors">RupayKg</h3>
-                <p className="text-white/60 leading-relaxed mb-8">
-                  A "waste-to-wealth" ecosystem that uses technology to transform waste collection, recycling engagement, and economic incentives for citizens, businesses, and partners.
-                </p>
-                <div className="pt-6 border-t border-white/10">
-                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
-                  <div className="text-sm text-white/80">Environmental impact, circular economy, community empowerment.</div>
-                </div>
-              </div>
-            </Link>
-
-            {/* VyaparKendra */}
-            <Link
-              to="/vyaparkendra"
-              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Briefcase className="w-32 h-32" />
-              </div>
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-medium uppercase tracking-wider">
-                    Commerce
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
-                </div>
-                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-blue-400 transition-colors">VyaparKendra</h3>
-                <p className="text-white/60 leading-relaxed mb-8">
-                  A digital ecosystem designed to unify business services, commerce facilitation, and stakeholder engagement across national and state-level frameworks.
-                </p>
-                <div className="pt-6 border-t border-white/10">
-                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
-                  <div className="text-sm text-white/80">Trade enablement, compliance, platformized service delivery.</div>
-                </div>
-              </div>
-            </Link>
-
-            {/* AyushKendra */}
-            <Link
-              to="/ayushkendra"
-              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Stethoscope className="w-32 h-32" />
-              </div>
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 text-rose-400 text-xs font-medium uppercase tracking-wider">
-                    Health-Tech
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
-                </div>
-                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-rose-400 transition-colors">AyushKendra</h3>
-                <p className="text-white/60 leading-relaxed mb-8">
-                  A focused venture in the medical devices and health-tech space with its own identity and domain, bringing innovation to healthcare accessibility.
-                </p>
-                <div className="pt-6 border-t border-white/10">
-                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
-                  <div className="text-sm text-white/80">Healthcare innovation, accessibility, device-centric solutions.</div>
-                </div>
-              </div>
-            </Link>
-
             {/* CodesAI1 */}
             <Link
               to="/codesai1"
@@ -368,6 +290,58 @@ export default function Home() {
               </div>
             </Link>
 
+            {/* RupayKg */}
+            <Link
+              to="/rupaykg"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Leaf className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium uppercase tracking-wider">
+                    Sustainability
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
+                </div>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-emerald-400 transition-colors">RupayKg</h3>
+                <p className="text-white/60 leading-relaxed mb-8">
+                  A "waste-to-wealth" ecosystem that uses technology to transform waste collection, recycling engagement, and economic incentives for citizens, businesses, and partners.
+                </p>
+                <div className="pt-6 border-t border-white/10">
+                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
+                  <div className="text-sm text-white/80">Environmental impact, circular economy, community empowerment.</div>
+                </div>
+              </div>
+            </Link>
+
+            {/* AyushKendra */}
+            <Link
+              to="/ayushkendra"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Stethoscope className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 text-rose-400 text-xs font-medium uppercase tracking-wider">
+                    Health-Tech
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
+                </div>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-rose-400 transition-colors">AyushKendra</h3>
+                <p className="text-white/60 leading-relaxed mb-8">
+                  A focused venture in the medical devices and health-tech space with its own identity and domain, bringing innovation to healthcare accessibility.
+                </p>
+                <div className="pt-6 border-t border-white/10">
+                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
+                  <div className="text-sm text-white/80">Healthcare innovation, accessibility, device-centric solutions.</div>
+                </div>
+              </div>
+            </Link>
+
             {/* KrishiKendra */}
             <Link
               to="/krishikendra"
@@ -390,6 +364,32 @@ export default function Home() {
                 <div className="pt-6 border-t border-white/10">
                   <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
                   <div className="text-sm text-white/80">Precision farming, market empowerment, sustainable agriculture.</div>
+                </div>
+              </div>
+            </Link>
+
+            {/* VyaparKendra */}
+            <Link
+              to="/vyaparkendra"
+              className="group relative p-8 rounded-3xl bg-[#050505] border border-white/10 overflow-hidden block hover:border-white/30 transition-colors"
+            >
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Briefcase className="w-32 h-32" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-medium uppercase tracking-wider">
+                    Commerce
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-white/30 group-hover:text-white/80 transition-colors" />
+                </div>
+                <h3 className="font-display text-3xl font-medium mb-4 group-hover:text-blue-400 transition-colors">VyaparKendra</h3>
+                <p className="text-white/60 leading-relaxed mb-8">
+                  A digital ecosystem designed to unify business services, commerce facilitation, and stakeholder engagement across national and state-level frameworks.
+                </p>
+                <div className="pt-6 border-t border-white/10">
+                  <div className="text-sm font-medium text-white/40 uppercase tracking-wider mb-2">Focus</div>
+                  <div className="text-sm text-white/80">Trade enablement, compliance, platformized service delivery.</div>
                 </div>
               </div>
             </Link>
@@ -497,12 +497,12 @@ export default function Home() {
             <div>
               <h4 className="font-display font-medium text-white mb-6 uppercase tracking-wider text-xs">Portfolio</h4>
               <ul className="space-y-4 text-sm text-white/50">
-                <li><Link to="/rupaykg" className="hover:text-white transition-colors">RupayKg</Link></li>
-                <li><Link to="/vyaparkendra" className="hover:text-white transition-colors">VyaparKendra</Link></li>
-                <li><Link to="/ayushkendra" className="hover:text-white transition-colors">AyushKendra</Link></li>
                 <li><Link to="/codesai1" className="hover:text-white transition-colors">CodesAI1</Link></li>
                 <li><Link to="/containerbazaar" className="hover:text-white transition-colors">ContainerBazaar</Link></li>
+                <li><Link to="/rupaykg" className="hover:text-white transition-colors">RupayKg</Link></li>
+                <li><Link to="/ayushkendra" className="hover:text-white transition-colors">AyushKendra</Link></li>
                 <li><Link to="/krishikendra" className="hover:text-white transition-colors">KrishiKendra</Link></li>
+                <li><Link to="/vyaparkendra" className="hover:text-white transition-colors">VyaparKendra</Link></li>
               </ul>
             </div>
 

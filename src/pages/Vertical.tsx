@@ -48,12 +48,12 @@ export default function VerticalPage({ data }: { data: VerticalProps }) {
             ALLIANCE<span className="text-white/50">VENTURES</span>
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-            <Link to="/rupaykg" className="hover:text-white transition-colors">RupayKg</Link>
-            <Link to="/vyaparkendra" className="hover:text-white transition-colors">VyaparKendra</Link>
-            <Link to="/ayushkendra" className="hover:text-white transition-colors">AyushKendra</Link>
             <Link to="/codesai1" className="hover:text-white transition-colors">CodesAI1</Link>
             <Link to="/containerbazaar" className="hover:text-white transition-colors">ContainerBazaar</Link>
+            <Link to="/rupaykg" className="hover:text-white transition-colors">RupayKg</Link>
+            <Link to="/ayushkendra" className="hover:text-white transition-colors">AyushKendra</Link>
             <Link to="/krishikendra" className="hover:text-white transition-colors">KrishiKendra</Link>
+            <Link to="/vyaparkendra" className="hover:text-white transition-colors">VyaparKendra</Link>
             <a href="/login" className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">Investor Login</a>
           </div>
         </div>
@@ -166,12 +166,12 @@ export default function VerticalPage({ data }: { data: VerticalProps }) {
             <div>
               <h4 className="font-display font-medium text-white mb-6 uppercase tracking-wider text-xs">Portfolio</h4>
               <ul className="space-y-4 text-sm text-white/50">
-                <li><Link to="/rupaykg" className="hover:text-white transition-colors">RupayKg</Link></li>
-                <li><Link to="/vyaparkendra" className="hover:text-white transition-colors">VyaparKendra</Link></li>
-                <li><Link to="/ayushkendra" className="hover:text-white transition-colors">AyushKendra</Link></li>
                 <li><Link to="/codesai1" className="hover:text-white transition-colors">CodesAI1</Link></li>
                 <li><Link to="/containerbazaar" className="hover:text-white transition-colors">ContainerBazaar</Link></li>
+                <li><Link to="/rupaykg" className="hover:text-white transition-colors">RupayKg</Link></li>
+                <li><Link to="/ayushkendra" className="hover:text-white transition-colors">AyushKendra</Link></li>
                 <li><Link to="/krishikendra" className="hover:text-white transition-colors">KrishiKendra</Link></li>
+                <li><Link to="/vyaparkendra" className="hover:text-white transition-colors">VyaparKendra</Link></li>
               </ul>
             </div>
 
