@@ -1,0 +1,263 @@
+{
+  "schemaVersion": "1.0.0",
+  "summary": {
+    "generatedAt": "2026-10-06",
+    "corpusObservationDate": "2026-10-06",
+    "total": 22,
+    "actualDecisionCounts": {
+      "INSUFFICIENT_EVIDENCE": 22
+    },
+    "certificationEligibleRecords": 0,
+    "productionCertified": false,
+    "notes": [
+      "This is a deterministic first-pass case-level evaluation of the stored evidence ledger, not a legal/title/valuation certification.",
+      "Discovery-only records with missing critical evidence are conservatively INSUFFICIENT_EVIDENCE.",
+      "Explicit adverse evidence/negative controls are DO_NOT_BID.",
+      "BID_READY is not granted by this corpus pass; applicable auction-term evidence and independent critical validation remain required."
+    ]
+  },
+  "cases": [
+    {
+      "caseId": "P1-IBBI-001",
+      "corporateDebtor": "GENERAL COMPOSITES PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-002",
+      "corporateDebtor": "HALLMARK LIVING SPACE PRIVATE LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "OTHER",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-003",
+      "corporateDebtor": "Vysali Pharmaceuticals Limited",
+      "class": "INDUSTRIAL",
+      "subtype": "LAND_BUILDING",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-004",
+      "corporateDebtor": "SUPREME VASAI BHIWANDI TOLLWAYS PRIVATE LIMITED",
+      "class": "OTHER_IMMOVABLE",
+      "subtype": "INFRASTRUCTURE",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-005",
+      "corporateDebtor": "PURPLE ADVERTISING SERVICES PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-006",
+      "corporateDebtor": "EUPHORIA TECHNOLOGIES PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-007",
+      "corporateDebtor": "IND TOB INTERNATIONAL PRIVATE LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "FACTORY_BUILDING",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-008",
+      "corporateDebtor": "ETHNIC TOBACCO (INDIA) LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "FACTORY_BUILDING",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-009",
+      "corporateDebtor": "NAKODA LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "MULTI_PROPERTY_LOT",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-010",
+      "corporateDebtor": "GEI INDUSTRIAL SYSTEMS LIMITED",
+      "class": "OTHER_IMMOVABLE",
+      "subtype": "LEASEHOLD",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-011",
+      "corporateDebtor": "Vrundavan Ceramic Private Limited",
+      "class": "COMPOSITE",
+      "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-012",
+      "corporateDebtor": "SORT INDIA ENVIRO SOLUTIONS LIMITED",
+      "class": "OTHER_IMMOVABLE",
+      "subtype": "OTHER",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-013",
+      "corporateDebtor": "SRI PAVANA KEERTI HOTELS INDIA PRIVATE LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "HOTEL",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-014",
+      "corporateDebtor": "PEEJAY AGRO FOODS PRIVATE LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "LAND_BUILDING",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=Live+auctions&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-015",
+      "corporateDebtor": "PEEJAY AGRO FOODS PRIVATE LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "LAND_BUILDING",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=Live+auctions&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-016",
+      "corporateDebtor": "SKYRISE OVERSEAS PRIVATE LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "OTHER",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-017",
+      "corporateDebtor": "OSIL EXPORTS LIMITED",
+      "class": "OTHER_IMMOVABLE",
+      "subtype": "LEASEHOLD",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-018",
+      "corporateDebtor": "SPD Cold Storage LLP",
+      "class": "OTHER_IMMOVABLE",
+      "subtype": "OTHER",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-019",
+      "corporateDebtor": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "GODOWN",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-020",
+      "corporateDebtor": "SPECIFIC ALLOYS PRIVATE LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-021",
+      "corporateDebtor": "MUKTAR INFRASTRUCTURE INDIA PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    },
+    {
+      "caseId": "P1-IBBI-022",
+      "corporateDebtor": "NEETA CHEMICALS (INDIA) PRIVATE LIMITED",
+      "class": "OTHER_IMMOVABLE",
+      "subtype": "OTHER",
+      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
+      "actual": "INSUFFICIENT_EVIDENCE",
+      "sourceStatus": "DISCOVERY_ONLY",
+      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+    }
+  ]
+}
