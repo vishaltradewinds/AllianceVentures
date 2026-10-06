@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
-    "assetshakti:validate": "tsx assetshakti/phase1/validate-corpus.ts"
+    "assetshakti:validate": "tsx assetshakti/phase1/validate-corpus.ts",
+    "assetshakti:test:phase1": "tsx assetshakti/phase1/decision-engine.test.ts"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
