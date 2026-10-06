@@ -56,8 +56,9 @@ export function assessAssetPackage(input: AssetPackageInput): AssetPackageAssess
   const components = input.components.length ? input.components : detectComponents(input.auctionDescription);
   const unique = Array.from(new Map(components.map(c => [c.componentType, c])).values());
   const hasNonProperty = unique.some(c => ["PLANT_MACHINERY","SECURITIES_FINANCIAL_ASSETS","NRRA_PUFE_CLAIM","GOING_CONCERN"].includes(c.componentType));
-  const composite = unique.length > 1;
   const alternative = Boolean(input.alternativeStructures?.length);
+  const propertyComponentsOnly = unique.every(c => c.componentType === "LAND" || c.componentType === "BUILDING");
+  const composite = unique.length > 1 && !propertyComponentsOnly;
   const structure: AssetSaleStructure =
     alternative ? "ALTERNATIVE_LOTS" :
     unique.some(c => c.componentType === "GOING_CONCERN") ? "GOING_CONCERN" :
