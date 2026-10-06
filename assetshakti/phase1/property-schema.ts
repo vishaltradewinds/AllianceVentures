@@ -22,7 +22,7 @@ export type PropertyClass =
 export interface EvidenceItem {
   id: string;
   category: "IDENTITY" | "TITLE" | "ENCUMBRANCE" | "LITIGATION" | "POSSESSION" |
-    "PHYSICAL" | "LOCATION" | "VALUATION" | "AUCTION" | "AUTHORITY";
+    "PHYSICAL" | "LOCATION" | "VALUATION" | "AUCTION" | "BIDDER_OBLIGATION" | "PROVENANCE_PARTY_RISK" | "AUTHORITY";
   sourceName: string;
   sourceReference?: string;
   observedAt?: string;
