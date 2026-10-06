@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AssetShakti Jurisdiction Registry",
+  "type":"object",
+  "required":["jurisdictions"],
+  "properties":{
+    "jurisdictions":{"type":"array","items":{"type":"object","required":["code","name","reraAuthority","status"],"properties":{
+      "code":{"type":"string"},
+      "name":{"type":"string"},
+      "reraAuthority":{"type":"string"},
+      "officialUrl":{"type":"string","format":"uri"},
+      "status":{"enum":["VALIDATED_ADAPTER","DISCOVERY_ADAPTER","PLANNED"]},
+      "notes":{"type":"string"}
+    }}}
+  }
+}
