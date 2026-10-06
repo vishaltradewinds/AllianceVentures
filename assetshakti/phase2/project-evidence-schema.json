@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"AssetShakti New Project Evidence Record",
+  "type":"object",
+  "required":["projectId","projectClass","jurisdiction","evidence"],
+  "properties":{
+    "projectId":{"type":"string"},
+    "projectClass":{"enum":["RESIDENTIAL","COMMERCIAL","INDUSTRIAL","MIXED_USE","PLOTTED_DEVELOPMENT","TOWNSHIP","REDEVELOPMENT","OTHER"]},
+    "jurisdiction":{"type":"object","required":["state"],"properties":{"country":{"type":"string"},"state":{"type":"string"},"district":{"type":"string"},"city":{"type":"string"},"localAuthority":{"type":"string"}}},
+    "promoter":{"type":"object","properties":{"name":{"type":"string"},"entityId":{"type":"string"},"source":{"type":"string"}}},
+    "land":{"type":"object","properties":{"parcelReference":{"type":"string"},"ownershipStatus":{"type":"string"},"developmentRightsStatus":{"type":"string"}}},
+    "regulatory":{"type":"object","properties":{"reraRegistration":{"type":"string"},"planningApproval":{"type":"string"},"buildingApproval":{"type":"string"},"environmentalApproval":{"type":"string"}}},
+    "evidence":{"type":"array","items":{"type":"object","required":["category","status"],"properties":{
+      "category":{"enum":["IDENTITY","JURISDICTION","TITLE","LAND_RIGHTS","RERA","PLANNING","BUILDING_APPROVAL","ENVIRONMENT","PROMOTER","DISCLOSURE","CONSTRUCTION","POSSESSION","CONTRACT","PRICING","MARKET","FINANCIAL","LITIGATION","ENCUMBRANCE","OTHER"]},
+      "status":{"enum":["VERIFIED","REPORTED_BY_SOURCE","UNVERIFIED","MISSING","CONTRADICTED"]},
+      "source":{"type":"string"},
+      "observedAt":{"type":"string","format":"date-time"},
+      "assertion":{"type":"string"},
+      "confidence":{"type":"number","minimum":0,"maximum":1}
+    }}}
+  }
+}
