@@ -16,3 +16,14 @@ assert.equal(evaluatePropertyProductionDecision({...base(),evidence:base().evide
 const low=base().evidence.filter(x=>x.category!=="VALUATION"&&x.category!=="AUCTION"&&x.category!=="PHYSICAL"&&x.category!=="LOCATION");
 assert.equal(evaluatePropertyProductionDecision({...base(),evidence:low}).decision,"INSUFFICIENT_EVIDENCE");
 console.log("PASS: AssetShakti Phase 1 decision-engine tests");
+
+
+const adverseAuction=base([
+  evidence("CONTRADICTED","BIDDER_OBLIGATION")
+]);
+assert.equal(evaluatePropertyProductionDecision(adverseAuction).decision,"DO_NOT_BID");
+
+const auctionMissing=base().evidence.filter(x=>x.category!=="BIDDER_OBLIGATION");
+assert.equal(evaluatePropertyProductionDecision({...base(),evidence:auctionMissing}).decision,"DO_NOT_BID");
+
+console.log("PASS: auction-term critical negative controls");
