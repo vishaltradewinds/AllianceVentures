@@ -493,6 +493,199 @@
         }
       ],
       "expectedDecision": "DO_NOT_PROCEED"
+    },
+    {
+      "caseId": "P2-TG-001",
+      "projectId": "P02400008565",
+      "projectName": "BRMeadowland Apartments",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/Home/Revoked",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "VERIFIED",
+          "assertion": "TG RERA official revoked-project register identifies BRMeadowland Apartments.",
+          "source": "TG RERA revoked projects",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "PROMOTER",
+          "status": "VERIFIED",
+          "assertion": "TG RERA register identifies YVR Constructions.",
+          "source": "TG RERA revoked projects",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is recorded in Telangana RERA system.",
+          "source": "TG RERA",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "CONTRADICTED",
+          "assertion": "Official TG RERA register records project registration revocation.",
+          "source": "TG RERA revoked projects",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "DO_NOT_PROCEED"
+    },
+    {
+      "caseId": "P2-TG-002",
+      "projectId": "DISCOVERY-TG-001",
+      "projectName": "Telangana Registered Project Discovery Case",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/",
+      "evidence": [
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "TG RERA provides public access to registered project information and project progress.",
+          "source": "TG RERA official portal",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "VERIFIED",
+          "assertion": "TG RERA official portal reports a large registered-project corpus and provides registered-project search.",
+          "source": "TG RERA official portal",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "IDENTITY",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-TG-003",
+      "projectId": "DISCOVERY-TG-002",
+      "projectName": "Telangana Defaulter / Order Discovery Case",
+      "projectClass": "OTHER",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/Home/Renewed",
+      "evidence": [
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "TG RERA publishes project/agent defaulters with complaint and authority-order references.",
+          "source": "TG RERA defaulters register",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official defaulter records expose complaint numbers and authority orders for listed projects.",
+          "source": "TG RERA defaulters register",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "IDENTITY",
+          "status": "MISSING"
+        },
+        {
+          "category": "RERA",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
     }
   ],
   "validationNote": "These cases demonstrate source capture and critical missing-evidence behavior. They do not constitute production certification or investment recommendations."
