@@ -38,12 +38,14 @@
   },
   {
     "caseId": "P1-NEG-COMPOSITE-002",
-    "sourceAuthority": "IBBI",
-    "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?date=&filter_by=Live+auctions%2F1000&page=21",
-    "observedAt": "2026-10-06",
     "expectedDecision": "DO_NOT_BID",
     "note": "Sun Petpack Jabalpur: IBBI lists separate plant/machinery and land/building lots plus a composite lot. The composite lot is expressly sold on 'as is where is, whatever there is, no recourse' basis. This control ensures a property-only evaluator cannot silently assume component equivalence or clean title/condition.",
-    "observedEvidence": [
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?date=&filter_by=Live+auctions%2F1000&page=21",
+      "observedAt": "2026-10-06"
+    },
+    "evidence": [
       {
         "category": "IDENTITY",
         "status": "REPORTED_BY_SOURCE",
