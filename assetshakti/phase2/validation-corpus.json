@@ -4035,32 +4035,32 @@
     {
       "caseId": "P2-MH-021",
       "projectId": null,
-      "projectName": "Shivam Greens - additional validation record",
+      "projectName": "Jayas Platinum",
       "projectClass": "RESIDENTIAL",
-      "location": "Maharashtra",
-      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/",
       "evidence": [
         {
           "category": "IDENTITY",
           "status": "REPORTED_BY_SOURCE",
-          "assertion": "MahaRERA search record is retained as a separate validation observation only when source identity is reconciled; this duplicate-name observation must not count as an independent production case.",
-          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "assertion": "Telangana RERA revoked-project page lists Jayas Platinum.",
+          "source": "https://rera.telangana.gov.in/",
           "observedAt": "2026-10-06",
           "confidence": 0.8
         },
         {
           "category": "JURISDICTION",
           "status": "REPORTED_BY_SOURCE",
-          "assertion": "Official/authority-linked source places Shivam Greens - additional validation record in Maharashtra.",
-          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "assertion": "Telangana RERA revoked-project page identifies the project within Telangana.",
+          "source": "https://rera.telangana.gov.in/",
           "observedAt": "2026-10-06",
           "confidence": 0.8
         },
         {
           "category": "RERA",
           "status": "REPORTED_BY_SOURCE",
-          "assertion": "The cited authority-linked source references Shivam Greens - additional validation record.",
-          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "assertion": "Telangana RERA revoked-project page lists Jayas Platinum.",
+          "source": "https://rera.telangana.gov.in/",
           "observedAt": "2026-10-06",
           "confidence": 0.8
         },
@@ -4104,7 +4104,7 @@
       "expectedDecision": "INSUFFICIENT_EVIDENCE",
       "jurisdiction": {
         "country": "India",
-        "state": "Maharashtra"
+        "state": "Telangana"
       }
     },
     {
