@@ -20,7 +20,19 @@
     "emdAmount": null,
     "emdDeadline": "",
     "saleBasis": "",
-    "possessionType": "UNKNOWN"
+    "possessionType": "UNKNOWN",
+    "saleBasisFlags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "AS_IS_WHERE_IS",
+          "AS_IS_WHAT_IS",
+          "WHATEVER_THERE_IS",
+          "WITHOUT_NO_RECOURSE"
+        ]
+      }
+    }
   },
   "evidence": [
     {
@@ -72,6 +84,39 @@
         },
         "observedAt": {
           "type": "string"
+        }
+      }
+    },
+    "assetComposition": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "componentType",
+          "description"
+        ],
+        "properties": {
+          "componentType": {
+            "type": "string",
+            "enum": [
+              "LAND",
+              "BUILDING",
+              "PLANT_MACHINERY",
+              "SECURITIES_FINANCIAL_ASSETS",
+              "NRRA_PUFE_CLAIM",
+              "GOING_CONCERN",
+              "OTHER"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "observedAt": {
+            "type": "string"
+          }
         }
       }
     }
