@@ -1,9 +1,79 @@
 {
-  "schemaVersion":"0.1.0",
-  "source":"IBBI",
-  "sourceRecord":{"noticeUrl":"","noticeDate":"","auctionDate":"","corporateDebtor":"","insolvencyProfessional":""},
-  "asset":{"class":"","subtype":"","description":"","location":"","area":"","reservePrice":null},
-  "auction":{"emdAmount":null,"emdDeadline":"","saleBasis":"","possessionType":"UNKNOWN"},
-  "evidence":[{"category":"","status":"","assertion":"","sourceReference":"","confidence":0}],
-  "decision":{"state":"INSUFFICIENT_EVIDENCE","criticalGatePassed":false}
+  "schemaVersion": "0.1.0",
+  "source": "IBBI",
+  "sourceRecord": {
+    "noticeUrl": "",
+    "noticeDate": "",
+    "auctionDate": "",
+    "corporateDebtor": "",
+    "insolvencyProfessional": ""
+  },
+  "asset": {
+    "class": "",
+    "subtype": "",
+    "description": "",
+    "location": "",
+    "area": "",
+    "reservePrice": null
+  },
+  "auction": {
+    "emdAmount": null,
+    "emdDeadline": "",
+    "saleBasis": "",
+    "possessionType": "UNKNOWN"
+  },
+  "evidence": [
+    {
+      "category": "",
+      "status": "",
+      "assertion": "",
+      "sourceReference": "",
+      "confidence": 0
+    }
+  ],
+  "decision": {
+    "state": "INSUFFICIENT_EVIDENCE",
+    "criticalGatePassed": false
+  },
+  "properties": {
+    "auctionTerms": {
+      "type": "object",
+      "description": "Decision-critical auction terms extracted from the authoritative notice/corrigendum.",
+      "properties": {
+        "emdDeadline": {
+          "type": "string"
+        },
+        "balancePaymentDeadline": {
+          "type": "string"
+        },
+        "extensionTerms": {
+          "type": "string"
+        },
+        "interestOnExtension": {
+          "type": "string"
+        },
+        "forfeitureCondition": {
+          "type": "string"
+        },
+        "eligibilityRequirements": {
+          "type": "string"
+        },
+        "saleBasis": {
+          "type": "string"
+        },
+        "materialDisclosures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source": {
+          "type": "string"
+        },
+        "observedAt": {
+          "type": "string"
+        }
+      }
+    }
+  }
 }
