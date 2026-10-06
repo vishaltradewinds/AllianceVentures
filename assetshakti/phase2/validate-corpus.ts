@@ -19,7 +19,7 @@ for(const c of corpus.cases){
   if(criticalFailure&&(c.expectedDecision==="BUY_READY"||c.expectedDecision==="INVESTMENT_READY")){console.error(`ERROR ${c.caseId}: failed critical gate cannot be ready`);errors++;}
   if(applicableCritical.some(category=>byCategory.get(category)==="CONTRADICTED")&&c.expectedDecision!=="DO_NOT_PROCEED"){console.error(`ERROR ${c.caseId}: contradicted critical evidence must be DO_NOT_PROCEED`);errors++;}
   for(const e of c.evidence ?? []){
-    if(!e.category||!e.status||!e.source||!e.observedAt||!e.assertion){console.error(`ERROR ${c.caseId}: incomplete evidence provenance`);errors++;break;}
+    if(!e.category||!e.status){console.error(`ERROR ${c.caseId}: incomplete evidence item`);errors++;break;} if(e.status!=="MISSING" && (!e.source||!e.observedAt||!e.assertion)){console.error(`ERROR ${c.caseId}: non-missing evidence lacks provenance`);errors++;break;}
   }
   if(!c.source){console.error(`ERROR ${c.caseId}: missing source`);errors++;}
 }
