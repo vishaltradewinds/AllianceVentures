@@ -1,5 +1,5 @@
 import type { PropertyAsset, EvidenceItem, PropertyClass } from "./property-schema";
-import { evaluatePropertyProductionDecision } from "./decision-engine";
+import { evaluatePropertyProductionDecision, evaluatePropertyGates } from "./decision-engine";
 
 export type CaseEvaluationInput = {
   caseId: string;
@@ -79,7 +79,7 @@ function toPropertyAsset(input: CaseEvaluationInput): PropertyAsset {
 export function evaluateCase(input: CaseEvaluationInput): CaseEvaluationResult {
   const asset = toPropertyAsset(input);
   const shakti = evaluatePropertyProductionDecision(asset);
-  const gates = require("./decision-engine").evaluatePropertyGates(asset) as CaseEvaluationResult["gateResults"];
+  const gates = evaluatePropertyGates(asset);
 
   return {
     caseId: input.caseId,
