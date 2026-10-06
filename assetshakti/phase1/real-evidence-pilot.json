@@ -371,5 +371,47 @@
         "observedAt": "2026-10-06"
       }
     ]
+  },
+  {
+    "caseId": "P1-PILOT-006",
+    "sourceAuthority": "IBBI",
+    "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/2026-01-16-121358-pu20w-faf9dc1a71a2376de49b6a168ae84219.pdf",
+    "observedAt": "2026-10-06",
+    "expectedDecision": "DO_NOT_BID",
+    "assetClass": "COMPOSITE",
+    "subtype": "LEASEHOLD_LAND_BUILDING_AND_PLANT_MACHINERY",
+    "description": "Silverton Spinners auction structure with alternative slump-sale and separate asset blocks.",
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "Notice identifies Silverton Spinners Limited and describes alternative auction blocks.",
+        "confidence": 0.95
+      },
+      {
+        "category": "TITLE",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Block B-(2) includes leasehold land with a 99-year lease commencing 06-10-1994 and additional leasehold land; 1% transfer fee applies.",
+        "confidence": 0.95
+      },
+      {
+        "category": "AUCTION",
+        "status": "VERIFIED",
+        "assertion": "Option 1 is a slump sale of the entire assets; Options 2 and 3 are separate blocks, and the separate blocks are not taken up if Option 1 succeeds.",
+        "confidence": 0.95
+      },
+      {
+        "category": "PHYSICAL",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Block B-(1) plant and machinery removal is subject to a maximum four-month period; physical handover of Block B-(2) land can occur after removal when purchasers differ.",
+        "confidence": 0.95
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Section 29A declaration is required and EMD may be forfeited if ineligibility is found; bidders are directed to complete process documents and independent title/asset inquiries.",
+        "confidence": 0.95
+      }
+    ]
   }
 ]
