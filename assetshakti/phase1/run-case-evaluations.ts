@@ -4,8 +4,20 @@ import { evaluateCase, type CaseEvaluationInput } from "./case-evaluation-engine
 const load = (path: string): unknown => JSON.parse(readFileSync(path, "utf8"));
 
 const normalizeCase = (raw: any): CaseEvaluationInput => ({
-  ...raw,
+  caseId: raw.caseId,
+  source: {
+    authority: raw.source?.authority ?? raw.sourceAuthority ?? "IBBI",
+    sourceReference: raw.source?.sourceReference ?? raw.source?.sourceUrl ?? raw.sourceReference ?? "",
+    observedAt: raw.source?.observedAt ?? raw.observedAt ?? "1970-01-01",
+  },
+  expectedDecision: raw.expectedDecision,
+  asset: raw.asset ?? (raw.assetClass ? {
+    class: raw.assetClass,
+    subtype: raw.subtype,
+    description: raw.description,
+  } : undefined),
   evidence: raw.evidence ?? raw.observedEvidence ?? [],
+  notes: raw.notes ?? raw.reason,
 });
 
 const inputs: CaseEvaluationInput[] = [
