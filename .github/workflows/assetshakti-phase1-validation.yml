@@ -1,0 +1,23 @@
+name: AssetShakti Phase 1 Validation
+
+on:
+  pull_request:
+    paths:
+      - "assetshakti/phase1/**"
+      - "package.json"
+      - "package-lock.json"
+  push:
+    branches:
+      - "assetshakti/phase1-property-foundation"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run assetshakti:validate
