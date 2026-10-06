@@ -18,6 +18,8 @@ const normalizeCase = (raw: any): CaseEvaluationInput => ({
   } : undefined),
   evidence: raw.evidence ?? raw.observedEvidence ?? [],
   notes: raw.notes ?? raw.reason,
+  documentVersions: raw.documentVersions,
+  reconciliation: raw.reconciliation,
 });
 
 const inputs: CaseEvaluationInput[] = [
