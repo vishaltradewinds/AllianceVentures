@@ -1,0 +1,536 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-10-06",
+  "method": "Deterministic first-pass from stored Phase 2 evidence ledgers.",
+  "summary": {
+    "totalCases": 50,
+    "jurisdictions": [
+      "Uttar Pradesh",
+      "Maharashtra",
+      "Gujarat",
+      "Telangana",
+      "Rajasthan",
+      "Madhya Pradesh"
+    ],
+    "decisionCounts": {
+      "INSUFFICIENT_EVIDENCE": 48,
+      "DO_NOT_PROCEED": 2
+    },
+    "productionCertified": false
+  },
+  "controls": {
+    "revokedOrAdverseCases": [
+      "P2-MH-NEG-001",
+      "P2-TG-003"
+    ],
+    "doNotProceedCount": 2,
+    "readyCount": 0
+  },
+  "cases": [
+    {
+      "caseId": "P2-UP-001",
+      "projectName": "County One O Seven",
+      "projectClass": "RESIDENTIAL",
+      "state": "Uttar Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.up-rera.in/viewprojects"
+    },
+    {
+      "caseId": "P2-UP-002",
+      "projectName": "Aradhyam Spa City Phase 1",
+      "projectClass": "MIXED_USE",
+      "state": "Uttar Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.up-rera.in/ViewDocument?Param=412311100819.pdf"
+    },
+    {
+      "caseId": "P2-UP-003",
+      "projectName": "FairField Residency",
+      "projectClass": "RESIDENTIAL",
+      "state": "Uttar Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.up-rera.in/ViewDocument?Param=460451636280.pdf"
+    },
+    {
+      "caseId": "P2-MH-001",
+      "projectName": "Construction of 14 Rowhouses at Waddhamna Nagpur",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-002",
+      "projectName": "FUTURE CITY",
+      "projectClass": "MIXED_USE",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-GJ-001",
+      "projectName": "GujRERA Registered Project Discovery Case",
+      "projectClass": "OTHER",
+      "state": "Gujarat",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: IDENTITY, TITLE, LAND_RIGHTS.",
+      "source": "https://gujrera.gujarat.gov.in/"
+    },
+    {
+      "caseId": "P2-MH-NEG-001",
+      "projectName": "MahaRERA Revoked/Ab Initio Void Project Discovery Case",
+      "projectClass": "OTHER",
+      "state": "Maharashtra",
+      "expectedDecision": "DO_NOT_PROCEED",
+      "actualDecision": "DO_NOT_PROCEED",
+      "rationale": "Contradicted evidence is present.",
+      "source": "https://maharera.maharashtra.gov.in/index.php/mr/projects-registration-revoked-initio-void"
+    },
+    {
+      "caseId": "P2-TG-001",
+      "projectName": "BRMeadowland Apartments",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "DO_NOT_PROCEED",
+      "actualDecision": "DO_NOT_PROCEED",
+      "rationale": "Contradicted evidence is present.",
+      "source": "https://rera.telangana.gov.in/Home/Revoked"
+    },
+    {
+      "caseId": "P2-TG-002",
+      "projectName": "Telangana Registered Project Discovery Case",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: IDENTITY, TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/"
+    },
+    {
+      "caseId": "P2-TG-003",
+      "projectName": "Telangana Defaulter / Order Discovery Case",
+      "projectClass": "OTHER",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: IDENTITY, TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/Home/Renewed"
+    },
+    {
+      "caseId": "P2-MH-003",
+      "projectName": "RADHA RAMAN APARTMENT",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-004",
+      "projectName": "SPRING DIVISHA",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-005",
+      "projectName": "Sumangal Vihar",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-006",
+      "projectName": "K T PREMIA",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-007",
+      "projectName": "BELLA VITA",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-008",
+      "projectName": "THANEKAR PARKLAND",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-009",
+      "projectName": "RAAJ SWAPNAPURTI",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-010",
+      "projectName": "Royal Empire",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-RJ-001",
+      "projectName": "UNIVERSAL CITY",
+      "projectClass": "PLOTTED_DEVELOPMENT",
+      "state": "Rajasthan",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf"
+    },
+    {
+      "caseId": "P2-RJ-002",
+      "projectName": "SHALIMAR",
+      "projectClass": "MIXED_USE",
+      "state": "Rajasthan",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf"
+    },
+    {
+      "caseId": "P2-RJ-003",
+      "projectName": "AAYAM",
+      "projectClass": "RESIDENTIAL",
+      "state": "Rajasthan",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf"
+    },
+    {
+      "caseId": "P2-RJ-004",
+      "projectName": "SHUBHAM RESIDENCY TOWNSHIP",
+      "projectClass": "PLOTTED_DEVELOPMENT",
+      "state": "Rajasthan",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf"
+    },
+    {
+      "caseId": "P2-RJ-005",
+      "projectName": "Parth Elegance I",
+      "projectClass": "RESIDENTIAL",
+      "state": "Rajasthan",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf"
+    },
+    {
+      "caseId": "P2-RJ-006",
+      "projectName": "SHREE KRISHNA RESIDENCY XI",
+      "projectClass": "RESIDENTIAL",
+      "state": "Rajasthan",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf"
+    },
+    {
+      "caseId": "P2-RJ-007",
+      "projectName": "ARYA SHINE",
+      "projectClass": "RESIDENTIAL",
+      "state": "Rajasthan",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf"
+    },
+    {
+      "caseId": "P2-TG-004",
+      "projectName": "Arna",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings"
+    },
+    {
+      "caseId": "P2-TG-005",
+      "projectName": "GVR CLASSIC",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/Home/Revoked"
+    },
+    {
+      "caseId": "P2-TG-006",
+      "projectName": "KESINENI NORTHSCAPE",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/Home/Revoked"
+    },
+    {
+      "caseId": "P2-TG-007",
+      "projectName": "EPITOME INTEGRATED CITY - PHASE 2",
+      "projectClass": "TOWNSHIP",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/Home/Revoked"
+    },
+    {
+      "caseId": "P2-TG-008",
+      "projectName": "SPECTRA TECH TOWERS",
+      "projectClass": "COMMERCIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/Home/Revoked"
+    },
+    {
+      "caseId": "P2-MP-001",
+      "projectName": "DWARKADHAM",
+      "projectClass": "RESIDENTIAL",
+      "state": "Madhya Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.greentribunal.gov.in/sites/default/files/news_updates/Report%20in%20O.A.%20No.%2061-2020%2004_08_2021.pdf"
+    },
+    {
+      "caseId": "P2-MP-002",
+      "projectName": "New Shri Ram Parisar",
+      "projectClass": "RESIDENTIAL",
+      "state": "Madhya Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf"
+    },
+    {
+      "caseId": "P2-MP-003",
+      "projectName": "New Shri Ram Parisar Phase-3",
+      "projectClass": "RESIDENTIAL",
+      "state": "Madhya Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf"
+    },
+    {
+      "caseId": "P2-MP-004",
+      "projectName": "Regal Kasturi Phase-2",
+      "projectClass": "RESIDENTIAL",
+      "state": "Madhya Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf"
+    },
+    {
+      "caseId": "P2-MP-005",
+      "projectName": "Madan Maharaj Kasturi Trade Center",
+      "projectClass": "COMMERCIAL",
+      "state": "Madhya Pradesh",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.rerainspector.com/state/madhyapradesh"
+    },
+    {
+      "caseId": "P2-MH-012",
+      "projectName": "ELEGANCE",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-013",
+      "projectName": "VIKRANT ESTATE RUBY PHASE 2",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-014",
+      "projectName": "Shivam Greens",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-015",
+      "projectName": "SHEESH MALL",
+      "projectClass": "COMMERCIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-016",
+      "projectName": "SWAMI DARSHAN",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-017",
+      "projectName": "RIVA RYTHM -I J,K,L WING",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-018",
+      "projectName": "Shree Krishna Residency",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-019",
+      "projectName": "HORIZON CLASSIQUE-2",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-020",
+      "projectName": "Amrut Darshan",
+      "projectClass": "RESIDENTIAL",
+      "state": "Maharashtra",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result"
+    },
+    {
+      "caseId": "P2-MH-021",
+      "projectName": "Jayas Platinum",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/"
+    },
+    {
+      "caseId": "P2-TG-009",
+      "projectName": "SIGNIFA SIGNATURE",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/"
+    },
+    {
+      "caseId": "P2-TG-010",
+      "projectName": "LAXMI INFOBAHN TOWER 23",
+      "projectClass": "COMMERCIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/"
+    },
+    {
+      "caseId": "P2-TG-011",
+      "projectName": "VIAN ONE80",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/"
+    },
+    {
+      "caseId": "P2-TG-012",
+      "projectName": "Gangidis Royal Abode",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/"
+    },
+    {
+      "caseId": "P2-TG-013",
+      "projectName": "NIHARIKA ONE",
+      "projectClass": "RESIDENTIAL",
+      "state": "Telangana",
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, LAND_RIGHTS.",
+      "source": "https://rera.telangana.gov.in/"
+    }
+  ],
+  "limitations": [
+    "Discovery/validation corpus is not production certification.",
+    "No project is promoted to BUY_READY or INVESTMENT_READY from corpus presence alone.",
+    "Independent title, RERA, planning, approval, construction, promoter and economic evidence remain required."
+  ]
+}
