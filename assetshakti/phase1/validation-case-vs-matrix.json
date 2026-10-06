@@ -1,0 +1,21 @@
+{
+  "caseId": "P1-001",
+  "source": {
+    "authority": "IBBI",
+    "noticeType": "Liquidation Auction Notice",
+    "sourceUrl": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1768478644_9496.pdf"
+  },
+  "asset": {
+    "class": "INDUSTRIAL",
+    "subtype": "LAND_BUILDING",
+    "description": "Land and Building at 486, FIE Patparganj Industrial Area, Delhi"
+  },
+  "observedEvidence": [
+    {"category":"IDENTITY","status":"REPORTED_BY_SOURCE","assertion":"Property address is 486 FIE Patparganj Industrial Area, Delhi 110092","confidence":0.95},
+    {"category":"AUTHORITY","status":"VERIFIED","assertion":"Auction notice is published by IBBI for the liquidation process","confidence":0.98},
+    {"category":"POSSESSION","status":"VERIFIED","assertion":"Possession is symbolic; possession is not with the liquidator","confidence":0.98},
+    {"category":"LITIGATION","status":"VERIFIED","assertion":"An illegal-possession application was filed and the dispute is pending before NCLT","confidence":0.98}
+  ],
+  "expectedDecision": "DO_NOT_BID",
+  "reason": "Negative-control test: critical possession/legal risk must not be converted into a positive investment recommendation."
+}
