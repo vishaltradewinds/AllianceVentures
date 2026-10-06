@@ -426,7 +426,7 @@
         {
           "category": "JURISDICTION",
           "status": "VERIFIED",
-          "assertion": "GujRERA public portal supports public project search without login.",
+          "assertion": "Gujarat RERA is the applicable state regulatory source for this discovery case.",
           "source": "GujRERA official portal",
           "observedAt": "2026-10-06",
           "confidence": 1
@@ -479,7 +479,7 @@
       "expectedDecision": "INSUFFICIENT_EVIDENCE",
       "jurisdiction": {
         "country": "India",
-        "state": "Unknown"
+        "state": "Gujarat"
       }
     },
     {
