@@ -25,8 +25,14 @@ for(const c of corpus.cases){
     return !s || s==="MISSING" || s==="CONTRADICTED";
   });
 
-  if(criticalFailure && c.expectedDecision==="BUY_READY"){
+  if(criticalFailure && (c.expectedDecision==="BUY_READY" || c.expectedDecision==="INVESTMENT_READY")){
+
     console.error(`ERROR ${c.caseId}: failed critical gate cannot be BUY_READY`);
+    errors++;
+  }
+
+  if(critical.some(category => byCategory.get(category)==="CONTRADICTED") && c.expectedDecision!=="DO_NOT_PROCEED"){
+    console.error(`ERROR ${c.caseId}: contradicted critical evidence must be DO_NOT_PROCEED`);
     errors++;
   }
 
