@@ -23,3 +23,10 @@ P1-G10 Decision integrity — BID_READY requires critical gates to pass; score c
 P1-G11 Auditability — every score and decision traces to evidence.
 
 P1-G12 Production certification — minimum 50 real property cases across major classes before production certification.
+
+
+## P1-G13 Bidder obligations and forfeiture
+Auction-specific bidder obligations are first-class evidence. The system must capture source-traceable EMD requirements, eligibility declarations, payment deadlines, extension terms, forfeiture clauses and material “as is / no recourse” conditions. A bidder obligation may create a decision-critical risk even where title or physical evidence is otherwise adequate.
+
+## P1-G14 Provenance and party-risk
+Where an auction package contains financial assets, securities, receivables, NRRA/PUFE claims or rights beyond immovable property, those components must retain explicit provenance and must not be silently treated as ordinary property value.
