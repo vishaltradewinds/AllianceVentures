@@ -83,3 +83,17 @@ The production certification package must contain:
 - Shakti sign-off.
 
 **Status: execution framework established; case-level production certification remains open.**
+
+
+## Live-market edge-case acceptance rules — 2026-10-06
+
+The evidence model must preserve materially different auction structures visible in authoritative IBBI listings:
+
+1. **NRRA / PUFE / actionable-claim lots** — do not classify these as ordinary immovable property. Preserve the legal nature and provenance of the claim/asset package separately.
+2. **Leasehold rights** — title/interest must record leasehold rights, remaining term and relevant transfer/consent conditions; never normalize to freehold ownership.
+3. **Composite lots** — land/building, plant & machinery, securities/financial assets and other components require component-level provenance and valuation boundaries.
+4. **Going-concern sales** — distinguish sale of the corporate debtor/going concern from sale of an identified immovable property asset.
+5. **Sale-basis disclaimers** — “as is where is”, “as is what is”, “whatever there is” and “without/no recourse” are source-traceable auction risks, not substitutes for title/condition verification.
+6. **Addenda/corrigenda** — the latest applicable notice version must be reconciled before a decision is treated as current; prior evidence remains immutable historical evidence.
+
+These rules are derived from live IBBI auction structures and are validation requirements, not legal conclusions.
