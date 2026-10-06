@@ -1,0 +1,16 @@
+name: AssetShakti Phase 2 Validation
+on:
+  pull_request:
+    paths: ["assetshakti/phase2/**","package.json","package-lock.json"]
+  push:
+    branches: ["assetshakti/phase2-new-project-intelligence"]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 20, cache: npm}
+      - run: npm ci
+      - run: npm run assetshakti:validate:phase2
+      - run: npx tsx assetshakti/phase2/decision-engine.test.ts
