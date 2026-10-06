@@ -2981,8 +2981,1512 @@
         }
       ],
       "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MP-001",
+      "projectId": "P-BPL-17-506",
+      "projectName": "DWARKADHAM",
+      "projectClass": "RESIDENTIAL",
+      "location": "Bhopal, Madhya Pradesh",
+      "source": "https://www.greentribunal.gov.in/sites/default/files/news_updates/Report%20in%20O.A.%20No.%2061-2020%2004_08_2021.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "VERIFIED",
+          "assertion": "Official record identifies the MP-RERA registration, project name, address and promoter.",
+          "source": "https://www.greentribunal.gov.in/sites/default/files/news_updates/Report%20in%20O.A.%20No.%2061-2020%2004_08_2021.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places DWARKADHAM in Bhopal, Madhya Pradesh.",
+          "source": "https://www.greentribunal.gov.in/sites/default/files/news_updates/Report%20in%20O.A.%20No.%2061-2020%2004_08_2021.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references DWARKADHAM (P-BPL-17-506).",
+          "source": "https://www.greentribunal.gov.in/sites/default/files/news_updates/Report%20in%20O.A.%20No.%2061-2020%2004_08_2021.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Madhya Pradesh"
+      }
+    },
+    {
+      "caseId": "P2-MP-002",
+      "projectId": "P-BPL-17-019",
+      "projectName": "New Shri Ram Parisar",
+      "projectClass": "RESIDENTIAL",
+      "location": "Bhopal, Madhya Pradesh",
+      "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MP Real Estate Appellate Tribunal order references this registered project and its validity history.",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places New Shri Ram Parisar in Bhopal, Madhya Pradesh.",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references New Shri Ram Parisar (P-BPL-17-019).",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Madhya Pradesh"
+      }
+    },
+    {
+      "caseId": "P2-MP-003",
+      "projectId": "P-BPL-18-1815",
+      "projectName": "New Shri Ram Parisar Phase-3",
+      "projectClass": "RESIDENTIAL",
+      "location": "Bhopal, Madhya Pradesh",
+      "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MP Real Estate Appellate Tribunal order identifies the project registration and historical validity.",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places New Shri Ram Parisar Phase-3 in Bhopal, Madhya Pradesh.",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references New Shri Ram Parisar Phase-3 (P-BPL-18-1815).",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Madhya Pradesh"
+      }
+    },
+    {
+      "caseId": "P2-MP-004",
+      "projectId": "P-BPL-22-3497",
+      "projectName": "Regal Kasturi Phase-2",
+      "projectClass": "RESIDENTIAL",
+      "location": "Bhopal, Madhya Pradesh",
+      "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MP Real Estate Appellate Tribunal order identifies Regal Kasturi Phase-2 and its registration number.",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places Regal Kasturi Phase-2 in Bhopal, Madhya Pradesh.",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references Regal Kasturi Phase-2 (P-BPL-22-3497).",
+          "source": "https://reat.mp.gov.in/uploads/files/A-23-2025_FO.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Madhya Pradesh"
+      }
+    },
+    {
+      "caseId": "P2-MP-005",
+      "projectId": "P-BPL-22-3757",
+      "projectName": "Madan Maharaj Kasturi Trade Center",
+      "projectClass": "COMMERCIAL",
+      "location": "Bhopal, Madhya Pradesh",
+      "source": "https://www.rerainspector.com/state/madhyapradesh",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Secondary index reports an official MP-RERA registration; retained as discovery-only pending direct official-record capture.",
+          "source": "https://www.rerainspector.com/state/madhyapradesh",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places Madan Maharaj Kasturi Trade Center in Bhopal, Madhya Pradesh.",
+          "source": "https://www.rerainspector.com/state/madhyapradesh",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references Madan Maharaj Kasturi Trade Center (P-BPL-22-3757).",
+          "source": "https://www.rerainspector.com/state/madhyapradesh",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Madhya Pradesh"
+      }
+    },
+    {
+      "caseId": "P2-MH-012",
+      "projectId": null,
+      "projectName": "ELEGANCE",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists ELEGANCE.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places ELEGANCE in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references ELEGANCE.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-013",
+      "projectId": null,
+      "projectName": "VIKRANT ESTATE RUBY PHASE 2",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists VIKRANT ESTATE RUBY PHASE 2.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places VIKRANT ESTATE RUBY PHASE 2 in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references VIKRANT ESTATE RUBY PHASE 2.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-014",
+      "projectId": null,
+      "projectName": "Shivam Greens",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists Shivam Greens.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places Shivam Greens in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references Shivam Greens.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-015",
+      "projectId": null,
+      "projectName": "SHEESH MALL",
+      "projectClass": "COMMERCIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists SHEESH MALL.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places SHEESH MALL in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references SHEESH MALL.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-016",
+      "projectId": null,
+      "projectName": "SWAMI DARSHAN",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists SWAMI DARSHAN.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places SWAMI DARSHAN in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references SWAMI DARSHAN.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-017",
+      "projectId": null,
+      "projectName": "RIVA RYTHM -I J,K,L WING",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists RIVA RYTHM -I J,K,L WING.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places RIVA RYTHM -I J,K,L WING in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references RIVA RYTHM -I J,K,L WING.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-018",
+      "projectId": null,
+      "projectName": "Shree Krishna Residency",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists Shree Krishna Residency.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places Shree Krishna Residency in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references Shree Krishna Residency.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-019",
+      "projectId": null,
+      "projectName": "HORIZON CLASSIQUE-2",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists HORIZON CLASSIQUE-2.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places HORIZON CLASSIQUE-2 in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references HORIZON CLASSIQUE-2.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-020",
+      "projectId": null,
+      "projectName": "Amrut Darshan",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA registered-project search lists Amrut Darshan.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places Amrut Darshan in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references Amrut Darshan.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-MH-021",
+      "projectId": null,
+      "projectName": "Shivam Greens - additional validation record",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "MahaRERA search record is retained as a separate validation observation only when source identity is reconciled; this duplicate-name observation must not count as an independent production case.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places Shivam Greens - additional validation record in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references Shivam Greens - additional validation record.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
+    },
+    {
+      "caseId": "P2-TG-009",
+      "projectId": null,
+      "projectName": "SIGNIFA SIGNATURE",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Telangana RERA revoked-project page lists SIGNIFA SIGNATURE.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places SIGNIFA SIGNATURE in Telangana.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references SIGNIFA SIGNATURE.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
+    },
+    {
+      "caseId": "P2-TG-010",
+      "projectId": null,
+      "projectName": "LAXMI INFOBAHN TOWER 23",
+      "projectClass": "COMMERCIAL",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Telangana RERA revoked-project page lists LAXMI INFOBAHN TOWER 23.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places LAXMI INFOBAHN TOWER 23 in Telangana.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references LAXMI INFOBAHN TOWER 23.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
+    },
+    {
+      "caseId": "P2-TG-011",
+      "projectId": null,
+      "projectName": "VIAN ONE80",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Telangana RERA revoked-project page lists VIAN ONE80.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places VIAN ONE80 in Telangana.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references VIAN ONE80.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
+    },
+    {
+      "caseId": "P2-TG-012",
+      "projectId": null,
+      "projectName": "Gangidis Royal Abode",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Telangana RERA revoked-project page lists Gangidis Royal Abode.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places Gangidis Royal Abode in Telangana.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references Gangidis Royal Abode.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
+    },
+    {
+      "caseId": "P2-TG-013",
+      "projectId": null,
+      "projectName": "NIHARIKA ONE",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana",
+      "source": "https://rera.telangana.gov.in/",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Telangana RERA revoked-project page lists NIHARIKA ONE.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official/authority-linked source places NIHARIKA ONE in Telangana.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "The cited authority-linked source references NIHARIKA ONE.",
+          "source": "https://rera.telangana.gov.in/",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PROMOTER",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
     }
   ],
   "validationNote": "These cases demonstrate source capture and critical missing-evidence behavior. They do not constitute production certification or investment recommendations.",
-  "corpusNote": "Records sourced from official state RERA sources are discovery/validation records only. Registration or listing does not establish title, approvals, construction reality, economics or buyer readiness."
+  "corpusNote": "Records sourced from official state RERA sources are discovery/validation records only. Registration or listing does not establish title, approvals, construction reality, economics or buyer readiness.",
+  "notes": [
+    "Expanded discovery/validation corpus with 20 records. MP is now represented as a fifth jurisdiction. Records sourced from official authority documents/pages where available; secondary-index MP record remains discovery-only and must be directly reconciled before production certification.",
+    "Duplicate-name observation P2-MH-021 is intentionally excluded from independent production-corpus counting by validator policy."
+  ]
 }
