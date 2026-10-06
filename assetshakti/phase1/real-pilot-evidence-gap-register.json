@@ -1,0 +1,114 @@
+{
+  "purpose": "Shakti-gated evidence gap register for the six real AssetShakti Phase 1 pilot cases. This register records what is actually evidenced versus what remains required before any positive decision or production certification.",
+  "observedAt": "2026-10-06",
+  "productionCertification": "OFF",
+  "rules": [
+    "Do not infer title, possession, valuation, encumbrance clearance or bidder eligibility from an auction index.",
+    "REPORTED_BY_SOURCE is not VERIFIED.",
+    "MISSING and CONTRADICTED evidence remain decision-critical where the applicable gate requires it.",
+    "Corrigenda/addenda/process documents must be reconciled before a current positive decision.",
+    "Composite packages require component-level provenance and valuation boundaries.",
+    "Leasehold interests must retain lease term, transfer/consent conditions and other rights-specific evidence."
+  ],
+  "cases": [
+    {
+      "caseId": "P1-PILOT-001",
+      "asset": "GENERAL COMPOSITES PRIVATE LIMITED",
+      "currentDecision": "DO_NOT_BID",
+      "currentEvidenceStrength": "IBBI listing evidence for identity, authority and auction metadata; title, possession and complete bidder obligations remain missing.",
+      "criticalGaps": [
+        "Obtain and version the complete auction notice/process document.",
+        "Capture EMD, bidder eligibility, balance-payment deadline, extension/interest and forfeiture terms.",
+        "Obtain title/interest evidence for land and building.",
+        "Obtain possession/occupancy evidence.",
+        "Decompose land, building and plant/machinery for provenance and valuation boundaries."
+      ],
+      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION", "ASSET_PACKAGE"]
+    },
+    {
+      "caseId": "P1-PILOT-002",
+      "asset": "HALLMARK LIVING SPACE PRIVATE LIMITED — Emerald Project",
+      "currentDecision": "DO_NOT_BID",
+      "currentEvidenceStrength": "IBBI listing establishes a partially built project, approximately 7.62 acres and exclusion of 6,388 sq.ft. UDS already conveyed to home buyers; title/UDS reconciliation, possession and complete bidder obligations remain open.",
+      "criticalGaps": [
+        "Obtain the full auction notice and process document.",
+        "Reconcile total land area with excluded UDS/home-buyer conveyances.",
+        "Verify title/interest and development rights.",
+        "Verify physical completion status and actual possession/occupancy.",
+        "Capture complete bidder obligations and forfeiture/payment terms."
+      ],
+      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION"]
+    },
+    {
+      "caseId": "P1-PILOT-003",
+      "asset": "Vysali Pharmaceuticals Limited — Edathala",
+      "currentDecision": "DO_NOT_BID",
+      "currentEvidenceStrength": "Detailed IBBI auction evidence establishes the cited sale metadata and presence of financial instruments alongside physical assets; title, possession and complete bidder obligations remain open.",
+      "criticalGaps": [
+        "Reconcile the detailed notice with the current IBBI auction record and any later notice/corrigendum.",
+        "Verify title/interest for land/building.",
+        "Verify possession/occupancy.",
+        "Capture complete bidder eligibility, payment and forfeiture terms.",
+        "Create component-level provenance for financial instruments and plant/machinery; do not include them in ordinary property value."
+      ],
+      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION", "ASSET_PACKAGE", "PROVENANCE_PARTY_RISK"]
+    },
+    {
+      "caseId": "P1-PILOT-004",
+      "asset": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED — Delhi commercial premises",
+      "currentDecision": "DO_NOT_BID",
+      "currentEvidenceStrength": "IBBI listing establishes property identity, auction metadata and sale-basis disclaimers; title, possession and complete bidder obligations remain open.",
+      "criticalGaps": [
+        "Obtain and version the complete auction notice/process document.",
+        "Verify title/interest and any encumbrance/litigation position.",
+        "Verify possession/occupancy and physical condition.",
+        "Capture complete bidder eligibility, payment, extension and forfeiture terms.",
+        "Preserve as-is/no-recourse language as risk evidence, not as title or condition verification."
+      ],
+      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION"]
+    },
+    {
+      "caseId": "P1-PILOT-005",
+      "asset": "JOSAN FOODS PRIVATE LIMITED — leasehold industrial land/building",
+      "currentDecision": "DO_NOT_BID",
+      "currentEvidenceStrength": "IBBI listing reports leasehold interest through 22-07-2033; a corrigendum is recorded and current reconciliation remains unresolved.",
+      "criticalGaps": [
+        "Retrieve and reconcile the full current corrigendum against the auction notice.",
+        "Verify the underlying lease deed and remaining term.",
+        "Verify transfer/assignment rights, consent requirements, fees and restrictions.",
+        "Verify title/interest and possession/occupancy.",
+        "Capture complete bidder obligations and forfeiture/payment terms."
+      ],
+      "positiveDecisionBlockedBy": ["DOCUMENT_RECONCILIATION", "TITLE", "POSSESSION", "BIDDER_OBLIGATION"]
+    },
+    {
+      "caseId": "P1-PILOT-006",
+      "asset": "Silverton Spinners Limited — alternative slump-sale/separate blocks",
+      "currentDecision": "DO_NOT_BID",
+      "currentEvidenceStrength": "Auction notice evidence identifies alternative sale structures, leasehold land, plant/machinery handover/removal conditions and bidder eligibility/EMD forfeiture provisions.",
+      "criticalGaps": [
+        "Version the complete notice and any subsequent corrigenda/addenda.",
+        "Verify lease documents, remaining term, transfer fee and consent conditions.",
+        "Verify possession and handover dependencies between separate blocks.",
+        "Create component-level provenance and valuation boundaries for land/building versus plant/machinery and slump-sale alternatives.",
+        "Capture the complete payment, extension, forfeiture and Section 29A obligations in the canonical bidder-obligation record."
+      ],
+      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION", "ASSET_PACKAGE"]
+    }
+  ],
+  "certificationGate": {
+    "status": "OPEN",
+    "minimumRealCaseCount": 50,
+    "currentStructuralCorpusEligibleCount": 52,
+    "requiredBeforePositiveDecision": [
+      "case-level evidence dossier",
+      "document/version reconciliation",
+      "critical title/interest evidence",
+      "possession evidence",
+      "auction bidder-obligation evidence",
+      "component-level provenance where applicable",
+      "deterministic re-evaluation",
+      "independent Shakti sign-off"
+    ]
+  }
+}
