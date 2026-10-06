@@ -74,3 +74,18 @@ A production validation run must include cases where auction notices expose:
 - bidder eligibility restrictions.
 
 Acceptance criterion: a case with materially missing or contradictory auction-term evidence cannot receive BID_READY. This control is independent of the numerical score.
+
+
+## 2026-10-06 deterministic corpus evaluation checkpoint
+
+The combined base + supplemental corpus was processed through the first-pass evidence-gated evaluator:
+- 55 stored corpus records evaluated;
+- 52 source-reconciled / certification-eligible records;
+- 3 supplemental candidates remain pending provenance verification;
+- 0 BID_READY decisions;
+- 55 INSUFFICIENT_EVIDENCE decisions;
+- negative control P1-001: DO_NOT_BID.
+
+This result is intentionally conservative. The discovery corpus lacks independently established critical evidence for positive bidding decisions. The result therefore demonstrates the **blocking behavior** of the Shakti gates, not production readiness.
+
+Next certification work is evidence enrichment and independent case-level verification, followed by expected-vs-actual review. No record is promoted to BID_READY merely to satisfy a target count.
