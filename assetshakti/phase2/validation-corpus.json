@@ -17,28 +17,32 @@
           "status": "VERIFIED",
           "assertion": "UP-RERA project record identifies County One O Seven and registration UPRERAPRJ837374.",
           "source": "UP-RERA project detail",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "PROMOTER",
           "status": "VERIFIED",
           "assertion": "UP-RERA record identifies Countyconcept Developers LLP.",
           "source": "UP-RERA project detail",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "JURISDICTION",
           "status": "VERIFIED",
           "assertion": "Project record identifies Gautam Buddha Nagar, Uttar Pradesh.",
           "source": "UP-RERA project detail",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "PLANNING",
           "status": "REPORTED_BY_SOURCE",
           "assertion": "Project detail exposes competent-authority and permit fields.",
           "source": "UP-RERA project detail",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
         },
         {
           "category": "TITLE",
@@ -53,14 +57,16 @@
           "status": "VERIFIED",
           "assertion": "Project is represented in the UP-RERA registered project system.",
           "source": "UP-RERA project detail",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "BUILDING_APPROVAL",
           "status": "REPORTED_BY_SOURCE",
           "assertion": "Project detail provides permit and uploaded plan/document fields.",
           "source": "UP-RERA project detail",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
         },
         {
           "category": "CONSTRUCTION",
@@ -79,7 +85,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Uttar Pradesh"
+      }
     },
     {
       "caseId": "P2-UP-002",
@@ -94,28 +104,32 @@
           "status": "VERIFIED",
           "assertion": "UP-RERA Form C identifies Aradhyam Spa City Phase 1 and its project registration number.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "PROMOTER",
           "status": "VERIFIED",
           "assertion": "UP-RERA Form C identifies the named promoters.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "JURISDICTION",
           "status": "VERIFIED",
           "assertion": "Project address is Village Dasna, Ghaziabad, Uttar Pradesh.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "VERIFIED",
           "assertion": "Registration certificate states registration under Section 5 of the Act.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "TITLE",
@@ -150,7 +164,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Uttar Pradesh"
+      }
     },
     {
       "caseId": "P2-UP-003",
@@ -165,35 +183,40 @@
           "status": "VERIFIED",
           "assertion": "UP-RERA Form C identifies FairField Residency and its project registration number.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "PROMOTER",
           "status": "VERIFIED",
           "assertion": "UP-RERA Form C identifies Shakuntalam Habitats Private Limited.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "JURISDICTION",
           "status": "VERIFIED",
           "assertion": "Project record identifies Meerut, Uttar Pradesh.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "VERIFIED",
           "assertion": "UP-RERA Form C records the project registration.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "POSSESSION",
           "status": "REPORTED_BY_SOURCE",
           "assertion": "Proposed completion date is 08-06-2030.",
           "source": "UP-RERA Form C",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
         },
         {
           "category": "TITLE",
@@ -228,7 +251,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Uttar Pradesh"
+      }
     },
     {
       "caseId": "P2-MH-001",
@@ -243,28 +270,32 @@
           "status": "VERIFIED",
           "assertion": "MahaRERA search record identifies project P50500012638.",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "PROMOTER",
           "status": "VERIFIED",
           "assertion": "MahaRERA search record identifies MHADA (Nagpur Board).",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "JURISDICTION",
           "status": "VERIFIED",
           "assertion": "Search record identifies Hingna, Nagpur, Maharashtra.",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "VERIFIED",
           "assertion": "Project appears in MahaRERA registered-project search with registration number P50500012638.",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "TITLE",
@@ -299,7 +330,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
     },
     {
       "caseId": "P2-MH-002",
@@ -314,28 +349,32 @@
           "status": "VERIFIED",
           "assertion": "MahaRERA search record identifies FUTURE CITY, registration P52900014655.",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "PROMOTER",
           "status": "VERIFIED",
           "assertion": "MahaRERA search record identifies Future Infra Builders And Developers LLP.",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "JURISDICTION",
           "status": "VERIFIED",
           "assertion": "Search record identifies Sawantwadi, Sindhudurg, Maharashtra.",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "VERIFIED",
           "assertion": "Project appears in MahaRERA registered-project search.",
           "source": "MahaRERA registered project search",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "TITLE",
@@ -370,7 +409,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
     },
     {
       "caseId": "P2-GJ-001",
@@ -385,14 +428,16 @@
           "status": "VERIFIED",
           "assertion": "GujRERA public portal supports public project search without login.",
           "source": "GujRERA official portal",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "VERIFIED",
           "assertion": "GujRERA exposes registered project information and project progress monitoring functions.",
           "source": "GujRERA official portal",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "IDENTITY",
@@ -431,7 +476,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Unknown"
+      }
     },
     {
       "caseId": "P2-MH-NEG-001",
@@ -446,14 +495,16 @@
           "status": "VERIFIED",
           "assertion": "MahaRERA maintains an official list of projects whose registration is revoked or ab initio void.",
           "source": "MahaRERA revoked/ab initio void project list",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "CONTRADICTED",
           "assertion": "A project appearing in the revoked/ab initio void list cannot be treated as an ordinary active registered-project positive control.",
           "source": "MahaRERA revoked/ab initio void project list",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 0.35
         },
         {
           "category": "IDENTITY",
@@ -492,7 +543,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "DO_NOT_PROCEED"
+      "expectedDecision": "DO_NOT_PROCEED",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      }
     },
     {
       "caseId": "P2-TG-001",
@@ -507,28 +562,32 @@
           "status": "VERIFIED",
           "assertion": "TG RERA official revoked-project register identifies BRMeadowland Apartments.",
           "source": "TG RERA revoked projects",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "PROMOTER",
           "status": "VERIFIED",
           "assertion": "TG RERA register identifies YVR Constructions.",
           "source": "TG RERA revoked projects",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "JURISDICTION",
           "status": "VERIFIED",
           "assertion": "Project is recorded in Telangana RERA system.",
           "source": "TG RERA",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "CONTRADICTED",
           "assertion": "Official TG RERA register records project registration revocation.",
           "source": "TG RERA revoked projects",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 0.35
         },
         {
           "category": "TITLE",
@@ -563,7 +622,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "DO_NOT_PROCEED"
+      "expectedDecision": "DO_NOT_PROCEED",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
     },
     {
       "caseId": "P2-TG-002",
@@ -578,14 +641,16 @@
           "status": "VERIFIED",
           "assertion": "TG RERA provides public access to registered project information and project progress.",
           "source": "TG RERA official portal",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "RERA",
           "status": "VERIFIED",
           "assertion": "TG RERA official portal reports a large registered-project corpus and provides registered-project search.",
           "source": "TG RERA official portal",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "IDENTITY",
@@ -624,7 +689,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
     },
     {
       "caseId": "P2-TG-003",
@@ -639,14 +708,16 @@
           "status": "VERIFIED",
           "assertion": "TG RERA publishes project/agent defaulters with complaint and authority-order references.",
           "source": "TG RERA defaulters register",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 1
         },
         {
           "category": "LITIGATION",
           "status": "REPORTED_BY_SOURCE",
           "assertion": "Official defaulter records expose complaint numbers and authority orders for listed projects.",
           "source": "TG RERA defaulters register",
-          "observedAt": "2026-10-06"
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
         },
         {
           "category": "IDENTITY",
@@ -685,7 +756,11 @@
           "status": "MISSING"
         }
       ],
-      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      }
     }
   ],
   "validationNote": "These cases demonstrate source capture and critical missing-evidence behavior. They do not constitute production certification or investment recommendations."
