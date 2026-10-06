@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AssetShakti Phase 1 Case Evaluation",
+  "type": "object",
+  "required": [
+    "caseId",
+    "source",
+    "expectedDecision",
+    "evidence"
+  ],
+  "properties": {
+    "caseId": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "authority",
+        "sourceReference",
+        "observedAt"
+      ],
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "sourceReference": {
+          "type": "string"
+        },
+        "observedAt": {
+          "type": "string"
+        }
+      }
+    },
+    "expectedDecision": {
+      "enum": [
+        "BID_READY",
+        "CONDITIONAL",
+        "DO_NOT_BID",
+        "INSUFFICIENT_EVIDENCE"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "status",
+          "assertion"
+        ],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "VERIFIED",
+              "REPORTED_BY_SOURCE",
+              "UNVERIFIED",
+              "MISSING",
+              "CONTRADICTED"
+            ]
+          },
+          "assertion": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
