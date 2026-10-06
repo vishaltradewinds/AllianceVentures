@@ -48,3 +48,17 @@ The check reports class coverage, remaining certification gaps, structural evide
 
 ## Certification
 Phase 1 is not production-certified until the full sample is processed, errors are reviewed, risk coverage is demonstrated, and the Shakti gate criteria are signed off.
+
+
+## Current source-reconciliation checkpoint — 2026-10-06
+The combined corpus currently contains **52 certification-eligible source records**:
+- Residential: 10
+- Commercial: 8
+- Industrial: 10
+- Agricultural: 6
+- Other immovable: 6
+- Composite: 12
+
+Three supplemental candidates remain explicitly pending and do not count toward certification. Source reconciliation verifies only the corporate debtor, auction date, reserve price, asset nature and authoritative IBBI reference; it does not verify title, possession, encumbrances, litigation or valuation.
+
+**Corpus-size gate: PASS (52/50). Case-level evaluation and Shakti certification gates remain open.**
