@@ -41,3 +41,12 @@ The validation corpus now contains **30 real project discovery/validation record
 The corpus deliberately contains registered, revoked, defaulter/order and progress-evidence cases. These records are **not certification-ready** merely because they appear on a RERA source. Registration status is only one evidence domain.
 
 Current production target remains **50 real cases across at least 5 States/UTs**. The remaining 20 cases must be source-reconciled and then subjected to case-level evidence evaluation, contradiction review, negative controls and Shakti sign-off.
+
+
+## 2026-10-06 checkpoint — 50-case corpus gate
+
+- Corpus expanded to 50 discovery/validation records.
+- Jurisdiction coverage now includes Uttar Pradesh, Maharashtra, Telangana, Rajasthan and Madhya Pradesh.
+- Five-jurisdiction gate is now enforced by the structural validator.
+- Records remain validation-stage evidence; no title, approval, construction, valuation or investment certification is inferred from registration/discovery records.
+- Production certification remains OPEN pending direct case-level evidence evaluation, contradiction review, negative-control execution, jurisdiction-adapter validation and Shakti sign-off.
