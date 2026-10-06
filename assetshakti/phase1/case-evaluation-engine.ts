@@ -1,6 +1,7 @@
 import type { PropertyAsset, EvidenceItem, PropertyClass } from "./property-schema";
 import { evaluatePropertyProductionDecision, evaluatePropertyGates } from "./decision-engine";
 import { reconcileAuctionDocuments, type AuctionDocumentVersion } from "./document-reconciliation";
+import { assessAssetPackage, type AssetPackageAssessment } from "./asset-package-decomposition";
 
 export type CaseEvaluationInput = {
   caseId: string;
@@ -40,6 +41,7 @@ export type CaseEvaluationResult = {
   source: CaseEvaluationInput["source"];
   gateResults: ReturnType<typeof import("./decision-engine").evaluatePropertyGates>;
   documentReconciliation?: ReturnType<typeof reconcileAuctionDocuments>;
+  assetPackageAssessment?: AssetPackageAssessment;
 };
 
 function toPropertyAsset(input: CaseEvaluationInput): PropertyAsset {
@@ -82,11 +84,19 @@ function toPropertyAsset(input: CaseEvaluationInput): PropertyAsset {
 
 export function evaluateCase(input: CaseEvaluationInput): CaseEvaluationResult {
   const asset = toPropertyAsset(input);
+  const assetPackageAssessment = input.asset?.description
+    ? assessAssetPackage({ caseId: input.caseId, auctionDescription: input.asset.description, components: [] })
+    : undefined;
   const documentReconciliation = input.documentVersions?.length
     ? reconcileAuctionDocuments({ documents: input.documentVersions })
     : undefined;
   const shakti = evaluatePropertyProductionDecision(asset);
   const gates = evaluatePropertyGates(asset);
+  if (assetPackageAssessment && !assetPackageAssessment.propertyOnlyDecisionAllowed) {
+    gates.push({ gate: "ASSET_PACKAGE", passed: false, reason: assetPackageAssessment.blockingReasons.join(" ") || "Non-property or composite sale requires component-level evaluation." });
+    shakti.criticalGatePassed = false;
+    shakti.decision = "DO_NOT_BID";
+  }
   if (documentReconciliation && documentReconciliation.status === "UNRESOLVED") {
     gates.push({ gate: "DOCUMENT_RECONCILIATION", passed: false, reason: "Auction document versions are unresolved or have conflicting CURRENT records." });
     shakti.criticalGatePassed = false;
@@ -103,5 +113,6 @@ export function evaluateCase(input: CaseEvaluationInput): CaseEvaluationResult {
     source: input.source,
     gateResults: gates,
     documentReconciliation,
+    assetPackageAssessment,
   };
 }
