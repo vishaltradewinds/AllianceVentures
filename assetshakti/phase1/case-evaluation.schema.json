@@ -69,6 +69,75 @@
     },
     "notes": {
       "type": "string"
+    },
+    "documentVersions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "documentType",
+          "sourceReference",
+          "observedAt",
+          "versionStatus"
+        ],
+        "properties": {
+          "documentType": {
+            "type": "string",
+            "enum": [
+              "AUCTION_NOTICE",
+              "CORRIGENDUM",
+              "ADDENDUM",
+              "PROCESS_DOCUMENT",
+              "OTHER"
+            ]
+          },
+          "sourceReference": {
+            "type": "string"
+          },
+          "observedAt": {
+            "type": "string"
+          },
+          "versionStatus": {
+            "type": "string",
+            "enum": [
+              "CURRENT",
+              "SUPERSEDED",
+              "UNRESOLVED"
+            ]
+          },
+          "materialChanges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "RECONCILED",
+            "UNRESOLVED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "materialConflicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "latestApplicableReference": {
+          "type": "string"
+        }
+      }
     }
   }
 }
