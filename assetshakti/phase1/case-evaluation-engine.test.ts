@@ -68,5 +68,17 @@ assert.equal(unresolvedDocs.actualDecision, "DO_NOT_BID");
 assert.equal(unresolvedDocs.passed, true);
 assert.equal(unresolvedDocs.documentReconciliation?.status, "UNRESOLVED");
 
-console.log("PASS: Phase 1 case-evaluation engine uses the production decision engine and document reconciliation");
+const compositePackage = evaluateCase({
+  caseId: "ENGINE-NEG-PACKAGE-001",
+  source,
+  expectedDecision: "DO_NOT_BID",
+  asset: { class: "COMPOSITE", subtype: "COMPOSITE_PACKAGE", description: "Composite sale of leasehold rights of Land & Building, Plant & Machinery and Securities & Financial Assets." },
+  evidence: fullEvidence,
+});
+assert.equal(compositePackage.actualDecision, "DO_NOT_BID");
+assert.equal(compositePackage.passed, true);
+assert.equal(compositePackage.assetPackageAssessment?.propertyOnlyDecisionAllowed, false);
+
+console.log("PASS: Phase 1 case-evaluation engine uses decision, package decomposition and document reconciliation gates");
+
 
