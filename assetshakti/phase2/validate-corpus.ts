@@ -5,11 +5,14 @@ type Status="VERIFIED"|"REPORTED_BY_SOURCE"|"UNVERIFIED"|"MISSING"|"CONTRADICTED
 const file=path.join(process.cwd(),"assetshakti/phase2/validation-corpus.json");
 const corpus=JSON.parse(fs.readFileSync(file,"utf8")) as {cases:Array<any>};
 const critical=["IDENTITY","JURISDICTION","TITLE","LAND_RIGHTS","RERA","PLANNING","BUILDING_APPROVAL"];
+const requiredCaseFields=["caseId","projectName","projectClass","location","source","expectedDecision","jurisdiction"];
 let errors=0;
 const seenProjectIds=new Set<string>();
 const seenNames=new Set<string>();
 const states=new Set<string>();
 for(const c of corpus.cases){
+  for(const field of requiredCaseFields){ if(c[field]===undefined||c[field]===null||c[field]===""){ console.error(`ERROR ${c.caseId??"UNKNOWN"}: missing required field ${field}`); errors++; } }
+  if(c.expectedDecision && !["INVESTMENT_READY","BUY_READY","CONDITIONAL","DO_NOT_PROCEED","INSUFFICIENT_EVIDENCE"].includes(c.expectedDecision)){ console.error(`ERROR ${c.caseId}: invalid expectedDecision ${c.expectedDecision}`); errors++; }
   const state=c.jurisdiction?.state;
   if(state) states.add(state);
   if(c.projectId){ if(seenProjectIds.has(c.projectId)){console.error(`ERROR ${c.caseId}: duplicate projectId ${c.projectId}`);errors++;} else seenProjectIds.add(c.projectId); }
