@@ -51,4 +51,22 @@ const contradictedAuctionTerms = evaluateCase({
 assert.equal(contradictedAuctionTerms.actualDecision, "DO_NOT_BID");
 assert.equal(contradictedAuctionTerms.passed, true);
 
-console.log("PASS: Phase 1 case-evaluation engine uses the production decision engine");
+const unresolvedDocs = evaluateCase({
+  caseId: "ENGINE-NEG-DOCS-001",
+  source,
+  expectedDecision: "DO_NOT_BID",
+  asset: { class: "INDUSTRIAL", subtype: "INDUSTRIAL_LAND_BUILDING" },
+  evidence: fullEvidence,
+  documentVersions: [{
+    documentType: "AUCTION_NOTICE",
+    sourceReference: "https://ibbi.gov.in/original.pdf",
+    observedAt: "2026-10-06",
+    versionStatus: "UNRESOLVED",
+  }],
+});
+assert.equal(unresolvedDocs.actualDecision, "DO_NOT_BID");
+assert.equal(unresolvedDocs.passed, true);
+assert.equal(unresolvedDocs.documentReconciliation?.status, "UNRESOLVED");
+
+console.log("PASS: Phase 1 case-evaluation engine uses the production decision engine and document reconciliation");
+
