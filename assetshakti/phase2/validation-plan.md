@@ -1,7 +1,7 @@
 # AssetShakti Phase 2 — Validation Plan
 
 ## Current state
-Validation corpus: 7 cases across Uttar Pradesh, Maharashtra and Gujarat, including a negative control.
+Validation corpus: 10 cases across Uttar Pradesh, Maharashtra and Gujarat, including a negative control.
 
 ## Required expansion before production certification
 Minimum target: **50 real new-project cases** across:
