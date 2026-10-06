@@ -1,20 +1,24 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
+  "generatedAt": "2026-10-06",
+  "method": "Deterministic first-pass from stored evidence ledgers; no missing evidence inferred.",
   "summary": {
-    "generatedAt": "2026-10-06",
-    "corpusObservationDate": "2026-10-06",
-    "total": 22,
-    "actualDecisionCounts": {
-      "INSUFFICIENT_EVIDENCE": 22
+    "totalRecordsEvaluated": 56,
+    "baseCorpus": 22,
+    "supplementRecords": 33,
+    "certificationEligibleRecords": 52,
+    "pendingSupplementCandidates": 3,
+    "decisionCounts": {
+      "INSUFFICIENT_EVIDENCE": 55,
+      "DO_NOT_BID": 1
     },
-    "certificationEligibleRecords": 0,
-    "productionCertified": false,
-    "notes": [
-      "This is a deterministic first-pass case-level evaluation of the stored evidence ledger, not a legal/title/valuation certification.",
-      "Discovery-only records with missing critical evidence are conservatively INSUFFICIENT_EVIDENCE.",
-      "Explicit adverse evidence/negative controls are DO_NOT_BID.",
-      "BID_READY is not granted by this corpus pass; applicable auction-term evidence and independent critical validation remain required."
-    ]
+    "productionCertified": false
+  },
+  "controls": {
+    "negativeControl": "P1-001",
+    "negativeControlResult": "DO_NOT_BID",
+    "bidReadyCount": 0,
+    "rule": "No BID_READY unless all applicable critical evidence and auction-term obligations are independently established."
   },
   "cases": [
     {
@@ -22,242 +26,566 @@
       "corporateDebtor": "GENERAL COMPOSITES PRIVATE LIMITED",
       "class": "COMPOSITE",
       "subtype": "LAND_BUILDING_PLANT_MACHINERY",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-002",
       "corporateDebtor": "HALLMARK LIVING SPACE PRIVATE LIMITED",
       "class": "RESIDENTIAL",
       "subtype": "OTHER",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-003",
       "corporateDebtor": "Vysali Pharmaceuticals Limited",
       "class": "INDUSTRIAL",
       "subtype": "LAND_BUILDING",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-004",
       "corporateDebtor": "SUPREME VASAI BHIWANDI TOLLWAYS PRIVATE LIMITED",
       "class": "OTHER_IMMOVABLE",
       "subtype": "INFRASTRUCTURE",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-005",
       "corporateDebtor": "PURPLE ADVERTISING SERVICES PRIVATE LIMITED",
       "class": "COMPOSITE",
       "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-006",
       "corporateDebtor": "EUPHORIA TECHNOLOGIES PRIVATE LIMITED",
       "class": "COMPOSITE",
       "subtype": "LAND_BUILDING_PLANT_MACHINERY",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-007",
       "corporateDebtor": "IND TOB INTERNATIONAL PRIVATE LIMITED",
       "class": "INDUSTRIAL",
       "subtype": "FACTORY_BUILDING",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-008",
       "corporateDebtor": "ETHNIC TOBACCO (INDIA) LIMITED",
       "class": "INDUSTRIAL",
       "subtype": "FACTORY_BUILDING",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-009",
       "corporateDebtor": "NAKODA LIMITED",
       "class": "COMPOSITE",
       "subtype": "MULTI_PROPERTY_LOT",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-010",
       "corporateDebtor": "GEI INDUSTRIAL SYSTEMS LIMITED",
       "class": "OTHER_IMMOVABLE",
       "subtype": "LEASEHOLD",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-011",
       "corporateDebtor": "Vrundavan Ceramic Private Limited",
       "class": "COMPOSITE",
       "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-012",
       "corporateDebtor": "SORT INDIA ENVIRO SOLUTIONS LIMITED",
       "class": "OTHER_IMMOVABLE",
       "subtype": "OTHER",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-013",
       "corporateDebtor": "SRI PAVANA KEERTI HOTELS INDIA PRIVATE LIMITED",
       "class": "COMMERCIAL",
       "subtype": "HOTEL",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-014",
       "corporateDebtor": "PEEJAY AGRO FOODS PRIVATE LIMITED",
       "class": "INDUSTRIAL",
       "subtype": "LAND_BUILDING",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=Live+auctions&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-015",
       "corporateDebtor": "PEEJAY AGRO FOODS PRIVATE LIMITED",
       "class": "INDUSTRIAL",
       "subtype": "LAND_BUILDING",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=Live+auctions&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-016",
       "corporateDebtor": "SKYRISE OVERSEAS PRIVATE LIMITED",
       "class": "RESIDENTIAL",
       "subtype": "OTHER",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-017",
       "corporateDebtor": "OSIL EXPORTS LIMITED",
       "class": "OTHER_IMMOVABLE",
       "subtype": "LEASEHOLD",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-018",
       "corporateDebtor": "SPD Cold Storage LLP",
       "class": "OTHER_IMMOVABLE",
       "subtype": "OTHER",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-019",
       "corporateDebtor": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED",
       "class": "COMMERCIAL",
       "subtype": "GODOWN",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-020",
       "corporateDebtor": "SPECIFIC ALLOYS PRIVATE LIMITED",
       "class": "INDUSTRIAL",
       "subtype": "LAND_BUILDING_PLANT_MACHINERY",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-021",
       "corporateDebtor": "MUKTAR INFRASTRUCTURE INDIA PRIVATE LIMITED",
       "class": "COMPOSITE",
       "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
     },
     {
       "caseId": "P1-IBBI-022",
       "corporateDebtor": "NEETA CHEMICALS (INDIA) PRIVATE LIMITED",
       "class": "OTHER_IMMOVABLE",
       "subtype": "OTHER",
-      "expected": "CASE_LEVEL_REVIEW_REQUIRED",
-      "actual": "INSUFFICIENT_EVIDENCE",
-      "sourceStatus": "DISCOVERY_ONLY",
-      "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
-      "rationale": "Critical evidence required for a positive decision is absent or not yet evaluated."
+      "sourceVerificationStatus": "UNKNOWN",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-023",
+      "corporateDebtor": "HELPLINE HOSPITALITY PRIVATE LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "OTHER",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-024",
+      "corporateDebtor": "VEESONS ENERGY SYSTEMS P LTD.",
+      "class": "RESIDENTIAL",
+      "subtype": "APARTMENT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-026",
+      "corporateDebtor": "COROMANDEL AGRICO PRIVATE LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "APARTMENT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-027",
+      "corporateDebtor": "IBD UNIVERSAL PRIVATE LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "APARTMENT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-028",
+      "corporateDebtor": "DNB IMPEX PRIVATE LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "APARTMENT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-029",
+      "corporateDebtor": "DREAMS CONSTRUCTION (PUNE) PRIVATE LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "APARTMENT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-030",
+      "corporateDebtor": "EURO CERAMICS LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "APARTMENT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-031",
+      "corporateDebtor": "JET AIRWAYS (INDIA) LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "OFFICE",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-032",
+      "corporateDebtor": "UNIQUE SUGARS LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "COMMERCIAL_PLOT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-033",
+      "corporateDebtor": "UNIQUE SUGARS LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "COMMERCIAL_PLOT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-034",
+      "corporateDebtor": "HYDRIC FARM INPUTS LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "OFFICE",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-035",
+      "corporateDebtor": "SHRENUJ AND COMPANY LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "OFFICE",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-036",
+      "corporateDebtor": "ULTIMO FABRICS PRIVATE LIMITED",
+      "class": "COMMERCIAL",
+      "subtype": "OFFICE",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-037",
+      "corporateDebtor": "SHREE BANKEY BEHARI EXPORTS LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "INDUSTRIAL_LAND_BUILDING",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-038",
+      "corporateDebtor": "KOHINOOR GINNING AND PRESSING PVT LTD",
+      "class": "INDUSTRIAL",
+      "subtype": "LAND_BUILDING",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-039",
+      "corporateDebtor": "MUDHAI DAIRY PRIVATE LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "INDUSTRIAL_PLOT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-040",
+      "corporateDebtor": "SHREE DAKSH JYOT SILK MILLS PVT LTD",
+      "class": "INDUSTRIAL",
+      "subtype": "FACTORY_BUILDING",
+      "sourceVerificationStatus": "CANDIDATE_PENDING_VERIFICATION",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-041",
+      "corporateDebtor": "UNIQUE SUGARS LIMITED",
+      "class": "AGRICULTURAL",
+      "subtype": "AGRICULTURAL_LAND",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-043",
+      "corporateDebtor": "FUTURE RETAIL LIMITED",
+      "class": "AGRICULTURAL",
+      "subtype": "AGRICULTURAL_LAND",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-044",
+      "corporateDebtor": "GRS ISPAT COMPANY PVT LTD",
+      "class": "AGRICULTURAL",
+      "subtype": "AGRICULTURAL_LAND",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-045",
+      "corporateDebtor": "SUPREME TEX MART LIMITED",
+      "class": "AGRICULTURAL",
+      "subtype": "AGRICULTURAL_LAND",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-046",
+      "corporateDebtor": "ADYA OILS AND CHEMICALS LIMITED",
+      "class": "AGRICULTURAL",
+      "subtype": "AGRICULTURAL_LAND",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-047",
+      "corporateDebtor": "HVR PROJECTS PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-048",
+      "corporateDebtor": "CAMERICH PAPERS PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-049",
+      "corporateDebtor": "GWALIOR POLYPIPES LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
+      "sourceVerificationStatus": "CANDIDATE_PENDING_VERIFICATION",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-050",
+      "corporateDebtor": "AJANTA PAPER AND GENERAL PRODUCTS LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-051",
+      "corporateDebtor": "AJS IMPEX PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "PROPERTY_WITH_FINANCIAL_ASSETS",
+      "sourceVerificationStatus": "CANDIDATE_PENDING_VERIFICATION",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-052",
+      "corporateDebtor": "BLUEFERN VENTURES PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-053",
+      "corporateDebtor": "NASHIK FORGE PRIVATE LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-025",
+      "corporateDebtor": "SAGAR INFRA RAIL INTERNATIONAL LIMITED",
+      "class": "RESIDENTIAL",
+      "subtype": "FLAT",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-054",
+      "corporateDebtor": "BAID INDUSTRIES PRIVATE LIMITED",
+      "class": "INDUSTRIAL",
+      "subtype": "LAND_BUILDING",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-055",
+      "corporateDebtor": "ARCHON ENGICON LIMITED",
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY_FINANCIAL_ASSETS",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-IBBI-056",
+      "corporateDebtor": "UNIQUE SUGARS LIMITED",
+      "class": "AGRICULTURAL",
+      "subtype": "AGRICULTURAL_LAND",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "DISCOVERY_ONLY",
+      "actualDecision": "INSUFFICIENT_EVIDENCE",
+      "rationale": "Critical evidence incomplete: TITLE, POSSESSION."
+    },
+    {
+      "caseId": "P1-001",
+      "corporateDebtor": "NEGATIVE CONTROL — IBBI industrial property case",
+      "class": "INDUSTRIAL",
+      "subtype": "INDUSTRIAL_LAND_BUILDING",
+      "sourceVerificationStatus": "VERIFIED",
+      "recordStatus": "NEGATIVE_CONTROL",
+      "actualDecision": "DO_NOT_BID",
+      "rationale": "Stored negative-control evidence includes adverse possession/legal proceedings; critical gate must block BID_READY."
     }
+  ],
+  "limitations": [
+    "This is not legal, title, valuation, engineering or environmental certification.",
+    "The 52 certification-eligible records have source-field reconciliation but remain case-level evidence evaluations.",
+    "The discovery ledger deliberately contains missing critical evidence, so conservative INSUFFICIENT_EVIDENCE is expected.",
+    "Actual positive/conditional certification requires independent evidence capture and review."
   ]
 }
