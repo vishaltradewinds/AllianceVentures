@@ -21,3 +21,4 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run assetshakti:validate
+      - run: npx tsx assetshakti/phase1/decision-engine.test.ts
