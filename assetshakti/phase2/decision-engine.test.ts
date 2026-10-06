@@ -5,6 +5,8 @@ const evidence=categories.map(category=>({category,status:"VERIFIED" as const,so
 const base={projectId:"TEST",projectClass:"RESIDENTIAL" as const,jurisdiction:{state:"Madhya Pradesh"},evidence};
 const ready=evaluateProject(base);
 if(ready.decision!=="BUY_READY") throw new Error("Expected BUY_READY for fully evidenced test project.");
+const investor=evaluateProject({...base,decisionIntent:"INVESTOR"});
+if(investor.decision!=="INVESTMENT_READY") throw new Error("Investor intent must produce INVESTMENT_READY when all gates pass.");
 const contradiction=evaluateProject({...base,evidence:evidence.map(e=>e.category==="TITLE"?{...e,status:"CONTRADICTED" as const}:e)});
 if(contradiction.decision!=="DO_NOT_PROCEED") throw new Error("Critical contradiction must block.");
 const missing=evaluateProject({...base,evidence:evidence.filter(e=>e.category!=="RERA")});
