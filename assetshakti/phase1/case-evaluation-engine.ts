@@ -1,5 +1,6 @@
 import type { PropertyAsset, EvidenceItem, PropertyClass } from "./property-schema";
 import { evaluatePropertyProductionDecision, evaluatePropertyGates } from "./decision-engine";
+import { reconcileAuctionDocuments, type AuctionDocumentVersion } from "./document-reconciliation";
 
 export type CaseEvaluationInput = {
   caseId: string;
@@ -25,6 +26,8 @@ export type CaseEvaluationInput = {
     observedAt?: string;
   }>;
   notes?: string;
+  documentVersions?: AuctionDocumentVersion[];
+  reconciliation?: { status: "RECONCILED" | "UNRESOLVED" | "NOT_APPLICABLE"; materialConflicts?: string[]; latestApplicableReference?: string };
 };
 
 export type CaseEvaluationResult = {
@@ -36,6 +39,7 @@ export type CaseEvaluationResult = {
   evidenceCount: number;
   source: CaseEvaluationInput["source"];
   gateResults: ReturnType<typeof import("./decision-engine").evaluatePropertyGates>;
+  documentReconciliation?: ReturnType<typeof reconcileAuctionDocuments>;
 };
 
 function toPropertyAsset(input: CaseEvaluationInput): PropertyAsset {
@@ -78,8 +82,16 @@ function toPropertyAsset(input: CaseEvaluationInput): PropertyAsset {
 
 export function evaluateCase(input: CaseEvaluationInput): CaseEvaluationResult {
   const asset = toPropertyAsset(input);
+  const documentReconciliation = input.documentVersions?.length
+    ? reconcileAuctionDocuments({ documents: input.documentVersions })
+    : undefined;
   const shakti = evaluatePropertyProductionDecision(asset);
   const gates = evaluatePropertyGates(asset);
+  if (documentReconciliation && documentReconciliation.status === "UNRESOLVED") {
+    gates.push({ gate: "DOCUMENT_RECONCILIATION", passed: false, reason: "Auction document versions are unresolved or have conflicting CURRENT records." });
+    shakti.criticalGatePassed = false;
+    shakti.decision = "DO_NOT_BID";
+  }
 
   return {
     caseId: input.caseId,
@@ -90,5 +102,6 @@ export function evaluateCase(input: CaseEvaluationInput): CaseEvaluationResult {
     evidenceCount: asset.evidence.length,
     source: input.source,
     gateResults: gates,
+    documentReconciliation,
   };
 }
