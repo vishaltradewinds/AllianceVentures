@@ -28,3 +28,16 @@ Minimum target: **50 real new-project cases** across:
 
 ## Current decision
 **NOT PRODUCTION CERTIFIED.**
+
+
+## Current corpus checkpoint — 2026-10-06
+The validation corpus now contains **30 real project discovery/validation records** across **4 Indian jurisdictions**:
+- Uttar Pradesh: 3
+- Maharashtra: 11
+- Telangana: 8
+- Rajasthan: 7
+- Gujarat: 1 discovery case pending jurisdiction-source reconciliation
+
+The corpus deliberately contains registered, revoked, defaulter/order and progress-evidence cases. These records are **not certification-ready** merely because they appear on a RERA source. Registration status is only one evidence domain.
+
+Current production target remains **50 real cases across at least 5 States/UTs**. The remaining 20 cases must be source-reconciled and then subjected to case-level evidence evaluation, contradiction review, negative controls and Shakti sign-off.
