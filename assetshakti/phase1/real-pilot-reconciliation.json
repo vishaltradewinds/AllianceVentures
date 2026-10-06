@@ -1,0 +1,25 @@
+{
+  "P1-PILOT-005": {
+    "documentVersions": [
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=6",
+        "observedAt": "2026-10-06",
+        "versionStatus": "SUPERSEDED",
+        "materialChanges": ["Leasehold rights for remaining duration through 22-07-2033."]
+      },
+      {
+        "documentType": "CORRIGENDUM",
+        "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?direction=asc&page=469&sort=date_submit",
+        "observedAt": "2026-10-06",
+        "versionStatus": "CURRENT",
+        "materialChanges": ["IBBI register records a corrigendum; detailed content requires reconciliation before positive decision."]
+      }
+    ],
+    "reconciliation": {
+      "status": "UNRESOLVED",
+      "materialConflicts": ["Corrigendum requires detailed reconciliation with the auction notice."],
+      "latestApplicableReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?direction=asc&page=469&sort=date_submit"
+    }
+  }
+}
