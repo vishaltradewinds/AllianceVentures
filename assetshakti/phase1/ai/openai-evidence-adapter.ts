@@ -85,7 +85,7 @@ export async function extractEvidenceWithOpenAI(
     throw new Error("OPENAI_API_KEY is not configured");
   }
 
-  const model = options.model ?? process.env.OPENAI_ASSET_SHAKTI_MODEL ?? "gpt-6-astra";
+  const model = options.model ?? process.env.OPENAI_ASSET_SHAKTI_MODEL ?? "gpt-5-mini";
 
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
