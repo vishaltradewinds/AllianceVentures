@@ -1224,7 +1224,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "CANDIDATE_PENDING_VERIFICATION"
     },
     {
       "caseId": "P1-IBBI-041",
@@ -1798,7 +1799,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "CANDIDATE_PENDING_VERIFICATION"
     },
     {
       "caseId": "P1-IBBI-050",
@@ -1941,7 +1943,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "CANDIDATE_PENDING_VERIFICATION"
     },
     {
       "caseId": "P1-IBBI-052",
