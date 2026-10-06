@@ -30,3 +30,20 @@ Auction-specific bidder obligations are first-class evidence. The system must ca
 
 ## P1-G14 Provenance and party-risk
 Where an auction package contains financial assets, securities, receivables, NRRA/PUFE claims or rights beyond immovable property, those components must retain explicit provenance and must not be silently treated as ordinary property value.
+
+
+## P1-G15 Auction-Term / Forfeiture Integrity
+
+An auction decision cannot be treated as BID_READY unless the applicable auction notice/corrigendum has been reviewed for:
+
+- EMD amount and deadline;
+- bidder eligibility/declarations;
+- balance sale-consideration deadline;
+- extension terms and interest;
+- forfeiture/cancellation conditions;
+- sale basis such as “as is where is”, “as is what is”, “whatever there is” or “without recourse”;
+- material title/possession disclosures contained in the auction notice.
+
+A missing or contradictory material auction-term record is a critical evidence failure. The engine must never infer that regulatory silence removes a forfeiture/payment exposure stated in the auction notice.
+
+This gate reflects the Supreme Court's September 2026 treatment of explicit e-auction forfeiture conditions and is subject to future legal/regulatory change control.
