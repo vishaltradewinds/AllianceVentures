@@ -7,7 +7,7 @@ const load = (name: string) =>
 
 const base = load("validation-corpus.json") as { records: any[] };
 const supplement = load("validation-corpus-supplement.json") as { records: any[] };
-const corpus = { records: [...base.records, ...supplement.records.filter(r => r.sourceVerificationStatus === "VERIFIED")] };
+const corpus = { records: [...base.records, ...supplement.records.filter(r => (r.sourceVerificationStatus ?? "VERIFIED") === "VERIFIED")] };
 
 const TARGET = 50;
 const REQUIRED = {
