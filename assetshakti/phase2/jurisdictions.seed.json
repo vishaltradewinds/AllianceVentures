@@ -1,0 +1,8 @@
+{
+  "jurisdictions":[
+    {"code":"UP","name":"Uttar Pradesh","reraAuthority":"UP RERA","officialUrl":"https://www.up-rera.in/","status":"VALIDATED_ADAPTER","notes":"Registered, completed, de-registered, NCLT, abeyance and withdrawn project surfaces are publicly exposed."},
+    {"code":"MH","name":"Maharashtra","reraAuthority":"MahaRERA","officialUrl":"https://www.maharera.maharashtra.gov.in/","status":"VALIDATED_ADAPTER","notes":"Registered projects plus lapsed, revoked/ab initio void, abeyance and other project-status surfaces are publicly exposed."},
+    {"code":"GJ","name":"Gujarat","reraAuthority":"GujRERA","officialUrl":"https://gujrera.gujarat.gov.in/","status":"DISCOVERY_ADAPTER","notes":"Public project search and project-progress functionality identified; field-level mapping requires further validation."},
+    {"code":"MP","name":"Madhya Pradesh","reraAuthority":"RERA Madhya Pradesh","officialUrl":"https://rera.mp.gov.in/","status":"PLANNED","notes":"Requires dedicated field-level validation before production use."}
+  ]
+}
