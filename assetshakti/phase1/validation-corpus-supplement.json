@@ -72,7 +72,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-024",
@@ -143,85 +144,16 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
-    },
-    {
-      "caseId": "P1-IBBI-025",
-      "source": {
-        "authority": "IBBI",
-        "sourceType": "auction-listing",
-        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?date=&filter_by=all&page=120&reserve_price=&title=",
-        "observedAt": "2026-10-06"
-      },
-      "asset": {
-        "corporateDebtor": "SAGAR INFRA RAIL INTERNATIONAL LIMITED",
-        "class": "RESIDENTIAL",
-        "subtype": "APARTMENT",
-        "description": "Residential Flats 601 & 602, built-up area 1900 sq ft with UDS"
-      },
-      "auction": {
-        "reservePrice": 8598200,
-        "auctionDate": "2025-07-07"
-      },
-      "evidence": [
-        {
-          "category": "IDENTITY",
-          "status": "REPORTED_BY_SOURCE",
-          "assertion": "Residential Flats 601 & 602, built-up area 1900 sq ft with UDS",
-          "confidence": 0.9
-        },
-        {
-          "category": "AUTHORITY",
-          "status": "REPORTED_BY_SOURCE",
-          "assertion": "Record appears in IBBI liquidation auction notice index.",
-          "confidence": 0.95
-        },
-        {
-          "category": "TITLE",
-          "status": "MISSING",
-          "assertion": "Underlying title/interest evidence not yet collected.",
-          "confidence": 0
-        },
-        {
-          "category": "POSSESSION",
-          "status": "MISSING",
-          "assertion": "Possession evidence not yet collected.",
-          "confidence": 0
-        },
-        {
-          "category": "ENCUMBRANCE",
-          "status": "MISSING",
-          "assertion": "Encumbrance search not yet completed.",
-          "confidence": 0
-        },
-        {
-          "category": "LITIGATION",
-          "status": "MISSING",
-          "assertion": "Independent litigation search not yet completed.",
-          "confidence": 0
-        },
-        {
-          "category": "VALUATION",
-          "status": "MISSING",
-          "assertion": "Independent valuation/market evidence not yet collected.",
-          "confidence": 0
-        },
-        {
-          "category": "AUCTION",
-          "status": "REPORTED_BY_SOURCE",
-          "assertion": "Auction date and reserve price reported in IBBI listing; underlying auction document requires review.",
-          "confidence": 0.85
-        }
-      ],
-      "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-026",
       "source": {
         "authority": "IBBI",
         "sourceType": "auction-listing",
-        "observedAt": "2026-10-06"
+        "observedAt": "2026-10-06",
+        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all%2F1000&page=83"
       },
       "asset": {
         "corporateDebtor": "COROMANDEL AGRICO PRIVATE LIMITED",
@@ -284,7 +216,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-027",
@@ -355,7 +288,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-028",
@@ -426,7 +360,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-029",
@@ -497,7 +432,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-030",
@@ -568,7 +504,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-031",
@@ -639,7 +576,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-032",
@@ -710,7 +648,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-033",
@@ -781,7 +720,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-034",
@@ -852,7 +792,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-035",
@@ -923,7 +864,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-036",
@@ -994,7 +936,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-037",
@@ -1065,7 +1008,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-038",
@@ -1136,7 +1080,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-039",
@@ -1207,7 +1152,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-040",
@@ -1285,7 +1231,7 @@
       "source": {
         "authority": "IBBI",
         "sourceType": "auction-listing",
-        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=54",
+        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all%2F1000&page=62",
         "observedAt": "2026-10-06"
       },
       "asset": {
@@ -1295,8 +1241,8 @@
         "description": "Agricultural land, Survey No. 175/1 & 175/2, Village Divi, about 26,400 sq m"
       },
       "auction": {
-        "reservePrice": 2677950,
-        "auctionDate": "2026-03-13"
+        "reservePrice": 3570600,
+        "auctionDate": "2026-02-11"
       },
       "evidence": [
         {
@@ -1349,78 +1295,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
-    },
-    {
-      "caseId": "P1-IBBI-042",
-      "source": {
-        "authority": "IBBI",
-        "sourceType": "auction-listing",
-        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=54",
-        "observedAt": "2026-10-06"
-      },
-      "asset": {
-        "corporateDebtor": "UNIQUE SUGARS LIMITED",
-        "class": "AGRICULTURAL",
-        "subtype": "AGRICULTURAL_LAND",
-        "description": "Agricultural land, separate parcel"
-      },
-      "auction": {
-        "reservePrice": 15118875,
-        "auctionDate": "2026-03-13"
-      },
-      "evidence": [
-        {
-          "category": "IDENTITY",
-          "status": "REPORTED_BY_SOURCE",
-          "assertion": "Agricultural land, separate parcel",
-          "confidence": 0.9
-        },
-        {
-          "category": "AUTHORITY",
-          "status": "REPORTED_BY_SOURCE",
-          "assertion": "Record appears in IBBI liquidation auction notice index.",
-          "confidence": 0.95
-        },
-        {
-          "category": "TITLE",
-          "status": "MISSING",
-          "assertion": "Underlying title/interest evidence not yet collected.",
-          "confidence": 0
-        },
-        {
-          "category": "POSSESSION",
-          "status": "MISSING",
-          "assertion": "Possession evidence not yet collected.",
-          "confidence": 0
-        },
-        {
-          "category": "ENCUMBRANCE",
-          "status": "MISSING",
-          "assertion": "Encumbrance search not yet completed.",
-          "confidence": 0
-        },
-        {
-          "category": "LITIGATION",
-          "status": "MISSING",
-          "assertion": "Independent litigation search not yet completed.",
-          "confidence": 0
-        },
-        {
-          "category": "VALUATION",
-          "status": "MISSING",
-          "assertion": "Independent valuation/market evidence not yet collected.",
-          "confidence": 0
-        },
-        {
-          "category": "AUCTION",
-          "status": "REPORTED_BY_SOURCE",
-          "assertion": "Auction date and reserve price reported in IBBI listing; underlying auction document requires review.",
-          "confidence": 0.85
-        }
-      ],
-      "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-043",
@@ -1491,7 +1367,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-044",
@@ -1562,7 +1439,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-045",
@@ -1633,7 +1511,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-046",
@@ -1704,7 +1583,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-047",
@@ -1775,14 +1655,15 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-048",
       "source": {
         "authority": "IBBI",
         "sourceType": "auction-listing",
-        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=88",
+        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?date=&filter_by=all&page=95&reserve_price=&title=",
         "observedAt": "2026-10-06"
       },
       "asset": {
@@ -1846,7 +1727,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-049",
@@ -1987,7 +1869,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-051",
@@ -2129,7 +2012,8 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
-      "decision": "NOT_EVALUATED"
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
     },
     {
       "caseId": "P1-IBBI-053",
@@ -2200,8 +2084,298 @@
         }
       ],
       "status": "DISCOVERY_ONLY",
+      "decision": "NOT_EVALUATED",
+      "sourceVerificationStatus": "VERIFIED"
+    },
+    {
+      "caseId": "P1-IBBI-025",
+      "source": {
+        "authority": "IBBI",
+        "sourceType": "auction-listing",
+        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?date=&filter_by=all&page=130&reserve_price=&title=",
+        "observedAt": "2026-10-06"
+      },
+      "sourceVerificationStatus": "VERIFIED",
+      "asset": {
+        "corporateDebtor": "SAGAR INFRA RAIL INTERNATIONAL LIMITED",
+        "class": "RESIDENTIAL",
+        "subtype": "FLAT",
+        "description": "Residential Flat no. 601 & 602 (5th Floor), built-up area 1900 sq ft with undivided share of land 48 sq yards"
+      },
+      "auction": {
+        "reservePrice": 10615000,
+        "auctionDate": "2025-05-23"
+      },
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Residential Flat no. 601 & 602 (5th Floor), built-up area 1900 sq ft with undivided share of land 48 sq yards",
+          "confidence": 0.95
+        },
+        {
+          "category": "AUTHORITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Corporate debtor, auction date, reserve price and asset nature reconciled to the IBBI auction notice listing.",
+          "confidence": 0.95
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Underlying title/interest evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "POSSESSION",
+          "status": "MISSING",
+          "assertion": "Possession evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Independent encumbrance search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Independent litigation search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "VALUATION",
+          "status": "MISSING",
+          "assertion": "Independent valuation/market evidence not yet collected.",
+          "confidence": 0
+        },
+        {
+          "category": "AUCTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Auction date and reserve price reconciled to the IBBI notice listing.",
+          "confidence": 0.95
+        }
+      ],
+      "status": "DISCOVERY_ONLY",
+      "decision": "NOT_EVALUATED"
+    },
+    {
+      "caseId": "P1-IBBI-054",
+      "source": {
+        "authority": "IBBI",
+        "sourceType": "auction-listing",
+        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=24",
+        "observedAt": "2026-10-06"
+      },
+      "sourceVerificationStatus": "VERIFIED",
+      "asset": {
+        "corporateDebtor": "BAID INDUSTRIES PRIVATE LIMITED",
+        "class": "INDUSTRIAL",
+        "subtype": "LAND_BUILDING",
+        "description": "Land and Building, along with Plant and Machinery"
+      },
+      "auction": {
+        "reservePrice": 1595000000,
+        "auctionDate": "2026-07-06"
+      },
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Land and Building, along with Plant and Machinery",
+          "confidence": 0.95
+        },
+        {
+          "category": "AUTHORITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Corporate debtor, auction date, reserve price and asset nature reconciled to the IBBI auction notice listing.",
+          "confidence": 0.95
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Underlying title/interest evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "POSSESSION",
+          "status": "MISSING",
+          "assertion": "Possession evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Independent encumbrance search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Independent litigation search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "VALUATION",
+          "status": "MISSING",
+          "assertion": "Independent valuation/market evidence not yet collected.",
+          "confidence": 0
+        },
+        {
+          "category": "AUCTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Auction date and reserve price reconciled to the IBBI notice listing.",
+          "confidence": 0.95
+        }
+      ],
+      "status": "DISCOVERY_ONLY",
+      "decision": "NOT_EVALUATED"
+    },
+    {
+      "caseId": "P1-IBBI-055",
+      "source": {
+        "authority": "IBBI",
+        "sourceType": "auction-listing",
+        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all%2F1000&page=118",
+        "observedAt": "2026-10-06"
+      },
+      "sourceVerificationStatus": "VERIFIED",
+      "asset": {
+        "corporateDebtor": "ARCHON ENGICON LIMITED",
+        "class": "COMPOSITE",
+        "subtype": "LAND_BUILDING_PLANT_MACHINERY_FINANCIAL_ASSETS",
+        "description": "Sale of corporate debtor as going concern with land and building, plant and machinery and financial assets"
+      },
+      "auction": {
+        "reservePrice": 4662000000,
+        "auctionDate": "2025-07-09"
+      },
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Sale of corporate debtor as going concern with land and building, plant and machinery and financial assets",
+          "confidence": 0.95
+        },
+        {
+          "category": "AUTHORITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Corporate debtor, auction date, reserve price and asset nature reconciled to the IBBI auction notice listing.",
+          "confidence": 0.95
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Underlying title/interest evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "POSSESSION",
+          "status": "MISSING",
+          "assertion": "Possession evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Independent encumbrance search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Independent litigation search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "VALUATION",
+          "status": "MISSING",
+          "assertion": "Independent valuation/market evidence not yet collected.",
+          "confidence": 0
+        },
+        {
+          "category": "AUCTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Auction date and reserve price reconciled to the IBBI notice listing.",
+          "confidence": 0.95
+        }
+      ],
+      "status": "DISCOVERY_ONLY",
+      "decision": "NOT_EVALUATED"
+    },
+    {
+      "caseId": "P1-IBBI-056",
+      "source": {
+        "authority": "IBBI",
+        "sourceType": "auction-listing",
+        "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all%2F1000&page=62",
+        "observedAt": "2026-10-06"
+      },
+      "sourceVerificationStatus": "VERIFIED",
+      "asset": {
+        "corporateDebtor": "UNIQUE SUGARS LIMITED",
+        "class": "AGRICULTURAL",
+        "subtype": "AGRICULTURAL_LAND",
+        "description": "Agricultural land, Survey No. 296/1/A, near Universal Starch Chemical Alloyed Ltd, Village Dondaicha, Taluka Shindkheda, District Dhule, about 15,100 sq m"
+      },
+      "auction": {
+        "reservePrice": 20158500,
+        "auctionDate": "2026-02-11"
+      },
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Agricultural land, Survey No. 296/1/A, near Universal Starch Chemical Alloyed Ltd, Village Dondaicha, Taluka Shindkheda, District Dhule, about 15,100 sq m",
+          "confidence": 0.95
+        },
+        {
+          "category": "AUTHORITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Corporate debtor, auction date, reserve price and asset nature reconciled to the IBBI auction notice listing.",
+          "confidence": 0.95
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Underlying title/interest evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "POSSESSION",
+          "status": "MISSING",
+          "assertion": "Possession evidence not yet independently collected.",
+          "confidence": 0
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Independent encumbrance search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Independent litigation search not yet completed.",
+          "confidence": 0
+        },
+        {
+          "category": "VALUATION",
+          "status": "MISSING",
+          "assertion": "Independent valuation/market evidence not yet collected.",
+          "confidence": 0
+        },
+        {
+          "category": "AUCTION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Auction date and reserve price reconciled to the IBBI notice listing.",
+          "confidence": 0.95
+        }
+      ],
+      "status": "DISCOVERY_ONLY",
       "decision": "NOT_EVALUATED"
     }
   ],
-  "status": "CANDIDATE_DISCOVERY_PENDING_VERIFICATION"
+  "status": "CANDIDATE_DISCOVERY_WITH_53_CERTIFICATION_ELIGIBLE_SOURCE_RECORDS_PENDING_CASE_EVALUATION",
+  "verificationNote": "sourceVerificationStatus=VERIFIED means only that corporate debtor, auction date, reserve price, asset nature and IBBI source reference were reconciled. It does NOT verify title, possession, encumbrance, litigation or valuation."
 }
