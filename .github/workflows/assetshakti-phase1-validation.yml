@@ -24,4 +24,5 @@ jobs:
       - run: npx tsx assetshakti/phase1/decision-engine.test.ts
       - run: npm run assetshakti:test:case-engine
       - run: npm run assetshakti:test:decomposition
+      - run: npm run assetshakti:test:reconciliation
       - run: npm run assetshakti:evaluate:cases
