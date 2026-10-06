@@ -62,3 +62,15 @@ The combined corpus currently contains **52 certification-eligible source record
 Three supplemental candidates remain explicitly pending and do not count toward certification. Source reconciliation verifies only the corporate debtor, auction date, reserve price, asset nature and authoritative IBBI reference; it does not verify title, possession, encumbrances, litigation or valuation.
 
 **Corpus-size gate: PASS (52/50). Case-level evaluation and Shakti certification gates remain open.**
+
+
+### 2026-10-06 auction-term control
+
+A production validation run must include cases where auction notices expose:
+- explicit forfeiture language;
+- extended payment with interest;
+- “as is” sale conditions;
+- disclosed title/possession limitations;
+- bidder eligibility restrictions.
+
+Acceptance criterion: a case with materially missing or contradictory auction-term evidence cannot receive BID_READY. This control is independent of the numerical score.
