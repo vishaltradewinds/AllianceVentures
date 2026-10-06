@@ -11,6 +11,7 @@ const normalizeCase = (raw: any): CaseEvaluationInput => ({
 const inputs: CaseEvaluationInput[] = [
   load("assetshakti/phase1/validation-case-vs-matrix.json") as CaseEvaluationInput,
   ...(load("assetshakti/phase1/case-evaluation-negative-controls.json") as CaseEvaluationInput[]),
+  ...(load("assetshakti/phase1/real-evidence-pilot.json") as CaseEvaluationInput[]),
 ];
 
 const results = inputs.map(normalizeCase).map(evaluateCase);
