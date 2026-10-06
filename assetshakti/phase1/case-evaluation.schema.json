@@ -136,6 +136,12 @@
         },
         "latestApplicableReference": {
           "type": "string"
+        },
+        "supersededReferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }
