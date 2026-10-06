@@ -1,0 +1,21 @@
+{
+  "observedAt": "2026-10-06T00:00:00Z",
+  "sources": [
+    {"name":"IBBI Liquidation Auction Notices","url":"https://ibbi.gov.in/liquidation-auction-notices/lists"},
+    {"name":"IBBI Legal Framework","url":"https://ibbi.gov.in/legal-framework/circulars"},
+    {"name":"BAANKNET","url":"https://baanknet.com/eauction-psb/"}
+  ],
+  "regulatory": {
+    "liquidationRegulationsAmendedThrough":"2026-06-02",
+    "valuationGuidance2026":true,
+    "dueDiligenceCircular":"2026-09-09"
+  },
+  "architecture": {
+    "transactionChannel":"BAANKNET",
+    "intelligenceLayer":"AssetShakti",
+    "automatedBidding":false,
+    "titleGuarantee":false,
+    "unrestrictedBaanknetScraping":false
+  },
+  "meaningfulChangePolicy":"Alert only when a material change affects opportunity, evidence quality, legal feasibility or technical feasibility."
+}
