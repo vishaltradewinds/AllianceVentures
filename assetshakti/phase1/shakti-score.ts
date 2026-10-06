@@ -20,12 +20,10 @@ function statusWeight(status: EvidenceItem["status"]): number {
 function categoryScore(evidence: EvidenceItem[], categories: string[]): number {
   const items = evidence.filter(e => categories.includes(e.category));
   if (!items.length) return 0;
-
   const weighted = items.reduce(
     (sum, e) => sum + statusWeight(e.status) * Math.max(0, Math.min(1, e.confidence)),
     0
   );
-
   return Math.round((weighted / items.length) * 100);
 }
 
@@ -39,22 +37,21 @@ function overallCoverage(evidence: EvidenceItem[]): number {
 }
 
 function hasCriticalFailure(evidence: EvidenceItem[]): boolean {
-  return evidence.some(
-    e => CRITICAL.has(e.category) &&
-      (e.status === "MISSING" || e.status === "CONTRADICTED")
-  );
+  for (const category of CRITICAL) {
+    const items = evidence.filter(e => e.category === category);
+    // Absence is itself a critical evidence failure. Do not infer safety
+    // from the fact that a source said nothing about the category.
+    if (!items.length) return true;
+    if (items.some(e => e.status === "MISSING" || e.status === "CONTRADICTED")) return true;
+  }
+  return false;
 }
 
 /**
  * Evidence-gated prototype scorer.
- *
- * Important:
- * - Domain scores are now based on evidence relevant to that domain.
- * - Missing/contradicted critical evidence blocks BID_READY and conservatively
- *   produces DO_NOT_BID.
- * - A score never overrides a failed critical gate.
- * - This remains a validation-stage scorer until the 50-case corpus and
- *   error analysis are complete.
+ * Critical evidence is mandatory; absence, MISSING, or CONTRADICTED state
+ * prevents a positive decision. This is not production-certified until the
+ * 50-case corpus and error analysis are complete.
  */
 export function evaluateProperty(asset: PropertyAsset): PropertyAsset["shakti"] {
   const evidence = asset.evidence;
@@ -75,14 +72,5 @@ export function evaluateProperty(asset: PropertyAsset): PropertyAsset["shakti"] 
   else if (criticalGatePassed && coverage >= 85) decision = "BID_READY";
   else if (coverage >= 45) decision = "CONDITIONAL";
 
-  return {
-    legal,
-    physical,
-    location,
-    market,
-    economics,
-    auction,
-    criticalGatePassed,
-    decision
-  };
+  return { legal, physical, location, market, economics, auction, criticalGatePassed, decision };
 }
