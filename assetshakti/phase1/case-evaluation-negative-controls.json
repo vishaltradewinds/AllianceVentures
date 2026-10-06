@@ -1,0 +1,39 @@
+[
+  {
+    "caseId": "P1-NEG-AUCTION-001",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/616097ac3b00cb0a97df43544da04183.pdf",
+      "observedAt": "2026-10-06"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Auction notice identifies the offered asset."
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Notice is issued within the IBBI liquidation auction process."
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "Independent title/interest verification is not established by this control case."
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "Independent possession verification is not established by this control case."
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "CONTRADICTED",
+        "assertion": "Auction notice contains explicit balance-payment default forfeiture language; the control deliberately represents the obligation assessment as adverse/contradictory pending case-specific reconciliation."
+      }
+    ],
+    "notes": "Negative control for machine enforcement of auction-term risk. IBBI source explicitly states that default in balance consideration can entail forfeiture of the entire amount deposited."
+  }
+]
