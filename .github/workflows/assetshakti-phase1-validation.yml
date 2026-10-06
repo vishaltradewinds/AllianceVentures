@@ -22,3 +22,5 @@ jobs:
       - run: npm ci
       - run: npm run assetshakti:validate
       - run: npx tsx assetshakti/phase1/decision-engine.test.ts
+      - run: npm run assetshakti:test:case-engine
+      - run: npm run assetshakti:evaluate:cases
