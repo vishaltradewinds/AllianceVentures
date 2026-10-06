@@ -1,5 +1,5 @@
 {
-  "status": "VALIDATION_ONLY",
+  "status": "DISCOVERY_VALIDATION_CORPUS",
   "observedAt": "2026-10-06",
   "jurisdiction": "Uttar Pradesh",
   "sourcePolicy": "Official UP-RERA records are authoritative for the fields they publish; registration is not treated as independent proof of title, construction quality, market value or investment suitability.",
@@ -761,7 +761,2228 @@
         "country": "India",
         "state": "Telangana"
       }
+    },
+    {
+      "caseId": "P2-MH-003",
+      "projectId": "P2-MH-003",
+      "projectName": "RADHA RAMAN APARTMENT",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RADHA RAMAN APARTMENT.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-004",
+      "projectId": "P2-MH-004",
+      "projectName": "SPRING DIVISHA",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies SPRING DIVISHA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-005",
+      "projectId": "P2-MH-005",
+      "projectName": "Sumangal Vihar",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Sumangal Vihar.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-006",
+      "projectId": "P2-MH-006",
+      "projectName": "K T PREMIA",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies K T PREMIA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-007",
+      "projectId": "P2-MH-007",
+      "projectName": "BELLA VITA",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies BELLA VITA.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-008",
+      "projectId": "P2-MH-008",
+      "projectName": "THANEKAR PARKLAND",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies THANEKAR PARKLAND.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-009",
+      "projectId": "P2-MH-009",
+      "projectName": "RAAJ SWAPNAPURTI",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies RAAJ SWAPNAPURTI.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-010",
+      "projectId": "P2-MH-010",
+      "projectName": "Royal Empire",
+      "projectClass": "RESIDENTIAL",
+      "location": "Maharashtra, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Maharashtra"
+      },
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Maharashtra.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Maharashtra RERA source identifies Royal Empire.",
+          "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-RJ-001",
+      "projectId": "P2-RJ-001",
+      "projectName": "UNIVERSAL CITY",
+      "projectClass": "PLOTTED_DEVELOPMENT",
+      "location": "Rajasthan, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Rajasthan"
+      },
+      "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Rajasthan.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies UNIVERSAL CITY.",
+          "source": "https://rera.rajasthan.gov.in/Content/blob-storage/e/a/ea4e4ec0f9668df44d4aa39250a33d832faa221bc40046059773e274407f2bc0.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-RJ-002",
+      "projectId": "P2-RJ-002",
+      "projectName": "SHALIMAR",
+      "projectClass": "MIXED_USE",
+      "location": "Rajasthan, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Rajasthan"
+      },
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Rajasthan.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHALIMAR.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/c06feb54-605e-4832-97d8-8b4eb2b98250-10284.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-RJ-003",
+      "projectId": "P2-RJ-003",
+      "projectName": "AAYAM",
+      "projectClass": "RESIDENTIAL",
+      "location": "Rajasthan, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Rajasthan"
+      },
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Rajasthan.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies AAYAM.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/Certificate/8c67507f-bfa5-4680-ac55-dce94e2f32dc-10257.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-RJ-004",
+      "projectId": "P2-RJ-004",
+      "projectName": "SHUBHAM RESIDENCY TOWNSHIP",
+      "projectClass": "PLOTTED_DEVELOPMENT",
+      "location": "Rajasthan, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Rajasthan"
+      },
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Rajasthan.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHUBHAM RESIDENCY TOWNSHIP.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/f9bb33ca-48ee-439c-b04c-de4d4c255ca8.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-RJ-005",
+      "projectId": "P2-RJ-005",
+      "projectName": "Parth Elegance I",
+      "projectClass": "RESIDENTIAL",
+      "location": "Rajasthan, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Rajasthan"
+      },
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Rajasthan.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies Parth Elegance I.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/1dff5b83-962a-4596-90c8-28efed7a5049.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-RJ-006",
+      "projectId": "P2-RJ-006",
+      "projectName": "SHREE KRISHNA RESIDENCY XI",
+      "projectClass": "RESIDENTIAL",
+      "location": "Rajasthan, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Rajasthan"
+      },
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Rajasthan.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies SHREE KRISHNA RESIDENCY XI.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/349d9914-6e41-432e-b212-0e26bdd09ff7.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-RJ-007",
+      "projectId": "P2-RJ-007",
+      "projectName": "ARYA SHINE",
+      "projectClass": "RESIDENTIAL",
+      "location": "Rajasthan, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Rajasthan"
+      },
+      "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Rajasthan.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Rajasthan RERA source identifies ARYA SHINE.",
+          "source": "https://rera.rajasthan.gov.in/app/Content/uploads/QPR/R1/6b732c19-3dbb-4e90-bd6e-00a045d4ac7c.pdf",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-TG-004",
+      "projectId": "P2-TG-004",
+      "projectName": "Arna",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      },
+      "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Telangana.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies Arna.",
+          "source": "https://rera.telangana.gov.in/Proceedings-TG-RERA-15121976Proceedings",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-TG-005",
+      "projectId": "P2-TG-005",
+      "projectName": "GVR CLASSIC",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      },
+      "source": "https://rera.telangana.gov.in/Home/Revoked",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Telangana.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies GVR CLASSIC.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-TG-006",
+      "projectId": "P2-TG-006",
+      "projectName": "KESINENI NORTHSCAPE",
+      "projectClass": "RESIDENTIAL",
+      "location": "Telangana, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      },
+      "source": "https://rera.telangana.gov.in/Home/Revoked",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Telangana.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies KESINENI NORTHSCAPE.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-TG-007",
+      "projectId": "P2-TG-007",
+      "projectName": "EPITOME INTEGRATED CITY - PHASE 2",
+      "projectClass": "TOWNSHIP",
+      "location": "Telangana, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      },
+      "source": "https://rera.telangana.gov.in/Home/Revoked",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Telangana.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies EPITOME INTEGRATED CITY - PHASE 2.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-TG-008",
+      "projectId": "P2-TG-008",
+      "projectName": "SPECTRA TECH TOWERS",
+      "projectClass": "COMMERCIAL",
+      "location": "Telangana, India",
+      "jurisdiction": {
+        "country": "India",
+        "state": "Telangana"
+      },
+      "source": "https://rera.telangana.gov.in/Home/Revoked",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project is located in Telangana.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 1
+        },
+        {
+          "category": "PROMOTER",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "RERA",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING",
+          "assertion": "Official Telangana RERA source identifies SPECTRA TECH TOWERS.",
+          "source": "https://rera.telangana.gov.in/Home/Revoked",
+          "observedAt": "2026-10-06",
+          "confidence": 0.8
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
     }
   ],
-  "validationNote": "These cases demonstrate source capture and critical missing-evidence behavior. They do not constitute production certification or investment recommendations."
+  "validationNote": "These cases demonstrate source capture and critical missing-evidence behavior. They do not constitute production certification or investment recommendations.",
+  "corpusNote": "Records sourced from official state RERA sources are discovery/validation records only. Registration or listing does not establish title, approvals, construction reality, economics or buyer readiness."
 }
