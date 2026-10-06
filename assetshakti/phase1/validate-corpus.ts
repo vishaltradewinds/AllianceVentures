@@ -7,7 +7,7 @@ const load = (name: string) =>
 
 const base = load("validation-corpus.json") as { records: any[] };
 const supplement = load("validation-corpus-supplement.json") as { records: any[] };
-const corpus = { records: [...base.records, ...supplement.records] };
+const corpus = { records: [...base.records, ...supplement.records.filter(r => r.sourceVerificationStatus === "VERIFIED")] };
 
 const TARGET = 50;
 const REQUIRED = {
@@ -20,6 +20,7 @@ const REQUIRED = {
 };
 
 const errors: string[] = [];
+const candidateCount = supplement.records.filter(r => r.sourceVerificationStatus !== "VERIFIED").length;
 const seen = new Set<string>();
 
 for (const record of corpus.records) {
@@ -78,7 +79,8 @@ if (negativeResult.decision !== negative.expectedDecision) {
 }
 
 console.log("AssetShakti Phase-1 validation");
-console.log(`Corpus: ${corpus.records.length}/${TARGET} records`);
+console.log(`Certified-eligible corpus: ${corpus.records.length}/${TARGET} records`);
+console.log(`Pending provenance candidates: ${candidateCount}`);
 console.log("Class counts:", counts);
 console.log(`Remaining to certification: ${Math.max(0, TARGET - corpus.records.length)}`);
 console.log(`Negative control: ${negative.caseId} => ${negativeResult.decision}`);
