@@ -1,0 +1,9 @@
+{
+  "schemaVersion":"0.1.0",
+  "source":"IBBI",
+  "sourceRecord":{"noticeUrl":"","noticeDate":"","auctionDate":"","corporateDebtor":"","insolvencyProfessional":""},
+  "asset":{"class":"","subtype":"","description":"","location":"","area":"","reservePrice":null},
+  "auction":{"emdAmount":null,"emdDeadline":"","saleBasis":"","possessionType":"UNKNOWN"},
+  "evidence":[{"category":"","status":"","assertion":"","sourceReference":"","confidence":0}],
+  "decision":{"state":"INSUFFICIENT_EVIDENCE","criticalGatePassed":false}
+}
