@@ -17,6 +17,45 @@ Pipeline:
 8. Apply auction constraints
 9. Produce an evidence-traceable Shakti decision
 
+## Stakeholder operating model
+
+AssetShakti is a multi-stakeholder intelligence layer. It does not replace the auction transaction channel, professional advice, regulators, courts, or statutory records.
+
+### Tier 1 — Decision makers / primary customers
+- Investors and auction bidders
+- Property investors, HNIs and family offices
+- Corporates and strategic buyers
+- Real-estate professionals
+- ARCs and distressed-asset investors
+- SMEs and entrepreneurs seeking distressed commercial/industrial assets
+
+Core workflow: **“Should I commit capital to this auction asset, and what must I verify before bidding?”**
+
+### Tier 2 — Evidence and professional users
+- Insolvency Professionals / Liquidators
+- Lawyers and legal due-diligence teams
+- Registered valuers
+- Chartered Engineers / technical consultants
+- Surveyors / architects
+- Environmental and other specialist verification professionals
+
+These stakeholders validate, contribute, or challenge evidence. Licensed/statutory professional judgment remains authoritative where required.
+
+### Tier 3 — Institutional / ecosystem stakeholders
+- Banks and public-sector banks
+- Asset Reconstruction Companies
+- Institutional investors
+- Government and statutory authorities
+- Regulators, courts and tribunals
+- Approved data/evidence partners
+
+### Role separation
+**BAANKNET = transaction/execution channel**
+
+**AssetShakti = evidence + risk + decision intelligence layer**
+
+AssetShakti must not become a BAANKNET clone, perform automated bidding, guarantee title, or represent AI output as legal/valuation certification.
+
 ## Property classes
 - Residential
 - Commercial
