@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "purpose": "Supplemental real IBBI auction-list discovery records for Phase-1 class-coverage validation. These records are not independently verified.",
+  "purpose": "Candidate real IBBI auction-list discovery records. These candidates are intentionally NOT counted toward the certified 50-case sample until each record's corporate debtor, asset class, reserve price, auction date and source URL are independently checked against the authoritative IBBI listing or underlying auction notice.",
   "observationDate": "2026-10-06",
   "records": [
     {
@@ -2202,5 +2202,6 @@
       "status": "DISCOVERY_ONLY",
       "decision": "NOT_EVALUATED"
     }
-  ]
+  ],
+  "status": "CANDIDATE_DISCOVERY_PENDING_VERIFICATION"
 }
