@@ -5,75 +5,495 @@
   "sourcePolicy": "Official UP-RERA records are authoritative for the fields they publish; registration is not treated as independent proof of title, construction quality, market value or investment suitability.",
   "cases": [
     {
-      "caseId":"P2-UP-001",
-      "projectId":"UPRERAPRJ837374",
-      "projectName":"County One O Seven",
-      "projectClass":"RESIDENTIAL",
-      "location":"Gautam Buddha Nagar, Uttar Pradesh",
-      "source":"https://www.up-rera.in/viewprojects",
-      "evidence":[
-        {"category":"IDENTITY","status":"VERIFIED","assertion":"UP-RERA project record identifies County One O Seven and registration UPRERAPRJ837374.","source":"UP-RERA project detail","observedAt":"2026-10-06"},
-        {"category":"PROMOTER","status":"VERIFIED","assertion":"UP-RERA record identifies Countyconcept Developers LLP.","source":"UP-RERA project detail","observedAt":"2026-10-06"},
-        {"category":"JURISDICTION","status":"VERIFIED","assertion":"Project record identifies Gautam Buddha Nagar, Uttar Pradesh.","source":"UP-RERA project detail","observedAt":"2026-10-06"},
-        {"category":"PLANNING","status":"REPORTED_BY_SOURCE","assertion":"Project detail exposes competent-authority and permit fields.","source":"UP-RERA project detail","observedAt":"2026-10-06"},
-        {"category":"TITLE","status":"MISSING"},
-        {"category":"LAND_RIGHTS","status":"MISSING"},
-        {"category":"RERA","status":"VERIFIED","assertion":"Project is represented in the UP-RERA registered project system.","source":"UP-RERA project detail","observedAt":"2026-10-06"},
-        {"category":"BUILDING_APPROVAL","status":"REPORTED_BY_SOURCE","assertion":"Project detail provides permit and uploaded plan/document fields.","source":"UP-RERA project detail","observedAt":"2026-10-06"},
-        {"category":"CONSTRUCTION","status":"MISSING"},
-        {"category":"PRICING","status":"MISSING"},
-        {"category":"LITIGATION","status":"MISSING"},
-        {"category":"ENCUMBRANCE","status":"MISSING"}
+      "caseId": "P2-UP-001",
+      "projectId": "UPRERAPRJ837374",
+      "projectName": "County One O Seven",
+      "projectClass": "RESIDENTIAL",
+      "location": "Gautam Buddha Nagar, Uttar Pradesh",
+      "source": "https://www.up-rera.in/viewprojects",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "VERIFIED",
+          "assertion": "UP-RERA project record identifies County One O Seven and registration UPRERAPRJ837374.",
+          "source": "UP-RERA project detail",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "PROMOTER",
+          "status": "VERIFIED",
+          "assertion": "UP-RERA record identifies Countyconcept Developers LLP.",
+          "source": "UP-RERA project detail",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project record identifies Gautam Buddha Nagar, Uttar Pradesh.",
+          "source": "UP-RERA project detail",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "PLANNING",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Project detail exposes competent-authority and permit fields.",
+          "source": "UP-RERA project detail",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "RERA",
+          "status": "VERIFIED",
+          "assertion": "Project is represented in the UP-RERA registered project system.",
+          "source": "UP-RERA project detail",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Project detail provides permit and uploaded plan/document fields.",
+          "source": "UP-RERA project detail",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
       ],
-      "expectedDecision":"INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
     },
     {
-      "caseId":"P2-UP-002",
-      "projectId":"UPRERAPRJ321247/08/2024",
-      "projectName":"Aradhyam Spa City Phase 1",
-      "projectClass":"MIXED_USE",
-      "location":"Dasna, Ghaziabad, Uttar Pradesh",
-      "source":"https://www.up-rera.in/ViewDocument?Param=412311100819.pdf",
-      "evidence":[
-        {"category":"IDENTITY","status":"VERIFIED","assertion":"UP-RERA Form C identifies Aradhyam Spa City Phase 1 and its project registration number.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"PROMOTER","status":"VERIFIED","assertion":"UP-RERA Form C identifies the named promoters.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"JURISDICTION","status":"VERIFIED","assertion":"Project address is Village Dasna, Ghaziabad, Uttar Pradesh.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"RERA","status":"VERIFIED","assertion":"Registration certificate states registration under Section 5 of the Act.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"TITLE","status":"MISSING"},
-        {"category":"LAND_RIGHTS","status":"MISSING"},
-        {"category":"PLANNING","status":"MISSING"},
-        {"category":"BUILDING_APPROVAL","status":"MISSING"},
-        {"category":"CONSTRUCTION","status":"MISSING"},
-        {"category":"PRICING","status":"MISSING"},
-        {"category":"LITIGATION","status":"MISSING"},
-        {"category":"ENCUMBRANCE","status":"MISSING"}
+      "caseId": "P2-UP-002",
+      "projectId": "UPRERAPRJ321247/08/2024",
+      "projectName": "Aradhyam Spa City Phase 1",
+      "projectClass": "MIXED_USE",
+      "location": "Dasna, Ghaziabad, Uttar Pradesh",
+      "source": "https://www.up-rera.in/ViewDocument?Param=412311100819.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "VERIFIED",
+          "assertion": "UP-RERA Form C identifies Aradhyam Spa City Phase 1 and its project registration number.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "PROMOTER",
+          "status": "VERIFIED",
+          "assertion": "UP-RERA Form C identifies the named promoters.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project address is Village Dasna, Ghaziabad, Uttar Pradesh.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "VERIFIED",
+          "assertion": "Registration certificate states registration under Section 5 of the Act.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
       ],
-      "expectedDecision":"INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
     },
     {
-      "caseId":"P2-UP-003",
-      "projectId":"UPRERAPRJ255302/08/2025",
-      "projectName":"FairField Residency",
-      "projectClass":"RESIDENTIAL",
-      "location":"Meerut, Uttar Pradesh",
-      "source":"https://www.up-rera.in/ViewDocument?Param=460451636280.pdf",
-      "evidence":[
-        {"category":"IDENTITY","status":"VERIFIED","assertion":"UP-RERA Form C identifies FairField Residency and its project registration number.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"PROMOTER","status":"VERIFIED","assertion":"UP-RERA Form C identifies Shakuntalam Habitats Private Limited.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"JURISDICTION","status":"VERIFIED","assertion":"Project record identifies Meerut, Uttar Pradesh.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"RERA","status":"VERIFIED","assertion":"UP-RERA Form C records the project registration.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"POSSESSION","status":"REPORTED_BY_SOURCE","assertion":"Proposed completion date is 08-06-2030.","source":"UP-RERA Form C","observedAt":"2026-10-06"},
-        {"category":"TITLE","status":"MISSING"},
-        {"category":"LAND_RIGHTS","status":"MISSING"},
-        {"category":"PLANNING","status":"MISSING"},
-        {"category":"BUILDING_APPROVAL","status":"MISSING"},
-        {"category":"CONSTRUCTION","status":"MISSING"},
-        {"category":"PRICING","status":"MISSING"},
-        {"category":"LITIGATION","status":"MISSING"},
-        {"category":"ENCUMBRANCE","status":"MISSING"}
+      "caseId": "P2-UP-003",
+      "projectId": "UPRERAPRJ255302/08/2025",
+      "projectName": "FairField Residency",
+      "projectClass": "RESIDENTIAL",
+      "location": "Meerut, Uttar Pradesh",
+      "source": "https://www.up-rera.in/ViewDocument?Param=460451636280.pdf",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "VERIFIED",
+          "assertion": "UP-RERA Form C identifies FairField Residency and its project registration number.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "PROMOTER",
+          "status": "VERIFIED",
+          "assertion": "UP-RERA Form C identifies Shakuntalam Habitats Private Limited.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Project record identifies Meerut, Uttar Pradesh.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "VERIFIED",
+          "assertion": "UP-RERA Form C records the project registration.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "POSSESSION",
+          "status": "REPORTED_BY_SOURCE",
+          "assertion": "Proposed completion date is 08-06-2030.",
+          "source": "UP-RERA Form C",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
       ],
-      "expectedDecision":"INSUFFICIENT_EVIDENCE"
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-001",
+      "projectId": "P50500012638",
+      "projectName": "Construction of 14 Rowhouses at Waddhamna Nagpur",
+      "projectClass": "RESIDENTIAL",
+      "location": "Hingna, Nagpur, Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "VERIFIED",
+          "assertion": "MahaRERA search record identifies project P50500012638.",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "PROMOTER",
+          "status": "VERIFIED",
+          "assertion": "MahaRERA search record identifies MHADA (Nagpur Board).",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Search record identifies Hingna, Nagpur, Maharashtra.",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "VERIFIED",
+          "assertion": "Project appears in MahaRERA registered-project search with registration number P50500012638.",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-002",
+      "projectId": "P52900014655",
+      "projectName": "FUTURE CITY",
+      "projectClass": "MIXED_USE",
+      "location": "Sawantwadi, Sindhudurg, Maharashtra",
+      "source": "https://www.maharera.maharashtra.gov.in/projects-search-result",
+      "evidence": [
+        {
+          "category": "IDENTITY",
+          "status": "VERIFIED",
+          "assertion": "MahaRERA search record identifies FUTURE CITY, registration P52900014655.",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "PROMOTER",
+          "status": "VERIFIED",
+          "assertion": "MahaRERA search record identifies Future Infra Builders And Developers LLP.",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "Search record identifies Sawantwadi, Sindhudurg, Maharashtra.",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "VERIFIED",
+          "assertion": "Project appears in MahaRERA registered-project search.",
+          "source": "MahaRERA registered project search",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-GJ-001",
+      "projectId": "GJ-DISCOVERY-001",
+      "projectName": "GujRERA Registered Project Discovery Case",
+      "projectClass": "OTHER",
+      "location": "Gujarat",
+      "source": "https://gujrera.gujarat.gov.in/",
+      "evidence": [
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "GujRERA public portal supports public project search without login.",
+          "source": "GujRERA official portal",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "VERIFIED",
+          "assertion": "GujRERA exposes registered project information and project progress monitoring functions.",
+          "source": "GujRERA official portal",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "IDENTITY",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "caseId": "P2-MH-NEG-001",
+      "projectId": "MAHARERA-REVOKED-DISCOVERY",
+      "projectName": "MahaRERA Revoked/Ab Initio Void Project Discovery Case",
+      "projectClass": "OTHER",
+      "location": "Maharashtra",
+      "source": "https://maharera.maharashtra.gov.in/index.php/mr/projects-registration-revoked-initio-void",
+      "evidence": [
+        {
+          "category": "JURISDICTION",
+          "status": "VERIFIED",
+          "assertion": "MahaRERA maintains an official list of projects whose registration is revoked or ab initio void.",
+          "source": "MahaRERA revoked/ab initio void project list",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "RERA",
+          "status": "CONTRADICTED",
+          "assertion": "A project appearing in the revoked/ab initio void list cannot be treated as an ordinary active registered-project positive control.",
+          "source": "MahaRERA revoked/ab initio void project list",
+          "observedAt": "2026-10-06"
+        },
+        {
+          "category": "IDENTITY",
+          "status": "MISSING"
+        },
+        {
+          "category": "TITLE",
+          "status": "MISSING"
+        },
+        {
+          "category": "LAND_RIGHTS",
+          "status": "MISSING"
+        },
+        {
+          "category": "PLANNING",
+          "status": "MISSING"
+        },
+        {
+          "category": "BUILDING_APPROVAL",
+          "status": "MISSING"
+        },
+        {
+          "category": "CONSTRUCTION",
+          "status": "MISSING"
+        },
+        {
+          "category": "PRICING",
+          "status": "MISSING"
+        },
+        {
+          "category": "LITIGATION",
+          "status": "MISSING"
+        },
+        {
+          "category": "ENCUMBRANCE",
+          "status": "MISSING"
+        }
+      ],
+      "expectedDecision": "DO_NOT_PROCEED"
     }
   ],
-  "validationNote":"These cases demonstrate source capture and critical missing-evidence behavior. They do not constitute production certification or investment recommendations."
+  "validationNote": "These cases demonstrate source capture and critical missing-evidence behavior. They do not constitute production certification or investment recommendations."
 }
