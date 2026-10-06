@@ -3,12 +3,17 @@ import { evaluateCase, type CaseEvaluationInput } from "./case-evaluation-engine
 
 const load = (path: string): unknown => JSON.parse(readFileSync(path, "utf8"));
 
+const normalizeCase = (raw: any): CaseEvaluationInput => ({
+  ...raw,
+  evidence: raw.evidence ?? raw.observedEvidence ?? [],
+});
+
 const inputs: CaseEvaluationInput[] = [
   load("assetshakti/phase1/validation-case-vs-matrix.json") as CaseEvaluationInput,
   ...(load("assetshakti/phase1/case-evaluation-negative-controls.json") as CaseEvaluationInput[]),
 ];
 
-const results = inputs.map(evaluateCase);
+const results = inputs.map(normalizeCase).map(evaluateCase);
 const failed = results.filter((result) => !result.passed);
 
 const report = {
