@@ -13,7 +13,7 @@ assert.equal(evaluatePropertyProductionDecision(base([evidence("CONTRADICTED","P
 assert.equal(evaluatePropertyProductionDecision(base([evidence("MISSING","TITLE")])).decision,"DO_NOT_BID");
 assert.equal(evaluatePropertyProductionDecision(base([evidence("MISSING","BIDDER_OBLIGATION")])).decision,"DO_NOT_BID");
 assert.equal(evaluatePropertyProductionDecision({...base(),evidence:base().evidence.filter(x=>x.category!=="BIDDER_OBLIGATION")}).decision,"DO_NOT_BID");
-const low=base().evidence.filter(x=>x.category!=="VALUATION"&&x.category!=="AUCTION"&&x.category!=="PHYSICAL"&&x.category!=="LOCATION");
+const low=base().evidence.map(x=>({ ...x, status: "UNVERIFIED" as const, confidence: 1 }));
 assert.equal(evaluatePropertyProductionDecision({...base(),evidence:low}).decision,"INSUFFICIENT_EVIDENCE");
 console.log("PASS: AssetShakti Phase 1 decision-engine tests");
 
