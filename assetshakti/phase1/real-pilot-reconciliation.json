@@ -6,20 +6,55 @@
         "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=6",
         "observedAt": "2026-10-06",
         "versionStatus": "SUPERSEDED",
-        "materialChanges": ["Leasehold rights for remaining duration through 22-07-2033."]
+        "materialChanges": [
+          "Leasehold rights for remaining duration through 22-07-2033."
+        ]
       },
       {
         "documentType": "CORRIGENDUM",
         "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?direction=asc&page=469&sort=date_submit",
         "observedAt": "2026-10-06",
         "versionStatus": "CURRENT",
-        "materialChanges": ["IBBI register records a corrigendum; detailed content requires reconciliation before positive decision."]
+        "materialChanges": [
+          "IBBI register records a corrigendum; detailed content requires reconciliation before positive decision."
+        ]
       }
     ],
     "reconciliation": {
       "status": "UNRESOLVED",
-      "materialConflicts": ["Corrigendum requires detailed reconciliation with the auction notice."],
+      "materialConflicts": [
+        "Corrigendum requires detailed reconciliation with the auction notice."
+      ],
       "latestApplicableReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?direction=asc&page=469&sort=date_submit"
+    }
+  },
+  "P1-PILOT-001": {
+    "documentVersions": [
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI liquidation auction register",
+        "observedAt": "2026-10-07",
+        "versionStatus": "CURRENT",
+        "materialChanges": [
+          "07-10-2026 auction; reserve Rs. 9.27 crore; composite Land & Building and Plant & Machinery. Detailed process document and component schedules remain required."
+        ]
+      },
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI official auction notice PDF; unique process record for the 02-02-2026 round",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
+        "materialChanges": [
+          "02-02-2026 auction; reserve Rs. 10.30 crore; slump sale including Land & Building, Plant & Machinery and Financial Assets & Securities; approximately 42,200 sq m land and 2,974 sq m industrial building."
+        ]
+      }
+    ],
+    "reconciliation": {
+      "status": "UNRESOLVED",
+      "materialConflicts": [
+        "Current 07-10-2026 lot must be reconciled against the historical 02-02-2026 composite/slump-sale package; current detailed process document, financial-assets scope and component schedules remain required."
+      ],
+      "latestApplicableReference": "IBBI liquidation auction register"
     }
   }
 }
