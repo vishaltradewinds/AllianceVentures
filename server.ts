@@ -205,17 +205,26 @@ app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_ver
     if (!intakeId) return res.status(400).json({ error: "intakeId is required." });
 
     const files = fs.existsSync(ASSETSHAKTI_EVIDENCE_DIR) ? fs.readdirSync(ASSETSHAKTI_EVIDENCE_DIR) : [];
-    const metadataFile = files.find(name => name.endsWith(".json") && name !== "index.json");
-    if (!metadataFile) return res.status(404).json({ error: "Evidence intake metadata not found." });
 
     let intake: any = null;
-    for (const name of files.filter(n => n.endsWith(".json"))) {
+    for (const name of files.filter(n => n.endsWith(".json") && !n.endsWith(".verification.json"))) {
       try {
         const candidate = JSON.parse(fs.readFileSync(path.join(ASSETSHAKTI_EVIDENCE_DIR, name), "utf8"));
         if (candidate.intakeId === intakeId) { intake = candidate; break; }
       } catch { /* ignore unrelated/corrupt metadata; audit failure is handled below */ }
     }
     if (!intake) return res.status(404).json({ error: "Evidence intake not found." });
+    if (intake.provenanceStatus !== "USER_SUPPLIED_PENDING_VERIFICATION") {
+      return res.status(409).json({ error: "Evidence is not pending verification." });
+    }
+    if (!intake.storedFile || !fs.existsSync(intake.storedFile)) {
+      return res.status(409).json({ error: "Stored evidence file is missing." });
+    }
+    const storedBuffer = fs.readFileSync(intake.storedFile);
+    const storedHash = crypto.createHash("sha256").update(storedBuffer).digest("hex");
+    if (storedHash !== intake.contentSha256) {
+      return res.status(409).json({ error: "Stored evidence hash does not match intake metadata." });
+    }
 
     const result = verifyUserSuppliedEvidence({
       documentIdentityConfirmed: documentIdentityConfirmed === true,
@@ -223,7 +232,7 @@ app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_ver
       applicableRoundConfirmed: applicableRoundConfirmed === true,
       currentOrSupersededStatusConfirmed: currentOrSupersededStatusConfirmed === true,
       corrigendaConsistencyConfirmed: corrigendaConsistencyConfirmed === true,
-      hashIntegrityConfirmed: hashIntegrityConfirmed === true,
+      hashIntegrityConfirmed: storedHash === intake.contentSha256 && hashIntegrityConfirmed === true,
       materialAssertionsHavePageReferences: materialAssertionsHavePageReferences === true,
       verifierNote: typeof verifierNote === "string" ? verifierNote : "",
     });
@@ -241,12 +250,12 @@ app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_ver
         applicableRoundConfirmed: applicableRoundConfirmed === true,
         currentOrSupersededStatusConfirmed: currentOrSupersededStatusConfirmed === true,
         corrigendaConsistencyConfirmed: corrigendaConsistencyConfirmed === true,
-        hashIntegrityConfirmed: hashIntegrityConfirmed === true,
+        hashIntegrityConfirmed: storedHash === intake.contentSha256 && hashIntegrityConfirmed === true,
         materialAssertionsHavePageReferences: materialAssertionsHavePageReferences === true,
       },
       verificationNotes: verifierNote || "",
     };
-    const metadataPath = path.join(ASSETSHAKTI_EVIDENCE_DIR, metadataFile);
+    const metadataPath = intake.storedFile.replace(/\\.pdf$/, ".json");
     const verificationAuditPath = metadataPath.replace(/\\.json$/, ".verification.json");
     fs.writeFileSync(verificationAuditPath, JSON.stringify(updated, null, 2), { flag: "wx" });
 
