@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "1.0",
+  "purpose": "Shakti-gated acquisition queue for current-round auction/process documents that are not safely inferable from the IBBI auction register alone.",
+  "observedAt": "2026-10-07",
+  "productionCertification": "OFF",
+  "rule": "A process document may enter decision evidence only after exact debtor + auction round + document version are verified and its bytes are hashed.",
+  "sourceHierarchy": [
+    "Exact current-round process/tender document issued by liquidator or hosted by the corporate debtor",
+    "IBBI auction record and auction notice for exact-round identity",
+    "BAANKNET current-lot record where publicly accessible",
+    "User-provided document uploaded through AssetShakti evidence intake when public retrieval is unavailable"
+  ],
+  "requests": [
+    {
+      "caseId": "P1-PILOT-001",
+      "debtor": "GENERAL COMPOSITES PRIVATE LIMITED",
+      "auctionRound": "07-10-2026",
+      "required": true,
+      "requiredEvidence": [
+        "current E-Auction Process Information Document / detailed tender terms",
+        "current asset/component schedule",
+        "financial-assets/securities scope if included or excluded",
+        "current corrigendum/addendum set"
+      ],
+      "publicDiscovery": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "fallback": "Request the exact 07-10-2026 process document from the liquidator / BAANKNET and upload the original PDF."
+    },
+    {
+      "caseId": "P1-PILOT-002",
+      "debtor": "HALLMARK LIVING SPACE PRIVATE LIMITED",
+      "auctionRound": "15-10-2026",
+      "required": true,
+      "requiredEvidence": [
+        "18-09-2026 E-Auction Process Information Document",
+        "current corrigenda/addenda",
+        "current title/UDS schedules and data-room references"
+      ],
+      "publicDiscovery": "https://www.hallmarklivingspace.co.in/index.php?project_status=1",
+      "knownCurrentProcessDocument": "https://www.hallmarklivingspace.co.in/assets/liquidation/EAUCTION%20PROCESS%20INFORMATION%20DOCUMENT%2018.09.2026.pdf",
+      "fallback": "If the public copy changes, upload the exact version supplied by the liquidator/BAANKNET."
+    },
+    {
+      "caseId": "P1-PILOT-003",
+      "debtor": "Vysali Pharmaceuticals Limited",
+      "auctionRound": "10-10-2026",
+      "required": true,
+      "requiredEvidence": [
+        "current Edathala-only E-Auction Process Information Document / tender terms",
+        "current corrigendum/addendum set",
+        "current asset/title schedule for Edathala"
+      ],
+      "publicDiscovery": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "fallback": "Request the exact 10-10-2026 Edathala process document from the liquidator / BAANKNET and upload the original PDF. Do not inherit the 17-04-2026 multi-parcel package."
+    },
+    {
+      "caseId": "P1-PILOT-004",
+      "debtor": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED",
+      "auctionRound": "01-10-2026",
+      "required": true,
+      "requiredEvidence": [
+        "current land-plus-built-up-godown process/tender document",
+        "current corrigenda/addenda",
+        "lot-specific title/property schedule",
+        "possession and bidder-obligation terms"
+      ],
+      "publicDiscovery": "https://ibbi.gov.in/claims/auction-notice-process/U67190MH2008PTC179535",
+      "fallback": "Request the exact 01-10-2026 lot document from the liquidator / BAANKNET and upload the original PDF. Do not merge the 29-09-2026 commercial-premises round."
+    },
+    {
+      "caseId": "P1-PILOT-005",
+      "debtor": "JOSAN FOODS PRIVATE LIMITED",
+      "auctionRound": "23-09-2026",
+      "required": true,
+      "requiredEvidence": [
+        "current auction/process document",
+        "current corrigendum",
+        "four underlying lease deeds",
+        "assignment/transfer/consent/fee restrictions",
+        "current possession terms"
+      ],
+      "publicDiscovery": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "fallback": "Request the exact 23-09-2026 process bundle from the liquidator / BAANKNET and upload the original PDFs. Reconcile the recorded corrigendum before decision use."
+    },
+    {
+      "caseId": "P1-PILOT-006",
+      "debtor": "Silverton Spinners Limited",
+      "auctionRound": "22-05-2026",
+      "required": true,
+      "requiredEvidence": [
+        "current process/tender document applicable to the selected option",
+        "all corrigenda/addenda",
+        "lease document for Option 3 / Block B-(2)",
+        "handover/removal terms for Option 2 / Block B-(1)",
+        "component-specific title and valuation evidence"
+      ],
+      "publicDiscovery": "https://ibbi.gov.in/claims/auction-notice-process/L18101WB1994PLC063733",
+      "knownSaleNotice": "https://ibbi.gov.in/uploads/auction_notice_liquidation/76adbba0f83cecb4527aea6c5457b6ad.pdf",
+      "fallback": "Upload the exact process document and option-specific supporting documents supplied by the liquidator / BAANKNET. Preserve Options 1, 2 and 3 as separate lots."
+    }
+  ],
+  "failClosed": [
+    "Register metadata cannot substitute for a detailed process document.",
+    "Historical-round documents cannot satisfy a current-round requirement unless explicitly reconciled.",
+    "A public URL is a discovery reference until the exact bytes are acquired, hashed and identity-verified.",
+    "No title, possession, valuation or bidder-eligibility conclusion may be promoted from this queue alone."
+  ]
+}
