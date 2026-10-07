@@ -3,7 +3,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
 
-const OUT = process.argv[2] ?? ".assetshakti-acquisition";
+// Shakti evidence acquisition: acquisition is never verification.\nconst OUT = process.argv[2] ?? ".assetshakti-acquisition";
 fs.mkdirSync(OUT, { recursive: true });
 
 const sourceUrl = "https://ibbi.gov.in/liquidation-auction-notices/lists";
