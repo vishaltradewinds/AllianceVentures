@@ -16,7 +16,8 @@
     "assetshakti:evaluate:cases": "tsx assetshakti/phase1/run-case-evaluations.ts",
     "assetshakti:test:decomposition": "tsx assetshakti/phase1/asset-package-decomposition.test.ts",
     "assetshakti:test:reconciliation": "tsx assetshakti/phase1/document-reconciliation.test.ts",
-    "assetshakti:test:readiness": "tsx assetshakti/phase1/pilot-evidence-readiness.test.ts"
+    "assetshakti:test:readiness": "tsx assetshakti/phase1/pilot-evidence-readiness.test.ts",
+    "assetshakti:test:six-pilot-certification": "tsx assetshakti/phase1/six-pilot-certification-gate.test.ts"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
