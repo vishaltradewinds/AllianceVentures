@@ -1,6 +1,6 @@
 export type AuctionSourceProvider =
   | "IBBI" | "BAANKNET" | "MSTC" | "SAMIL" | "EAUCTION_INDIA"
-  | "INDIAN_RAILWAYS" | "C1_INDIA";
+  | "INDIAN_RAILWAYS" | "C1_INDIA" | "AUCTION_TIGER";
 
 export type SourceAccessMode =
   | "PUBLIC_DISCOVERY" | "PUBLIC_DOCUMENT" | "USER_SUPPLIED" | "AUTHENTICATED";
@@ -99,6 +99,14 @@ export const AUCTION_SOURCE_ADAPTERS: readonly AuctionSourceAdapter[] = [
     accessMode: "PUBLIC_DISCOVERY", discoveryEnabled: true, documentAcquisitionEnabled: true,
     transactionExecutionEnabled: false, supportedMechanisms: ["ENGLISH", "E_TENDER", "UNKNOWN"],
     supportedAssetCategories: ["PROPERTY", "SCRAP", "OTHER"]
+  },
+  {
+    provider: "AUCTION_TIGER",
+    displayName: "AuctionTiger",
+    authoritativeUrl: "https://www.auctiontiger.in/",
+    accessMode: "PUBLIC_DISCOVERY", discoveryEnabled: true, documentAcquisitionEnabled: true,
+    transactionExecutionEnabled: false, supportedMechanisms: ["ENGLISH", "UNKNOWN"],
+    supportedAssetCategories: ["PROPERTY", "PLANT_AND_MACHINERY", "VEHICLE", "SCRAP", "OTHER"]
   },
   {
     provider: "C1_INDIA",
