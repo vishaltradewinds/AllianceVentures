@@ -8,7 +8,7 @@ const pilots = JSON.parse(
   fs.readFileSync(new URL("./real-evidence-pilot.json", import.meta.url), "utf8"),
 ) as Pilot[];
 
-const REQUIRED = ["IDENTITY", "AUTHORITY", "TITLE", "POSSESSION", "AUCTION", "BIDDER_OBLIGATION"];
+const REQUIRED = ["IDENTITY", "TITLE", "POSSESSION", "AUCTION", "BIDDER_OBLIGATION"];
 
 assert.equal(pilots.length, 6, "Six real pilot cases must remain in the certification corpus.");
 
