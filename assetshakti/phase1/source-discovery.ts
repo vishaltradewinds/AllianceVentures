@@ -37,14 +37,12 @@ function clean(value: string): string {
 function money(value?: string): number | undefined {
   if (!value) return undefined;
   const normalized = value.replace(/[,₹]/g, " ").replace(/\s+/g, " ").trim();
-  const labelledCrore = normalized.match(/(?:reserve\s+price|floor\s+price|price)\s*[:=-]?\s*([0-9]+(?:\.[0-9]+)?)\s*(?:crore|cr)\b/i);
-  if (labelledCrore) return Number(labelledCrore[1]) * 10000000;
-  const crore = normalized.match(/([0-9]+(?:\.[0-9]+)?)\s*(?:crore|cr)\b/i);
-  if (crore) return Number(crore[1]) * 10000000;
-  const labelledLakh = normalized.match(/(?:reserve\s+price|floor\s+price|price)\s*[:=-]?\s*([0-9]+(?:\.[0-9]+)?)\s*(?:lakh|lac)\b/i);
-  if (labelledLakh) return Number(labelledLakh[1]) * 100000;
-  const lakh = normalized.match(/([0-9]+(?:\.[0-9]+)?)\s*(?:lakh|lac)\b/i);
-  if (lakh) return Number(lakh[1]) * 100000;
+  const amountWithUnit = normalized.match(/([0-9]+(?:\.[0-9]+)?)\s*(crore|cr|lakh|lac)(?:\s|$)/i);
+  if (amountWithUnit) {
+    const amount = Number(amountWithUnit[1]);
+    const unit = amountWithUnit[2].toLowerCase();
+    return unit === "crore" || unit === "cr" ? amount * 10000000 : amount * 100000;
+  }
   const direct = normalized.match(/[0-9]+(?:\.[0-9]+)?/);
   return direct ? Number(direct[0]) : undefined;
 }
