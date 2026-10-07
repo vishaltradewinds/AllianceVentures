@@ -6,6 +6,9 @@ on:
       - "assetshakti/phase1/**"
       - "package.json"
       - "package-lock.json"
+      - "server.ts"
+      - "src/pages/AssetShaktiEvidence.tsx"
+      - "src/App.tsx"
   push:
     branches:
       - "assetshakti/phase1-property-foundation"
