@@ -35,7 +35,19 @@ jobs:
         run: npm ci
 
       - name: Apply compatible npm audit fixes
+        continue-on-error: true
         run: npm audit fix --package-lock-only
+
+      - name: Capture post-remediation audit evidence
+        run: npm audit --json > npm-audit-post-remediation.json || true
+
+      - name: Upload post-remediation audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assetshakti-npm-audit-post-remediation
+          path: npm-audit-post-remediation.json
+          if-no-files-found: error
 
       - name: Check whether the lockfile changed
         id: diff
