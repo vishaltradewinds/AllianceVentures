@@ -21,7 +21,7 @@ const complete = assessPilotReadiness({
   auctionLotBinding: {
     auctionDate: "2026-10-07", assetDescription: "Land and Building",
     reservePrice: 1000000, emdDeadline: "2026-10-05",
-    sourceReference: "ibbi://exact-auction", status: "VERIFIED"
+    sourceReference: "ibbi://exact-auction", documentVersionReference: "ibbi://exact-auction", status: "VERIFIED"
   }
 });
 assert.equal(complete.readiness, "COMPLETE");
