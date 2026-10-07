@@ -9,6 +9,7 @@ export interface PilotReadinessCase {
   caseId: string;
   evidence: Array<{category: string; status: string; sourceReference?: string}>;
   documentVersions?: Array<{versionStatus: string; sourceReference: string}>;
+  auctionLotBinding?: { auctionDate: string; assetDescription: string; reservePrice?: number; emdDeadline?: string; sourceReference: string; status: "VERIFIED" | "UNRESOLVED" };
 }
 
 export interface PilotReadinessResult {
@@ -18,6 +19,7 @@ export interface PilotReadinessResult {
   blockingCategories: string[];
   unresolvedDocuments: string[];
   sourceBackedAuctionTerms: boolean;
+  auctionLotBinding: "VERIFIED" | "UNRESOLVED";
 }
 
 export function assessPilotReadiness(input: PilotReadinessCase): PilotReadinessResult {
@@ -35,8 +37,9 @@ export function assessPilotReadiness(input: PilotReadinessCase): PilotReadinessR
     ["VERIFIED","REPORTED_BY_SOURCE"].includes(e.status) &&
     !!e.sourceReference
   );
+  const auctionLotBinding = input.auctionLotBinding?.status ?? "UNRESOLVED";
   const readiness: EvidenceReadiness =
-    unresolvedDocuments.length || blockingCategories.length || !sourceBackedAuctionTerms
+    unresolvedDocuments.length || blockingCategories.length || !sourceBackedAuctionTerms || auctionLotBinding === "UNRESOLVED"
       ? "BLOCKED"
       : missingCategories.length
         ? "PARTIAL"
