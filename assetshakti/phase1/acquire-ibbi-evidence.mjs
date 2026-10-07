@@ -43,6 +43,59 @@ function extractDates(row) {
 }
 
 function extractPdfLinks(row) {
+  const tokens = row.split(/["'\\s=<>]+/).map(s => s.trim()).filter(Boolean);
+  const candidates = tokens.filter(token =>
+    token.toLowerCase().includes("/uploads/auction_notice_liquidation/") ||
+    /\\.pdf(?:\\?|$)/i.test(token)
+  );
+  return [...new Set(candidates.map(raw => raw.replace(/&amp;/g, "&")).map(raw => {
+    try { return new URL(raw, IBBI_LIST).href; } catch { return null; }
+  }).filter(Boolean))];
+}port fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
+import { execFileSync } from "node:child_process";
+
+// Shakti evidence acquisition: acquisition is never verification.
+const OUT = process.argv[2] ?? ".assetshakti-acquisition";
+fs.mkdirSync(OUT, { recursive: true });
+
+const IBBI_LIST = "https://ibbi.gov.in/liquidation-auction-notices/lists";
+
+function curl(url, output, timeout = "90") {
+  execFileSync("curl", [
+    "-fsSL",
+    "--retry", "3",
+    "--retry-delay", "2",
+    "--max-time", timeout,
+    "-A", "Mozilla/5.0 (AssetShakti evidence acquisition)",
+    "-H", "Accept: text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
+    "-o", output,
+    url
+  ]);
+}
+
+function clean(s) {
+  return s
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function dateToKey(s) {
+  const m = s.match(/(\d{2})-(\d{2})-(\d{4})/);
+  return m ? `${m[3]}-${m[2]}-${m[1]}` : "";
+}
+
+function extractDates(row) {
+  return [...clean(row).matchAll(/\b\d{2}-\d{2}-\d{4}\b/g)].map(m => m[0]);
+}
+
+function extractPdfLinks(row) {
   const urls = [];
   const patterns = [
     /\/uploads\/auction_notice_liquidation\/[^"'<>\\s)]+/gi,
