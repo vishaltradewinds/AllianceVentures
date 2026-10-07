@@ -4,6 +4,7 @@ import {
   type AuctionSourceProvider,
   type NormalizedAuctionLot
 } from "./auction-source-adapter";
+import { normalizeDiscoveredHtml } from "./source-discovery";
 
 const expected: AuctionSourceProvider[] = [
   "IBBI", "BAANKNET", "MSTC", "SAMIL", "EAUCTION_INDIA", "INDIAN_RAILWAYS", "C1_INDIA", "AUCTION_TIGER"
@@ -39,4 +40,6 @@ if (sample.provider !== "MSTC" || sample.lotId !== "LOT-01" || sample.decisionEv
   throw new Error("FAIL: normalized lot identity/evidence invariants are not preserved");
 }
 
-console.log("PASS: multi-auction source adapter registry and normalization invariants");
+const discovery = normalizeDiscoveredHtml({ provider: "AUCTION_TIGER", url: "https://www.auctiontiger.in/" }, "<tr><th>Listing ID</th><th>Reserve Price</th></tr><tr><td>123</td><td>₹2.50 Crore</td></tr>");
+if (discovery.records.length !== 1 || discovery.records[0].reservePrice !== 25000000) throw new Error("FAIL: source discovery normalization regression");
+console.log("PASS: multi-auction source adapter registry and discovery invariants");
