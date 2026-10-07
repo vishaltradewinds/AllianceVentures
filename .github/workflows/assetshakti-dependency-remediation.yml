@@ -31,6 +31,9 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Synchronize lockfile with declared dependency ranges
+        run: npm install --package-lock-only
+
       - name: Clean install before remediation
         run: npm ci
 
