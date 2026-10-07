@@ -53,6 +53,13 @@ Silverton correctly resolves to three separate option rows for the same auction 
 
 The acquired auction notices establish authoritative source-document possession and exact-lot binding. They do **not** by themselves establish title, possession, valuation, encumbrance clearance, bidder eligibility, or complete process-term reconciliation.
 
+## Latest engineering gate
+
+- Latest commit: `9d0f20ef442d2163d0e136e8f85d867ef02ef7ef`
+- Phase 1 Validation run: `37611221979` (Run #359)
+- Result: **SUCCESS**
+- Added and CI-enforced: current-round process-document gate. An acquired process document cannot project into decision evidence unless exact round, current status, corrigenda reconciliation, hash, source reference and page/section references are all present.
+
 ## Next gate
 
 For each pilot:
