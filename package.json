@@ -20,7 +20,8 @@
     "assetshakti:test:six-pilot-certification": "tsx assetshakti/phase1/six-pilot-certification-gate.test.ts",
     "assetshakti:test:user-evidence-intake": "tsx assetshakti/phase1/user-evidence-intake.test.ts",
     "assetshakti:test:user-evidence-verification": "tsx assetshakti/phase1/user-evidence-verification.test.ts",
-    "assetshakti:test:user-evidence-lifecycle": "tsx assetshakti/phase1/user-evidence-lifecycle.test.ts"
+    "assetshakti:test:user-evidence-lifecycle": "tsx assetshakti/phase1/user-evidence-lifecycle.test.ts",
+    "assetshakti:test:stakeholder-upload": "tsx assetshakti/phase1/stakeholder-upload-simulation.test.ts"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
