@@ -1,6 +1,6 @@
 export type AuctionSourceProvider =
   | "IBBI" | "BAANKNET" | "MSTC" | "SAMIL" | "EAUCTION_INDIA"
-  | "INDIAN_RAILWAYS" | "SAMIL";
+  | "INDIAN_RAILWAYS" | "SAMIL" | "AUCTION_TIGER" | "C1_INDIA";
 
 export type SourceAccessMode =
   | "PUBLIC_DISCOVERY" | "PUBLIC_DOCUMENT" | "USER_SUPPLIED" | "AUTHENTICATED";
