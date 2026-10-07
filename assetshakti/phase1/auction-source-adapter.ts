@@ -85,6 +85,14 @@ export const AUCTION_SOURCE_ADAPTERS: readonly AuctionSourceAdapter[] = [
     supportedAssetCategories: ["VEHICLE", "PLANT_AND_MACHINERY", "PROPERTY", "SCRAP", "GOLD", "OTHER"]
   },
   {
+    provider: "INDIAN_RAILWAYS",
+    displayName: "Indian Railways IREPS",
+    authoritativeUrl: "https://www.ireps.gov.in/",
+    accessMode: "PUBLIC_DISCOVERY", discoveryEnabled: true, documentAcquisitionEnabled: true,
+    transactionExecutionEnabled: false, supportedMechanisms: ["ENGLISH", "E_TENDER", "UNKNOWN"],
+    supportedAssetCategories: ["PROPERTY", "SCRAP", "OTHER"]
+  },
+  {
     provider: "EAUCTION_INDIA",
     displayName: "NIC eAuction India",
     authoritativeUrl: "https://www.eauction.gov.in/eAuction/app",
