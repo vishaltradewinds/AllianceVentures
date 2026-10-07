@@ -285,7 +285,7 @@ app.post("/api/assetshakti/evidence-intake/:intakeId/verify", auth(["admin"]), (
       ? fs.readdirSync(ASSETSHAKTI_EVIDENCE_DIR)
       : [];
     let intake: any = null;
-    for (const name of directoryEntries.filter(name => name.endsWith(".json"))) {
+    for (const name of directoryEntries.filter(name => name.endsWith(".json") && !name.endsWith(".verification.json"))) {
       try {
         const candidate = JSON.parse(fs.readFileSync(path.join(ASSETSHAKTI_EVIDENCE_DIR, name), "utf8"));
         if (candidate.intakeId === intakeId) {
@@ -306,8 +306,18 @@ app.post("/api/assetshakti/evidence-intake/:intakeId/verify", auth(["admin"]), (
     if (storedHash !== intake.contentSha256) {
       return res.status(409).json({ error: "Stored evidence hash does not match intake metadata." });
     }
-    const verification = verifyUserSuppliedEvidence(req.body || {});
-    if (req.body?.contentSha256 && req.body.contentSha256 !== storedHash) {
+    const body = req.body || {};
+    const verification = verifyUserSuppliedEvidence({
+      documentIdentityConfirmed: body.documentIdentityConfirmed === true,
+      authoritativeSourceConfirmed: body.authoritativeSourceConfirmed === true,
+      applicableRoundConfirmed: body.applicableRoundConfirmed === true,
+      currentOrSupersededStatusConfirmed: body.currentOrSupersededStatusConfirmed === true,
+      corrigendaConsistencyConfirmed: body.corrigendaConsistencyConfirmed === true,
+      hashIntegrityConfirmed: storedHash === intake.contentSha256 && body.hashIntegrityConfirmed === true,
+      materialAssertionsHavePageReferences: body.materialAssertionsHavePageReferences === true,
+      verifierNote: typeof body.verifierNote === "string" ? body.verifierNote : "",
+    });
+    if (body.contentSha256 && body.contentSha256 !== storedHash) {
       return res.status(409).json({ error: "Verification hash does not match stored evidence." });
     }
 
@@ -317,6 +327,8 @@ app.post("/api/assetshakti/evidence-intake/:intakeId/verify", auth(["admin"]), (
       verification: {
         verifiedAt: new Date().toISOString(),
         verifier: "authenticated-verifier",
+        auctionRound: intake.auctionRound,
+        sourceReference: intake.sourceReference,
         reasons: verification.reasons,
         contentSha256: storedHash
       }
