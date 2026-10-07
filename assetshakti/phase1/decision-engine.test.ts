@@ -23,6 +23,9 @@ const adverseAuction=base([
 ]);
 assert.equal(evaluatePropertyProductionDecision(adverseAuction).decision,"DO_NOT_BID");
 
+const litigationContradicted=base([evidence("CONTRADICTED","LITIGATION")]);
+assert.equal(evaluatePropertyProductionDecision(litigationContradicted).decision,"DO_NOT_BID");
+
 const auctionMissing=base().evidence.filter(x=>x.category!=="BIDDER_OBLIGATION");
 assert.equal(evaluatePropertyProductionDecision({...base(),evidence:auctionMissing}).decision,"DO_NOT_BID");
 
