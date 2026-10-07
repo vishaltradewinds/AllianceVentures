@@ -158,5 +158,108 @@
       "status": "EXACT_LOT_BINDING_REQUIRED"
     }
   ],
-  "nextGate": "Complete current-round document bundles for all six pilots, then deterministic re-evaluation; no positive decision until critical evidence is verified."
+  "nextGate": "Complete current-round document bundles for all six pilots, then deterministic re-evaluation; no positive decision until critical evidence is verified.",
+  "currentRoundEvidence": [
+    {
+      "caseId": "P1-PILOT-001",
+      "auctionDate": "2026-10-07",
+      "reservePrice": 92700000,
+      "asset": "Composite sale of Land, Building and Plant & Machinery",
+      "emdDeadline": "2026-10-05",
+      "source": "IBBI current liquidation auction register",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "status": "CURRENT_LOT_IDENTIFIED",
+      "blockers": [
+        "title",
+        "possession",
+        "complete bidder obligations",
+        "component-level provenance and valuation",
+        "process-impact reconciliation"
+      ]
+    },
+    {
+      "caseId": "P1-PILOT-002",
+      "auctionDate": "2026-10-15",
+      "reservePrice": 705000000,
+      "asset": "Emerald Project: proposed building 8,98,137 sq.ft. not fully built; land approx. 7.62 acres; 6,388 sq.ft. UDS already conveyed to home buyers excluded",
+      "emdDeadline": "2026-10-12",
+      "source": "IBBI current liquidation auction register",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "status": "CURRENT_LOT_IDENTIFIED",
+      "blockers": [
+        "title/UDS reconciliation",
+        "possession/occupancy",
+        "complete bidder obligations",
+        "physical completion verification",
+        "current valuation"
+      ]
+    },
+    {
+      "caseId": "P1-PILOT-003",
+      "auctionDate": "2026-10-10",
+      "reservePrice": 133668963,
+      "asset": "Land and Building - Edathala",
+      "emdDeadline": "2026-10-09",
+      "source": "IBBI current liquidation auction register",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "status": "CURRENT_LOT_IDENTIFIED",
+      "blockers": [
+        "reconcile current round against historical rounds",
+        "title",
+        "possession",
+        "bidder obligations",
+        "component boundaries"
+      ]
+    },
+    {
+      "caseId": "P1-PILOT-004",
+      "auctionDate": "2026-10-01",
+      "reservePrice": 28734000,
+      "asset": "Land along with Built Up Godown",
+      "emdDeadline": "2026-09-29",
+      "source": "IBBI current auction register",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=all&page=2",
+      "status": "CURRENT_LOT_IDENTIFIED",
+      "blockers": [
+        "do not merge with commercial-premises rounds",
+        "title",
+        "possession",
+        "bidder obligations",
+        "valuation"
+      ]
+    },
+    {
+      "caseId": "P1-PILOT-005",
+      "auctionDate": "2026-09-23",
+      "reservePrice": 4340005,
+      "asset": "Leasehold rights for remaining duration through 22-07-2033",
+      "emdDeadline": "2026-09-19",
+      "source": "IBBI liquidation auction register",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=7",
+      "status": "CURRENT_LOT_IDENTIFIED",
+      "blockers": [
+        "lease deed verification",
+        "assignment/consent",
+        "possession",
+        "current bidder obligations",
+        "round reconciliation"
+      ]
+    },
+    {
+      "caseId": "P1-PILOT-006",
+      "auctionDate": "MULTIPLE_ROUNDS",
+      "asset": "Alternative slump-sale and separate land/building and plant/machinery blocks",
+      "source": "IBBI liquidation auction records",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "status": "MULTI_ROUND_RECONCILIATION_REQUIRED",
+      "blockers": [
+        "exact applicable round",
+        "lease rights",
+        "handover",
+        "bidder obligations",
+        "component valuation"
+      ]
+    }
+  ],
+  "nextExecution": "Current-round evidence has been bound for all six pilots. Next: retrieve/version the exact auction/process documents and build deterministic document reconciliation records; no positive decision is permitted from register evidence alone."
 }
