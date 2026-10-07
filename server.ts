@@ -257,6 +257,9 @@ app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_ver
     };
     const metadataPath = intake.storedFile.replace(/\\.pdf$/, ".json");
     const verificationAuditPath = metadataPath.replace(/\\.json$/, ".verification.json");
+    const tmpMetadataPath = metadataPath + ".tmp";
+    fs.writeFileSync(tmpMetadataPath, JSON.stringify(updated, null, 2), { flag: "wx" });
+    fs.renameSync(tmpMetadataPath, metadataPath);
     fs.writeFileSync(verificationAuditPath, JSON.stringify(updated, null, 2), { flag: "wx" });
 
     return res.status(result.outcome === "VERIFIED" ? 200 : 422).json({
