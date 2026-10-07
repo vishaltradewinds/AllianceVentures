@@ -36,19 +36,15 @@ function clean(value: string): string {
 
 function money(value?: string): number | undefined {
   if (!value) return undefined;
-  const normalized = value.replace(/[,₹]/g, " ").replace(/\s+/g, " ").trim();
-  const findAmountBefore = (unitPattern: RegExp, multiplier: number): number | undefined => {
-    const match = unitPattern.exec(normalized);
-    if (!match || match.index < 0) return undefined;
-    const before = normalized.slice(0, match.index);
-    const numbers = before.match(/[0-9]+(?:\.[0-9]+)?/g);
-    const last = numbers?.at(-1);
-    return last ? Number(last) * multiplier : undefined;
-  };
-  const fallback = Number(normalized.match(/[0-9]+(?:\.[0-9]+)?/)?.[0] ?? NaN);
-  return findAmountBefore(/(?:crore|cr)/i, 10000000)
-    ?? findAmountBefore(/(?:lakh|lac)/i, 100000)
-    ?? (Number.isFinite(fallback) ? fallback : undefined);
+  const normalized = value.replace(/,/g, " ").replace(/₹/g, " ").replace(/\s+/g, " ").trim();
+  const match = normalized.match(/([0-9]+(?:\.[0-9]+)?)\s*(crore|cr|lakh|lac)/i);
+  if (match) {
+    const amount = Number(match[1]);
+    const unit = match[2].toLowerCase();
+    return amount * (unit === "crore" || unit === "cr" ? 10000000 : 100000);
+  }
+  const fallback = normalized.match(/[0-9]+(?:\.[0-9]+)?/);
+  return fallback ? Number(fallback[0]) : undefined;
 }
 
 function categoryFromText(text: string, fallback: AssetCategory): AssetCategory {
