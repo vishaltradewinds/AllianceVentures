@@ -20,7 +20,7 @@ export default function AssetShaktiEvidence(){
       const bytes=new Uint8Array(await file.arrayBuffer());
       let binary=''; for(let i=0;i<bytes.length;i+=0x8000) binary+=String.fromCharCode(...bytes.subarray(i,i+0x8000));
       const contentBase64=btoa(binary);
-      const r=await fetch('/api/assetshakti/evidence-intake',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({caseId,documentType,auctionRound,sourceReference,observedAt,fileName:file.name,contentType:file.type,contentBase64})});
+      const r=await fetch('/api/assetshakti/evidence-intake',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+(localStorage.getItem('token')||'')},body:JSON.stringify({caseId,documentType,auctionRound,sourceReference,observedAt,fileName:file.name,contentType:file.type,contentBase64})});
       const data=await r.json();
       setStatus(r.ok ? 'Uploaded: USER_SUPPLIED_PENDING_VERIFICATION. G16 remains fail-closed until verification.' : (data.error||'Upload failed.'));
     }catch{setStatus('Upload failed. Please retry.');}
