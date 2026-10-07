@@ -44,5 +44,5 @@ export function assessPilotReadiness(input: PilotReadinessCase): PilotReadinessR
       : missingCategories.length
         ? "PARTIAL"
         : "COMPLETE";
-  return { caseId: input.caseId, readiness, missingCategories, blockingCategories, unresolvedDocuments, sourceBackedAuctionTerms };
+  return { caseId: input.caseId, readiness, missingCategories, blockingCategories, unresolvedDocuments, sourceBackedAuctionTerms, auctionLotBinding };
 }
