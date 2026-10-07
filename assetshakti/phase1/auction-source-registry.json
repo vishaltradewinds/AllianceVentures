@@ -9,6 +9,7 @@
     {"provider":"SAMIL","name":"SAMIL — Shriram Automall India Limited","url":"https://www.samil.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
     {"provider":"EAUCTION_INDIA","name":"NIC eAuction India","url":"https://www.eauction.gov.in/eAuction/app","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
     {"provider":"INDIAN_RAILWAYS","name":"Indian Railways e-Tender / e-Auction","url":"https://www.ireps.gov.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
+    {"provider":"AUCTION_TIGER","name":"AuctionTiger","url":"https://www.auctiontiger.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
     {"provider":"C1_INDIA","name":"C1 India Bankeauctions","url":"https://bankeauctions.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"}
   ],
   "mandatoryControls": [
