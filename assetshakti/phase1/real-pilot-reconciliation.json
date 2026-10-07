@@ -3,29 +3,29 @@
     "documentVersions": [
       {
         "documentType": "AUCTION_NOTICE",
-        "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=6",
-        "observedAt": "2026-10-06",
-        "versionStatus": "SUPERSEDED",
+        "sourceReference": "IBBI liquidation auction register",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
         "materialChanges": [
-          "Leasehold rights for remaining duration through 22-07-2033."
+          "23-09-2026 round reserve Rs. 43,40,005; leasehold industrial land/building; lease term stated through 22-07-2033 and four lease deeds identified."
         ]
       },
       {
         "documentType": "CORRIGENDUM",
-        "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?direction=asc&page=469&sort=date_submit",
-        "observedAt": "2026-10-06",
+        "sourceReference": "IBBI liquidation auction register",
+        "observedAt": "2026-10-07",
         "versionStatus": "CURRENT",
         "materialChanges": [
-          "IBBI register records a corrigendum; detailed content requires reconciliation before positive decision."
+          "A corrigendum is recorded in the IBBI register; detailed document content remains required for reconciliation."
         ]
       }
     ],
     "reconciliation": {
       "status": "UNRESOLVED",
       "materialConflicts": [
-        "Corrigendum requires detailed reconciliation with the auction notice."
+        "Current applicable terms and corrigendum content must be reconciled with the 23-09-2026 notice and underlying lease deeds."
       ],
-      "latestApplicableReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?direction=asc&page=469&sort=date_submit"
+      "latestApplicableReference": "IBBI liquidation auction register"
     }
   },
   "P1-PILOT-001": {
@@ -55,6 +55,131 @@
         "Current 07-10-2026 lot must be reconciled against the historical 02-02-2026 composite/slump-sale package; current detailed process document, financial-assets scope and component schedules remain required."
       ],
       "latestApplicableReference": "IBBI liquidation auction register"
+    }
+  },
+  "P1-PILOT-002": {
+    "documentVersions": [
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI current liquidation auction register",
+        "observedAt": "2026-10-07",
+        "versionStatus": "CURRENT",
+        "materialChanges": [
+          "15-10-2026 auction; reserve Rs. 70.50 crore; Emerald Project land/building; approximately 7.62 acres; 6,388 sq.ft. UDS already conveyed to home buyers excluded."
+        ]
+      },
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI corporate-process auction register U45400TN2012PTC084362",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
+        "materialChanges": [
+          "16-09-2026 round reserve Rs. 77.82 crore; earlier rounds materially changed reserve and auction dates."
+        ]
+      },
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI official Hallmark auction notice",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
+        "materialChanges": [
+          "22-01-2025 round reserve Rs. 70 crore for the same Emerald property description; notice required the complete e-auction process information document and stated modifications must be notified."
+        ]
+      }
+    ],
+    "reconciliation": {
+      "status": "UNRESOLVED",
+      "materialConflicts": [
+        "Multiple Hallmark auction rounds exist with materially different dates and reserves. The current 15-10-2026 process document and any current modifications must be bound before decision use."
+      ],
+      "latestApplicableReference": "IBBI current liquidation auction register"
+    }
+  },
+  "P1-PILOT-003": {
+    "documentVersions": [
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI current liquidation auction register",
+        "observedAt": "2026-10-07",
+        "versionStatus": "CURRENT",
+        "materialChanges": [
+          "10-10-2026 auction; reserve Rs. 13,36,68,963; Land and Building - Edathala."
+        ]
+      },
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI official 17-04-2026 third auction notice",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
+        "materialChanges": [
+          "Third auction parcelised Edathala land/building, Edappally land/building and plant/machinery into separate assets with distinct reserve prices."
+        ]
+      }
+    ],
+    "reconciliation": {
+      "status": "UNRESOLVED",
+      "materialConflicts": [
+        "Current Edathala-only round must not inherit evidence or valuation from earlier multi-parcel rounds; current process document and title/possession evidence remain required."
+      ],
+      "latestApplicableReference": "IBBI current liquidation auction register"
+    }
+  },
+  "P1-PILOT-004": {
+    "documentVersions": [
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI corporate-process auction register U67190MH2008PTC179535",
+        "observedAt": "2026-10-07",
+        "versionStatus": "CURRENT",
+        "materialChanges": [
+          "01-10-2026 round reserve Rs. 2.8734 crore; land with built-up godown."
+        ]
+      },
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI corporate-process auction register U67190MH2008PTC179535",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
+        "materialChanges": [
+          "29-09-2026 round reserve Rs. 60,50,700; commercial premises. Earlier 20-08-2026 round reserve Rs. 67,23,000; commercial premises."
+        ]
+      }
+    ],
+    "reconciliation": {
+      "status": "UNRESOLVED",
+      "materialConflicts": [
+        "The 01-10-2026 land-plus-built-up-godown lot is materially different from the 29-09-2026 commercial-premises lot and must remain separately bound."
+      ],
+      "latestApplicableReference": "IBBI corporate-process auction register U67190MH2008PTC179535"
+    }
+  },
+  "P1-PILOT-006": {
+    "documentVersions": [
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI corporate-process auction register L18101WB1994PLC063733",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
+        "materialChanges": [
+          "Multiple 2026 rounds offered alternative structures: slump sale of entire unit, plant & machinery, and land & building, with materially different reserve prices."
+        ]
+      },
+      {
+        "documentType": "AUCTION_NOTICE",
+        "sourceReference": "IBBI liquidation auction register",
+        "observedAt": "2026-10-07",
+        "versionStatus": "HISTORICAL",
+        "materialChanges": [
+          "22-05-2026 round again listed Option 1 slump sale, Option 2 plant & machinery and Option 3 land & building."
+        ]
+      }
+    ],
+    "reconciliation": {
+      "status": "UNRESOLVED",
+      "materialConflicts": [
+        "Multiple rounds and alternative sale structures prevent a single current lot from being assumed. Exact applicable round, lease rights, handover conditions and component valuation remain unresolved."
+      ],
+      "latestApplicableReference": "IBBI corporate-process auction register L18101WB1994PLC063733"
     }
   }
 }
