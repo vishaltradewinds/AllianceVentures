@@ -44,6 +44,14 @@ A numerical score cannot override a failed critical evidence gate. No pilot beco
 
 Production certification requires completion of the evidence dossiers, deterministic re-evaluation, the 50-case certification review, and independent Shakti sign-off.
 
+## Execution update — 2026-10-07
+
+- Added `real-pilot-evidence-request-manifest.json` as the actionable acquisition queue for all six real pilots.
+- Confirmed the existing Evidence Intake UI/API provides a user-assisted authorised-source path when automated retrieval is blocked.
+- IBBI official register evidence was rechecked for the current General Composites, Hallmark Living Space, Vysali and Parakkott rounds; exact document/version binding remains mandatory.
+- Automated web access to underlying IBBI PDF/image content can be blocked by the source; this does not justify inference. The authorised user-upload path is therefore the operational fallback.
+- Production certification remains **OFF**.
+
 ## Current conclusion
 
-AssetShakti Phase 1 engineering is validated, but the system is **NOT production certified**. The correct next action is evidence completion, not additional synthetic test cases.
+AssetShakti Phase 1 engineering is validated, but the system is **NOT production certified**. The correct next action is to acquire and verify the exact source-document bundles through automated retrieval where available or the authorised user-assisted intake path where necessary, followed by reconciliation and deterministic re-evaluation.
