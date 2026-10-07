@@ -29,7 +29,7 @@ if (!fs.existsSync("./private.pem") || !fs.existsSync("./public.pem")) {
 }
 
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: "15mb" }));
 
 const PORT = parseInt(process.env.PORT || "3000", 10);
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/allianceventures";
@@ -133,6 +133,66 @@ app.post("/login", async (req, res) => {
       window.location="/investor";
     </script>
   `);
+});
+
+// ------------------- ASSETSHAKTI USER EVIDENCE INTAKE -------------------
+
+const ASSETSHAKTI_EVIDENCE_DIR = process.env.ASSETSHAKTI_EVIDENCE_DIR || "./data/assetshakti/evidence";
+
+app.post("/api/assetshakti/evidence-intake", (req, res) => {
+  try {
+    const { caseId, documentType, auctionRound, sourceReference, observedAt, fileName, contentType, contentBase64 } = req.body || {};
+    if (!caseId || !documentType || !auctionRound || !sourceReference || !observedAt || !fileName || !contentBase64) {
+      return res.status(400).json({ error: "caseId, documentType, auctionRound, sourceReference, observedAt and PDF are required." });
+    }
+    if (contentType !== "application/pdf" && !String(fileName).toLowerCase().endsWith(".pdf")) {
+      return res.status(415).json({ error: "Only PDF evidence is accepted." });
+    }
+    if (typeof contentBase64 !== "string" || contentBase64.length > 14 * 1024 * 1024) {
+      return res.status(413).json({ error: "Evidence file exceeds the configured intake limit." });
+    }
+    const buffer = Buffer.from(contentBase64, "base64");
+    if (buffer.length === 0 || buffer.length > 10 * 1024 * 1024) {
+      return res.status(413).json({ error: "Evidence file exceeds the 10 MB limit." });
+    }
+    if (buffer.subarray(0, 4).toString() !== "%PDF") {
+      return res.status(400).json({ error: "Uploaded content is not a valid PDF." });
+    }
+
+    fs.mkdirSync(ASSETSHAKTI_EVIDENCE_DIR, { recursive: true });
+    const contentSha256 = crypto.createHash("sha256").update(buffer).digest("hex");
+    const safeCase = String(caseId).replace(/[^a-zA-Z0-9_-]/g, "_");
+    const safeHash = contentSha256.slice(0, 16);
+    const storedFile = path.join(ASSETSHAKTI_EVIDENCE_DIR, safeCase + "-" + safeHash + ".pdf");
+    fs.writeFileSync(storedFile, buffer, { flag: "wx" });
+
+    const intake = {
+      intakeId: "ASI-" + Date.now() + "-" + safeHash,
+      caseId,
+      documentType,
+      auctionRound,
+      sourceReference,
+      observedAt,
+      fileName: String(fileName).replace(/[^a-zA-Z0-9._-]/g, "_"),
+      contentSha256,
+      uploadedAt: new Date().toISOString(),
+      provenanceStatus: "USER_SUPPLIED_PENDING_VERIFICATION",
+      storedFile
+    };
+    const metaPath = storedFile.replace(/\.pdf$/, ".json");
+    fs.writeFileSync(metaPath, JSON.stringify(intake, null, 2), { flag: "wx" });
+
+    return res.status(201).json({
+      intakeId: intake.intakeId,
+      provenanceStatus: intake.provenanceStatus,
+      contentSha256,
+      message: "Evidence accepted for verification. It cannot satisfy G16 until verified."
+    });
+  } catch (err: any) {
+    if (err?.code === "EEXIST") return res.status(409).json({ error: "This document has already been uploaded for this case." });
+    console.error("AssetShakti evidence intake error:", err);
+    return res.status(500).json({ error: "Evidence intake failed." });
+  }
 });
 
 // ------------------- LIVE ANALYTICS CONNECTOR -------------------
