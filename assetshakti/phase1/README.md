@@ -77,3 +77,7 @@ BAANKNET remains the authoritative transaction channel. This project is an indep
 
 ## Phase 1 validation gate
 Minimum 50 real property auction cases across the taxonomy before production certification.
+
+## Real-evidence acquisition
+
+The actionable six-pilot document queue is maintained in `real-pilot-evidence-request-manifest.json`. When automated retrieval is blocked, use the AssetShakti Evidence Intake UI to obtain the exact document through the authorised source and upload it. Uploads remain `USER_SUPPLIED_PENDING_VERIFICATION` until source/version identity, integrity, reconciliation, and material page/section references are verified. This mechanism does not bypass IBBI/BAANKNET access controls and cannot override a failed Shakti gate.
