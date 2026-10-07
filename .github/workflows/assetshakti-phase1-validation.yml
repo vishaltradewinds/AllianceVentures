@@ -26,4 +26,5 @@ jobs:
       - run: npm run assetshakti:test:decomposition
       - run: npm run assetshakti:test:reconciliation
       - run: npm run assetshakti:test:readiness
+      - run: npm run assetshakti:test:six-pilot-certification
       - run: npm run assetshakti:evaluate:cases
