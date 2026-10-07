@@ -155,7 +155,10 @@ for (const target of targets) {
       sourceReference: sourceLinks[i],
       contentSha256: sha256,
       bytes: bytes.length,
-      localPath: filePath
+      localPath: filePath,
+      documentRole,
+      identityMatch: extractedText.toLowerCase().includes(target.name.toLowerCase()),
+      auctionRoundMatch: extractedText.includes(target.round)
     });
   }
 }
