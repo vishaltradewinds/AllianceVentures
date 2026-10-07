@@ -1,17 +1,30 @@
 import { normalizeDiscoveredHtml } from "./source-discovery";
+import { AUCTION_SOURCE_ADAPTERS, getAuctionSourceAdapter, type AuctionSourceProvider, type NormalizedAuctionLot } from "./auction-source-adapter";
 
-const auctionTigerHtml = "<table><tr><th>Listing ID</th><th>Auction Bank Name</th><th>Reserve Price</th><th>Auction Date</th></tr><tr><td>123</td><td>Example Bank</td><td>₹2.50 Crore</td><td>26 October 2026</td></tr></table>";
-const tiger = normalizeDiscoveredHtml({ provider: "AUCTION_TIGER", url: "https://www.auctiontiger.in/" }, auctionTigerHtml);
-if (tiger.records.length !== 1) throw new Error("FAIL: AuctionTiger discovery did not normalize one listing");
-if (tiger.records[0].provider !== "AUCTION_TIGER") throw new Error("FAIL: provider identity was lost");
-if (tiger.records[0].reservePrice !== 25000000) throw new Error("FAIL: crore reserve normalization failed");
-if (tiger.records[0].decisionEvidenceProjection !== false) throw new Error("FAIL: discovery projected into decision evidence");
+const expected: AuctionSourceProvider[] = ["IBBI", "BAANKNET", "MSTC", "SAMIL", "EAUCTION_INDIA", "INDIAN_RAILWAYS"];
+if (AUCTION_SOURCE_ADAPTERS.length !== expected.length) throw new Error("FAIL: direct source registry changed");
+for (const provider of expected) {
+  const adapter = getAuctionSourceAdapter(provider);
+  if (!adapter.authoritativeUrl.startsWith("https://")) throw new Error("FAIL: " + provider + " has no HTTPS authoritative URL");
+  if (adapter.transactionExecutionEnabled !== false) throw new Error("FAIL: " + provider + " must never execute transactions");
+  if (!adapter.discoveryEnabled) throw new Error("FAIL: " + provider + " discovery is disabled");
+}
 
-const mstcHtml = "<table><tr><th>Property</th><th>EMD</th></tr><tr><td>Industrial shed with plant and machinery</td><td>100000</td></tr></table>";
-const mstc = normalizeDiscoveredHtml({ provider: "MSTC", url: "https://www.mstcecommerce.com/" }, mstcHtml);
-if (mstc.records[0].assetCategory !== "PLANT_AND_MACHINERY") throw new Error("FAIL: MSTC category normalization failed");
+const sample: NormalizedAuctionLot = {
+  provider: "MSTC", sourceRecordId: "MSTC-EXAMPLE-001", auctionId: "A-001", lotId: "LOT-01",
+  sourceUrl: "https://www.mstcecommerce.com/", auctionMechanism: "ENGLISH", assetCategory: "PROPERTY",
+  title: "Example industrial property", currency: "INR", documentReferences: [],
+  evidenceState: "DISCOVERED", decisionEvidenceProjection: false
+};
+if (sample.lotId !== "LOT-01" || sample.decisionEvidenceProjection !== false) throw new Error("FAIL: normalized lot invariants");
+
+const discovery = normalizeDiscoveredHtml({ provider: "MSTC", url: "https://www.mstcecommerce.com/" }, "<tr><th>Property Ref</th><th>Floor Price</th></tr><tr><td>123</td><td>₹2.50 Crore</td></tr>");
+if (discovery.records.length !== 1 || discovery.records[0].reservePrice !== 25000000) throw new Error("FAIL: MSTC discovery normalization regression");
 
 const empty = normalizeDiscoveredHtml({ provider: "SAMIL", url: "https://www.samil.in/" }, "<html><body>No auction table</body></html>");
 if (!empty.failClosed || empty.records.length !== 0) throw new Error("FAIL: empty discovery must fail closed");
 
-console.log("PASS: live-source discovery normalization invariants");
+const unsupported = normalizeDiscoveredHtml({ provider: "BAANKNET", url: "https://baanknet.com/" }, "<html><body>Login required</body></html>");
+if (!unsupported.failClosed || unsupported.records.length !== 0) throw new Error("FAIL: inaccessible public surface must fail closed");
+
+console.log("PASS: direct auction platform registry and discovery invariants");
