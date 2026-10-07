@@ -24,7 +24,8 @@
     "assetshakti:test:stakeholder-upload": "tsx assetshakti/phase1/stakeholder-upload-simulation.test.ts",
     "assetshakti:test:current-round-process": "tsx assetshakti/phase1/current-round-process-gate.test.ts",
     "assetshakti:test:source-adapters": "tsx assetshakti/phase1/auction-source-adapter.test.ts",
-    "assetshakti:test:lot-identity": "tsx assetshakti/phase1/auction-lot-identity.test.ts"
+    "assetshakti:test:lot-identity": "tsx assetshakti/phase1/auction-lot-identity.test.ts",
+    "assetshakti:test:provider-certification": "tsx assetshakti/phase1/provider-certification-gate.test.ts"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
