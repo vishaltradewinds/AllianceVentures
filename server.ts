@@ -228,11 +228,12 @@ app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_ver
       verifierNote: typeof verifierNote === "string" ? verifierNote : "",
     });
 
+    const verifierId = (req as any).user?.sub || "unknown";
     const updated = {
       ...intake,
       provenanceStatus: result.outcome,
       verifiedAt: new Date().toISOString(),
-      verifierId: (req as any).user?.sub || "unknown",
+      verifierId,
       verificationReasons: result.reasons,
       verificationChecks: {
         documentIdentityConfirmed: documentIdentityConfirmed === true,
