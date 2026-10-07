@@ -11,8 +11,8 @@ const source = {
 const fullEvidence: Pick<EvidenceItem, "category" | "status" | "assertion">[] = [
   "IDENTITY", "TITLE", "AUTHORITY", "POSSESSION", "PHYSICAL",
   "LOCATION", "VALUATION", "AUCTION", "BIDDER_OBLIGATION",
-].map((category) => ({
-  category,
+].map((category): Pick<EvidenceItem, "category" | "status" | "assertion"> => ({
+  category: category as EvidenceItem["category"],
   status: "VERIFIED",
   assertion: `Verified ${category} evidence.`,
 }));
