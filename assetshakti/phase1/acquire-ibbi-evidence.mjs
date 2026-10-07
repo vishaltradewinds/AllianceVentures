@@ -43,16 +43,20 @@ function extractDates(row) {
 }
 
 function extractPdfLinks(row) {
-  const candidates = [
-    ...row.matchAll(/(?:https?:\\/\\/|\\/)[^"'<>\\s)]+(?:\\.pdf|auction_notice_liquidation)[^"'<>\\s)]*/gi),
-    ...row.matchAll(/href\\s*=\\s*["']([^"']+)["']/gi),
-    ...row.matchAll(/(?:data-url|data-href|onclick)\\s*=\\s*["']([^"']+)["']/gi)
+  const urls = [];
+  const patterns = [
+    /\/uploads\/auction_notice_liquidation\/[^"'<>\\s)]+/gi,
+    /https?:\\/\\/[^"'<>\\s)]+/gi
   ];
-  return [...new Set(candidates.map(m => m[1]).filter(Boolean).map(raw => {
-    try { return new URL(raw.replace(/&amp;/g, "&"), IBBI_LIST).href; } catch { return null; }
+  for (const pattern of patterns) {
+    for (const match of row.matchAll(pattern)) urls.push(match[0]);
+  }
+  for (const match of row.matchAll(/href\\s*=\\s*["']([^"']+)["']/gi)) urls.push(match[1]);
+  for (const match of row.matchAll(/(?:data-url|data-href|onclick)\\s*=\\s*["']([^"']+)["']/gi)) urls.push(match[1]);
+  return [...new Set(urls.map(raw => raw.replace(/&amp;/g, "&")).map(raw => {
+    try { return new URL(raw, IBBI_LIST).href; } catch { return null; }
   }).filter(Boolean).filter(u => /\\.pdf(?:\\?|$)/i.test(u) || /auction_notice_liquidation/i.test(u)))];
 }
-
 const targets = [
   { caseId: "P1-PILOT-001", name: "GENERAL COMPOSITES PRIVATE LIMITED", round: "07-10-2026" },
   { caseId: "P1-PILOT-002", name: "HALLMARK LIVING SPACE PRIVATE LIMITED", round: "15-10-2026" },
