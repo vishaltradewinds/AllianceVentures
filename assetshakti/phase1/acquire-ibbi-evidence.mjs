@@ -44,12 +44,13 @@ function extractDates(row) {
 
 function extractPdfLinks(row) {
   const candidates = [
-    ...row.matchAll(/href\s*=\s*["']([^"']+?\.pdf(?:\?[^"']*)?)["']/gi),
-    ...row.matchAll(/["']([^"']*\/uploads\/auction_notice_liquidation\/[^"']+\.pdf(?:\?[^"']*)?)["']/gi)
+    ...row.matchAll(/(?:https?:\\/\\/|\\/)[^"'<>\\s)]+(?:\\.pdf|auction_notice_liquidation)[^"'<>\\s)]*/gi),
+    ...row.matchAll(/href\\s*=\\s*["']([^"']+)["']/gi),
+    ...row.matchAll(/(?:data-url|data-href|onclick)\\s*=\\s*["']([^"']+)["']/gi)
   ];
-  return [...new Set(candidates.map(m => {
-    try { return new URL(m[1], IBBI_LIST).href; } catch { return null; }
-  }).filter(Boolean))];
+  return [...new Set(candidates.map(m => m[1]).filter(Boolean).map(raw => {
+    try { return new URL(raw.replace(/&amp;/g, "&"), IBBI_LIST).href; } catch { return null; }
+  }).filter(Boolean).filter(u => /\\.pdf(?:\\?|$)/i.test(u) || /auction_notice_liquidation/i.test(u)))];
 }
 
 const targets = [
@@ -93,6 +94,7 @@ for (const target of targets) {
 
   const allPdfs = [...new Set(matchedRows.flatMap(extractPdfLinks))];
   if (!allPdfs.length) {
+    console.log("NO_PDF_LINKS_ROW=" + matchedRows[0].slice(0, 12000));
     throw new Error(`FAIL-CLOSED: authoritative row found but no PDF source link exposed for ${target.caseId} / ${target.round}`);
   }
 
