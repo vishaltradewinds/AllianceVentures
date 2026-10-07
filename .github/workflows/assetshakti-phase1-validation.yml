@@ -38,6 +38,7 @@ jobs:
       - run: npm run assetshakti:test:current-round-process
       - run: npm run assetshakti:test:source-adapters
       - run: npm run assetshakti:test:lot-identity
+      - run: npm run assetshakti:test:provider-certification
       - run: npx tsx assetshakti/phase1/source-discovery.test.ts
       - run: npm run build
       - run: npm run lint
