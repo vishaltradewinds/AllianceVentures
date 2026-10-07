@@ -6,11 +6,11 @@ import {
 } from "./auction-source-adapter";
 
 const expected: AuctionSourceProvider[] = [
-  "IBBI", "BAANKNET", "MSTC", "SAMIL", "EAUCTION_INDIA", "INDIAN_RAILWAYS", "C1_INDIA"
+  "IBBI", "BAANKNET", "MSTC", "SAMIL", "EAUCTION_INDIA", "INDIAN_RAILWAYS", "C1_INDIA", "AUCTION_TIGER"
 ];
 
 if (AUCTION_SOURCE_ADAPTERS.length !== expected.length) {
-  throw new Error("FAIL: source registry does not contain the expected seven providers");
+  throw new Error("FAIL: source registry does not contain the expected eight providers");
 }
 
 for (const provider of expected) {
