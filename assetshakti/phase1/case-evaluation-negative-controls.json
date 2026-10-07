@@ -72,5 +72,42 @@
         "assertion": "Complete bidder-obligation record not reconstructed from the detailed notice/corrigendum set."
       }
     ]
+  },
+  {
+    "caseId": "P1-NEG-POSSESSION-LITIGATION-003",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1768478644_9496.pdf",
+      "observedAt": "2026-10-07"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI notice identifies V S Matrix Private Limited and land/building at 486 FIE Patparganj Industrial Area, Delhi."
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Notice is an IBBI liquidation auction record."
+      },
+      {
+        "category": "POSSESSION",
+        "status": "CONTRADICTED",
+        "assertion": "Possession is not with the Liquidator; the notice states possession is symbolic."
+      },
+      {
+        "category": "LITIGATION",
+        "status": "CONTRADICTED",
+        "assertion": "Notice states an illegal-possession application is pending before the Hon'ble NCLT."
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "Complete current bidder obligations are not captured in this negative-control fixture."
+      }
+    ],
+    "note": "Real IBBI negative control: explicit symbolic possession plus pending NCLT dispute must force DO_NOT_BID."
   }
 ]
