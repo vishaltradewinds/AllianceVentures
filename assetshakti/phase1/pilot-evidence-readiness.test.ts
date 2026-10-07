@@ -21,4 +21,40 @@ const complete = assessPilotReadiness({
 });
 assert.equal(complete.readiness, "COMPLETE");
 
+const unbound = assessPilotReadiness({
+  caseId: "PILOT-003",
+  evidence: [
+    "IDENTITY","AUTHORITY","TITLE","POSSESSION","ENCUMBRANCE","LITIGATION",
+    "PHYSICAL","LOCATION","VALUATION","AUCTION","BIDDER_OBLIGATION","PROVENANCE_PARTY_RISK"
+  ].map(category => ({category,status:"VERIFIED",sourceReference:"ibbi://notice"})),
+  auctionLotBinding: {
+    auctionDate: "2026-10-10",
+    assetDescription: "Land and Building at Edathala",
+    reservePrice: 133668963,
+    emdDeadline: "2026-10-09",
+    sourceReference: "ibbi://current-auction",
+    status: "UNRESOLVED"
+  }
+});
+assert.equal(unbound.readiness, "BLOCKED");
+assert.equal(unbound.auctionLotBinding, "UNRESOLVED");
+
+const bound = assessPilotReadiness({
+  caseId: "PILOT-004",
+  evidence: [
+    "IDENTITY","AUTHORITY","TITLE","POSSESSION","ENCUMBRANCE","LITIGATION",
+    "PHYSICAL","LOCATION","VALUATION","AUCTION","BIDDER_OBLIGATION","PROVENANCE_PARTY_RISK"
+  ].map(category => ({category,status:"VERIFIED",sourceReference:"ibbi://notice"})),
+  auctionLotBinding: {
+    auctionDate: "2026-08-20",
+    assetDescription: "First Floor, Municipal No. 1588-89, Azis Ganj Bahadurgarh Road, Delhi",
+    reservePrice: 6723000,
+    emdDeadline: "2026-08-18",
+    sourceReference: "ibbi://exact-auction",
+    status: "VERIFIED"
+  }
+});
+assert.equal(bound.readiness, "COMPLETE");
+assert.equal(bound.auctionLotBinding, "VERIFIED");
+
 console.log("PASS: Pilot evidence readiness gate");
