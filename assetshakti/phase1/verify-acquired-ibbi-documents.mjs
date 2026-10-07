@@ -31,6 +31,8 @@ for (const r of manifest.records) {
     debtorIdentityFound:identity,
     auctionRoundFound:round,
     sourceIdentityVerified:isPdf && readable && identity && round && actualHash===r.contentSha256,
+    expectedDocumentRole:r.documentRole ?? "UNCLASSIFIED",
+    documentRoleConsistent:Boolean(r.documentRole),
     decisionEvidenceProjection:false,
     notes:"Objective source-document verification only; this does not verify title, possession, valuation, bidder eligibility, or corrigenda reconciliation."
   });
@@ -45,7 +47,9 @@ const report={
     total:results.length,
     sourceIdentityVerified:results.filter(x=>x.sourceIdentityVerified).length,
     hashFailures:results.filter(x=>!x.hashIntegrity).length,
-    identityFailures:results.filter(x=>!x.debtorIdentityFound||!x.auctionRoundFound).length
+    identityFailures:results.filter(x=>!x.debtorIdentityFound||!x.auctionRoundFound).length,
+    documentRoleCounts:Object.fromEntries([...new Set(results.map(x=>x.documentRole))].map(role => [role, results.filter(x=>x.documentRole===role).length])),
+    decisionEvidenceEligible:0
   }
 };
 fs.writeFileSync(path.join(OUT,"document-verification-report.json"),JSON.stringify(report,null,2));
