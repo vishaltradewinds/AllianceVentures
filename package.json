@@ -9,7 +9,20 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "assetshakti:validate": "tsx assetshakti/phase1/validate-corpus.ts",
+    "assetshakti:test:phase1": "tsx assetshakti/phase1/decision-engine.test.ts",
+    "assetshakti:test:case-engine": "tsx assetshakti/phase1/case-evaluation-engine.test.ts",
+    "assetshakti:evaluate:cases": "tsx assetshakti/phase1/run-case-evaluations.ts",
+    "assetshakti:test:decomposition": "tsx assetshakti/phase1/asset-package-decomposition.test.ts",
+    "assetshakti:test:reconciliation": "tsx assetshakti/phase1/document-reconciliation.test.ts",
+    "assetshakti:test:readiness": "tsx assetshakti/phase1/pilot-evidence-readiness.test.ts",
+    "assetshakti:test:six-pilot-certification": "tsx assetshakti/phase1/six-pilot-certification-gate.test.ts",
+    "assetshakti:test:user-evidence-intake": "tsx assetshakti/phase1/user-evidence-intake.test.ts",
+    "assetshakti:test:user-evidence-verification": "tsx assetshakti/phase1/user-evidence-verification.test.ts",
+    "assetshakti:test:user-evidence-lifecycle": "tsx assetshakti/phase1/user-evidence-lifecycle.test.ts",
+    "assetshakti:test:stakeholder-upload": "tsx assetshakti/phase1/stakeholder-upload-simulation.test.ts",
+    "assetshakti:test:current-round-process": "tsx assetshakti/phase1/current-round-process-gate.test.ts"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

@@ -8,6 +8,7 @@ import crypto from "crypto";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
+import { verifyUserSuppliedEvidence } from "./assetshakti/phase1/user-evidence-verification.js";
 
 // Generate keys if they don't exist
 if (!fs.existsSync("./private.pem") || !fs.existsSync("./public.pem")) {
@@ -29,7 +30,7 @@ if (!fs.existsSync("./private.pem") || !fs.existsSync("./public.pem")) {
 }
 
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: "15mb" }));
 
 const PORT = parseInt(process.env.PORT || "3000", 10);
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/allianceventures";
@@ -133,6 +134,222 @@ app.post("/login", async (req, res) => {
       window.location="/investor";
     </script>
   `);
+});
+
+// ------------------- ASSETSHAKTI USER EVIDENCE INTAKE -------------------
+
+const ASSETSHAKTI_EVIDENCE_DIR = process.env.ASSETSHAKTI_EVIDENCE_DIR || "./data/assetshakti/evidence";
+
+app.post("/api/assetshakti/evidence-intake", auth(), (req, res) => {
+  try {
+    const { caseId, documentType, auctionRound, sourceReference, observedAt, fileName, contentType, contentBase64 } = req.body || {};
+    if (!caseId || !documentType || !auctionRound || !sourceReference || !observedAt || !fileName || !contentBase64) {
+      return res.status(400).json({ error: "caseId, documentType, auctionRound, sourceReference, observedAt and PDF are required." });
+    }
+    if (contentType !== "application/pdf" && !String(fileName).toLowerCase().endsWith(".pdf")) {
+      return res.status(415).json({ error: "Only PDF evidence is accepted." });
+    }
+    if (typeof contentBase64 !== "string" || contentBase64.length > 14 * 1024 * 1024) {
+      return res.status(413).json({ error: "Evidence file exceeds the configured intake limit." });
+    }
+    const buffer = Buffer.from(contentBase64, "base64");
+    if (buffer.length === 0 || buffer.length > 10 * 1024 * 1024) {
+      return res.status(413).json({ error: "Evidence file exceeds the 10 MB limit." });
+    }
+    if (buffer.subarray(0, 4).toString() !== "%PDF") {
+      return res.status(400).json({ error: "Uploaded content is not a valid PDF." });
+    }
+
+    fs.mkdirSync(ASSETSHAKTI_EVIDENCE_DIR, { recursive: true });
+    const contentSha256 = crypto.createHash("sha256").update(buffer).digest("hex");
+    const safeCase = String(caseId).replace(/[^a-zA-Z0-9_-]/g, "_");
+    const safeHash = contentSha256.slice(0, 16);
+    const storedFile = path.join(ASSETSHAKTI_EVIDENCE_DIR, safeCase + "-" + safeHash + ".pdf");
+    fs.writeFileSync(storedFile, buffer, { flag: "wx" });
+
+    const intake = {
+      intakeId: "ASI-" + Date.now() + "-" + safeHash,
+      caseId,
+      documentType,
+      auctionRound,
+      sourceReference,
+      observedAt,
+      fileName: String(fileName).replace(/[^a-zA-Z0-9._-]/g, "_"),
+      contentSha256,
+      uploadedAt: new Date().toISOString(),
+      uploaderId: (req as any).user?.sub || "unknown",
+      provenanceStatus: "USER_SUPPLIED_PENDING_VERIFICATION",
+      storedFile
+    };
+    const metaPath = storedFile.replace(/\.pdf$/, ".json");
+    fs.writeFileSync(metaPath, JSON.stringify(intake, null, 2), { flag: "wx" });
+
+    return res.status(201).json({
+      intakeId: intake.intakeId,
+      provenanceStatus: intake.provenanceStatus,
+      contentSha256,
+      message: "Evidence accepted for verification. It cannot satisfy G16 until verified."
+    });
+  } catch (err: any) {
+    if (err?.code === "EEXIST") return res.status(409).json({ error: "This document has already been uploaded for this case." });
+    console.error("AssetShakti evidence intake error:", err);
+    return res.status(500).json({ error: "Evidence intake failed." });
+  }
+});
+
+// ------------------- ASSETSHAKTI USER EVIDENCE VERIFICATION -------------------
+
+app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_verifier"]), (req, res) => {
+  try {
+    const { intakeId, documentIdentityConfirmed, authoritativeSourceConfirmed, applicableRoundConfirmed, currentOrSupersededStatusConfirmed, corrigendaConsistencyConfirmed, hashIntegrityConfirmed, materialAssertionsHavePageReferences, verifierNote } = req.body || {};
+    if (!intakeId) return res.status(400).json({ error: "intakeId is required." });
+
+    const files = fs.existsSync(ASSETSHAKTI_EVIDENCE_DIR) ? fs.readdirSync(ASSETSHAKTI_EVIDENCE_DIR) : [];
+
+    let intake: any = null;
+    for (const name of files.filter(n => n.endsWith(".json") && !n.endsWith(".verification.json"))) {
+      try {
+        const candidate = JSON.parse(fs.readFileSync(path.join(ASSETSHAKTI_EVIDENCE_DIR, name), "utf8"));
+        if (candidate.intakeId === intakeId) { intake = candidate; break; }
+      } catch { /* ignore unrelated/corrupt metadata; audit failure is handled below */ }
+    }
+    if (!intake) return res.status(404).json({ error: "Evidence intake not found." });
+    if (intake.provenanceStatus !== "USER_SUPPLIED_PENDING_VERIFICATION") {
+      return res.status(409).json({ error: "Evidence is not pending verification." });
+    }
+    if (!intake.storedFile || !fs.existsSync(intake.storedFile)) {
+      return res.status(409).json({ error: "Stored evidence file is missing." });
+    }
+    const storedBuffer = fs.readFileSync(intake.storedFile);
+    const storedHash = crypto.createHash("sha256").update(storedBuffer).digest("hex");
+    if (storedHash !== intake.contentSha256) {
+      return res.status(409).json({ error: "Stored evidence hash does not match intake metadata." });
+    }
+
+    const result = verifyUserSuppliedEvidence({
+      documentIdentityConfirmed: documentIdentityConfirmed === true,
+      authoritativeSourceConfirmed: authoritativeSourceConfirmed === true,
+      applicableRoundConfirmed: applicableRoundConfirmed === true,
+      currentOrSupersededStatusConfirmed: currentOrSupersededStatusConfirmed === true,
+      corrigendaConsistencyConfirmed: corrigendaConsistencyConfirmed === true,
+      hashIntegrityConfirmed: storedHash === intake.contentSha256 && hashIntegrityConfirmed === true,
+      materialAssertionsHavePageReferences: materialAssertionsHavePageReferences === true,
+      verifierNote: typeof verifierNote === "string" ? verifierNote : "",
+    });
+
+    const verifierId = (req as any).user?.sub || "unknown";
+    const updated = {
+      ...intake,
+      provenanceStatus: result.outcome,
+      verifiedAt: new Date().toISOString(),
+      verifierId,
+      verificationReasons: result.reasons,
+      verificationChecks: {
+        documentIdentityConfirmed: documentIdentityConfirmed === true,
+        authoritativeSourceConfirmed: authoritativeSourceConfirmed === true,
+        applicableRoundConfirmed: applicableRoundConfirmed === true,
+        currentOrSupersededStatusConfirmed: currentOrSupersededStatusConfirmed === true,
+        corrigendaConsistencyConfirmed: corrigendaConsistencyConfirmed === true,
+        hashIntegrityConfirmed: storedHash === intake.contentSha256 && hashIntegrityConfirmed === true,
+        materialAssertionsHavePageReferences: materialAssertionsHavePageReferences === true,
+      },
+      verificationNotes: verifierNote || "",
+    };
+    const metadataPath = intake.storedFile.replace(/\\.pdf$/, ".json");
+    const verificationAuditPath = metadataPath.replace(/\\.json$/, ".verification.json");
+    const tmpMetadataPath = metadataPath + ".tmp";
+    fs.writeFileSync(tmpMetadataPath, JSON.stringify(updated, null, 2), { flag: "wx" });
+    fs.renameSync(tmpMetadataPath, metadataPath);
+    fs.writeFileSync(verificationAuditPath, JSON.stringify(updated, null, 2), { flag: "wx" });
+
+    return res.status(result.outcome === "VERIFIED" ? 200 : 422).json({
+      intakeId,
+      provenanceStatus: result.outcome,
+      reasons: result.reasons,
+      message: result.outcome === "VERIFIED"
+        ? "Evidence verified. Reconciliation and decision evaluation must still run before any critical gate is satisfied."
+        : "Evidence remains rejected and cannot satisfy a critical gate.",
+    });
+  } catch (err: any) {
+    if (err?.code === "EEXIST") return res.status(409).json({ error: "Verification record already exists for this intake." });
+    console.error("AssetShakti evidence verification error:", err);
+    return res.status(500).json({ error: "Evidence verification failed." });
+  }
+});
+
+// Admin verification endpoint: upload never promotes evidence; this endpoint performs the explicit verification gate.
+app.post("/api/assetshakti/evidence-intake/:intakeId/verify", auth(["admin"]), (req, res) => {
+  try {
+    const { intakeId } = req.params;
+    const directoryEntries = fs.existsSync(ASSETSHAKTI_EVIDENCE_DIR)
+      ? fs.readdirSync(ASSETSHAKTI_EVIDENCE_DIR)
+      : [];
+    let intake: any = null;
+    for (const name of directoryEntries.filter(name => name.endsWith(".json") && !name.endsWith(".verification.json"))) {
+      try {
+        const candidate = JSON.parse(fs.readFileSync(path.join(ASSETSHAKTI_EVIDENCE_DIR, name), "utf8"));
+        if (candidate.intakeId === intakeId) {
+          intake = candidate;
+          break;
+        }
+      } catch {
+        // Ignore malformed sidecars; they are not accepted as evidence.
+      }
+    }
+    if (!intake) return res.status(404).json({ error: "Evidence intake not found." });
+    if (intake.provenanceStatus !== "USER_SUPPLIED_PENDING_VERIFICATION") {
+      return res.status(409).json({ error: "Evidence is not pending verification." });
+    }
+
+    const storedBuffer = fs.readFileSync(intake.storedFile);
+    const storedHash = crypto.createHash("sha256").update(storedBuffer).digest("hex");
+    if (storedHash !== intake.contentSha256) {
+      return res.status(409).json({ error: "Stored evidence hash does not match intake metadata." });
+    }
+    const body = req.body || {};
+    const verification = verifyUserSuppliedEvidence({
+      documentIdentityConfirmed: body.documentIdentityConfirmed === true,
+      authoritativeSourceConfirmed: body.authoritativeSourceConfirmed === true,
+      applicableRoundConfirmed: body.applicableRoundConfirmed === true,
+      currentOrSupersededStatusConfirmed: body.currentOrSupersededStatusConfirmed === true,
+      corrigendaConsistencyConfirmed: body.corrigendaConsistencyConfirmed === true,
+      hashIntegrityConfirmed: storedHash === intake.contentSha256 && body.hashIntegrityConfirmed === true,
+      materialAssertionsHavePageReferences: body.materialAssertionsHavePageReferences === true,
+      verifierNote: typeof body.verifierNote === "string" ? body.verifierNote : "",
+    });
+    if (body.contentSha256 && body.contentSha256 !== storedHash) {
+      return res.status(409).json({ error: "Verification hash does not match stored evidence." });
+    }
+
+    const updated = {
+      ...intake,
+      provenanceStatus: verification.outcome,
+      verification: {
+        verifiedAt: new Date().toISOString(),
+        verifier: "authenticated-verifier",
+        auctionRound: intake.auctionRound,
+        sourceReference: intake.sourceReference,
+        reasons: verification.reasons,
+        contentSha256: storedHash
+      }
+    };
+    const metaPath = intake.storedFile.replace(/\.pdf$/, ".json");
+    const tmpPath = metaPath + ".tmp";
+    fs.writeFileSync(tmpPath, JSON.stringify(updated, null, 2), { flag: "wx" });
+    fs.renameSync(tmpPath, metaPath);
+
+    return res.status(verification.outcome === "VERIFIED" ? 200 : 422).json({
+      intakeId,
+      provenanceStatus: verification.outcome,
+      reasons: verification.reasons,
+      message: verification.outcome === "VERIFIED"
+        ? "Evidence verified. Decision gates may be re-evaluated against this exact source/version."
+        : "Evidence rejected. Critical gates remain fail-closed."
+    });
+  } catch (err) {
+    console.error("AssetShakti evidence verification error:", err);
+    return res.status(500).json({ error: "Evidence verification failed." });
+  }
 });
 
 // ------------------- LIVE ANALYTICS CONNECTOR -------------------

@@ -1,0 +1,115 @@
+{
+  "observedAt": "2026-10-06",
+  "status": "EVIDENCE_CAPTURE_IN_PROGRESS",
+  "productionCertification": false,
+  "cases": [
+    {
+      "caseId": "P1-PILOT-005",
+      "name": "JOSAN FOODS PRIVATE LIMITED",
+      "sourceAuthority": "IBBI",
+      "sourceDocuments": [
+        {
+          "documentType": "CORRIGENDUM",
+          "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1781343793_10341.pdf",
+          "observedAt": "2026-10-06",
+          "status": "CURRENT_EVIDENCE_CAPTURED",
+          "facts": [
+            "Corporate debtor: JOSAN FOODS PRIVATE LIMITED.",
+            "Corrigendum date: 13-06-2026.",
+            "Auction date in this corrigendum: 24-06-2026.",
+            "Reserve price: Rs. 43,40,005.",
+            "EMD: Rs. 4,34,000.",
+            "Last date for EMD including extension: 20-06-2026.",
+            "Auction platform: eBKray; web address recorded by IBBI as baanknet.com.",
+            "Asset: leasehold industrial land measuring 16K 15M with building at Village Bagge Ke Uttar, Gumani Wala Road, Jalalabad, District Fazilka.",
+            "Lease stated for 20 years from 23-07-2013 to 22-07-2033.",
+            "Four lease deeds are identified in the IBBI record with Wasika references 1951, 1952, 1990 and 1950."
+          ]
+        },
+        {
+          "documentType": "CURRENT_AUCTION_RECORD",
+          "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?filter_by=Live+auctions&page=6",
+          "observedAt": "2026-10-06",
+          "status": "CURRENT_LISTING_CAPTURED",
+          "facts": [
+            "Later IBBI listing records an auction notice issued 20-08-2026 for auction on 23-09-2026.",
+            "Reserve price remains Rs. 43,40,005.",
+            "EMD deadline recorded as 19-09-2026.",
+            "Asset is described as leasehold rights for the remaining duration of the lease through 22-07-2033."
+          ]
+        }
+      ],
+      "evidenceState": {
+        "IDENTITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUTHORITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUCTION": "VERIFIED_FROM_IBBI_RECORD",
+        "TITLE": "PARTIAL_SOURCE_REPORTED_LEASE_INTEREST; INDEPENDENT_LEASE_AND_ASSIGNABILITY_VERIFICATION_REQUIRED",
+        "POSSESSION": "MISSING",
+        "BIDDER_OBLIGATION": "MISSING_COMPLETE_TERMS",
+        "DOCUMENT_RECONCILIATION": "REQUIRES_RECONCILIATION_ACROSS_MULTIPLE_AUCTION_ROUNDS",
+        "ENCUMBRANCE": "MISSING",
+        "LITIGATION": "MISSING",
+        "VALUATION": "MISSING",
+        "PROVENANCE_PARTY_RISK": "NOT_YET_EVIDENCED"
+      },
+      "criticalBlockers": [
+        "Current auction round and prior corrigendum/notice history must be reconciled into one applicable document chain.",
+        "Underlying lease deeds and transfer/assignment/consent conditions must be independently checked.",
+        "Possession/occupancy evidence is absent.",
+        "Complete bidder eligibility, payment, extension, interest and forfeiture terms are not yet captured in the canonical evidence ledger."
+      ],
+      "decision": "DO_NOT_BID"
+    },
+    {
+      "caseId": "P1-PILOT-006",
+      "name": "Silverton Spinners Limited",
+      "sourceAuthority": "IBBI",
+      "sourceDocuments": [
+        {
+          "documentType": "AUCTION_NOTICE",
+          "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?date=&filter_by=all&page=55&reserve_price=&title=",
+          "observedAt": "2026-10-06",
+          "status": "SOURCE_CAPTURED",
+          "facts": [
+            "IBBI records multiple auction rounds and multiple options.",
+            "One recorded option is Option 3 Block B-(2), comprising leasehold land with a 99-year lease commencing 06-10-1994, approximately 4.9312 acres with RCC factory building and two godowns, plus approximately 1.0147 acres with civil structures.",
+            "Another recorded option is Option 2 Block B-(1), consisting of plant and machinery and related electrical assets; RCC factory building and two godowns are expressly excluded from that option.",
+            "A later IBBI listing records Option 1 as slump sale of the entire unit, with separate Option 2 plant & machinery and Option 3 land & building."
+          ]
+        },
+        {
+          "documentType": "IBBI_PROCESS_RECORD",
+          "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1773124267_9812.pdf",
+          "observedAt": "2026-10-06",
+          "status": "SOURCE_CAPTURED",
+          "facts": [
+            "For the cited March 2026 round, IBBI records auction date 25-03-2026 and EMD deadline 23-03-2026.",
+            "Reserve price recorded for the cited plant-and-machinery option is Rs. 11,25,57,600 with EMD Rs. 1,12,55,760.",
+            "Auction platform recorded as eBKray with IBBI/BAANKNET address."
+          ]
+        }
+      ],
+      "evidenceState": {
+        "IDENTITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUTHORITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUCTION": "VERIFIED_FROM_IBBI_RECORD",
+        "TITLE": "LEASEHOLD_INTEREST_REPORTED; UNDERLYING_LEASE_AND_TRANSFER_RIGHTS_REQUIRE_VERIFICATION",
+        "POSSESSION": "MISSING_FOR_COMPONENT_HANDOVER_STATE",
+        "BIDDER_OBLIGATION": "PARTIAL_SOURCE_REPORTED; COMPLETE_CANONICAL_TERMS_REQUIRED",
+        "DOCUMENT_RECONCILIATION": "MULTIPLE_AUCTION_ROUNDS_AND_OPTIONS_REQUIRE_VERSION_CHAIN",
+        "ASSET_PACKAGE": "COMPOSITE_OR_ALTERNATIVE_LOTS",
+        "VALUATION": "MISSING_COMPONENT_LEVEL_VALUATION",
+        "PROVENANCE_PARTY_RISK": "COMPONENT_BOUNDARIES_REQUIRED"
+      },
+      "criticalBlockers": [
+        "Determine the applicable auction round and winning/unsuccessful option history for the evaluation date.",
+        "Reconcile slump-sale versus separate-block structures.",
+        "Verify lease documents, remaining term, transfer fee/consent conditions and title/interest.",
+        "Verify physical possession and handover dependencies between plant/machinery and land/building blocks.",
+        "Capture complete bidder eligibility, payment, extension and forfeiture provisions."
+      ],
+      "decision": "DO_NOT_BID"
+    }
+  ],
+  "shaktiRule": "These dossiers capture source-backed facts but do not convert them into title clearance, possession clearance, valuation certification or legal opinion. Positive bidding remains blocked until critical evidence is independently verified and document versions are reconciled."
+}

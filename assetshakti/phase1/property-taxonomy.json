@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "classes": [
+    {
+      "code": "RESIDENTIAL",
+      "name": "Residential",
+      "subtypes": ["FLAT", "APARTMENT", "INDIVIDUAL_HOUSE", "VILLA", "BUNGALOW", "FARM_HOUSE", "STUDIO", "RESIDENTIAL_PLOT", "OTHER"]
+    },
+    {
+      "code": "COMMERCIAL",
+      "name": "Commercial",
+      "subtypes": ["OFFICE", "SHOP", "MALL", "GODOWN", "HOTEL", "RESTAURANT", "COMMERCIAL_PLOT", "COMMERCIAL_BUILDING", "OTHER"]
+    },
+    {
+      "code": "INDUSTRIAL",
+      "name": "Industrial",
+      "subtypes": ["INDUSTRIAL_PLOT", "INDUSTRIAL_SHED", "FACTORY_BUILDING", "SHED_WITH_PLANT_MACHINERY", "INDUSTRIAL_LAND_BUILDING", "OTHER"]
+    },
+    {
+      "code": "AGRICULTURAL",
+      "name": "Agricultural",
+      "subtypes": ["AGRICULTURAL_LAND", "AGRICULTURAL_BUILDING", "FARM_PROPERTY", "OTHER"]
+    },
+    {
+      "code": "OTHER_IMMOVABLE",
+      "name": "Other immovable property",
+      "subtypes": ["SPECIAL_USE", "INSTITUTIONAL", "INFRASTRUCTURE", "LEASEHOLD", "OTHER"]
+    },
+    {
+      "code": "COMPOSITE",
+      "name": "Composite property",
+      "subtypes": ["LAND_BUILDING", "LAND_BUILDING_PLANT_MACHINERY", "MULTI_PROPERTY_LOT", "PROPERTY_WITH_FINANCIAL_ASSETS", "OTHER"]
+    }
+  ]
+}

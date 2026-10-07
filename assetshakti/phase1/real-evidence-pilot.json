@@ -1,0 +1,417 @@
+[
+  {
+    "caseId": "P1-PILOT-001",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "observedAt": "2026-10-06"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "asset": {
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY",
+      "description": "GENERAL COMPOSITES PRIVATE LIMITED — composite sale of land, building and plant & machinery"
+    },
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing identifies GENERAL COMPOSITES PRIVATE LIMITED and the composite asset nature.",
+        "confidence": 0.98
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Auction notice is listed in the IBBI liquidation auction notice register.",
+        "confidence": 0.99
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing records reserve price Rs. 9,27,00,000 and EMD deadline 05-10-2026 for the 07-10-2026 auction.",
+        "confidence": 0.98
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "The stored listing evidence does not establish the complete auction-document terms for eligibility, balance payment, extension, interest and forfeiture.",
+        "confidence": 0
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "No independent title/interest evidence has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "No independent possession evidence has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI auction listing evidence is subject to the detailed auction notice/process document; reserve price and EMD deadline alone do not establish the complete bidder obligation set.",
+        "confidence": 0.95
+      },
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI listing identifies GENERAL COMPOSITES PRIVATE LIMITED; auction 07-10-2026; reserve price ₹9.27 crore; composite sale of land, building and plant & machinery.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+        "observedAt": "2026-10-06"
+      },
+      {
+        "category": "AUCTION",
+        "status": "VERIFIED",
+        "assertion": "IBBI listing records EMD deadline 05-10-2026.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+        "observedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "caseId": "P1-PILOT-002",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "observedAt": "2026-10-06"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "asset": {
+      "class": "OTHER_IMMOVABLE",
+      "subtype": "PARTIALLY_BUILT_PROJECT_LAND_BUILDING",
+      "description": "HALLMARK LIVING SPACE PRIVATE LIMITED — Emerald Project, proposed building area and approximately 7.62 acres land"
+    },
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing identifies the Emerald Project asset and notes proposed building area is not fully built up.",
+        "confidence": 0.98
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Auction notice is listed in the IBBI liquidation auction notice register.",
+        "confidence": 0.99
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing records reserve price Rs. 70,50,00,000, auction date 15-10-2026 and EMD deadline 12-10-2026.",
+        "confidence": 0.98
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "Complete auction-document bidder obligations have not been independently captured.",
+        "confidence": 0
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "No independent title/UDS reconciliation or land-rights evidence has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "No independent possession/occupancy evidence has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI auction listing evidence is subject to the detailed auction notice/process document; reserve price and EMD deadline alone do not establish the complete bidder obligation set.",
+        "confidence": 0.95
+      },
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI listing identifies HALLMARK LIVING SPACE PRIVATE LIMITED; auction 15-10-2026; reserve price ₹70.50 crore.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+        "observedAt": "2026-10-06"
+      },
+      {
+        "category": "PHYSICAL",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Emerald Project is described as proposed building area 8,98,137 sq.ft. not fully built-up on approximately 7.62 acres; 6,388 sq.ft. UDS already conveyed to home buyers is excluded from sale.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+        "observedAt": "2026-10-06"
+      },
+      {
+        "category": "AUCTION",
+        "status": "VERIFIED",
+        "assertion": "IBBI listing records EMD deadline 12-10-2026.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+        "observedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "caseId": "P1-PILOT-003",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1770703515_9653.pdf",
+      "observedAt": "2026-10-06"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "asset": {
+      "class": "COMPOSITE",
+      "subtype": "LAND_BUILDING_PLANT_MACHINERY_FINANCIAL_INSTRUMENTS",
+      "description": "Vysali Pharmaceuticals Limited — Edathala land & building, plant & machinery and financial instruments"
+    },
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI auction record identifies Vysali Pharmaceuticals Limited and the Edathala asset location.",
+        "confidence": 0.99
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI record identifies the liquidation auction process and the insolvency professional.",
+        "confidence": 0.99
+      },
+      {
+        "category": "AUCTION",
+        "status": "VERIFIED",
+        "assertion": "IBBI record states reserve price Rs. 16,09,00,000, EMD Rs. 1,60,90,000, auction date 04-03-2026 and EMD deadline 03-03-2026 for this auction record.",
+        "confidence": 0.99
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "The stored IBBI record does not contain the complete bidder obligation/forfeiture terms.",
+        "confidence": 0
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "No independent title/interest verification has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "No independent possession verification has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "PROVENANCE_PARTY_RISK",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "The asset record includes financial instruments alongside immovable/physical assets; these must not be silently valued as ordinary property.",
+        "confidence": 0.95
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI auction listing evidence is subject to the detailed auction notice/process document; reserve price and EMD deadline alone do not establish the complete bidder obligation set.",
+        "confidence": 0.95
+      },
+      {
+        "category": "AUCTION",
+        "status": "VERIFIED",
+        "assertion": "IBBI detailed auction notice records reserve ₹16.09 crore, EMD ₹1.609 crore, EMD deadline 03-03-2026 and auction 04-03-2026 for the cited sale.",
+        "source": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1770703515_9653.pdf",
+        "observedAt": "2026-10-06"
+      },
+      {
+        "category": "PROVENANCE_PARTY_RISK",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "The asset package includes financial instruments in addition to land/building and plant/machinery; these require separate provenance and legal characterization.",
+        "source": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1770703515_9653.pdf",
+        "observedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "caseId": "P1-PILOT-004",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=13",
+      "observedAt": "2026-10-06"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "asset": {
+      "class": "COMMERCIAL",
+      "subtype": "COMMERCIAL_PREMISES",
+      "description": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED — commercial premises, First Floor, Municipal No. 1588-89, Azis Ganj Bahadurgarh Road, Delhi"
+    },
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing identifies the commercial premises and Delhi location.",
+        "confidence": 0.98
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Auction notice is listed in the IBBI liquidation auction notice register.",
+        "confidence": 0.99
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing records reserve price Rs. 67,23,000 and EMD deadline 18-08-2026 for the 20-08-2026 auction.",
+        "confidence": 0.98
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "Complete auction-document bidder obligations have not been independently captured.",
+        "confidence": 0
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "No independent title/interest evidence has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "No independent possession evidence has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI auction listing evidence is subject to the detailed auction notice/process document; reserve price and EMD deadline alone do not establish the complete bidder obligation set.",
+        "confidence": 0.95
+      },
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI listing identifies PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED; auction 20-08-2026; reserve ₹67.23 lakh; commercial premises at Municipal No. 1588-89, Azis Ganj Bahadurgarh Road, Delhi.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+        "observedAt": "2026-10-06"
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Sale is expressly described on 'as is where is', 'as is what is', 'whatever there is' and 'no recourse' basis.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+        "observedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "caseId": "P1-PILOT-005",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=7",
+      "observedAt": "2026-10-06"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "asset": {
+      "class": "INDUSTRIAL",
+      "subtype": "LEASEHOLD_INDUSTRIAL_LAND_BUILDING",
+      "description": "JOSAN FOODS PRIVATE LIMITED — leasehold industrial land and building, Jalalabad, Fazilka, Punjab"
+    },
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing identifies the industrial property and states it is leasehold for a remaining duration through 22-07-2033.",
+        "confidence": 0.98
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Auction notice is listed in the IBBI liquidation auction notice register.",
+        "confidence": 0.99
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI listing records reserve price Rs. 43,40,005 and EMD deadline 19-09-2026 for the 23-09-2026 auction.",
+        "confidence": 0.98
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "Complete auction-document bidder obligations have not been independently captured.",
+        "confidence": 0
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "Lease documents are described by the source, but independent verification of assignability, remaining rights and title/interest has not been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "No independent possession/occupancy evidence has been captured.",
+        "confidence": 0
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "IBBI auction listing evidence is subject to the detailed auction notice/process document; reserve price and EMD deadline alone do not establish the complete bidder obligation set.",
+        "confidence": 0.95
+      },
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI listing identifies JOSAN FOODS PRIVATE LIMITED; auction 23-09-2026; reserve ₹43,40,005; EMD deadline 19-09-2026.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=7",
+        "observedAt": "2026-10-06"
+      },
+      {
+        "category": "TITLE",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "The auctioned interest is leasehold rights for the remaining lease duration, with lease stated through 22-07-2033; it is not an outright freehold title.",
+        "source": "https://ibbi.gov.in/liquidation-auction-notices/lists?page=7",
+        "observedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "caseId": "P1-PILOT-006",
+    "sourceAuthority": "IBBI",
+    "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/2026-01-16-121358-pu20w-faf9dc1a71a2376de49b6a168ae84219.pdf",
+    "observedAt": "2026-10-06",
+    "expectedDecision": "DO_NOT_BID",
+    "assetClass": "COMPOSITE",
+    "subtype": "LEASEHOLD_LAND_BUILDING_AND_PLANT_MACHINERY",
+    "description": "Silverton Spinners auction structure with alternative slump-sale and separate asset blocks.",
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "Notice identifies Silverton Spinners Limited and describes alternative auction blocks.",
+        "confidence": 0.95
+      },
+      {
+        "category": "TITLE",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Block B-(2) includes leasehold land with a 99-year lease commencing 06-10-1994 and additional leasehold land; 1% transfer fee applies.",
+        "confidence": 0.95
+      },
+      {
+        "category": "AUCTION",
+        "status": "VERIFIED",
+        "assertion": "Option 1 is a slump sale of the entire assets; Options 2 and 3 are separate blocks, and the separate blocks are not taken up if Option 1 succeeds.",
+        "confidence": 0.95
+      },
+      {
+        "category": "PHYSICAL",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Block B-(1) plant and machinery removal is subject to a maximum four-month period; physical handover of Block B-(2) land can occur after removal when purchasers differ.",
+        "confidence": 0.95
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Section 29A declaration is required and EMD may be forfeited if ineligibility is found; bidders are directed to complete process documents and independent title/asset inquiries.",
+        "confidence": 0.95
+      }
+    ]
+  }
+]

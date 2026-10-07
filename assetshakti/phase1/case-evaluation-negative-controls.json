@@ -1,0 +1,113 @@
+[
+  {
+    "caseId": "P1-NEG-AUCTION-001",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/616097ac3b00cb0a97df43544da04183.pdf",
+      "observedAt": "2026-10-06"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Auction notice identifies the offered asset."
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Notice is issued within the IBBI liquidation auction process."
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "Independent title/interest verification is not established by this control case."
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "Independent possession verification is not established by this control case."
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "CONTRADICTED",
+        "assertion": "Auction notice contains explicit balance-payment default forfeiture language; the control deliberately represents the obligation assessment as adverse/contradictory pending case-specific reconciliation."
+      }
+    ],
+    "notes": "Negative control for machine enforcement of auction-term risk. IBBI source explicitly states that default in balance consideration can entail forfeiture of the entire amount deposited."
+  },
+  {
+    "caseId": "P1-NEG-COMPOSITE-002",
+    "expectedDecision": "DO_NOT_BID",
+    "note": "Sun Petpack Jabalpur: IBBI lists separate plant/machinery and land/building lots plus a composite lot. The composite lot is expressly sold on 'as is where is, whatever there is, no recourse' basis. This control ensures a property-only evaluator cannot silently assume component equivalence or clean title/condition.",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists?date=&filter_by=Live+auctions%2F1000&page=21",
+      "observedAt": "2026-10-06"
+    },
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Corporate debtor and asset lots identified by IBBI."
+      },
+      {
+        "category": "AUCTION",
+        "status": "REPORTED_BY_SOURCE",
+        "assertion": "Lot 3 combines Lot 1 plant/machinery and Lot 2 land/building and uses an explicit no-recourse sale basis."
+      },
+      {
+        "category": "TITLE",
+        "status": "MISSING",
+        "assertion": "No independent title/interest evidence supplied in this negative control."
+      },
+      {
+        "category": "POSSESSION",
+        "status": "MISSING",
+        "assertion": "No independent possession evidence supplied."
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "Complete bidder-obligation record not reconstructed from the detailed notice/corrigendum set."
+      }
+    ]
+  },
+  {
+    "caseId": "P1-NEG-POSSESSION-LITIGATION-003",
+    "source": {
+      "authority": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1768478644_9496.pdf",
+      "observedAt": "2026-10-07"
+    },
+    "expectedDecision": "DO_NOT_BID",
+    "evidence": [
+      {
+        "category": "IDENTITY",
+        "status": "VERIFIED",
+        "assertion": "IBBI notice identifies V S Matrix Private Limited and land/building at 486 FIE Patparganj Industrial Area, Delhi."
+      },
+      {
+        "category": "AUTHORITY",
+        "status": "VERIFIED",
+        "assertion": "Notice is an IBBI liquidation auction record."
+      },
+      {
+        "category": "POSSESSION",
+        "status": "CONTRADICTED",
+        "assertion": "Possession is not with the Liquidator; the notice states possession is symbolic."
+      },
+      {
+        "category": "LITIGATION",
+        "status": "CONTRADICTED",
+        "assertion": "Notice states an illegal-possession application is pending before the Hon'ble NCLT."
+      },
+      {
+        "category": "BIDDER_OBLIGATION",
+        "status": "MISSING",
+        "assertion": "Complete current bidder obligations are not captured in this negative-control fixture."
+      }
+    ],
+    "note": "Real IBBI negative control: explicit symbolic possession plus pending NCLT dispute must force DO_NOT_BID."
+  }
+]

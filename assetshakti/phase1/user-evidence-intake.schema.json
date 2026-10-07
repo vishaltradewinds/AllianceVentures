@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AssetShakti User Evidence Intake",
+  "type": "object",
+  "required": [
+    "intakeId",
+    "caseId",
+    "documentType",
+    "provenanceStatus",
+    "sourceReference",
+    "uploadedAt",
+    "contentSha256"
+  ],
+  "properties": {
+    "intakeId": {
+      "type": "string"
+    },
+    "caseId": {
+      "type": "string"
+    },
+    "documentType": {
+      "enum": [
+        "AUCTION_NOTICE",
+        "CORRIGENDUM",
+        "ADDENDUM",
+        "PROCESS_DOCUMENT",
+        "TITLE_DOCUMENT",
+        "POSSESSION_DOCUMENT",
+        "VALUATION_REPORT",
+        "COURT_DOCUMENT",
+        "OTHER"
+      ]
+    },
+    "provenanceStatus": {
+      "enum": [
+        "USER_SUPPLIED_PENDING_VERIFICATION",
+        "VERIFIED",
+        "REJECTED"
+      ]
+    },
+    "sourceReference": {
+      "type": "string"
+    },
+    "auctionRound": {
+      "type": "string"
+    },
+    "observedAt": {
+      "type": "string"
+    },
+    "uploadedAt": {
+      "type": "string"
+    },
+    "uploaderId": {
+      "type": "string"
+    },
+    "contentSha256": {
+      "type": "string"
+    },
+    "verificationNotes": {
+      "type": "string"
+    }
+  }
+}

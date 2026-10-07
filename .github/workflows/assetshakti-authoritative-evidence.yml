@@ -1,0 +1,39 @@
+name: AssetShakti authoritative evidence acquisition
+
+on:
+  push:
+    branches:
+      - "assetshakti/phase1-property-foundation"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install PDF evidence tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+      - name: Acquire IBBI pilot documents
+        run: node assetshakti/phase1/acquire-ibbi-evidence.mjs .assetshakti-acquisition
+      - name: Verify acquired document identity and hashes
+        run: node assetshakti/phase1/verify-acquired-ibbi-documents.mjs .assetshakti-acquisition
+      - name: Build page-level evidence index
+        run: node assetshakti/phase1/index-acquired-ibbi-evidence.mjs .assetshakti-acquisition
+      - name: Publish hashed evidence manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assetshakti-ibbi-evidence-manifest
+          path: .assetshakti-acquisition/
+          if-no-files-found: error
+          include-hidden-files: true

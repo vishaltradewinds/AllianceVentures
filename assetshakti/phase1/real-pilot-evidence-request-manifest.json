@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0",
+  "purpose": "Actionable evidence acquisition queue for AssetShakti Phase 1 real pilots. Uploads are pending verification and never satisfy critical gates automatically.",
+  "observedAt": "2026-10-07",
+  "productionCertification": "OFF",
+  "authoritativeSources": [
+    {
+      "name": "IBBI Liquidation Auction Notices",
+      "url": "https://ibbi.gov.in/liquidation-auction-notices/lists"
+    },
+    {
+      "name": "IBBI Corporate Process Auction Notice Register",
+      "url": "https://ibbi.gov.in/claims/auction-notice-process/U67190MH2008PTC179535"
+    }
+  ],
+  "workflow": [
+    "Acquire through authorised source",
+    "Upload exact document/version",
+    "Hash and bind to case + auction round",
+    "Verify identity/source/version",
+    "Reconcile with corrigenda/addenda",
+    "Extract page/section evidence",
+    "Re-run deterministic evaluation",
+    "Shakti sign-off"
+  ],
+  "failClosedRules": [
+    "USER_SUPPLIED_PENDING_VERIFICATION cannot satisfy a critical evidence gate.",
+    "Exact auction round/version must be preserved; materially different rounds must never be merged.",
+    "Title, possession, valuation and bidder eligibility must not be inferred from an auction index.",
+    "Reserve price is not independent market valuation."
+  ],
+  "pilots": [
+    {
+      "caseId": "P1-PILOT-001",
+      "asset": "GENERAL COMPOSITES PRIVATE LIMITED",
+      "round": "2026-10-07",
+      "priority": [
+        "AUCTION_NOTICE",
+        "PROCESS_DOCUMENT",
+        "TITLE_DOCUMENT",
+        "POSSESSION_DOCUMENT",
+        "VALUATION_REPORT",
+        "COURT_DOCUMENT"
+      ],
+      "notes": "Composite Land/Building/Plant & Machinery. Reconcile NCLT/process impact and component-level provenance/valuation."
+    },
+    {
+      "caseId": "P1-PILOT-002",
+      "asset": "HALLMARK LIVING SPACE PRIVATE LIMITED — Emerald Project",
+      "round": "2026-10-15",
+      "priority": [
+        "AUCTION_NOTICE",
+        "PROCESS_DOCUMENT",
+        "TITLE_DOCUMENT",
+        "POSSESSION_DOCUMENT",
+        "VALUATION_REPORT"
+      ],
+      "notes": "Reconcile approximately 7.62 acres with 6,388 sq.ft. UDS already conveyed to home buyers; verify physical completion and possession."
+    },
+    {
+      "caseId": "P1-PILOT-003",
+      "asset": "Vysali Pharmaceuticals Limited — Edathala",
+      "round": "2026-10-10",
+      "priority": [
+        "AUCTION_NOTICE",
+        "PROCESS_DOCUMENT",
+        "TITLE_DOCUMENT",
+        "POSSESSION_DOCUMENT",
+        "VALUATION_REPORT",
+        "CORRIGENDUM"
+      ],
+      "notes": "Bind evidence only to the Edathala lot/current round; reconcile historical rounds and component boundaries including plant/machinery and financial instruments."
+    },
+    {
+      "caseId": "P1-PILOT-004",
+      "asset": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED — Delhi commercial premises",
+      "round": "2026-09-29",
+      "priority": [
+        "AUCTION_NOTICE",
+        "PROCESS_DOCUMENT",
+        "TITLE_DOCUMENT",
+        "POSSESSION_DOCUMENT",
+        "VALUATION_REPORT",
+        "COURT_DOCUMENT"
+      ],
+      "notes": "Exact-lot binding required. Do not merge with the 2026-10-01 land-plus-built-up-godown round or earlier commercial-premises rounds."
+    },
+    {
+      "caseId": "P1-PILOT-005",
+      "asset": "JOSAN FOODS PRIVATE LIMITED — leasehold industrial land/building",
+      "round": "CURRENT_ROUND_TO_BE_CONFIRMED",
+      "priority": [
+        "AUCTION_NOTICE",
+        "CORRIGENDUM",
+        "PROCESS_DOCUMENT",
+        "TITLE_DOCUMENT",
+        "POSSESSION_DOCUMENT",
+        "VALUATION_REPORT"
+      ],
+      "notes": "Verify lease deed, remaining term through the stated date, assignment/consent/fees/restrictions and current corrigendum."
+    },
+    {
+      "caseId": "P1-PILOT-006",
+      "asset": "Silverton Spinners Limited — alternative sale structures",
+      "round": "MULTIPLE_ROUNDS",
+      "priority": [
+        "AUCTION_NOTICE",
+        "CORRIGENDUM",
+        "ADDENDUM",
+        "PROCESS_DOCUMENT",
+        "TITLE_DOCUMENT",
+        "POSSESSION_DOCUMENT",
+        "VALUATION_REPORT"
+      ],
+      "notes": "Bind each alternative sale structure separately; verify lease rights, handover/removal conditions, bidder obligations and component valuation."
+    }
+  ]
+}

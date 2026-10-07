@@ -1,0 +1,56 @@
+name: AssetShakti source monitor
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check authoritative source availability
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .assetshakti-monitor
+          curl -fsSL --max-time 30 -o .assetshakti-monitor/ibbi.html             "https://ibbi.gov.in/liquidation-auction-notices/lists"
+          curl -fsSL --max-time 30 -o .assetshakti-monitor/ibbi-legal.html             "https://ibbi.gov.in/legal-framework/circulars"
+          # BAANKNET is monitored for access/terms feasibility only.
+          # Do not scrape or redistribute its listing data.
+          curl -sS -L --max-time 30 -o /dev/null -w "%{http_code}"             "https://baanknet.com/eauction-psb/" > .assetshakti-monitor/baanknet-status.txt || true
+
+      - name: Detect material source changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require("fs");
+          const ibbi = fs.readFileSync(".assetshakti-monitor/ibbi.html", "utf8");
+          const legal = fs.readFileSync(".assetshakti-monitor/ibbi-legal.html", "utf8");
+          const baanknet = fs.readFileSync(".assetshakti-monitor/baanknet-status.txt", "utf8").trim();
+
+          const summary = [
+            "AssetShakti source-monitor observation",
+            "",
+            `IBBI auction page bytes: ${ibbi.length}`,
+            `IBBI legal-framework page bytes: ${legal.length}`,
+            `BAANKNET HTTP status: ${baanknet || "unavailable"}`,
+            "",
+            "This workflow records source-access signals only. Material legal, data, volume or platform changes require evidence review before changing AssetShakti rules."
+          ].join("\n");
+
+          fs.writeFileSync(".assetshakti-monitor/summary.md", summary);
+          NODE
+
+      - name: Publish observation
+        uses: actions/upload-artifact@v4
+        with:
+          name: assetshakti-source-observation
+          path: .assetshakti-monitor/

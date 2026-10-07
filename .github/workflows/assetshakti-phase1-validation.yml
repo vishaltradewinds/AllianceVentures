@@ -1,0 +1,40 @@
+name: AssetShakti Phase 1 Validation
+
+on:
+  pull_request:
+    paths:
+      - "assetshakti/phase1/**"
+      - "package.json"
+      - "package-lock.json"
+      - "server.ts"
+      - "src/pages/AssetShaktiEvidence.tsx"
+      - "src/App.tsx"
+  push:
+    branches:
+      - "assetshakti/phase1-property-foundation"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run assetshakti:validate
+      - run: npx tsx assetshakti/phase1/decision-engine.test.ts
+      - run: npm run assetshakti:test:case-engine
+      - run: npm run assetshakti:test:decomposition
+      - run: npm run assetshakti:test:reconciliation
+      - run: npm run assetshakti:test:readiness
+      - run: npm run assetshakti:test:six-pilot-certification
+      - run: npm run assetshakti:test:user-evidence-intake
+      - run: npm run assetshakti:test:user-evidence-verification
+      - run: npm run assetshakti:test:user-evidence-lifecycle
+      - run: npm run assetshakti:test:stakeholder-upload
+      - run: npm run assetshakti:test:current-round-process
+      - run: npm run build
+      - run: npm run lint
+      - run: npm run assetshakti:evaluate:cases
