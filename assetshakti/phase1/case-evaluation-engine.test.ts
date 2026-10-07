@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { evaluateCase } from "./case-evaluation-engine";
+import type { EvidenceItem } from "./property-schema";
 
 const source = {
   authority: "IBBI",
@@ -7,7 +8,7 @@ const source = {
   observedAt: "2026-10-06",
 };
 
-const fullEvidence = [
+const fullEvidence: Pick<EvidenceItem, "category" | "status" | "assertion">[] = [
   "IDENTITY", "TITLE", "AUTHORITY", "POSSESSION", "PHYSICAL",
   "LOCATION", "VALUATION", "AUCTION", "BIDDER_OBLIGATION",
 ].map((category) => ({
