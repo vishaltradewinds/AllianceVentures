@@ -34,6 +34,7 @@ jobs:
       - run: npm run assetshakti:test:user-evidence-verification
       - run: npm run assetshakti:test:user-evidence-lifecycle
       - run: npm run assetshakti:test:stakeholder-upload
+      - run: npm run assetshakti:test:current-round-process
       - run: npm run build
       - run: npm run lint
       - run: npm run assetshakti:evaluate:cases
