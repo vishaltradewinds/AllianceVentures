@@ -17,7 +17,12 @@ const complete = assessPilotReadiness({
   evidence: [
     "IDENTITY","AUTHORITY","TITLE","POSSESSION","ENCUMBRANCE","LITIGATION",
     "PHYSICAL","LOCATION","VALUATION","AUCTION","BIDDER_OBLIGATION","PROVENANCE_PARTY_RISK"
-  ].map(category => ({category,status:"VERIFIED",sourceReference:"ibbi://notice"}))
+  ].map(category => ({category,status:"VERIFIED",sourceReference:"ibbi://notice"})),
+  auctionLotBinding: {
+    auctionDate: "2026-10-07", assetDescription: "Land and Building",
+    reservePrice: 1000000, emdDeadline: "2026-10-05",
+    sourceReference: "ibbi://exact-auction", status: "VERIFIED"
+  }
 });
 assert.equal(complete.readiness, "COMPLETE");
 
