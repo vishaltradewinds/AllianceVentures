@@ -1,11 +1,11 @@
 {
-  "schemaVersion": "1.2",
+  "schemaVersion": "1.3",
   "purpose": "Authoritative source registry for AssetShakti multi-auction intelligence.",
   "sourcePolicy": "DIRECT_AUCTION_PLATFORMS_ONLY",
   "productionCertification": "OFF",
   "sources": [
     {"provider":"IBBI","name":"IBBI Liquidation Auction Notices","url":"https://ibbi.gov.in/liquidation-auction-notices/lists","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
-    {"provider":"BAANKNET","name":"BAANKNET — Bank Assets Auction Network","url":"https://baanknet.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
+    {"provider":"BAANKNET","name":"BAANKNET — Bank Assets Auction Network","url":"https://baanknet.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"EVIDENCE_READY","evidenceBasis":"Official IBBI sale notices identify BAANKNET as the approved e-auction platform and state that complete auction documents are uploaded there; exact pilot-lot certification remains separate."},
     {"provider":"MSTC","name":"MSTC e-Commerce / MSTC Realty","url":"https://www.mstcecommerce.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
     {"provider":"SAMIL","name":"SAMIL — Shriram Automall India Limited","url":"https://www.samil.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
     {"provider":"EAUCTION_INDIA","name":"NIC eAuction India","url":"https://www.eauction.gov.in/eAuction/app","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
