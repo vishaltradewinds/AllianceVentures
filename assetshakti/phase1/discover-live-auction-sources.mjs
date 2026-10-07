@@ -44,6 +44,7 @@ for (const source of SOURCES) {
     accessMode: source.mode,
     checkedAt: new Date().toISOString(),
     status: "UNKNOWN",
+    sourceVersion: "public-surface-v1",
     recordSignals: 0,
     categories: [],
     liveSurface: false,
