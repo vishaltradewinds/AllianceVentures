@@ -17,6 +17,10 @@ export function evaluatePropertyGates(asset:PropertyAsset):GateResult[]{
   if(!auctionTerms.length) out.push({gate:"AUCTION_TERMS",passed:false,reason:"No decision-critical auction-term evidence exists for EMD/payment/eligibility/forfeiture conditions."});
   else if(auctionTerms.some(e=>e.status==="MISSING"||e.status==="CONTRADICTED")) out.push({gate:"AUCTION_TERMS",passed:false,reason:"Auction-term evidence is missing or contradicted."});
   else out.push({gate:"AUCTION_TERMS",passed:true,reason:"Auction-term evidence exists without a blocking status."});
+  const litigation=asset.evidence.filter(e=>e.category==="LITIGATION");
+  if(litigation.some(e=>e.status==="CONTRADICTED")) out.push({gate:"LITIGATION",passed:false,reason:"Authoritative litigation evidence is contradicted or unresolved."});
+  else if(litigation.length) out.push({gate:"LITIGATION",passed:true,reason:"Litigation evidence is present; unresolved matters remain visible for review."});
+  else out.push({gate:"LITIGATION",passed:true,reason:"No litigation evidence was supplied to this gate; absence is not treated as clearance."});
   const audit=asset.evidence.every(e=>!!e.id&&!!e.sourceName&&!!e.assertion&&Number.isFinite(e.confidence)&&e.confidence>=0&&e.confidence<=1);
   out.push({gate:"AUDITABILITY",passed:audit,reason:audit?"Evidence records are structurally auditable.":"Evidence provenance is incomplete."});
   return out;
