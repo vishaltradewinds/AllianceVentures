@@ -21,6 +21,10 @@ jobs:
           node-version: 20
       - name: Acquire IBBI pilot documents
         run: node assetshakti/phase1/acquire-ibbi-evidence.mjs .assetshakti-acquisition
+      - name: Install PDF evidence tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
       - name: Build page-level evidence index
         run: node assetshakti/phase1/index-acquired-ibbi-evidence.mjs .assetshakti-acquisition
       - name: Publish hashed evidence manifest
