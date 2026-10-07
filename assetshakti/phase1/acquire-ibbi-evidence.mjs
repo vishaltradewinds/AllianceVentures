@@ -42,74 +42,25 @@ function extractDates(row) {
   return [...clean(row).matchAll(/\b\d{2}-\d{2}-\d{4}\b/g)].map(m => m[0]);
 }
 
-function extractPdfLinks(row) {
-  const tokens = row.split(/["'\\s=<>]+/).map(s => s.trim()).filter(Boolean);
-  const candidates = tokens.filter(token =>
-    token.toLowerCase().includes("/uploads/auction_notice_liquidation/") ||
-    /\\.pdf(?:\\?|$)/i.test(token)
-  );
-  return [...new Set(candidates.map(raw => raw.replace(/&amp;/g, "&")).map(raw => {
-    try { return new URL(raw, IBBI_LIST).href; } catch { return null; }
-  }).filter(Boolean))];
-}port fs from "node:fs";
-import path from "node:path";
-import crypto from "node:crypto";
-import { execFileSync } from "node:child_process";
+function extractSourceLinks(row) {
+  const tokens = row
+    .split(/["'\s=<>]+/)
+    .map(s => s.trim())
+    .filter(Boolean);
 
-// Shakti evidence acquisition: acquisition is never verification.
-const OUT = process.argv[2] ?? ".assetshakti-acquisition";
-fs.mkdirSync(OUT, { recursive: true });
-
-const IBBI_LIST = "https://ibbi.gov.in/liquidation-auction-notices/lists";
-
-function curl(url, output, timeout = "90") {
-  execFileSync("curl", [
-    "-fsSL",
-    "--retry", "3",
-    "--retry-delay", "2",
-    "--max-time", timeout,
-    "-A", "Mozilla/5.0 (AssetShakti evidence acquisition)",
-    "-H", "Accept: text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
-    "-o", output,
-    url
-  ]);
+  return [...new Set(tokens
+    .filter(token => {
+      const lower = token.toLowerCase();
+      return lower.includes("/uploads/auction_notice_liquidation/") || lower.includes(".pdf");
+    })
+    .map(raw => raw.replace(/&amp;/g, "&"))
+    .map(raw => {
+      try { return new URL(raw, IBBI_LIST).href; } catch { return null; }
+    })
+    .filter(Boolean)
+  )];
 }
 
-function clean(s) {
-  return s
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/&amp;/gi, "&")
-    .replace(/&quot;/gi, '"')
-    .replace(/&#39;/gi, "'")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function dateToKey(s) {
-  const m = s.match(/(\d{2})-(\d{2})-(\d{4})/);
-  return m ? `${m[3]}-${m[2]}-${m[1]}` : "";
-}
-
-function extractDates(row) {
-  return [...clean(row).matchAll(/\b\d{2}-\d{2}-\d{4}\b/g)].map(m => m[0]);
-}
-
-function extractPdfLinks(row) {
-  const urls = [];
-  const patterns = [
-    /\/uploads\/auction_notice_liquidation\/[^"'<>\\s)]+/gi,
-    /https?:\\/\\/[^"'<>\\s)]+/gi
-  ];
-  for (const pattern of patterns) {
-    for (const match of row.matchAll(pattern)) urls.push(match[0]);
-  }
-  for (const match of row.matchAll(/href\\s*=\\s*["']([^"']+)["']/gi)) urls.push(match[1]);
-  for (const match of row.matchAll(/(?:data-url|data-href|onclick)\\s*=\\s*["']([^"']+)["']/gi)) urls.push(match[1]);
-  return [...new Set(urls.map(raw => raw.replace(/&amp;/g, "&")).map(raw => {
-    try { return new URL(raw, IBBI_LIST).href; } catch { return null; }
-  }).filter(Boolean).filter(u => /\\.pdf(?:\\?|$)/i.test(u) || /auction_notice_liquidation/i.test(u)))];
-}
 const targets = [
   { caseId: "P1-PILOT-001", name: "GENERAL COMPOSITES PRIVATE LIMITED", round: "07-10-2026" },
   { caseId: "P1-PILOT-002", name: "HALLMARK LIVING SPACE PRIVATE LIMITED", round: "15-10-2026" },
@@ -130,9 +81,8 @@ for (const target of targets) {
 
   const html = fs.readFileSync(htmlPath, "utf8");
   const rows = [...html.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi)].map(m => m[0]);
-  const normalizedName = target.name.toLowerCase();
   const matchedRows = rows.filter(row =>
-    clean(row).toLowerCase().includes(normalizedName) &&
+    clean(row).toLowerCase().includes(target.name.toLowerCase()) &&
     extractDates(row).includes(target.round)
   );
 
@@ -141,7 +91,6 @@ for (const target of targets) {
     source: queryUrl,
     htmlBytes: Buffer.byteLength(html),
     rowCount: rows.length,
-    nameOccurrences: (html.toLowerCase().match(new RegExp(target.name.toLowerCase().replace(/[.*+?^{}()|[\]\\]/g, "\\$&"), "g")) || []).length,
     matchingRows: matchedRows.length
   }));
 
@@ -149,11 +98,18 @@ for (const target of targets) {
     throw new Error(`FAIL-CLOSED: no authoritative IBBI row found for ${target.caseId} / ${target.round}`);
   }
 
-  const allPdfs = [...new Set(matchedRows.flatMap(extractPdfLinks))];
-  if (!allPdfs.length) {
-    console.log("NO_PDF_LINKS_ROW=" + matchedRows[0].slice(0, 12000));
-    throw new Error(`FAIL-CLOSED: authoritative row found but no PDF source link exposed for ${target.caseId} / ${target.round}`);
+  const sourceLinks = [...new Set(matchedRows.flatMap(extractSourceLinks))];
+
+  if (!sourceLinks.length) {
+    console.log("NO_SOURCE_LINKS_ROW=" + matchedRows[0].slice(0, 16000));
+    throw new Error(`FAIL-CLOSED: authoritative row found but no downloadable source link exposed for ${target.caseId} / ${target.round}`);
   }
+
+  console.log(JSON.stringify({
+    caseId: target.caseId,
+    auctionDate: target.round,
+    sourceLinks
+  }));
 
   const dates = extractDates(matchedRows[0]);
   matchedTargets.push({
@@ -161,17 +117,17 @@ for (const target of targets) {
     corporateDebtor: target.name,
     issueDate: dates[0] ?? "",
     auctionDate: target.round,
-    pdfCount: allPdfs.length,
+    sourceLinkCount: sourceLinks.length,
     sourceQuery: queryUrl
   });
 
   const dir = path.join(OUT, target.caseId, dateToKey(target.round));
   fs.mkdirSync(dir, { recursive: true });
 
-  for (let i = 0; i < Math.min(2, allPdfs.length); i++) {
+  for (let i = 0; i < Math.min(2, sourceLinks.length); i++) {
     const fileName = i === 0 ? "auction-notice.pdf" : "details.pdf";
     const filePath = path.join(dir, fileName);
-    curl(allPdfs[i], filePath);
+    curl(sourceLinks[i], filePath);
 
     const bytes = fs.readFileSync(filePath);
     const sha256 = crypto.createHash("sha256").update(bytes).digest("hex");
@@ -181,7 +137,7 @@ for (const target of targets) {
       corporateDebtor: target.name,
       auctionDate: target.round,
       documentType: i === 0 ? "AUCTION_NOTICE" : "DETAILS",
-      sourceReference: allPdfs[i],
+      sourceReference: sourceLinks[i],
       contentSha256: sha256,
       bytes: bytes.length,
       localPath: filePath
@@ -194,7 +150,7 @@ if (new Set(acquired.map(x => x.caseId)).size !== targets.length) {
 }
 
 const manifest = {
-  schemaVersion: "1.2",
+  schemaVersion: "1.3",
   acquiredAt: new Date().toISOString(),
   source: IBBI_LIST,
   authoritativeSource: "IBBI Liquidation Auction Notices",
@@ -209,7 +165,7 @@ const manifest = {
     "PDF SHA-256 is computed from downloaded bytes.",
     "Title, possession, valuation and bidder eligibility are not inferred from an auction index.",
     "A record cannot enter decision evidence until the existing verification and reconciliation gates pass.",
-    "Missing pilot rows or missing PDF links fail the acquisition job rather than producing a partial success."
+    "Missing pilot rows or missing downloadable source links fail the acquisition job."
   ]
 };
 
