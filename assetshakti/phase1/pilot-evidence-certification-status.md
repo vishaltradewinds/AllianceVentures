@@ -48,6 +48,7 @@ Production certification requires completion of the evidence dossiers, determini
 
 - Added `real-pilot-evidence-request-manifest.json` as the actionable acquisition queue for all six real pilots.
 - Confirmed the existing Evidence Intake UI/API provides a user-assisted authorised-source path when automated retrieval is blocked.
+- Hardened the verifier so the stored PDF is re-hashed server-side, must match the immutable intake hash, must still be pending verification, and the verification audit is bound to that exact intake file.
 - IBBI official register evidence was rechecked for the current General Composites, Hallmark Living Space, Vysali and Parakkott rounds; exact document/version binding remains mandatory.
 - Automated web access to underlying IBBI PDF/image content can be blocked by the source; this does not justify inference. The authorised user-upload path is therefore the operational fallback.
 - Production certification remains **OFF**.
