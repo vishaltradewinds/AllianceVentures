@@ -85,7 +85,7 @@ const userVerifiedTerms = evaluateCase({
   source,
   expectedDecision: "DO_NOT_BID",
   asset: { class: "INDUSTRIAL", subtype: "INDUSTRIAL_LAND_BUILDING" },
-  evidence: fullEvidence.filter((e) => e.category !== "BIDDER_OBLIGATION"),
+  evidence: fullEvidence.filter((e) => e.category !== "BIDDER_OBLIGATION" && e.category !== "TITLE"),
   userEvidence: [{
     intakeId: "INTAKE-TEST-001", caseId: "ENGINE-USER-EVIDENCE-001", documentType: "AUCTION_NOTICE", auctionRound: "2026-09-23",
     sourceReference: "TEST://IBBI/JOSAN/CURRENT-2026-09-23", contentSha256: "sha256-test", state: "VERIFIED",
