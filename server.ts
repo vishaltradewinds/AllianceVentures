@@ -140,7 +140,7 @@ app.post("/login", async (req, res) => {
 
 const ASSETSHAKTI_EVIDENCE_DIR = process.env.ASSETSHAKTI_EVIDENCE_DIR || "./data/assetshakti/evidence";
 
-app.post("/api/assetshakti/evidence-intake", (req, res) => {
+app.post("/api/assetshakti/evidence-intake", auth(), (req, res) => {
   try {
     const { caseId, documentType, auctionRound, sourceReference, observedAt, fileName, contentType, contentBase64 } = req.body || {};
     if (!caseId || !documentType || !auctionRound || !sourceReference || !observedAt || !fileName || !contentBase64) {
@@ -177,6 +177,7 @@ app.post("/api/assetshakti/evidence-intake", (req, res) => {
       fileName: String(fileName).replace(/[^a-zA-Z0-9._-]/g, "_"),
       contentSha256,
       uploadedAt: new Date().toISOString(),
+      uploaderId: (req as any).user?.sub || "unknown",
       provenanceStatus: "USER_SUPPLIED_PENDING_VERIFICATION",
       storedFile
     };
