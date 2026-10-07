@@ -32,6 +32,7 @@ jobs:
       - run: npm run assetshakti:test:six-pilot-certification
       - run: npm run assetshakti:test:user-evidence-intake
       - run: npm run assetshakti:test:user-evidence-verification
+      - run: npm run assetshakti:test:user-evidence-lifecycle
       - run: npm run build
       - run: npm run lint
       - run: npm run assetshakti:evaluate:cases
