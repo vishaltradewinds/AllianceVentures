@@ -5,6 +5,8 @@ if(canPromoteToDecisionEvidence(base)) throw new Error("Pending evidence must re
 const verified:UserEvidenceRecord={...base,state:"VERIFIED",verification:{currentOrSuperseded:"CURRENT",reconciliationStatus:"RECONCILED",verifiedAt:"2026-10-07T09:00:00Z",verifierId:"TEST-VERIFIER"}};
 if(!canPromoteToDecisionEvidence(verified)) throw new Error("Verified current evidence should promote.");
 if(!projectVerifiedEvidence(verified,"BIDDER_OBLIGATION","TEST-only bidder obligations","2026-10-07T09:00:00Z")) throw new Error("Projection failed.");
+const verifiedWithoutReconciliation=({...verified,verification:{...verified.verification!,reconciliationStatus:"UNRESOLVED"}});
+if(projectVerifiedEvidence(verifiedWithoutReconciliation,"AUCTION","Must remain blocked","2026-10-07T09:00:00Z")) throw new Error("Unresolved evidence must not project.");
 if(canPromoteToDecisionEvidence({...verified,verification:{...verified.verification!,reconciliationStatus:"UNRESOLVED"}})) throw new Error("Unresolved reconciliation must block.");
 if(canPromoteToDecisionEvidence({...verified,verification:{...verified.verification!,currentOrSuperseded:"SUPERSEDED"}})) throw new Error("Superseded evidence must block current-round G16.");
 console.log("user-evidence-lifecycle: PASS");
