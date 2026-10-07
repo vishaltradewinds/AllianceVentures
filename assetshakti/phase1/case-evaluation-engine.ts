@@ -2,6 +2,7 @@ import type { PropertyAsset, EvidenceItem, PropertyClass } from "./property-sche
 import { evaluatePropertyProductionDecision, evaluatePropertyGates } from "./decision-engine";
 import { reconcileAuctionDocuments, type AuctionDocumentVersion } from "./document-reconciliation";
 import { assessAssetPackage, type AssetPackageAssessment } from "./asset-package-decomposition";
+import { canPromoteToDecisionEvidence, type UserEvidenceRecord } from "./user-evidence-lifecycle";
 
 export type CaseEvaluationInput = {
   caseId: string;
@@ -29,6 +30,7 @@ export type CaseEvaluationInput = {
   notes?: string;
   documentVersions?: AuctionDocumentVersion[];
   reconciliation?: { status: "RECONCILED" | "UNRESOLVED" | "NOT_APPLICABLE"; materialConflicts?: string[]; latestApplicableReference?: string };
+  userEvidence?: UserEvidenceRecord[];
 };
 
 export type CaseEvaluationResult = {
@@ -84,6 +86,17 @@ function toPropertyAsset(input: CaseEvaluationInput): PropertyAsset {
 
 export function evaluateCase(input: CaseEvaluationInput): CaseEvaluationResult {
   const asset = toPropertyAsset(input);
+  const promotedUserEvidence = (input.userEvidence ?? []).filter(canPromoteToDecisionEvidence).map((r) => ({
+    id: r.intakeId,
+    category: r.documentType === "TITLE_DOCUMENT" ? "TITLE" : r.documentType === "POSSESSION_DOCUMENT" ? "POSSESSION" : "BIDDER_OBLIGATION",
+    sourceName: "USER_SUPPLIED_VERIFIED",
+    sourceReference: r.sourceReference,
+    observedAt: r.verification?.verifiedAt ?? input.source.observedAt,
+    status: "VERIFIED",
+    assertion: `Verified user-supplied ${r.documentType} bound to auction round ${r.auctionRound}.`,
+    confidence: 1,
+  } as EvidenceItem));
+  asset.evidence.push(...promotedUserEvidence);
   const assetPackageAssessment = input.asset?.description
     ? assessAssetPackage({ caseId: input.caseId, auctionDescription: input.asset.description, components: [] })
     : undefined;
