@@ -8,6 +8,7 @@ import crypto from "crypto";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
+import { verifyUserSuppliedEvidence } from "./assetshakti/phase1/user-evidence-verification.js";
 
 // Generate keys if they don't exist
 if (!fs.existsSync("./private.pem") || !fs.existsSync("./public.pem")) {
@@ -192,6 +193,73 @@ app.post("/api/assetshakti/evidence-intake", (req, res) => {
     if (err?.code === "EEXIST") return res.status(409).json({ error: "This document has already been uploaded for this case." });
     console.error("AssetShakti evidence intake error:", err);
     return res.status(500).json({ error: "Evidence intake failed." });
+  }
+});
+
+// ------------------- ASSETSHAKTI USER EVIDENCE VERIFICATION -------------------
+
+app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_verifier"]), (req, res) => {
+  try {
+    const { intakeId, documentIdentityConfirmed, authoritativeSourceConfirmed, applicableRoundConfirmed, currentOrSupersededStatusConfirmed, corrigendaConsistencyConfirmed, hashIntegrityConfirmed, materialAssertionsHavePageReferences, verifierNote } = req.body || {};
+    if (!intakeId) return res.status(400).json({ error: "intakeId is required." });
+
+    const files = fs.existsSync(ASSETSHAKTI_EVIDENCE_DIR) ? fs.readdirSync(ASSETSHAKTI_EVIDENCE_DIR) : [];
+    const metadataFile = files.find(name => name.endsWith(".json") && name !== "index.json");
+    if (!metadataFile) return res.status(404).json({ error: "Evidence intake metadata not found." });
+
+    let intake: any = null;
+    for (const name of files.filter(n => n.endsWith(".json"))) {
+      try {
+        const candidate = JSON.parse(fs.readFileSync(path.join(ASSETSHAKTI_EVIDENCE_DIR, name), "utf8"));
+        if (candidate.intakeId === intakeId) { intake = candidate; break; }
+      } catch { /* ignore unrelated/corrupt metadata; audit failure is handled below */ }
+    }
+    if (!intake) return res.status(404).json({ error: "Evidence intake not found." });
+
+    const result = verifyUserSuppliedEvidence({
+      documentIdentityConfirmed: documentIdentityConfirmed === true,
+      authoritativeSourceConfirmed: authoritativeSourceConfirmed === true,
+      applicableRoundConfirmed: applicableRoundConfirmed === true,
+      currentOrSupersededStatusConfirmed: currentOrSupersededStatusConfirmed === true,
+      corrigendaConsistencyConfirmed: corrigendaConsistencyConfirmed === true,
+      hashIntegrityConfirmed: hashIntegrityConfirmed === true,
+      materialAssertionsHavePageReferences: materialAssertionsHavePageReferences === true,
+      verifierNote: typeof verifierNote === "string" ? verifierNote : "",
+    });
+
+    const updated = {
+      ...intake,
+      provenanceStatus: result.outcome,
+      verifiedAt: new Date().toISOString(),
+      verifierId: (req as any).user?.sub || "unknown",
+      verificationReasons: result.reasons,
+      verificationChecks: {
+        documentIdentityConfirmed: documentIdentityConfirmed === true,
+        authoritativeSourceConfirmed: authoritativeSourceConfirmed === true,
+        applicableRoundConfirmed: applicableRoundConfirmed === true,
+        currentOrSupersededStatusConfirmed: currentOrSupersededStatusConfirmed === true,
+        corrigendaConsistencyConfirmed: corrigendaConsistencyConfirmed === true,
+        hashIntegrityConfirmed: hashIntegrityConfirmed === true,
+        materialAssertionsHavePageReferences: materialAssertionsHavePageReferences === true,
+      },
+      verificationNotes: verifierNote || "",
+    };
+    const metadataPath = path.join(ASSETSHAKTI_EVIDENCE_DIR, metadataFile);
+    const verificationAuditPath = metadataPath.replace(/\\.json$/, ".verification.json");
+    fs.writeFileSync(verificationAuditPath, JSON.stringify(updated, null, 2), { flag: "wx" });
+
+    return res.status(result.outcome === "VERIFIED" ? 200 : 422).json({
+      intakeId,
+      provenanceStatus: result.outcome,
+      reasons: result.reasons,
+      message: result.outcome === "VERIFIED"
+        ? "Evidence verified. Reconciliation and decision evaluation must still run before any critical gate is satisfied."
+        : "Evidence remains rejected and cannot satisfy a critical gate.",
+    });
+  } catch (err: any) {
+    if (err?.code === "EEXIST") return res.status(409).json({ error: "Verification record already exists for this intake." });
+    console.error("AssetShakti evidence verification error:", err);
+    return res.status(500).json({ error: "Evidence verification failed." });
   }
 });
 
