@@ -304,7 +304,7 @@ app.post("/api/assetshakti/evidence-intake/:intakeId/verify", auth(["admin"]), (
       provenanceStatus: verification.outcome,
       verification: {
         verifiedAt: new Date().toISOString(),
-        verifier: (req as any).user?.sub || "unknown",
+        verifier: "authenticated-verifier",
         reasons: verification.reasons,
         contentSha256: storedHash
       }
