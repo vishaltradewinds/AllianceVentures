@@ -263,6 +263,69 @@ app.post("/api/assetshakti/evidence-intake/verify", auth(["admin", "evidence_ver
   }
 });
 
+// Admin verification endpoint: upload never promotes evidence; this endpoint performs the explicit verification gate.
+app.post("/api/assetshakti/evidence-intake/:intakeId/verify", auth(["admin"]), (req, res) => {
+  try {
+    const { intakeId } = req.params;
+    const directoryEntries = fs.existsSync(ASSETSHAKTI_EVIDENCE_DIR)
+      ? fs.readdirSync(ASSETSHAKTI_EVIDENCE_DIR)
+      : [];
+    let intake: any = null;
+    for (const name of directoryEntries.filter(name => name.endsWith(".json"))) {
+      try {
+        const candidate = JSON.parse(fs.readFileSync(path.join(ASSETSHAKTI_EVIDENCE_DIR, name), "utf8"));
+        if (candidate.intakeId === intakeId) {
+          intake = candidate;
+          break;
+        }
+      } catch {
+        // Ignore malformed sidecars; they are not accepted as evidence.
+      }
+    }
+    if (!intake) return res.status(404).json({ error: "Evidence intake not found." });
+    if (intake.provenanceStatus !== "USER_SUPPLIED_PENDING_VERIFICATION") {
+      return res.status(409).json({ error: "Evidence is not pending verification." });
+    }
+
+    const storedBuffer = fs.readFileSync(intake.storedFile);
+    const storedHash = crypto.createHash("sha256").update(storedBuffer).digest("hex");
+    if (storedHash !== intake.contentSha256) {
+      return res.status(409).json({ error: "Stored evidence hash does not match intake metadata." });
+    }
+    const verification = verifyUserSuppliedEvidence(req.body || {});
+    if (req.body?.contentSha256 && req.body.contentSha256 !== storedHash) {
+      return res.status(409).json({ error: "Verification hash does not match stored evidence." });
+    }
+
+    const updated = {
+      ...intake,
+      provenanceStatus: verification.outcome,
+      verification: {
+        verifiedAt: new Date().toISOString(),
+        verifier: req.user?.sub || "unknown",
+        reasons: verification.reasons,
+        contentSha256: storedHash
+      }
+    };
+    const metaPath = intake.storedFile.replace(/\.pdf$/, ".json");
+    const tmpPath = metaPath + ".tmp";
+    fs.writeFileSync(tmpPath, JSON.stringify(updated, null, 2), { flag: "wx" });
+    fs.renameSync(tmpPath, metaPath);
+
+    return res.status(verification.outcome === "VERIFIED" ? 200 : 422).json({
+      intakeId,
+      provenanceStatus: verification.outcome,
+      reasons: verification.reasons,
+      message: verification.outcome === "VERIFIED"
+        ? "Evidence verified. Decision gates may be re-evaluated against this exact source/version."
+        : "Evidence rejected. Critical gates remain fail-closed."
+    });
+  } catch (err) {
+    console.error("AssetShakti evidence verification error:", err);
+    return res.status(500).json({ error: "Evidence verification failed." });
+  }
+});
+
 // ------------------- LIVE ANALYTICS CONNECTOR -------------------
 
 async function fetchMetrics() {
