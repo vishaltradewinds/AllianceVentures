@@ -1,6 +1,11 @@
 name: AssetShakti Dependency Remediation
 
 on:
+  pull_request:
+    paths:
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/assetshakti-dependency-remediation.yml"
   push:
     branches:
       - "assetshakti/phase1.5-multi-auction-source-foundation"
