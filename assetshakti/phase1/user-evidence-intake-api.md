@@ -48,3 +48,9 @@ Do not execute uploaded files. Enforce authorization per case. Do not accept cre
 
 ## Product behavior
 When automated acquisition fails, the UI should convert the failure into an actionable user task rather than a dead end: `Get document from authorised source → Upload → Verify → Re-evaluate`.
+## Verification endpoint
+
+- `POST /api/assetshakti/evidence-intake/verify` is restricted to authenticated `admin` or `evidence_verifier` roles.
+- Verification is fail-closed and checks document identity, authoritative source, applicable round, current/superseded status, corrigenda consistency, stored-file hash integrity, and page/section references.
+- A successful verification records an immutable verification audit record and changes provenance to VERIFIED; it does **not** by itself mark a property BID_READY.
+- Reconciliation and the full Shakti decision engine remain mandatory after verification.
