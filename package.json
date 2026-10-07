@@ -21,7 +21,8 @@
     "assetshakti:test:user-evidence-intake": "tsx assetshakti/phase1/user-evidence-intake.test.ts",
     "assetshakti:test:user-evidence-verification": "tsx assetshakti/phase1/user-evidence-verification.test.ts",
     "assetshakti:test:user-evidence-lifecycle": "tsx assetshakti/phase1/user-evidence-lifecycle.test.ts",
-    "assetshakti:test:stakeholder-upload": "tsx assetshakti/phase1/stakeholder-upload-simulation.test.ts"
+    "assetshakti:test:stakeholder-upload": "tsx assetshakti/phase1/stakeholder-upload-simulation.test.ts",
+    "assetshakti:test:current-round-process": "tsx assetshakti/phase1/current-round-process-gate.test.ts"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
