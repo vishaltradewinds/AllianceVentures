@@ -37,14 +37,18 @@ function clean(value: string): string {
 function money(value?: string): number | undefined {
   if (!value) return undefined;
   const normalized = value.replace(/[,₹]/g, " ").replace(/\s+/g, " ").trim();
-  const amountWithUnit = normalized.match(/([0-9]+(?:\.[0-9]+)?)\s*(crore|cr|lakh|lac)(?:\s|$)/i);
-  if (amountWithUnit) {
-    const amount = Number(amountWithUnit[1]);
-    const unit = amountWithUnit[2].toLowerCase();
-    return unit === "crore" || unit === "cr" ? amount * 10000000 : amount * 100000;
-  }
-  const direct = normalized.match(/[0-9]+(?:\.[0-9]+)?/);
-  return direct ? Number(direct[0]) : undefined;
+  const findAmountBefore = (unitPattern: RegExp, multiplier: number): number | undefined => {
+    const match = unitPattern.exec(normalized);
+    if (!match || match.index < 0) return undefined;
+    const before = normalized.slice(0, match.index);
+    const numbers = before.match(/[0-9]+(?:\.[0-9]+)?/g);
+    const last = numbers?.at(-1);
+    return last ? Number(last) * multiplier : undefined;
+  };
+  return findAmountBefore(/(?:crore|cr)/i, 10000000)
+    ?? findAmountBefore(/(?:lakh|lac)/i, 100000)
+    ?? Number(normalized.match(/[0-9]+(?:\.[0-9]+)?/)?.[0] ?? NaN)
+    || undefined;
 }
 
 function categoryFromText(text: string, fallback: AssetCategory): AssetCategory {
