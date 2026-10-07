@@ -97,3 +97,10 @@ The evidence model must preserve materially different auction structures visible
 6. **Addenda/corrigenda** — the latest applicable notice version must be reconciled before a decision is treated as current; prior evidence remains immutable historical evidence.
 
 These rules are derived from live IBBI auction structures and are validation requirements, not legal conclusions.
+
+
+## Fresh live-market boundary — 2026-10-07
+
+IBBI's current liquidation register includes NRRA/PUFE transaction claims as auctioned assets (for example Kordash Handlers and Logistics), including claims filed before NCLT and composite packages containing investments/other assets. AssetShakti must classify these as non-ordinary-immovable-property claims and preserve their legal/provenance boundary; they must not enter ordinary property valuation or title scoring.
+
+Evidence source: IBBI Liquidation Auction Notices register, observed 2026-10-07.
