@@ -49,7 +49,7 @@ const bound = assessPilotReadiness({
   evidence: [
     "IDENTITY","AUTHORITY","TITLE","POSSESSION","ENCUMBRANCE","LITIGATION",
     "PHYSICAL","LOCATION","VALUATION","AUCTION","BIDDER_OBLIGATION","PROVENANCE_PARTY_RISK"
-  ].map(category => ({category,status:"VERIFIED",sourceReference:"ibbi://notice"})),
+  ].map(category => ({category,status:"VERIFIED",sourceReference: category === "BIDDER_OBLIGATION" ? "ibbi://exact-auction" : "ibbi://notice"})),
   auctionLotBinding: {
     auctionDate: "2026-08-20",
     assetDescription: "First Floor, Municipal No. 1588-89, Azis Ganj Bahadurgarh Road, Delhi",
