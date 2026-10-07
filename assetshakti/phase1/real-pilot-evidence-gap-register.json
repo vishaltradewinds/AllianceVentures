@@ -141,5 +141,22 @@
       "independent Shakti sign-off"
     ]
   },
-  "freshEvidenceNote2": "2026-10-07 IBBI verification: Vysali filing for 04-03-2026 records a combined description including Land & Building Edappally, Plant & Machinery, Financial Instruments and Land & Building Edathala, while the 17-04-2026 third auction notice explicitly parcelises Edathala land/building, Edappally land/building and plant/machinery. These are separate auction contexts. Parakkott's 23-03-2026 notice independently identifies the first-floor commercial premises. Historical rounds remain immutable evidence."
+  "freshEvidenceNote2": "2026-10-07 IBBI verification: Vysali filing for 04-03-2026 records a combined description including Land & Building Edappally, Plant & Machinery, Financial Instruments and Land & Building Edathala, while the 17-04-2026 third auction notice explicitly parcelises Edathala land/building, Edappally land/building and plant/machinery. These are separate auction contexts. Parakkott's 23-03-2026 notice independently identifies the first-floor commercial premises. Historical rounds remain immutable evidence.",
+  "authoritativeRoundEvidence": [
+    {
+      "caseId": "P1-PILOT-003",
+      "finding": "Vysali auction structures changed across rounds; 04-03-2026 records multiple asset types including financial instruments, while the 17-04-2026 third auction notice parcelises Edathala land/building, Edappally land/building and plant/machinery.",
+      "source": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/2026-03-18-151117-0auv7-072c0cec484e000d4cc3fa7c8f5458aa.pdf",
+      "status": "RECONCILIATION_REQUIRED"
+    },
+    {
+      "caseId": "P1-PILOT-004",
+      "finding": "Parakkott has repeated auction rounds for the same debtor, including the 23-03-2026 commercial-premises lot, 29-09-2026 commercial-premises lot, and 01-10-2026 land-plus-built-up-godown lot.",
+      "source": "IBBI",
+      "sourceReference": "https://ibbi.gov.in/claims/auction-notice-process/U67190MH2008PTC179535",
+      "status": "EXACT_LOT_BINDING_REQUIRED"
+    }
+  ],
+  "nextGate": "Complete current-round document bundles for all six pilots, then deterministic re-evaluation; no positive decision until critical evidence is verified."
 }
