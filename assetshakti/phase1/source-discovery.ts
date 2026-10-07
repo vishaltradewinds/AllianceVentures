@@ -87,6 +87,7 @@ function discoverTableRows(provider: AuctionSourceProvider, html: string, reques
   const rows = [...html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)];
   const output: NormalizedAuctionLot[] = [];
   for (let i = 0; i < rows.length; i++) {
+    if (/<th\b/i.test(rows[i][1])) continue;
     const text = clean(rows[i][1]);
     if (!/auction|property|emd|floor price|reserve price|listing|(?:₹|rs\.?\s*)?[0-9]+(?:\.[0-9]+)?\s*(?:crore|cr|lakh|lac)/i.test(text)) continue;
     if (!text) continue;
