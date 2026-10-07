@@ -1,0 +1,25 @@
+name: AssetShakti authoritative evidence acquisition
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Acquire IBBI pilot documents
+        run: node assetshakti/phase1/acquire-ibbi-evidence.mjs .assetshakti-acquisition
+      - name: Publish hashed evidence manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: assetshakti-ibbi-evidence-manifest
+          path: .assetshakti-acquisition/
