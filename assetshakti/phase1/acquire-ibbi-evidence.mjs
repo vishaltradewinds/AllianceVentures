@@ -73,6 +73,19 @@ const targets = [
 const acquired = [];
 const matchedTargets = [];
 
+function classifyDocument(text, target) {
+  const lower = text.toLowerCase();
+  const hasDebtor = lower.includes(target.name.toLowerCase());
+  const hasRound = lower.includes(target.round);
+  const saleNotice = /e-?auction|auction sale notice|sale notice under insolvency/i.test(text);
+  const metadata = /unique number|form is being filed for|nature of assets to be auctioned|date of auction/i.test(text);
+  if (hasDebtor && hasRound && saleNotice && metadata) return "IBBI_AUCTION_RECORD";
+  if (hasDebtor && hasRound && saleNotice) return "AUCTION_SALE_NOTICE";
+  if (hasDebtor && hasRound) return "SOURCE_DOCUMENT_UNCLASSIFIED";
+  return "IDENTITY_MISMATCH_OR_UNREADABLE";
+}
+
+
 for (const target of targets) {
   const queryUrl = `${IBBI_LIST}?filter_by=all&title=${encodeURIComponent(target.name)}`;
   const htmlPath = path.join(OUT, `${target.caseId}-ibbi.html`);
@@ -131,6 +144,8 @@ for (const target of targets) {
 
     const bytes = fs.readFileSync(filePath);
     const sha256 = crypto.createHash("sha256").update(bytes).digest("hex");
+    const extractedText = execFileSync("pdftotext", ["-layout", "-enc", "UTF-8", filePath, "-"], { encoding: "utf8" });
+    const documentRole = classifyDocument(extractedText, target);
 
     acquired.push({
       caseId: target.caseId,
