@@ -1,0 +1,244 @@
+{
+  "observedAt": "2026-10-07",
+  "status": "EVIDENCE_CAPTURE_IN_PROGRESS",
+  "productionCertification": false,
+  "scope": "Deep evidence dossiers for P1-PILOT-001 through P1-PILOT-004. Source-backed facts are recorded without promoting title, possession, valuation or legal clearance.",
+  "cases": [
+    {
+      "caseId": "P1-PILOT-001",
+      "name": "GENERAL COMPOSITES PRIVATE LIMITED",
+      "sourceAuthority": "IBBI",
+      "sourceDocuments": [
+        {
+          "documentType": "CURRENT_AUCTION_RECORD",
+          "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+          "observedAt": "2026-10-07",
+          "status": "CURRENT_LISTING_CAPTURED",
+          "facts": [
+            "IBBI records an auction notice issued 18-09-2026 for auction on 07-10-2026.",
+            "Reserve price is Rs. 9,27,00,000 and EMD submission deadline is 05-10-2026.",
+            "Nature of asset is composite sale of Land, Building and Plant & Machinery."
+          ]
+        },
+        {
+          "documentType": "EARLIER_AUCTION_RECORD",
+          "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/LiqAN1766995600_9393.pdf",
+          "observedAt": "2026-10-07",
+          "status": "HISTORICAL_SOURCE_CAPTURED",
+          "facts": [
+            "Earlier IBBI auction record described a slump sale consisting of land and building, plant and machinery, and financial assets and securities.",
+            "The earlier record described approximately 42,200 square metres of land at Village Lahe, Survey Nos. 208, 302 and 303, Taluka Shahapur, District Thane, Maharashtra, and an industrial RCC/A.C. shed of approximately 2,974 square metres.",
+            "Earlier reserve price was Rs. 10,30,00,000 for the 02-02-2026 auction round.",
+            "The historical record identifies the auction platform as eBKray/BAANKNET."
+          ]
+        },
+        {
+          "documentType": "NCLT_ORDER_INDEX",
+          "sourceReference": "https://ibbi.gov.in/claims/order-process/U35303MH1995PTC085048",
+          "observedAt": "2026-10-07",
+          "status": "SOURCE_CAPTURED",
+          "facts": [
+            "IBBI's process record shows NCLT proceedings including a 04-06-2026 final order in an application concerning General Composites Private Limited and earlier liquidation/proceeding records."
+          ]
+        }
+      ],
+      "evidenceState": {
+        "IDENTITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUTHORITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUCTION": "VERIFIED_FROM_IBBI_RECORD",
+        "TITLE": "MISSING_INDEPENDENT_TITLE_CLEARANCE",
+        "POSSESSION": "MISSING",
+        "BIDDER_OBLIGATION": "MISSING_COMPLETE_CANONICAL_TERMS",
+        "DOCUMENT_RECONCILIATION": "REQUIRED_ACROSS_MULTIPLE_ROUNDS",
+        "ENCUMBRANCE": "MISSING",
+        "LITIGATION": "PROCESS_RECORD_EXISTS; PROPERTY_SPECIFIC_STATUS_NOT_RESOLVED",
+        "PHYSICAL": "SOURCE_DESCRIPTION_ONLY; INDEPENDENT_INSPECTION_MISSING",
+        "VALUATION": "MISSING_COMPONENT_LEVEL_VALUATION",
+        "PROVENANCE_PARTY_RISK": "MATERIAL_BECAUSE_HISTORICAL_RECORD_INCLUDES_FINANCIAL_ASSETS_AND_SECURITIES"
+      },
+      "criticalBlockers": [
+        "Reconcile the 2026-10-07 composite auction with earlier slump-sale structures and determine the exact current asset package.",
+        "Separate immovable-property evidence from plant/machinery and any financial assets/securities; do not aggregate them into property value.",
+        "Verify title, possession, encumbrances, litigation and physical condition independently.",
+        "Capture the complete current auction-process document including bidder eligibility, payment deadlines, extension/interest and forfeiture terms."
+      ],
+      "decision": "DO_NOT_BID"
+    },
+    {
+      "caseId": "P1-PILOT-002",
+      "name": "HALLMARK LIVING SPACE PRIVATE LIMITED",
+      "sourceAuthority": "IBBI",
+      "sourceDocuments": [
+        {
+          "documentType": "CURRENT_AUCTION_RECORD",
+          "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+          "observedAt": "2026-10-07",
+          "status": "CURRENT_LISTING_CAPTURED",
+          "facts": [
+            "IBBI records an auction notice issued 18-09-2026 for auction on 15-10-2026.",
+            "Reserve price is Rs. 70,50,00,000 and EMD submission deadline is 12-10-2026.",
+            "Asset is Land and Building in the Emerald Project.",
+            "The proposed building area is approximately 8,98,137 square feet and is expressly described as not fully built up.",
+            "Land is approximately 7.62 acres.",
+            "UDS of approximately 6,388 square feet already conveyed through registered sale deeds to home buyers is excluded from sale."
+          ]
+        },
+        {
+          "documentType": "AUCTION_HISTORY_RECORD",
+          "sourceReference": "https://ibbi.gov.in/claims/auction-notice-process/U45400TN2012PTC084362",
+          "observedAt": "2026-10-07",
+          "status": "HISTORICAL_ROUND_HISTORY_CAPTURED",
+          "facts": [
+            "IBBI records numerous prior auction rounds for Hallmark Living Space Private Limited.",
+            "The record shows repeated changes in auction dates and reserve prices over multiple years, including a 21-08-2026 notice for a 16-09-2026 auction at Rs. 77,82,00,000 before the later 18-09-2026 notice at Rs. 70,50,00,000."
+          ]
+        }
+      ],
+      "evidenceState": {
+        "IDENTITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUTHORITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUCTION": "VERIFIED_FROM_IBBI_RECORD",
+        "TITLE": "MISSING_INDEPENDENT_TITLE_AND_UDS_RECONCILIATION",
+        "POSSESSION": "MISSING",
+        "BIDDER_OBLIGATION": "MISSING_COMPLETE_CANONICAL_TERMS",
+        "DOCUMENT_RECONCILIATION": "REQUIRED_DUE_TO_REPEATED_AUCTION_ROUNDS_AND_CHANGED_TERMS",
+        "ENCUMBRANCE": "MISSING",
+        "LITIGATION": "MISSING_PROPERTY_SPECIFIC_STATUS",
+        "PHYSICAL": "PARTIAL_SOURCE_REPORTED_BUILDING_INCOMPLETE; INSPECTION_REQUIRED",
+        "VALUATION": "MISSING",
+        "PROVENANCE_PARTY_RISK": "REQUIRES_EXPLICIT_RECONCILIATION_OF_UDS_ALREADY_CONVEYED"
+      },
+      "criticalBlockers": [
+        "Reconcile the current 15-10-2026 auction against the immediately preceding 16-09-2026 round and all applicable corrigenda/addenda.",
+        "Verify exactly which land/UDS interests remain in the liquidation estate and which have already been conveyed.",
+        "Verify construction status, approvals, physical possession, occupancy/home-buyer interests and site condition.",
+        "Capture complete bidder obligations and forfeiture/payment terms from the applicable current process documents."
+      ],
+      "decision": "DO_NOT_BID"
+    },
+    {
+      "caseId": "P1-PILOT-003",
+      "name": "Vysali Pharmaceuticals Limited",
+      "sourceAuthority": "IBBI",
+      "sourceDocuments": [
+        {
+          "documentType": "CURRENT_AUCTION_RECORD",
+          "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+          "observedAt": "2026-10-07",
+          "status": "CURRENT_LISTING_CAPTURED",
+          "facts": [
+            "IBBI records an auction notice issued 18-09-2026 for auction on 10-10-2026.",
+            "Current listing reserve price is Rs. 13,36,68,963 for Land and Building at Edathala.",
+            "EMD submission deadline is 09-10-2026."
+          ]
+        },
+        {
+          "documentType": "EARLIER_AUCTION_NOTICE",
+          "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/digital_pdf/LiqAN1770702783_9652.pdf",
+          "observedAt": "2026-10-07",
+          "status": "HISTORICAL_SOURCE_CAPTURED",
+          "facts": [
+            "An IBBI record dated 10-02-2026 identifies Vysali Pharmaceuticals Limited, liquidation commenced 03-12-2024.",
+            "The 04-03-2026 auction round covered Land and Building at Edappally, Plant and Machinery, Financial Instruments, and Land and Building at Edathala.",
+            "The record describes the asset locations and BAANKNET as the auction platform."
+          ]
+        },
+        {
+          "documentType": "THIRD_AUCTION_NOTICE",
+          "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/2026-03-18-151117-0auv7-072c0cec484e000d4cc3fa7c8f5458aa.pdf",
+          "observedAt": "2026-10-07",
+          "status": "HISTORICAL_SOURCE_CAPTURED",
+          "facts": [
+            "The 17-04-2026 third auction notice states sale on an as-is-where-is and as-is-what-is basis through BAANKNET.",
+            "It separated assets into parcels: Land and Building at Edathala, Land and Building at Edapally, and Plant and Machinery at Edathala.",
+            "The notice recorded an Edathala Land and Building reserve price of Rs. 14,81,09,655 and an Edathala Plant and Machinery reserve price of Rs. 47,45,345.",
+            "Inspection was required before 15-04-2026 and tender documents/EMD were due by 16-04-2026."
+          ]
+        }
+      ],
+      "evidenceState": {
+        "IDENTITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUTHORITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUCTION": "VERIFIED_FROM_IBBI_RECORD",
+        "TITLE": "MISSING_INDEPENDENT_TITLE_AND_PROPERTY_SCHEDULE_VERIFICATION",
+        "POSSESSION": "MISSING",
+        "BIDDER_OBLIGATION": "MISSING_COMPLETE_CURRENT_TERMS",
+        "DOCUMENT_RECONCILIATION": "REQUIRED_ACROSS_MULTIPLE_ROUNDS_AND_ASSET_PARCELS",
+        "ENCUMBRANCE": "MISSING",
+        "LITIGATION": "MISSING_PROPERTY_SPECIFIC_STATUS",
+        "PHYSICAL": "INSPECTION_HISTORY_EXISTS; CURRENT_PHYSICAL_STATE_NOT_VERIFIED",
+        "VALUATION": "MISSING_CURRENT_INDEPENDENT_VALUATION",
+        "PROVENANCE_PARTY_RISK": "MATERIAL_BECAUSE_HISTORICAL_ROUNDS_INCLUDED_FINANCIAL_INSTRUMENTS_AND_PLANT_MACHINERY"
+      },
+      "criticalBlockers": [
+        "Reconcile the current 10-10-2026 Edathala land/building lot with earlier multi-parcel auction rounds.",
+        "Verify whether the current lot excludes or includes any plant, financial instruments or other rights from earlier package structures.",
+        "Verify title, possession, encumbrances, litigation and current physical condition.",
+        "Capture the complete current auction process document and bidder-obligation terms."
+      ],
+      "decision": "DO_NOT_BID"
+    },
+    {
+      "caseId": "P1-PILOT-004",
+      "name": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED",
+      "sourceAuthority": "IBBI",
+      "sourceDocuments": [
+        {
+          "documentType": "CURRENT_AUCTION_HISTORY_RECORD",
+          "sourceReference": "https://ibbi.gov.in/claims/auction-notice-process/U67190MH2008PTC179535",
+          "observedAt": "2026-10-07",
+          "status": "ROUND_HISTORY_CAPTURED",
+          "facts": [
+            "IBBI records repeated auction rounds for Parakkott Investments India Private Limited.",
+            "A 27-07-2026 notice scheduled an auction on 20-08-2026 with reserve price Rs. 67,23,000.",
+            "A 04-09-2026 notice scheduled an auction on 29-09-2026 with reserve price Rs. 60,50,700.",
+            "A 07-09-2026 notice scheduled an auction on 01-10-2026 with reserve price Rs. 2,87,34,000 for an immovable asset described as land along with built-up godown."
+          ]
+        },
+        {
+          "documentType": "AUCTION_NOTICE",
+          "sourceReference": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+          "observedAt": "2026-10-07",
+          "status": "HISTORICAL_SOURCE_CAPTURED",
+          "facts": [
+            "The 27-07-2026 IBBI auction record describes commercial premises on the First Floor, Municipal No. 1588-89, Azis Ganj Bahadurgarh Road, Delhi 110006.",
+            "The stated reserve price was Rs. 67,23,000 with EMD deadline 18-08-2026.",
+            "The sale basis is stated as as-is-where-is, as-is-what-is, whatever-there-is and no-recourse."
+          ]
+        },
+        {
+          "documentType": "EARLIER_PUBLIC_NOTICE",
+          "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/2025-12-25-083513-bpvg1-4cef07c5839efd45fba812a7c0fb7fbd.pdf",
+          "observedAt": "2026-10-07",
+          "status": "HISTORICAL_SOURCE_CAPTURED",
+          "facts": [
+            "An earlier public notice described the same Delhi commercial premises/hall on the First Floor and stated the as-is/no-recourse sale basis.",
+            "The earlier 27-01-2026 auction reserve price was Rs. 83,00,000 with EMD Rs. 8,30,000."
+          ]
+        }
+      ],
+      "evidenceState": {
+        "IDENTITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUTHORITY": "VERIFIED_FROM_IBBI_RECORD",
+        "AUCTION": "VERIFIED_FROM_IBBI_RECORD",
+        "TITLE": "MISSING_INDEPENDENT_TITLE_AND_INTEREST_VERIFICATION",
+        "POSSESSION": "MISSING",
+        "BIDDER_OBLIGATION": "MISSING_COMPLETE_CURRENT_TERMS",
+        "DOCUMENT_RECONCILIATION": "REQUIRED_BECAUSE_CURRENT_RECORDS_SHOW_DIFFERENT_ASSET_DESCRIPTIONS_AND_RESERVE_PRICES",
+        "ENCUMBRANCE": "MISSING",
+        "LITIGATION": "MISSING",
+        "PHYSICAL": "MISSING_INDEPENDENT_INSPECTION",
+        "VALUATION": "MISSING",
+        "PROVENANCE_PARTY_RISK": "NO_NONPROPERTY_COMPONENT_CONFIRMED_IN_CAPTURED_CURRENT_DESCRIPTION; STILL_REQUIRES_PACKAGE_VERIFICATION"
+      },
+      "criticalBlockers": [
+        "Resolve the apparent asset-description change between the commercial first-floor premises and the later land-plus-built-up-godown listing.",
+        "Determine the applicable 01-10-2026 auction document and reconcile it with prior rounds/corrigenda.",
+        "Verify title/interest, possession, encumbrances, litigation and physical condition.",
+        "Capture complete current bidder eligibility, payment, extension, interest and forfeiture provisions."
+      ],
+      "decision": "DO_NOT_BID"
+    }
+  ],
+  "shaktiRule": "Source-backed facts are evidence records, not title clearance, possession clearance, valuation certification or legal opinion. No positive bid decision is permitted until critical evidence is independently verified and applicable auction documents are reconciled."
+}
