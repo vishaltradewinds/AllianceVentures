@@ -20,5 +20,5 @@ const sample: NormalizedAuctionLot = {
 if (sample.lotId !== "LOT-01" || sample.decisionEvidenceProjection !== false) throw new Error("FAIL: normalized lot invariants");
 
 const discovery = normalizeDiscoveredHtml({ provider: "MSTC", url: "https://www.mstcecommerce.com/" }, "<tr><th>Property Ref</th><th>Floor Price</th></tr><tr><td>123</td><td>₹2.50 Crore</td></tr>");
-if (discovery.records.length !== 1 || discovery.records[0].reservePrice !== 25000000) throw new Error("FAIL: MSTC discovery normalization regression");
+if (discovery.records.length !== 1 || discovery.records[0].reservePrice !== 25000000) throw new Error("FAIL: MSTC discovery normalization regression; actual reserve=" + String(discovery.records[0]?.reservePrice));
 console.log("PASS: direct auction platform registry and discovery invariants");
