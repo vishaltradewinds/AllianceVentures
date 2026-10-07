@@ -14,7 +14,7 @@ for (const r of manifest.records) {
   const debtor = r.corporateDebtor.toLowerCase();
   const date = r.auctionDate;
   const identity = text.toLowerCase().includes(debtor);
-  const round = text.includes(date);
+  const round = [date, date.split('-').reverse().join('/'), date.split('-').reverse().join('.'), date.split('-').reverse().join('-')].some(v => text.includes(v));
   const isPdf = bytes.slice(0,5).toString() === "%PDF-";
   const readable = text.trim().length > 20;
   results.push({
