@@ -1,19 +1,20 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "purpose": "Authoritative source registry for AssetShakti multi-auction intelligence.",
   "sourcePolicy": "DIRECT_AUCTION_PLATFORMS_ONLY",
   "productionCertification": "OFF",
   "sources": [
-    {"provider":"IBBI","name":"IBBI Liquidation Auction Notices","url":"https://ibbi.gov.in/liquidation-auction-notices/lists","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
-    {"provider":"BAANKNET","name":"BAANKNET — Bank Assets Auction Network","url":"https://baanknet.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
-    {"provider":"MSTC","name":"MSTC e-Commerce / MSTC Realty","url":"https://www.mstcecommerce.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
-    {"provider":"SAMIL","name":"SAMIL — Shriram Automall India Limited","url":"https://www.samil.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
-    {"provider":"EAUCTION_INDIA","name":"NIC eAuction India","url":"https://www.eauction.gov.in/eAuction/app","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"},
-    {"provider":"INDIAN_RAILWAYS","name":"Indian Railways IREPS","url":"https://www.ireps.gov.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION"}
+    {"provider":"IBBI","name":"IBBI Liquidation Auction Notices","url":"https://ibbi.gov.in/liquidation-auction-notices/lists","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
+    {"provider":"BAANKNET","name":"BAANKNET — Bank Assets Auction Network","url":"https://baanknet.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
+    {"provider":"MSTC","name":"MSTC e-Commerce / MSTC Realty","url":"https://www.mstcecommerce.com/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
+    {"provider":"SAMIL","name":"SAMIL — Shriram Automall India Limited","url":"https://www.samil.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
+    {"provider":"EAUCTION_INDIA","name":"NIC eAuction India","url":"https://www.eauction.gov.in/eAuction/app","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"},
+    {"provider":"INDIAN_RAILWAYS","name":"Indian Railways IREPS","url":"https://www.ireps.gov.in/","integration":"PUBLIC_DISCOVERY_AND_DOCUMENT_ACQUISITION","certificationState":"DISCOVERY_READY"}
   ],
   "mandatoryControls": [
     "Only direct auction platforms and authoritative auction operators are eligible source truth.",
     "Preserve provider, source URL, auction ID and exact lot ID.",
+    "Exact auction and lot identity is a hard gate; missing IDs fail closed and cannot enter decision evidence.",
     "Never merge lots merely because title, location or debtor appears similar.",
     "Preserve auction mechanism; do not assume every source is a simple English auction.",
     "Hash acquired documents and bind hashes to the exact source record/version.",
@@ -22,6 +23,7 @@
     "Decision evidence requires existing AssetShakti verification, reconciliation and Shakti gates.",
     "AssetShakti does not execute bids, payments or transaction commitments.",
     "Do not bypass authentication, CAPTCHA, robots controls, paywalls or other access restrictions.",
-    "Where machine-readable acquisition is unavailable, use controlled authorised evidence intake."
+    "Where machine-readable acquisition is unavailable, use controlled authorised evidence intake.",
+    "Production certification requires the provider certification gate and remains OFF until all applicable gates pass."
   ]
 }
