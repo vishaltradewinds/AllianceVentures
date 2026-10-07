@@ -1,6 +1,6 @@
 {
   "purpose": "Shakti-gated evidence gap register for the six real AssetShakti Phase 1 pilot cases. This register records what is actually evidenced versus what remains required before any positive decision or production certification.",
-  "observedAt": "2026-10-06",
+  "observedAt": "2026-10-07",
   "productionCertification": "OFF",
   "rules": [
     "Do not infer title, possession, valuation, encumbrance clearance or bidder eligibility from an auction index.",
@@ -96,6 +96,7 @@
       "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION", "ASSET_PACKAGE"]
     }
   ],
+  "freshEvidenceNote": "IBBI evidence confirms exact-lot separation is mandatory: Parakkott has a 29-09-2026 commercial-premises round at Rs. 60,50,700 and a 01-10-2026 land-plus-built-up-godown round at Rs. 2,87,34,000; Vysali also has materially different auction rounds and parcel structures. Evidence must remain bound to the exact auction notice/version.",
   "certificationGate": {
     "status": "OPEN",
     "minimumRealCaseCount": 50,
