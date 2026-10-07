@@ -47,8 +47,3 @@ An auction decision cannot be treated as BID_READY unless the applicable auction
 A missing or contradictory material auction-term record is a critical evidence failure. The engine must never infer that regulatory silence removes a forfeiture/payment exposure stated in the auction notice.
 
 This gate reflects the Supreme Court's September 2026 treatment of explicit e-auction forfeiture conditions and is subject to future legal/regulatory change control.
-
-
-## P1-G16 — Current Auction-Term Version Binding
-
-A bidder-obligation record is decision-valid only when bound to the exact applicable auction notice/process document version and observed date. EMD, eligibility, balance-payment deadline, extension/interest, forfeiture/cancellation, sale basis and material disclosures must not be carried across auction rounds or corrigenda by inference. If the applicable version cannot be established, the auction-term gate fails closed and the case cannot be BID_READY.

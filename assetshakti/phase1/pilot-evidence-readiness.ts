@@ -9,7 +9,7 @@ export interface PilotReadinessCase {
   caseId: string;
   evidence: Array<{category: string; status: string; sourceReference?: string}>;
   documentVersions?: Array<{versionStatus: string; sourceReference: string}>;
-  auctionLotBinding?: { auctionDate: string; assetDescription: string; reservePrice?: number; emdDeadline?: string; sourceReference: string; status: "VERIFIED" | "UNRESOLVED" };
+  auctionLotBinding?: { auctionDate: string; assetDescription: string; reservePrice?: number; emdDeadline?: string; sourceReference: string; documentVersionReference?: string; status: "VERIFIED" | "UNRESOLVED" };
 }
 
 export interface PilotReadinessResult {
@@ -32,10 +32,16 @@ export function assessPilotReadiness(input: PilotReadinessCase): PilotReadinessR
   const unresolvedDocuments = (input.documentVersions ?? [])
     .filter(d => d.versionStatus === "UNRESOLVED")
     .map(d => d.sourceReference);
+  const currentDocumentReferences = (input.documentVersions ?? [])
+    .filter(d => d.versionStatus === "CURRENT")
+    .map(d => d.sourceReference);
   const sourceBackedAuctionTerms = input.evidence.some(e =>
     e.category === "BIDDER_OBLIGATION" &&
     ["VERIFIED","REPORTED_BY_SOURCE"].includes(e.status) &&
-    !!e.sourceReference
+    !!e.sourceReference &&
+    (!!input.auctionLotBinding?.documentVersionReference
+      ? e.sourceReference === input.auctionLotBinding.documentVersionReference
+      : currentDocumentReferences.includes(e.sourceReference))
   );
   const auctionLotBinding = input.auctionLotBinding?.status ?? "UNRESOLVED";
   const readiness: EvidenceReadiness =
