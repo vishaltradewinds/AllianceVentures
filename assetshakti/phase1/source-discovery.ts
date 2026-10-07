@@ -45,10 +45,10 @@ function money(value?: string): number | undefined {
     const last = numbers?.at(-1);
     return last ? Number(last) * multiplier : undefined;
   };
+  const fallback = Number(normalized.match(/[0-9]+(?:\.[0-9]+)?/)?.[0] ?? NaN);
   return findAmountBefore(/(?:crore|cr)/i, 10000000)
     ?? findAmountBefore(/(?:lakh|lac)/i, 100000)
-    ?? Number(normalized.match(/[0-9]+(?:\.[0-9]+)?/)?.[0] ?? NaN)
-    || undefined;
+    ?? (Number.isFinite(fallback) ? fallback : undefined);
 }
 
 function categoryFromText(text: string, fallback: AssetCategory): AssetCategory {
