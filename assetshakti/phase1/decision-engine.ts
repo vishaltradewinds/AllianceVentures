@@ -32,7 +32,7 @@ export function evaluatePropertyProductionDecision(asset:PropertyAsset):Property
   const score=(cats:string[])=>{const a=e.filter(x=>cats.includes(x.category));if(!a.length)return 0;return Math.round(a.reduce((s,x)=>s+W[x.status]*Math.max(0,Math.min(1,x.confidence)),0)/a.length*100)};
   const coverage=e.length?Math.round(e.reduce((s,x)=>s+W[x.status]*Math.max(0,Math.min(1,x.confidence)),0)/e.length*100):0;
   const gates=evaluatePropertyGates(asset);
-  const criticalFailure=gates.some(g=>(CRITICAL.includes(g.gate as any)||g.gate==="AUCTION_TERMS")&&!g.passed);
+  const criticalFailure=gates.some(g=>(CRITICAL.includes(g.gate as any)||g.gate==="AUCTION_TERMS"||g.gate==="LITIGATION")&&!g.passed);
   const criticalGatePassed=!criticalFailure&&coverage>=75;
   let decision:DecisionState="INSUFFICIENT_EVIDENCE";
   if(criticalFailure)decision="DO_NOT_BID";else if(criticalGatePassed&&coverage>=85)decision="BID_READY";else if(coverage>=45)decision="CONDITIONAL";
