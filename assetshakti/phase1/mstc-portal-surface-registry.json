@@ -1,0 +1,49 @@
+{
+  "schemaVersion":"1.0",
+  "provider":"MSTC",
+  "providerName":"MSTC Limited",
+  "canonicalOperatorDomain":"https://www.mstcecommerce.com/",
+  "portalSurfaces":[
+    {
+      "surface":"MSTC_ECOMMERCE_HUB",
+      "url":"https://www.mstcecommerce.com/",
+      "role":"Operator hub and routing surface",
+      "authoritative":true
+    },
+    {
+      "surface":"MSTC_WEB_ECOMMERCE",
+      "url":"https://web.mstcecommerce.com/",
+      "role":"Operational e-commerce portal",
+      "authoritative":true
+    },
+    {
+      "surface":"MSTC_PROPERTY_PORTAL",
+      "url":"https://www.mstcecommerce.com/auctionhome/property/index.jsp",
+      "role":"Property auction discovery and event bulletin",
+      "authoritative":true
+    },
+    {
+      "surface":"MSTC_PROPERTY_SALE_PORTAL",
+      "url":"https://www.mstcecommerce.com/auctionhome/propertysale/index.jsp",
+      "role":"Property sale/lease/license bidding surface",
+      "authoritative":true
+    },
+    {
+      "surface":"MSTC_REALTY",
+      "role":"MSTC property/realty routing surface",
+      "authoritative":true
+    },
+    {
+      "surface":"MSTC_IBAPI_EBIKRAY",
+      "url":"https://www.mstcecommerce.com/auctionhome/ibapi/",
+      "role":"Legacy/NPA property auction surface",
+      "authoritative":true,
+      "currentStatus":"Bank NPA property-auction registration suspended"
+    }
+  ],
+  "identityRule":"All listed surfaces belong to the same MSTC provider. AssetShakti must preserve the exact portal surface used for each source record.",
+  "normalizationRule":"Do not create separate providers merely because MSTC uses different subdomains or auction applications.",
+  "evidenceRule":"Portal surface is part of source identity; exact auction ID and lot ID remain mandatory.",
+  "decisionEvidenceProjection":false,
+  "productionCertification":"OFF"
+}
