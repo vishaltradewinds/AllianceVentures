@@ -23,7 +23,12 @@
         "Obtain possession/occupancy evidence.",
         "Decompose land, building and plant/machinery for provenance and valuation boundaries."
       ],
-      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION", "ASSET_PACKAGE"]
+      "positiveDecisionBlockedBy": [
+        "TITLE",
+        "POSSESSION",
+        "BIDDER_OBLIGATION",
+        "ASSET_PACKAGE"
+      ]
     },
     {
       "caseId": "P1-PILOT-002",
@@ -37,7 +42,11 @@
         "Verify physical completion status and actual possession/occupancy.",
         "Capture complete bidder obligations and forfeiture/payment terms."
       ],
-      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION"]
+      "positiveDecisionBlockedBy": [
+        "TITLE",
+        "POSSESSION",
+        "BIDDER_OBLIGATION"
+      ]
     },
     {
       "caseId": "P1-PILOT-003",
@@ -51,7 +60,13 @@
         "Capture complete bidder eligibility, payment and forfeiture terms.",
         "Create component-level provenance for financial instruments and plant/machinery; do not include them in ordinary property value."
       ],
-      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION", "ASSET_PACKAGE", "PROVENANCE_PARTY_RISK"]
+      "positiveDecisionBlockedBy": [
+        "TITLE",
+        "POSSESSION",
+        "BIDDER_OBLIGATION",
+        "ASSET_PACKAGE",
+        "PROVENANCE_PARTY_RISK"
+      ]
     },
     {
       "caseId": "P1-PILOT-004",
@@ -65,7 +80,11 @@
         "Capture complete bidder eligibility, payment, extension and forfeiture terms.",
         "Preserve as-is/no-recourse language as risk evidence, not as title or condition verification."
       ],
-      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION"]
+      "positiveDecisionBlockedBy": [
+        "TITLE",
+        "POSSESSION",
+        "BIDDER_OBLIGATION"
+      ]
     },
     {
       "caseId": "P1-PILOT-005",
@@ -79,7 +98,12 @@
         "Verify title/interest and possession/occupancy.",
         "Capture complete bidder obligations and forfeiture/payment terms."
       ],
-      "positiveDecisionBlockedBy": ["DOCUMENT_RECONCILIATION", "TITLE", "POSSESSION", "BIDDER_OBLIGATION"]
+      "positiveDecisionBlockedBy": [
+        "DOCUMENT_RECONCILIATION",
+        "TITLE",
+        "POSSESSION",
+        "BIDDER_OBLIGATION"
+      ]
     },
     {
       "caseId": "P1-PILOT-006",
@@ -93,7 +117,12 @@
         "Create component-level provenance and valuation boundaries for land/building versus plant/machinery and slump-sale alternatives.",
         "Capture the complete payment, extension, forfeiture and Section 29A obligations in the canonical bidder-obligation record."
       ],
-      "positiveDecisionBlockedBy": ["TITLE", "POSSESSION", "BIDDER_OBLIGATION", "ASSET_PACKAGE"]
+      "positiveDecisionBlockedBy": [
+        "TITLE",
+        "POSSESSION",
+        "BIDDER_OBLIGATION",
+        "ASSET_PACKAGE"
+      ]
     }
   ],
   "freshEvidenceNote": "IBBI evidence confirms exact-lot separation is mandatory: Parakkott has a 29-09-2026 commercial-premises round at Rs. 60,50,700 and a 01-10-2026 land-plus-built-up-godown round at Rs. 2,87,34,000; Vysali also has materially different auction rounds and parcel structures. Evidence must remain bound to the exact auction notice/version.",
@@ -111,5 +140,6 @@
       "deterministic re-evaluation",
       "independent Shakti sign-off"
     ]
-  }
+  },
+  "freshEvidenceNote2": "2026-10-07 IBBI verification: Vysali filing for 04-03-2026 records a combined description including Land & Building Edappally, Plant & Machinery, Financial Instruments and Land & Building Edathala, while the 17-04-2026 third auction notice explicitly parcelises Edathala land/building, Edappally land/building and plant/machinery. These are separate auction contexts. Parakkott's 23-03-2026 notice independently identifies the first-floor commercial premises. Historical rounds remain immutable evidence."
 }
