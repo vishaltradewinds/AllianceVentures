@@ -1,6 +1,9 @@
 name: AssetShakti authoritative evidence acquisition
 
 on:
+  push:
+    branches:
+      - "assetshakti/phase1-property-foundation"
   workflow_dispatch:
   schedule:
     - cron: "0 4 * * *"
@@ -19,7 +22,9 @@ jobs:
       - name: Acquire IBBI pilot documents
         run: node assetshakti/phase1/acquire-ibbi-evidence.mjs .assetshakti-acquisition
       - name: Publish hashed evidence manifest
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: assetshakti-ibbi-evidence-manifest
           path: .assetshakti-acquisition/
+          if-no-files-found: error
