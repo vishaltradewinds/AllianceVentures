@@ -64,9 +64,10 @@ G12 Production certification
 ## Current truth
 
 G0/G1: PASS for the six identified IBBI rounds.  
-G2: BLOCKED/PENDING for exact process bundles.  
-G3-G9: consequently blocked for any positive decision where mandatory evidence is missing.  
-G10: PASS on the previously reviewed head.  
+G2: BLOCKED. Exact BAANKNET/process bundles remain unavailable, and a retained IBBI acquisition artifact has now been independently found to contain 3 mismatched auction-notice PDFs (P1-001, P1-002, P1-004).  
+G3: BLOCKED for those source records until exact bytes are re-acquired and identity-verified.  
+G4-G9: BLOCKED for positive decisions pending corrected source evidence and downstream due diligence/economic/risk validation.  
+G10: PASS on the latest reviewed engineering head only; the acquisition verifier is now fail-closed on source-document identity mismatch.  
 G11: NOT STARTED because evidence is incomplete.  
 G12: OFF.
 
