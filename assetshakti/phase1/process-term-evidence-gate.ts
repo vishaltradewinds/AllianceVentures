@@ -21,6 +21,7 @@ export interface ProcessTermEvidence {
     | "TAX_TRANSFER_COST"
     | "PROCESS_DOCUMENT_REFERENCE";
   publishedByIbbI: boolean;
+  sourceAuthority?: "IBBI" | "BAANKNET" | "LIQUIDATOR" | "CORPORATE_DEBTOR";
   exactRoundConfirmed: boolean;
   exactLotConfirmed: boolean;
   currentProcessBundleAcquired: boolean;
@@ -44,7 +45,8 @@ export function evaluateProcessTermEvidence(
   if (!evidence.contentSha256.trim()) reasons.push("content SHA-256 is required");
   if (!evidence.pageOrSection.trim()) reasons.push("page/section reference is required");
   if (!evidence.publicationDate.trim()) reasons.push("publication date is required");
-  if (!evidence.publishedByIbbI) reasons.push("IBBI publication authority is not established");
+  const authority = evidence.sourceAuthority ?? (evidence.publishedByIbbI ? "IBBI" : undefined);
+  if (!authority) reasons.push("authoritative source authority is not established");
   if (!evidence.exactRoundConfirmed) reasons.push("exact auction round is not confirmed");
   if (!evidence.exactLotConfirmed) reasons.push("exact lot is not confirmed");
 
