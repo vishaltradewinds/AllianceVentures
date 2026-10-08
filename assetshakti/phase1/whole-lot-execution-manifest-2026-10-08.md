@@ -85,3 +85,8 @@ Internal sub-gates may be recorded for auditability but do not constitute final 
 ## Safety
 
 No bid execution, payment, transaction commitment, authentication bypass, CAPTCHA bypass, robots bypass, paywall bypass or unsupported legal/title conclusion is permitted.
+
+
+## Controlled recovery path
+
+The connected environment could not directly retrieve the three mismatched IBBI PDFs without network access to the source host. No bypass was used. The lot now has an executable controlled original-document intake path: `assetshakti/phase1/controlled-evidence-intake.mjs`, with the binding contract in `assetshakti/phase1/controlled-evidence-intake.md`. Exact original PDFs can enter the same fail-closed verification chain when legitimately supplied.
