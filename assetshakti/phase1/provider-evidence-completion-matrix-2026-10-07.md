@@ -36,3 +36,8 @@ Evidence/compliance: INCOMPLETE.
 Security: separate npm vulnerability remediation gate remains OPEN.
 
 Production certification: OFF.
+
+
+## Mobile-completion closure — 2026-10-08
+
+The mobile-capable portion of provider/source work is now consolidated. Direct-source architecture, exact-round identity, evidence intake, fail-closed acquisition, process-term authority handling, BAANKNET obligation modeling, CI/security validation, and whole-lot gate controls are implemented and verified. Provider-specific raw current-lot evidence remains the only acquisition-dependent layer; no provider is promoted to production certification without exact bytes and downstream verification.
