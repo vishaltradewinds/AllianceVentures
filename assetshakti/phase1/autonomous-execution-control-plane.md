@@ -128,3 +128,8 @@ No partial success will be represented as final completion.
 `SCOPE → DISCOVER → EXACT_BIND → ACQUIRE → VERIFY → RECONCILE → DUE_DILIGENCE → ASSET_INTELLIGENCE → ECONOMICS → RISK → DECISION → QA → SHAKTI_REVIEW → CERTIFY → OPERATE → CONTINUOUS_ASSURANCE`
 
 A blocked upstream gate automatically blocks downstream positive decision paths.
+
+
+## Controlled evidence intake implementation
+
+The evidence blocker protocol is now executable through `assetshakti/phase1/controlled-evidence-intake.mjs` and its contract in `assetshakti/phase1/controlled-evidence-intake.md`. The path accepts only original document bytes, binds SHA-256, verifies PDF/readability/debtor/current-round identity, emits an immutable intake manifest/report, and remains fail-closed. Successful intake never bypasses downstream reconciliation, due diligence, economics, risk or Shakti review.
