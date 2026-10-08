@@ -16,9 +16,9 @@ A previously observed vulnerability count is not evidence of current remediation
 ## Current state — 2026-10-08
 - Security gate: **PASS**
 - Production certification: **OFF**
-- Exact reviewed branch head: `420b146a67b3a1b045ddf64ac0c5916cb505551b`
-- Dependency Security Gate #137: **SUCCESS** (run `37749304508`)
-- Phase 1 Validation #541: **SUCCESS** (run `37749304774`)
+- Exact reviewed branch head: `dfed93057772bffb33ce188271bce67aff448a14`
+- Dependency Security Gate #149: **SUCCESS** (run `37762503921`)
+- Phase 1 Validation #553: **SUCCESS** (run `37762504205`)
 - Dependency Remediation #134: **SUCCESS** (run `37749304512`)
 - Fresh audit evidence step: **SUCCESS**
 - High/critical failure step: **SUCCESS**
