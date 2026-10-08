@@ -16,15 +16,15 @@ A previously observed vulnerability count is not evidence of current remediation
 ## Current state — 2026-10-08
 - Security gate: **PASS**
 - Production certification: **OFF**
-- Exact reviewed branch head: `fae20bbd367d33915da80ec0bbbf44f5211207a8`
-- Dependency Security Gate #119: **SUCCESS** (run `37678747705`)
-- Phase 1 Validation #523: **SUCCESS** (run `37678747646`)
-- Dependency Remediation #116: **SUCCESS** (run `37678747634`)
+- Exact reviewed branch head: `420b146a67b3a1b045ddf64ac0c5916cb505551b`
+- Dependency Security Gate #137: **SUCCESS** (run `37749304508`)
+- Phase 1 Validation #541: **SUCCESS** (run `37749304774`)
+- Dependency Remediation #134: **SUCCESS** (run `37749304512`)
 - Fresh audit evidence step: **SUCCESS**
 - High/critical failure step: **SUCCESS**
 - Registry-signature verification step: **SUCCESS**
 
-The authoritative security evidence is the fresh CI audit executed against the exact reviewed commit. No high/critical advisory blocked the gate.
+The authoritative security evidence is the fresh CI audit executed against the exact reviewed commit. No high/critical advisory blocked the gate. The latest validation also passed build, lint and the full AssetShakti test/evaluation suite.
 
 ## Execution
 Future dependency changes must repeat the same exact-commit clean install, audit, signature verification and regression validation. Do not use `npm audit fix --force`.
