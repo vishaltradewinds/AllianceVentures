@@ -85,3 +85,15 @@ Only legitimate original document bytes can be promoted after SHA-256 and identi
 - Engineering/security: PASS on reviewed head
 - Shakti review: NOT STARTED
 - Production certification: OFF
+
+
+## Direct authoritative retrieval re-test
+
+2026-10-08: the exact current-round IBBI auction-notice objects were re-tested through the available authoritative retrieval interface. The IBBI listing/index remains accessible and confirms the current General Composites, Hallmark Living Space and Vysali rounds; however, direct retrieval of the previously identified raw PDF URLs for General Composites and Hallmark returned tool-level inaccessible responses, and the Parakkott PDF returned HTTP 403. These results are treated as acquisition failures, not as evidence failures or permission to substitute another source.
+
+Consequences:
+- IBBI listing metadata remains authoritative metadata.
+- Raw auction-notice bytes remain unbound for the affected records.
+- No reconstructed/cached/aggregated document may be promoted to decision evidence.
+- Controlled evidence recovery workflow remains the designated path for acquisition and SHA-256 binding.
+- Production certification and positive BID_READY decisions remain OFF until exact bytes are successfully acquired and verified.
