@@ -4,6 +4,10 @@ import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
 
 const [metadataPath, inputDir, outputDir = ".assetshakti-controlled-intake"] = process.argv.slice(2);
+
+// Whole-lot rule: acquisition metadata may identify an authoritative object, but
+// only the actual bytes may become evidence. Network failures are recorded as
+// ACQUISITION_BLOCKED and never downgraded into a successful evidence state.
 if (!metadataPath || !inputDir) {
   console.error("Usage: node controlled-evidence-intake.mjs <metadata.json> <input-dir> [output-dir]");
   process.exit(2);
