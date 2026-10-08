@@ -13,11 +13,20 @@ Dependency security remediation is a mandatory Shakti gate before production cer
 ## Fail-closed rule
 A previously observed vulnerability count is not evidence of current remediation status. No security clearance may be claimed without a fresh audit result tied to the reviewed commit.
 
-## Current state
-- Security gate: **OPEN**
+## Current state — 2026-10-08
+- Security gate: **PASS**
 - Production certification: **OFF**
-- Exact vulnerability inventory: **PENDING FRESH npm audit**
-- No dependency version has been changed without audit evidence.
+- Exact reviewed branch head: `fae20bbd367d33915da80ec0bbbf44f5211207a8`
+- Dependency Security Gate #119: **SUCCESS** (run `37678747705`)
+- Phase 1 Validation #523: **SUCCESS** (run `37678747646`)
+- Dependency Remediation #116: **SUCCESS** (run `37678747634`)
+- Fresh audit evidence step: **SUCCESS**
+- High/critical failure step: **SUCCESS**
+- Registry-signature verification step: **SUCCESS**
+
+The authoritative security evidence is the fresh CI audit executed against the exact reviewed commit. No high/critical advisory blocked the gate.
 
 ## Execution
-Run `npm ci` and `npm audit --json` against the exact branch/commit, then remediate only confirmed vulnerable dependency paths and rerun the complete validation suite.
+Future dependency changes must repeat the same exact-commit clean install, audit, signature verification and regression validation. Do not use `npm audit fix --force`.
+
+Security clearance does not by itself authorize production certification; real-world documentary evidence and independent Shakti sign-off remain mandatory.
