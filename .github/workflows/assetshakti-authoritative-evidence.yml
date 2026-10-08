@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "assetshakti/phase1-property-foundation"
+      - "assetshakti/phase1.5-multi-auction-source-foundation"
   workflow_dispatch:
   schedule:
     - cron: "0 4 * * *"
