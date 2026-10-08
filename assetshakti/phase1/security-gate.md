@@ -30,3 +30,15 @@ The authoritative security evidence is the fresh CI audit executed against the e
 Future dependency changes must repeat the same exact-commit clean install, audit, signature verification and regression validation. Do not use `npm audit fix --force`.
 
 Security clearance does not by itself authorize production certification; real-world documentary evidence and independent Shakti sign-off remain mandatory.
+
+
+## Integrated recovery-control verification — 2026-10-08
+
+Change commit: 94c2d04879ea04a85af5ab6e72f818a9d307f128
+
+All three automated gates completed successfully for this integrated change:
+- AssetShakti Phase 1 Validation #576 — SUCCESS (run 37764078595)
+- AssetShakti Dependency Security Gate #172 — SUCCESS (run 37764078656)
+- AssetShakti Dependency Remediation #169 — SUCCESS (run 37764078472)
+
+This verifies the fail-closed controlled-intake change. It does not change the real-world evidence state: missing/unacquired current-round source bytes remain blocked and production certification remains OFF.
