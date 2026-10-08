@@ -2,6 +2,9 @@ name: AssetShakti Controlled Evidence Recovery
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - assetshakti/phase1.5-multi-auction-source-foundation
 
 permissions:
   contents: read
