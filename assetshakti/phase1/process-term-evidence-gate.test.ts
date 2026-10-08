@@ -1,6 +1,6 @@
-import { evaluateProcessTermEvidence } from "./process-term-evidence-gate";
+import { evaluateProcessTermEvidence, type ProcessTermEvidence } from "./process-term-evidence-gate";
 
-const base = {
+const base: ProcessTermEvidence = {
   caseId: "P1-PILOT-003",
   auctionId: "IBBI-2026-10-10-VYSALI",
   lotId: "EDATHALA-LB",
