@@ -47,3 +47,30 @@ Acquire the exact current-round BAANKNET/process bundle or the authoritative liq
 
 No authentication/CAPTCHA/robots/paywall bypass is permitted.
 No bid, payment or transaction execution is enabled.
+
+
+## New authoritative documentary discovery — P1-PILOT-002 Hallmark
+
+On 2026-10-08, the corporate debtor's own liquidation website was independently checked and exposes EAUCTION PROCESS INFORMATION DOCUMENT 18.09.2026 for the 15-10-2026 Emerald Project auction.
+
+The document establishes:
+- sale notice date 18-09-2026;
+- auction date 15-10-2026, 03:00 PM–05:00 PM;
+- Emerald Project / Chengalpattu asset identity;
+- BAANKNET as the auction portal and PSB Alliance as service provider;
+- bidder KYC/registration and EMD requirements;
+- access to the data room after required documents/EMD;
+- explicit 6,388 sq.ft. UDS exclusion and requirement for successful bidder to independently acquire title/possession of those conveyed portions;
+- bidder responsibility for title, encumbrance, approvals, taxes/charges and independent legal due diligence;
+- Section 29A eligibility declaration and EMD forfeiture conditions;
+- requirement to monitor BAANKNET/corporate-debtor channels for amendments.
+
+This is authoritative current-round process-document evidence, but it is not yet cryptographically bound in AssetShakti because the connected web interface exposed parsed PDF content rather than the raw PDF bytes. Therefore:
+
+P1-PILOT-002 CURRENT_PROCESS_DOCUMENT = LOCATED_AND_CONTENT_VERIFIED
+P1-PILOT-002 SHA256 = PENDING_RAW_BYTE_CAPTURE
+P1-PILOT-002 CORRIGENDA_RECONCILIATION = PENDING
+P1-PILOT-002 TITLE/POSSESSION/DUE_DILIGENCE = PENDING
+P1-PILOT-002 DECISION_EVIDENCE = BLOCKED
+
+The discovery is recorded without upgrading the pilot to BID_READY.
