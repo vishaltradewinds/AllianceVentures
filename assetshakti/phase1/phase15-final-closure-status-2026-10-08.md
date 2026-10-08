@@ -50,6 +50,8 @@ Current state:
 
 This is an improvement in authoritative public evidence completeness, not a production-certification change. Independent inspection of the retained acquisition artifact subsequently identified a source-document integrity failure affecting P1-001, P1-002 and P1-004; the acquisition verifier is now fail-closed on such mismatches.
 
+P1-002 Hallmark has now progressed further: its corporate-debtor liquidation website publishes the exact 18-09-2026 E-Auction Process Information Document for the 15-10-2026 Emerald Project auction. AssetShakti now supports authoritative LIQUIDATOR/CORPORATE_DEBTOR process-document authority in addition to IBBI/BAANKNET, while retaining mandatory SHA-256 binding and corrigenda reconciliation before decision use.
+
 ## Source-document integrity finding
 
 The retained IBBI acquisition artifact (run 37610054650, artifact 11478265222) contains 12 downloaded PDFs. Three auction-notice PDFs do not match their target debtor/round content: P1-001, P1-002 and P1-004. This is recorded in `assetshakti/phase1/source-document-integrity-finding-2026-10-08.md` and blocks downstream evidence promotion.
