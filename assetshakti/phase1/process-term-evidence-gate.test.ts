@@ -10,6 +10,7 @@ const base = {
   publicationDate: "2026-10-08",
   termType: "EMD" as const,
   publishedByIbbI: true,
+  sourceAuthority: "IBBI",
   exactRoundConfirmed: true,
   exactLotConfirmed: true,
   currentProcessBundleAcquired: false,
@@ -38,3 +39,15 @@ if (incomplete.state !== "REJECTED") throw new Error("missing lot identity must 
 if (incomplete.decisionUsable) throw new Error("incomplete identity must never be decision-usable");
 
 console.log("AssetShakti process-term evidence gate tests passed.");
+
+
+const liquidatorVerified = evaluateProcessTermEvidence({
+  ...base,
+  publishedByIbbI: false,
+  sourceAuthority: "LIQUIDATOR",
+  currentProcessBundleAcquired: true,
+  currentProcessBundleHashBound: true,
+  corrigendaReconciled: true
+});
+if (liquidatorVerified.state !== "VERIFIED_PROCESS_TERM") throw new Error("authoritative liquidator process bundle should verify when fully hash-bound and reconciled");
+if (!liquidatorVerified.decisionUsable) throw new Error("verified liquidator process term should be decision-usable");
