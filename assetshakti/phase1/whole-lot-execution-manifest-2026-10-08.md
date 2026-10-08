@@ -115,3 +115,15 @@ Current external source truth remains:
 - Hallmark corporate debtor site identifies the 18-09-2026 process document as NEW/current and separately lists prior process documents.
 
 No current-round raw bytes are promoted unless exact acquisition, identity verification, SHA-256 binding and downstream reconciliation pass.
+
+
+## Recovery workflow CI closure — 2026-10-08
+
+Recovery workflow change `fd0e02e056df5eac454d74088204b88cf64fa3f2` completed all repository gates successfully:
+- Phase 1 Validation #581 — SUCCESS (run 37764749355)
+- Dependency Security Gate #177 — SUCCESS (run 37764749284)
+- Dependency Remediation #174 — SUCCESS (run 37764749287)
+
+This closes the engineering gate for the recovery mechanism. It does not promote any source bytes. Current-round evidence remains eligible for promotion only after actual acquisition, PDF/content validation, exact-round identity, SHA-256 binding and reconciliation succeed.
+
+External source truth remains independently corroborated: IBBI lists the 07-10-2026 General Composites and 15-10-2026 Hallmark current rounds, while Hallmark's corporate liquidation page marks its 18-09-2026 process document as NEW and lists prior versions separately. Aggregators are not source truth.
