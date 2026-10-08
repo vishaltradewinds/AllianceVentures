@@ -90,3 +90,15 @@ No bid execution, payment, transaction commitment, authentication bypass, CAPTCH
 ## Controlled recovery path
 
 The connected environment could not directly retrieve the three mismatched IBBI PDFs without network access to the source host. No bypass was used. The lot now has an executable controlled original-document intake path: `assetshakti/phase1/controlled-evidence-intake.mjs`, with the binding contract in `assetshakti/phase1/controlled-evidence-intake.md`. Exact original PDFs can enter the same fail-closed verification chain when legitimately supplied.
+
+
+## 2026-10-08 10:xx IST integrated execution update
+
+Fresh external verification confirms the exact current IBBI rounds remain published: General Composites (07-10-2026; ₹9.27 crore; composite Land/Building/P&M), Hallmark Living Space (15-10-2026; ₹70.50 crore; 7.62 acres with 6,388 sq.ft. UDS excluded), and Parakkott Investments (01-10-2026; ₹2.8734 crore). The Parakkott 29-09-2026 round is separately represented and is not inherited into the current round.
+
+CI on the latest evidence-update head:
+- Phase 1 Validation #564: SUCCESS
+- Dependency Security Gate #160: SUCCESS
+- Dependency Remediation #157: completed successfully with no compatible remediation requiring a lockfile change; downstream validation/security/build steps were appropriately skipped because no remediation commit was produced.
+
+Whole-lot state remains **BLOCKED** because exact raw authoritative bytes for the three mismatched auction notices and Hallmark current process bundle are not yet cryptographically bound. No positive auction decision is permitted.
