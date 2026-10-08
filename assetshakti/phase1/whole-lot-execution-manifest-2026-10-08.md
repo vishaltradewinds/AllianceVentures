@@ -102,3 +102,16 @@ CI on the latest evidence-update head:
 - Dependency Remediation #157: completed successfully with no compatible remediation requiring a lockfile change; downstream validation/security/build steps were appropriately skipped because no remediation commit was produced.
 
 Whole-lot state remains **BLOCKED** because exact raw authoritative bytes for the three mismatched auction notices and Hallmark current process bundle are not yet cryptographically bound. No positive auction decision is permitted.
+
+
+## Integrated recovery control — 2026-10-08
+
+The controlled intake implementation now explicitly documents that authoritative source metadata is not evidence: only acquired exact bytes can be promoted. Network/HTTP acquisition failure is an acquisition block and cannot be downgraded into a successful evidence state.
+
+Current external source truth remains:
+- IBBI current General Composites: auction 07-10-2026, reserve ₹9.27 crore, composite Land/Building/P&M.
+- IBBI current Hallmark Living Space: auction 15-10-2026, reserve ₹70.50 crore, Emerald Project, 7.62 acres with 6,388 sq.ft UDS excluded.
+- IBBI current Parakkott Investments: auction 01-10-2026, reserve ₹2.8734 crore; its 29-09-2026 auction is a separate round.
+- Hallmark corporate debtor site identifies the 18-09-2026 process document as NEW/current and separately lists prior process documents.
+
+No current-round raw bytes are promoted unless exact acquisition, identity verification, SHA-256 binding and downstream reconciliation pass.
