@@ -10,10 +10,10 @@ Direct auction policy: ACTIVE
 The exact current branch head has now passed all mandatory engineering/security workflows:
 
 - Branch: `assetshakti/phase1.5-multi-auction-source-foundation`
-- Reviewed head: `fae20bbd367d33915da80ec0bbbf44f5211207a8`
-- Phase 1 Validation #523 — SUCCESS — run `37678747646`
-- Dependency Security Gate #119 — SUCCESS — run `37678747705`
-- Dependency Remediation #116 — SUCCESS — run `37678747634`
+- Reviewed head: `420b146a67b3a1b045ddf64ac0c5916cb505551b`
+- Phase 1 Validation #541 — SUCCESS — run `37749304774`
+- Dependency Security Gate #137 — SUCCESS — run `37749304508`
+- Dependency Remediation #134 — SUCCESS — run `37749304512`
 - Fresh security audit, high/critical failure check and registry-signature verification — SUCCESS
 
 **Security gate is now CLOSED/PASS.**
@@ -48,7 +48,11 @@ Current state:
 - Bidder obligations: PENDING.
 - Decision evidence: BLOCKED.
 
-This is an improvement in authoritative public evidence completeness, not a production-certification change.
+This is an improvement in authoritative public evidence completeness, not a production-certification change. Independent inspection of the retained acquisition artifact subsequently identified a source-document integrity failure affecting P1-001, P1-002 and P1-004; the acquisition verifier is now fail-closed on such mismatches.
+
+## Source-document integrity finding
+
+The retained IBBI acquisition artifact (run 37610054650, artifact 11478265222) contains 12 downloaded PDFs. Three auction-notice PDFs do not match their target debtor/round content: P1-001, P1-002 and P1-004. This is recorded in `assetshakti/phase1/source-document-integrity-finding-2026-10-08.md` and blocks downstream evidence promotion.
 
 ## Current six-pilot boundary
 
