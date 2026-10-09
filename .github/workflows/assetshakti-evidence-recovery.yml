@@ -31,7 +31,7 @@ jobs:
           acquire() {
             local url="$1"
             local out="$2"
-            if curl --fail --location --retry 4 --retry-all-errors --connect-timeout 20 --max-time 120 \\
+            if curl --fail --location --retry 1 --retry-all-errors --connect-timeout 10 --max-time 45 \\
               "$url" -o "$out"; then
               printf 'ACQUIRED|%s|%s\\n' "$out" "$url" >> evidence-input/acquisition-report.txt
             else
