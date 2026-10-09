@@ -6,15 +6,46 @@ import { execFileSync } from "node:child_process";
 const OUT = process.argv[2] ?? ".assetshakti-acquisition";
 const manifest = JSON.parse(fs.readFileSync(path.join(OUT, "manifest.json"), "utf8"));
 
+function auctionRoundMatches(text, targetDate) {
+  const value = String(targetDate ?? "").trim();
+  let dayText, monthText, yearText;
+  let match = /^(\d{2})-(\d{2})-(\d{4})$/.exec(value);
+  if (match) [, dayText, monthText, yearText] = match;
+  else {
+    match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    if (!match) return false;
+    [, yearText, monthText, dayText] = match;
+  }
+  const day = Number(dayText), monthNumber = Number(monthText), year = Number(yearText);
+  if (day < 1 || day > 31 || monthNumber < 1 || monthNumber > 12 || year < 1900) return false;
+  const months = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+  const shortMonths = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+  const month = months[monthNumber - 1], shortMonth = shortMonths[monthNumber - 1];
+  const suffix = day % 100 >= 11 && day % 100 <= 13 ? "th" : day % 10 === 1 ? "st" : day % 10 === 2 ? "nd" : day % 10 === 3 ? "rd" : "th";
+  const normalized = String(text ?? "").normalize("NFKC").toLowerCase()
+    .replace(/[\u2010-\u2015\u2212]/g, "-").replace(/[\u00a0\s]+/g, " ");
+  const candidates = [
+    `${dayText}-${monthText}-${yearText}`, `${dayText}/${monthText}/${yearText}`,
+    `${dayText}.${monthText}.${yearText}`, `${yearText}-${monthText}-${dayText}`,
+    `${yearText}/${monthText}/${dayText}`, `${yearText}.${monthText}.${dayText}`,
+    `${day} ${month} ${year}`, `${day} ${month}, ${year}`,
+    `${day}${suffix} ${month} ${year}`, `${day}${suffix} ${month}, ${year}`,
+    `${month} ${day} ${year}`, `${month} ${day}, ${year}`,
+    `${month} ${day}${suffix} ${year}`, `${month} ${day}${suffix}, ${year}`,
+    `${day} ${shortMonth} ${year}`, `${day}${suffix} ${shortMonth} ${year}`,
+    `${shortMonth} ${day}, ${year}`
+  ];
+  return candidates.some(candidate => normalized.includes(candidate.toLowerCase()));
+}
+
 const results = [];
 for (const r of manifest.records) {
   const bytes = fs.readFileSync(r.localPath);
   const actualHash = crypto.createHash("sha256").update(bytes).digest("hex");
   const text = execFileSync("pdftotext", ["-layout", "-enc", "UTF-8", r.localPath, "-"], { encoding: "utf8" });
   const debtor = r.corporateDebtor.toLowerCase();
-  const date = r.auctionDate;
   const identity = text.toLowerCase().includes(debtor);
-  const round = [date, date.split("-").reverse().join("/"), date.split("-").reverse().join("."), date.split("-").reverse().join("-")].some(v => text.includes(v));
+  const round = auctionRoundMatches(text, r.auctionDate);
   const isPdf = bytes.slice(0, 5).toString() === "%PDF-";
   const readable = text.trim().length > 20;
   const sourceIdentityVerified = isPdf && readable && identity && round && actualHash === r.contentSha256;
