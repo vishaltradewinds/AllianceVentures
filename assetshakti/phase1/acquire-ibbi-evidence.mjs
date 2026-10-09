@@ -9,11 +9,12 @@ fs.mkdirSync(OUT, { recursive: true });
 
 const IBBI_LIST = "https://ibbi.gov.in/liquidation-auction-notices/lists";
 
-function curl(url, output, timeout = "90") {
+function curl(url, output, timeout = "45") {
   execFileSync("curl", [
     "-fsSL",
-    "--retry", "3",
-    "--retry-delay", "2",
+    "--retry", "1",
+    "--retry-delay", "1",
+    "--connect-timeout", "10",
     "--max-time", timeout,
     "-A", "Mozilla/5.0 (AssetShakti evidence acquisition)",
     "-H", "Accept: text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
@@ -90,7 +91,7 @@ for (const target of targets) {
   const queryUrl = `${IBBI_LIST}?filter_by=all&title=${encodeURIComponent(target.name)}`;
   const htmlPath = path.join(OUT, `${target.caseId}-ibbi.html`);
 
-  curl(queryUrl, htmlPath, "60");
+  curl(queryUrl, htmlPath, "45");
 
   const html = fs.readFileSync(htmlPath, "utf8");
   const rows = [...html.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi)].map(m => m[0]);
