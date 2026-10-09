@@ -31,8 +31,7 @@ jobs:
           acquire() {
             local url="$1"
             local out="$2"
-            if curl --fail --location --retry 1 --retry-all-errors --connect-timeout 10 --max-time 45 \\
-              "$url" -o "$out"; then
+            if curl --fail --location --retry 1 --retry-all-errors --connect-timeout 10 --max-time 45 "$url" -o "$out"; then
               printf 'ACQUIRED|%s|%s\\n' "$out" "$url" >> evidence-input/acquisition-report.txt
             else
               printf 'ACQUISITION_BLOCKED|%s|%s\\n' "$out" "$url" >> evidence-input/acquisition-report.txt
