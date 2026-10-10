@@ -14,7 +14,7 @@ The system must not presume that buying land, incorporating a subsidiary, or cho
 
 ## Current implementation status
 
-Implemented on this feature branch: governance/product documentation, a mobile-responsive intake prototype, and a deterministic evidence gate with fail-closed tests. The gate engine is not yet connected to the UI or an API, and the intake is not persisted. This is **not** a production workflow, validated global jurisdiction database, legal opinion service, or establishment execution engine.
+Implemented on this feature branch: governance/product documentation, a mobile-responsive intake prototype, a deterministic evidence gate, and an append-only tenant-scoped evidence-registry service contract with fail-closed tests. The registry currently has only an in-memory test adapter; it is not connected to the UI or API and does not persist production data. The intake is not persisted. This is **not** a production workflow, validated global jurisdiction database, legal opinion service, or establishment execution engine.
 
 - [Product requirements](PRODUCT_REQUIREMENTS.md)
 - [Legal boundaries and source policy](LEGAL_BOUNDARIES.md)
@@ -25,6 +25,8 @@ Implemented on this feature branch: governance/product documentation, a mobile-r
 - [Automated validation plan](VALIDATION_PLAN.md)
 - [Deterministic gate engine](../../src/lib/gbeg/gate-engine.ts)
 - [Gate engine tests](../../src/lib/gbeg/gate-engine.test.ts)
+- [Evidence registry service](../../src/lib/gbeg/evidence-registry.ts)
+- [Evidence registry tests](../../src/lib/gbeg/evidence-registry.test.ts)
 - [GitHub Actions validation run](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38064001766) — test, TypeScript check and build passed for commit 9a6b715.
 
 ## Non-negotiable principles
