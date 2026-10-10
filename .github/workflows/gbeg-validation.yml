@@ -1,0 +1,29 @@
+name: GBEG-OS Evidence Gate Validation
+
+on:
+  pull_request:
+    paths:
+      - "src/lib/gbeg/**"
+      - "src/pages/GlobalBusinessOS.tsx"
+      - "src/App.tsx"
+      - "docs/global-business-establishment-os/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/gbeg-validation.yml"
+  push:
+    branches:
+      - "global-business-establishment-os/phase0-foundation"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run gbeg:test
+      - run: npm run lint
+      - run: npm run build
