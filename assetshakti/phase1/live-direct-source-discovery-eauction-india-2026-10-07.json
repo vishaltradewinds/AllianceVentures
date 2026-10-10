@@ -1,0 +1,35 @@
+{
+  "schemaVersion":"1.0",
+  "capturedAt":"2026-10-07",
+  "provider":"EAUCTION_INDIA",
+  "sourceUrl":"https://www.eauction.gov.in/eAuction/app",
+  "sourceType":"DIRECT_GOVERNMENT_PLATFORM",
+  "platformOperator":"National Informatics Centre, Ministry of Electronics & Information Technology, Government of India",
+  "currentRecords":[
+    {
+      "auctionId":"2026_MH_36223",
+      "title":"e-Auction of Timber at Paoni Depot of Nagpur Division FDCM Date- 07-10-2026 to 09-10-2026",
+      "publishDate":"2026-10-05T14:00:00",
+      "closingDate":"2026-10-07T10:40:00",
+      "state":"SOURCE_RECORD_CONFIRMED"
+    },
+    {
+      "auctionId":"2026_MH_36240",
+      "title":"EAUCTION FOR THE SALE OF WITHDRAWN TEAK TIMBER AND POLES BELONGING TO BALLARSHAH SALE DEPOT OF DEPOT DIVISION BALLARSHAH. DATE 7-10 OCT 2026",
+      "publishDate":"2026-10-05T12:00:00",
+      "closingDate":"2026-10-07T15:30:00",
+      "state":"SOURCE_RECORD_CONFIRMED"
+    },
+    {
+      "auctionId":"2026_MH_36242",
+      "title":"SMC/Tax/DCollection/2026_6C",
+      "publishDate":"2026-09-30T15:00:00",
+      "closingDate":"2026-10-07T17:00:00",
+      "state":"SOURCE_RECORD_CONFIRMED"
+    }
+  ],
+  "evidenceState":"DISCOVERY_ONLY",
+  "decisionEvidenceProjection":false,
+  "control":"Contents are maintained by the respective Auction Inviting Authorities; AssetShakti must not treat NIC platform metadata as authority for title, valuation, possession or bidder obligations.",
+  "nextGate":"Open exact auction record, acquire authority documents, hash/version-bind, verify, reconcile corrigenda/addenda, then evaluate."
+}

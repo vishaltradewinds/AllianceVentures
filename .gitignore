@@ -6,3 +6,10 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Local development signing keys must never enter source control
+private.pem
+public.pem
+
+# Local evidence uploads and sidecar audit metadata
+data/assetshakti/evidence/

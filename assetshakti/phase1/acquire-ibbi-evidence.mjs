@@ -2,6 +2,18 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
+import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
+
+async function extractPdfText(bytes) {
+  const pdf = await getDocument({ data: new Uint8Array(bytes), useSystemFonts: true }).promise;
+  const pages = [];
+  for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+    const page = await pdf.getPage(pageNumber);
+    const content = await page.getTextContent();
+    pages.push(content.items.map(item => typeof item.str === "string" ? item.str : "").join(" "));
+  }
+  return pages.join(String.fromCharCode(10));
+}
 
 // Shakti evidence acquisition: acquisition is never verification.
 const OUT = process.argv[2] ?? ".assetshakti-acquisition";
@@ -9,11 +21,12 @@ fs.mkdirSync(OUT, { recursive: true });
 
 const IBBI_LIST = "https://ibbi.gov.in/liquidation-auction-notices/lists";
 
-function curl(url, output, timeout = "90") {
+function curl(url, output, timeout = "45") {
   execFileSync("curl", [
     "-fsSL",
-    "--retry", "3",
-    "--retry-delay", "2",
+    "--retry", "1",
+    "--retry-delay", "1",
+    "--connect-timeout", "10",
     "--max-time", timeout,
     "-A", "Mozilla/5.0 (AssetShakti evidence acquisition)",
     "-H", "Accept: text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
@@ -73,10 +86,17 @@ const targets = [
 const acquired = [];
 const matchedTargets = [];
 
+function hasExactRoundDate(text, targetRound) {
+  const normalise = value => value.replace(/[./]/g, "-");
+  const expected = normalise(targetRound);
+  return [...text.matchAll(/(?:^|[^0-9])([0-9]{2})[./-]([0-9]{2})[./-]([0-9]{4})(?:$|[^0-9])/g)]
+    .some(match => normalise(`${match[1]}-${match[2]}-${match[3]}`) === expected);
+}
+
 function classifyDocument(text, target) {
   const lower = text.toLowerCase();
   const hasDebtor = lower.includes(target.name.toLowerCase());
-  const hasRound = lower.includes(target.round);
+  const hasRound = hasExactRoundDate(text, target.round);
   const saleNotice = /e-?auction|auction sale notice|sale notice under insolvency/i.test(text);
   const metadata = /unique number|form is being filed for|nature of assets to be auctioned|date of auction/i.test(text);
   if (hasDebtor && hasRound && saleNotice && metadata) return "IBBI_AUCTION_RECORD";
@@ -90,7 +110,7 @@ for (const target of targets) {
   const queryUrl = `${IBBI_LIST}?filter_by=all&title=${encodeURIComponent(target.name)}`;
   const htmlPath = path.join(OUT, `${target.caseId}-ibbi.html`);
 
-  curl(queryUrl, htmlPath, "60");
+  curl(queryUrl, htmlPath, "45");
 
   const html = fs.readFileSync(htmlPath, "utf8");
   const rows = [...html.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi)].map(m => m[0]);
@@ -144,21 +164,23 @@ for (const target of targets) {
 
     const bytes = fs.readFileSync(filePath);
     const sha256 = crypto.createHash("sha256").update(bytes).digest("hex");
-    const extractedText = execFileSync("pdftotext", ["-layout", "-enc", "UTF-8", filePath, "-"], { encoding: "utf8" });
+    const extractedText = await extractPdfText(bytes);
     const documentRole = classifyDocument(extractedText, target);
 
     acquired.push({
       caseId: target.caseId,
       corporateDebtor: target.name,
       auctionDate: target.round,
-      documentType: i === 0 ? "AUCTION_NOTICE" : "DETAILS",
+      documentType: i === 0 ? "IBBI_LINKED_AUCTION_NOTICE_PDF_PENDING_VERIFICATION" : "IBBI_REGISTER_DETAILS_PDF",
       sourceReference: sourceLinks[i],
       contentSha256: sha256,
       bytes: bytes.length,
       localPath: filePath,
       documentRole,
       identityMatch: extractedText.toLowerCase().includes(target.name.toLowerCase()),
-      auctionRoundMatch: extractedText.includes(target.round)
+      auctionRoundMatch: hasExactRoundDate(extractedText, target.round),
+      verificationStatus: "PENDING_MANUAL_SOURCE_AND_VERSION_REVIEW",
+      decisionEvidenceEligible: false
     });
   }
 }
@@ -167,8 +189,14 @@ if (new Set(acquired.map(x => x.caseId)).size !== targets.length) {
   throw new Error("FAIL-CLOSED: not all six pilot case IDs produced acquired records");
 }
 
+const integrityFailures = acquired.filter(record =>
+  !record.identityMatch || !record.auctionRoundMatch || record.documentRole === "IDENTITY_MISMATCH_OR_UNREADABLE"
+);
+
 const manifest = {
-  schemaVersion: "1.3",
+  schemaVersion: "1.4",
+  acquisitionGate: integrityFailures.length === 0 ? "PENDING_MANUAL_VERIFICATION" : "BLOCKED_IDENTITY_OR_ROUND_MISMATCH",
+  integrityFailureCount: integrityFailures.length,
   acquiredAt: new Date().toISOString(),
   source: IBBI_LIST,
   authoritativeSource: "IBBI Liquidation Auction Notices",
@@ -191,5 +219,10 @@ fs.writeFileSync(path.join(OUT, "manifest.json"), JSON.stringify(manifest, null,
 console.log(JSON.stringify({
   records: acquired.length,
   pilots: new Set(acquired.map(x => x.caseId)).size,
-  manifest: path.join(OUT, "manifest.json")
+  manifest: path.join(OUT, "manifest.json"),
+  acquisitionGate: manifest.acquisitionGate,
+  integrityFailureCount: integrityFailures.length
 }));
+if (integrityFailures.length > 0) {
+  throw new Error(`FAIL-CLOSED: ${integrityFailures.length} acquired PDF records failed debtor/auction-round identity checks; manifest retained for review.`);
+}

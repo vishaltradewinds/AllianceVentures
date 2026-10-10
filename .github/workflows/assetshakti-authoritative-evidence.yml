@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "assetshakti/phase1-property-foundation"
+      - "assetshakti/phase1.5-multi-auction-source-foundation"
   workflow_dispatch:
   schedule:
     - cron: "0 4 * * *"
@@ -14,11 +15,14 @@ permissions:
 jobs:
   acquire:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Install project dependencies
+        run: npm ci
       - name: Install PDF evidence tooling
         run: |
           sudo apt-get update

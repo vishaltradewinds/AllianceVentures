@@ -1,0 +1,49 @@
+{
+  "capturedAt": "2026-10-07",
+  "provider": "SAMIL",
+  "sourcePolicy": "DIRECT_AUCTION_PLATFORMS_ONLY",
+  "sourceUrl": "https://www.samil.in/automall-profiles",
+  "sourceType": "DIRECT_PLATFORM_DISCOVERY",
+  "evidenceState": "DISCOVERY_ONLY",
+  "decisionEvidenceProjection": false,
+  "records": [
+    {
+      "sourceRecordId": "UNASSIGNED",
+      "auctionId": null,
+      "lotId": null,
+      "venue": "Shriram Automall Agra-Gwalior Road",
+      "auctionDate": "2026-10-07",
+      "startTime": "10:00",
+      "assetClasses": ["Commercial Vehicle", "Trucks", "Construction Equipment", "Cars"],
+      "auctionVehicleCount": 68
+    },
+    {
+      "sourceRecordId": "UNASSIGNED",
+      "auctionId": null,
+      "lotId": null,
+      "venue": "Shriram Automall Anantapur-Gooty Road",
+      "auctionDate": "2026-10-07",
+      "startTime": "10:00",
+      "assetClasses": ["Commercial Vehicle", "Trucks", "Construction Equipment", "Cars"],
+      "auctionVehicleCount": 57
+    },
+    {
+      "sourceRecordId": "UNASSIGNED",
+      "auctionId": null,
+      "lotId": null,
+      "venue": "Shriram Automall Ayodhya-Mumtaj Nagar",
+      "auctionDate": "2026-10-07",
+      "startTime": "10:00",
+      "assetClasses": ["Commercial Vehicle", "Trucks", "Construction Equipment", "Cars"],
+      "auctionVehicleCount": 55
+    }
+  ],
+  "controls": {
+    "exactLotBinding": "BLOCKED_UNTIL_AUCTION_AND_LOT_IDS_ARE_OBTAINED",
+    "reservePrice": "NOT_INFERRED",
+    "valuation": "NOT_INFERRED",
+    "title": "NOT_INFERRED",
+    "possession": "NOT_INFERRED",
+    "bidExecution": false
+  }
+}
