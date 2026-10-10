@@ -193,9 +193,10 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
       const isCoverageIssue = input.jurisdictionCoverage.status !== "COVERED" &&
         reasons.some(r => r.includes("coverage"));
       const isContradiction = reasons.some(r => r.includes("contradictory"));
+      const unsupportedLegalSource = control.legalControl && reasons.some(r => r.includes("No fresh verified evidence"));
       const status: GateStatus = isCoverageIssue && control.legalControl
         ? "NOT_COVERED"
-        : isContradiction || reasons.some(r => r.includes("missing") || r.includes("stale") || r.includes("no linked evidence"))
+        : isContradiction || unsupportedLegalSource || reasons.some(r => r.includes("missing") || r.includes("stale") || r.includes("no linked evidence"))
           ? "BLOCKED"
           : "PENDING_REVIEW";
       return { gateId: control.gateId, claimKey: control.claimKey, status, reasons, evidenceIds };
