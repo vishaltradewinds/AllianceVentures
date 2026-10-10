@@ -49,6 +49,7 @@ export interface RequiredControl {
   applicabilityRationale?: string;
   professionalReview: ProfessionalReview;
   professionalReviewer?: string;
+  professionalReviewEvidenceId?: string;
   maxEvidenceAgeDays?: number;
 }
 
@@ -128,6 +129,9 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
   const controls = input.controls;
   const duplicateGateIds = controls.map(c => c.gateId).filter((id, i, all) => all.indexOf(id) !== i);
   if (duplicateGateIds.length) blockers.push(`Duplicate gate identifiers: ${[...new Set(duplicateGateIds)].join(", ")}.`);
+  const evidenceIds = input.evidence.map(e => e.id);
+  const duplicateEvidenceIds = evidenceIds.filter((id, i, all) => !id.trim() || all.indexOf(id) !== i);
+  if (duplicateEvidenceIds.length) blockers.push("Evidence identifiers must be non-empty and unique.");
 
   const findings: GateFinding[] = controls.map(control => {
     const reasons: string[] = [];
@@ -152,16 +156,32 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
 
     if (control.applicability === "NOT_APPLICABLE") {
       if (!control.applicabilityRationale?.trim()) reasons.push("Non-applicability has no documented rationale.");
-      if (control.legalControl && (control.professionalReview !== "APPROVED" || !control.professionalReviewer?.trim())) {
-        reasons.push("Legal non-applicability requires recorded qualified-professional review.");
+      if (control.legalControl) {
+        const reviewEvidence = input.evidence.find(e => e.id === control.professionalReviewEvidenceId);
+        const validReviewEvidence = !!reviewEvidence &&
+          reviewEvidence.status === "VERIFIED" &&
+          reviewEvidence.sourceKind === "QUALIFIED_PROFESSIONAL" &&
+          !!reviewEvidence.reviewer?.trim() &&
+          !!(reviewEvidence.sourceUrl?.trim() || reviewEvidence.contentHash?.trim()) &&
+          evidenceIsFresh(reviewEvidence, input.asOf, control.maxEvidenceAgeDays ?? 365);
+        if (control.professionalReview !== "APPROVED" || !control.professionalReviewer?.trim() || !validReviewEvidence) {
+          reasons.push("Legal non-applicability requires linked, fresh, traceable evidence of qualified-professional review.");
+        }
       }
       if (reasons.length) return { gateId: control.gateId, claimKey: control.claimKey, status: "PENDING_REVIEW", reasons, evidenceIds };
       return { gateId: control.gateId, claimKey: control.claimKey, status: "PASS", reasons: ["Non-applicability documented; this is not an approval."], evidenceIds };
     }
 
     if (control.legalControl) {
-      if (control.professionalReview !== "APPROVED" || !control.professionalReviewer?.trim()) {
-        reasons.push("Mandatory legal control lacks recorded qualified-professional review.");
+      const reviewEvidence = input.evidence.find(e => e.id === control.professionalReviewEvidenceId);
+      const validReviewEvidence = !!reviewEvidence &&
+        reviewEvidence.status === "VERIFIED" &&
+        reviewEvidence.sourceKind === "QUALIFIED_PROFESSIONAL" &&
+        !!reviewEvidence.reviewer?.trim() &&
+        !!(reviewEvidence.sourceUrl?.trim() || reviewEvidence.contentHash?.trim()) &&
+        evidenceIsFresh(reviewEvidence, input.asOf, control.maxEvidenceAgeDays ?? 365);
+      if (control.professionalReview !== "APPROVED" || !control.professionalReviewer?.trim() || !validReviewEvidence) {
+        reasons.push("Mandatory legal control lacks linked, fresh, traceable evidence of qualified-professional review.");
       }
       if (input.jurisdictionCoverage.status !== "COVERED") {
         reasons.push("Legal control cannot pass under partial jurisdiction coverage.");
@@ -184,8 +204,9 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
         const fresh = usable.filter(e => evidenceIsFresh(e, input.asOf, maxAge));
         if (!fresh.length) reasons.push(`Verified evidence is stale, future-dated, invalidly dated, or outside its effective period (max age ${maxAge} days).`);
         const authoritative = fresh.filter(e => VERIFIED_SOURCE_KINDS.has(e.sourceKind));
-        if (!authoritative.length) reasons.push("No fresh verified evidence from an official authority, legislation, or qualified professional.");
-        if (authoritative.some(e => !e.sourceName.trim() || !e.assertion.trim())) reasons.push("Evidence provenance/assertion is incomplete.");
+        const traceable = authoritative.filter(e => !!(e.sourceUrl?.trim() || e.contentHash?.trim()));
+        if (!traceable.length) reasons.push("No fresh verified evidence from an official authority, legislation, or qualified professional has a source URL or content hash.");
+        if (traceable.some(e => !e.sourceName.trim() || !e.assertion.trim())) reasons.push("Evidence provenance/assertion is incomplete.");
       }
     }
 
