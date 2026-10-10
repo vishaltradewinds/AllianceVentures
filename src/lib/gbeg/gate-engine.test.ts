@@ -26,6 +26,7 @@ function expect(condition: unknown, message: string): asserts condition {
 const ready = evaluateGbegCase(base);
 expect(ready.outcome === "EVIDENCE_COMPLETE_FOR_HUMAN_REVIEW", "Complete reviewed evidence should permit human review.");
 expect(ready.isLegalEligibilityDecision === false, "Engine must never claim a legal eligibility decision.");
+expect(ready.evidenceIdsUsed.includes("EV-003"), "Professional-review evidence must be included in the audit trail.");
 
 const missing = evaluateGbegCase({ ...base, evidence: goodEvidence.filter(e => e.claimKey !== "india.outbound-investment") });
 expect(missing.outcome === "BLOCKED", "Missing mandatory legal evidence must block.");
