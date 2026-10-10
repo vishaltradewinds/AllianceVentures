@@ -10,8 +10,21 @@ import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
 import { verifyUserSuppliedEvidence } from "./assetshakti/phase1/user-evidence-verification.js";
 
-// Generate keys if they don't exist
-if (!fs.existsSync("./private.pem") || !fs.existsSync("./public.pem")) {
+// Production must never generate ephemeral auth keys or silently use local-only evidence storage.
+const IS_PRODUCTION = process.env.NODE_ENV === "production";
+if (IS_PRODUCTION) {
+  const required = ["JWT_PRIVATE_KEY", "JWT_PUBLIC_KEY", "MONGO_URI", "ASSETSHAKTI_EVIDENCE_DIR"];
+  const missing = required.filter(name => !process.env[name]);
+  if (missing.length) throw new Error(`Production startup blocked; missing required environment variables: ${missing.join(", ")}`);
+  if (process.env.ASSETSHAKTI_EVIDENCE_STORAGE_MODE !== "persistent-volume" || process.env.ASSETSHAKTI_EVIDENCE_STORAGE_CONFIRMED !== "true") {
+    throw new Error("Production startup blocked; configure and verify a durable persistent evidence volume before enabling evidence intake.");
+  }
+  if (!path.isAbsolute(process.env.ASSETSHAKTI_EVIDENCE_DIR || "")) {
+    throw new Error("Production startup blocked; ASSETSHAKTI_EVIDENCE_DIR must be an absolute path on the verified persistent volume.");
+  }
+}
+
+if (!IS_PRODUCTION && (!fs.existsSync("./private.pem") || !fs.existsSync("./public.pem"))) {
   console.log("Generating RSA keys...");
   const { publicKey, privateKey } = crypto.generateKeyPairSync("rsa", {
     modulusLength: 2048,
@@ -42,8 +55,12 @@ const AK_URL = process.env.AK_URL;
 
 // ------------------- KEYS -------------------
 
-const privateKey = fs.readFileSync("./private.pem");
-const publicKey = fs.readFileSync("./public.pem");
+const privateKey = IS_PRODUCTION
+  ? Buffer.from((process.env.JWT_PRIVATE_KEY || "").split(String.fromCharCode(92) + "n").join(String.fromCharCode(10)))
+  : fs.readFileSync("./private.pem");
+const publicKey = IS_PRODUCTION
+  ? Buffer.from((process.env.JWT_PUBLIC_KEY || "").split(String.fromCharCode(92) + "n").join(String.fromCharCode(10)))
+  : fs.readFileSync("./public.pem");
 
 // ------------------- DATABASE -------------------
 
