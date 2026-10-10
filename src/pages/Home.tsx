@@ -43,6 +43,7 @@ export default function Home() {
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#identity" className="hover:text-white transition-colors">Identity</a>
             <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
+            <Link to="/global-business-os" className="hover:text-cyan-300 transition-colors">Global Business OS</Link>
             <a href="#principles" className="hover:text-white transition-colors">Principles</a>
             <a href="#backbone" className="hover:text-white transition-colors">Operations</a>
             <a href="/login" className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">Investor Login</a>
