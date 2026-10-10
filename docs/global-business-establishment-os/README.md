@@ -27,7 +27,7 @@ Implemented on this feature branch: governance/product documentation, a mobile-r
 - [Gate engine tests](../../src/lib/gbeg/gate-engine.test.ts)
 - [Evidence registry service](../../src/lib/gbeg/evidence-registry.ts)
 - [Evidence registry tests](../../src/lib/gbeg/evidence-registry.test.ts)
-- [GitHub Actions validation run](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38064001766) — test, TypeScript check and build passed for commit 9a6b715.
+- [GitHub Actions validation run](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38064170902) — evidence-gate tests, registry tests, TypeScript check and build passed for commit b681933.
 
 ## Non-negotiable principles
 
