@@ -139,6 +139,9 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
     const reasons: string[] = [];
     const matching = input.evidence.filter(e => e.claimKey === control.claimKey);
     const evidenceIds = matching.map(e => e.id);
+    if (control.legalControl && control.professionalReviewEvidenceId && input.evidence.some(e => e.id === control.professionalReviewEvidenceId)) {
+      evidenceIds.push(control.professionalReviewEvidenceId);
+    }
 
     if (!control.mandatory) {
       return { gateId: control.gateId, claimKey: control.claimKey, status: "PASS", reasons: ["Optional control; no mandatory pass implied."], evidenceIds };
