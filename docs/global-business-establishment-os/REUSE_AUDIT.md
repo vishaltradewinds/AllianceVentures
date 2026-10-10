@@ -37,6 +37,7 @@ These are separate branches with different ancestry. The Phase 2 PR targets Phas
 
 - The GBEG gate tests, TypeScript check, and Vite production build passed in GitHub Actions for commit `9a6b7152510a161571059ced976e8cffcbb5741a`. Earlier intermediate commits failed a test before the review-evidence fixture was updated; the successful run is linked from the project README.
 - `npm ci` reported 24 dependency vulnerabilities (including 2 critical) in the existing dependency graph. The detailed advisories and production-versus-development exposure still need a dedicated dependency audit and remediation; this branch does not silently change dependency versions.
+- The existing `server.ts` is not safe to use as the confidential GBEG case/evidence API without a separate security pass: the source contains a default admin-bootstrap path and a demo login path that can mint an admin-role token when MongoDB is not configured; startup also generates local JWT keys outside production. Do not attach customer case data to these routes. PR #3 adds production startup/key/storage guards on its own branch, but it is not merged and does not by itself prove tenant isolation or fix every auth flow.
 - Mergeability or combined behavior of the separate AssetShakti PRs after a rebase/merge.
 - Availability of global official-source adapters or country-specific legal rule sets.
 - Production persistence, tenant isolation, professional credentials, evidence hashing at ingestion, or audit-log immutability for GBEG.
