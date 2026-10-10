@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
-    "gbeg:test": "tsx src/lib/gbeg/gate-engine.test.ts",
+    "gbeg:test": "tsx src/lib/gbeg/gate-engine.test.ts && tsx src/lib/gbeg/evidence-registry.test.ts",
     "gbeg:validate": "npm run gbeg:test && npm run lint && npm run build"
   },
   "dependencies": {
