@@ -31,6 +31,8 @@ These are separate branches with different ancestry. The Phase 2 PR targets Phas
 
 - `src/lib/gbeg/gate-engine.ts`: a domain-neutral evidence gate. It is intentionally not an eligibility, investment, or legal-advice engine.
 - `src/lib/gbeg/gate-engine.test.ts`: negative controls for missing evidence, contradiction, stale/future-dated evidence, missing professional review, partial/uncovered jurisdiction, unsupported source type, and unjustified non-applicability.
+- `src/lib/gbeg/evidence-registry.ts`: append-only tenant-scoped registry service with immutable IDs, supersession links, source URL/hash checks and a repository interface. Its in-memory adapter is for tests only; durable persistence and API integration are not implemented.
+- `src/lib/gbeg/evidence-registry.test.ts`: checks append-only corrections, tenant isolation, source provenance, URL schemes and supersession integrity.
 - The engine distinguishes evidence-complete-for-human-review from legal eligibility. A score cannot override mandatory legal-control failure.
 
 ## Validation and remaining risks
@@ -40,7 +42,7 @@ These are separate branches with different ancestry. The Phase 2 PR targets Phas
 - The existing `server.ts` is not safe to use as the confidential GBEG case/evidence API without a separate security pass: the source contains a default admin-bootstrap path and a demo login path that can mint an admin-role token when MongoDB is not configured; startup also generates local JWT keys outside production. Do not attach customer case data to these routes. PR #3 adds production startup/key/storage guards on its own branch, but it is not merged and does not by itself prove tenant isolation or fix every auth flow.
 - Mergeability or combined behavior of the separate AssetShakti PRs after a rebase/merge.
 - Availability of global official-source adapters or country-specific legal rule sets.
-- Production persistence, tenant isolation, professional credentials, evidence hashing at ingestion, or audit-log immutability for GBEG.
+- Production persistence, authenticated tenant identity, authorization policy, verified professional credentials, evidence hashing at ingestion, or durable audit-log immutability for GBEG.
 - A real customer case or any country-specific legal conclusion.
 
 ## Next safe integration sequence
