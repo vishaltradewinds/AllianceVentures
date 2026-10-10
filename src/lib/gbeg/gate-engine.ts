@@ -51,6 +51,7 @@ export interface RequiredControl {
   professionalReviewer?: string;
   professionalReviewEvidenceId?: string;
   maxEvidenceAgeDays?: number;
+  acceptedSourceKinds?: SourceKind[];
 }
 
 export interface JurisdictionCoverage {
@@ -127,6 +128,7 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
   }
 
   const controls = input.controls;
+  if (!controls.length) blockers.push("At least one required control is needed for a meaningful evaluation.");
   const duplicateGateIds = controls.map(c => c.gateId).filter((id, i, all) => all.indexOf(id) !== i);
   if (duplicateGateIds.length) blockers.push(`Duplicate gate identifiers: ${[...new Set(duplicateGateIds)].join(", ")}.`);
   const evidenceIds = input.evidence.map(e => e.id);
@@ -162,6 +164,7 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
           reviewEvidence.status === "VERIFIED" &&
           reviewEvidence.sourceKind === "QUALIFIED_PROFESSIONAL" &&
           !!reviewEvidence.reviewer?.trim() &&
+          !!reviewEvidence.sourceName.trim() && !!reviewEvidence.assertion.trim() &&
           !!(reviewEvidence.sourceUrl?.trim() || reviewEvidence.contentHash?.trim()) &&
           evidenceIsFresh(reviewEvidence, input.asOf, control.maxEvidenceAgeDays ?? 365);
         if (control.professionalReview !== "APPROVED" || !control.professionalReviewer?.trim() || !validReviewEvidence) {
@@ -178,6 +181,7 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
         reviewEvidence.status === "VERIFIED" &&
         reviewEvidence.sourceKind === "QUALIFIED_PROFESSIONAL" &&
         !!reviewEvidence.reviewer?.trim() &&
+        !!reviewEvidence.sourceName.trim() && !!reviewEvidence.assertion.trim() &&
         !!(reviewEvidence.sourceUrl?.trim() || reviewEvidence.contentHash?.trim()) &&
         evidenceIsFresh(reviewEvidence, input.asOf, control.maxEvidenceAgeDays ?? 365);
       if (control.professionalReview !== "APPROVED" || !control.professionalReviewer?.trim() || !validReviewEvidence) {
@@ -203,9 +207,18 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
         const maxAge = control.maxEvidenceAgeDays ?? 365;
         const fresh = usable.filter(e => evidenceIsFresh(e, input.asOf, maxAge));
         if (!fresh.length) reasons.push(`Verified evidence is stale, future-dated, invalidly dated, or outside its effective period (max age ${maxAge} days).`);
-        const authoritative = fresh.filter(e => VERIFIED_SOURCE_KINDS.has(e.sourceKind));
-        const traceable = authoritative.filter(e => !!(e.sourceUrl?.trim() || e.contentHash?.trim()));
-        if (!traceable.length) reasons.push("No fresh verified evidence from an official authority, legislation, or qualified professional has a source URL or content hash.");
+        const acceptedKinds = control.legalControl
+          ? VERIFIED_SOURCE_KINDS
+          : new Set<SourceKind>(control.acceptedSourceKinds ?? [
+              "OFFICIAL_AUTHORITY", "LEGISLATION", "QUALIFIED_PROFESSIONAL", "CUSTOMER", "COMMERCIAL", "OTHER"
+            ]);
+        const accepted = fresh.filter(e => acceptedKinds.has(e.sourceKind));
+        const traceable = accepted.filter(e => !!(e.sourceUrl?.trim() || e.contentHash?.trim()));
+        if (!traceable.length) {
+          reasons.push(control.legalControl
+            ? "No fresh verified evidence from an official authority, legislation, or qualified professional has a source URL or content hash."
+            : "No fresh verified evidence from an allowed source kind has a source URL or content hash.");
+        }
         if (traceable.some(e => !e.sourceName.trim() || !e.assertion.trim())) reasons.push("Evidence provenance/assertion is incomplete.");
       }
     }
@@ -214,7 +227,7 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
       const isCoverageIssue = input.jurisdictionCoverage.status !== "COVERED" &&
         reasons.some(r => r.includes("coverage"));
       const isContradiction = reasons.some(r => r.includes("contradictory"));
-      const unsupportedLegalSource = control.legalControl && reasons.some(r => r.includes("No fresh verified evidence"));
+      const unsupportedLegalSource = reasons.some(r => r.includes("No fresh verified evidence"));
       const status: GateStatus = isCoverageIssue && control.legalControl
         ? "NOT_COVERED"
         : isContradiction || unsupportedLegalSource || reasons.some(r => r.includes("missing") || r.includes("stale") || r.includes("no linked evidence"))
@@ -237,7 +250,7 @@ export function evaluateGbegCase(input: GateInput): GateEvaluation {
   }
 
   const hasNotCovered = findings.some(f => f.status === "NOT_COVERED");
-  const hasBlocked = findings.some(f => f.status === "BLOCKED") || blockers.some(b => b.includes("identifier") || b.includes("date is invalid") || b.includes("Duplicate"));
+  const hasBlocked = findings.some(f => f.status === "BLOCKED") || blockers.some(b => b.includes("identifier") || b.includes("date is invalid") || b.includes("Duplicate") || b.includes("At least one required control") || b.includes("jurisdiction path"));
   const hasPending = findings.some(f => f.status === "PENDING_REVIEW") || blockers.length > 0;
   const outcome: GateEvaluation["outcome"] = hasNotCovered
     ? "NOT_COVERED"
