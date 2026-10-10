@@ -60,4 +60,10 @@ expect(untraceable.outcome === "BLOCKED", "Legal evidence without a URL or conte
 const unlinkedReview = evaluateGbegCase({ ...base, controls: controls.map(c => c.legalControl ? { ...c, professionalReviewEvidenceId: undefined } : c) });
 expect(unlinkedReview.outcome === "PENDING_REVIEW", "Legal review must be linked to traceable review evidence.");
 
-console.log("GBEG gate engine tests passed: 11 fail-closed controls.");
+const customerAttested = evaluateGbegCase({ ...base, evidence: goodEvidence.map(e => e.id === "EV-001" ? { ...e, sourceKind: "CUSTOMER" as const, sourceUrl: undefined, contentHash: "sha256:customer-document" } : e) });
+expect(customerAttested.outcome === "EVIDENCE_COMPLETE_FOR_HUMAN_REVIEW", "A traceable customer source may support a non-legal control without satisfying legal controls.");
+
+const noControls = evaluateGbegCase({ ...base, controls: [] });
+expect(noControls.outcome === "BLOCKED", "An empty control set must not pass vacuously.");
+
+console.log("GBEG gate engine tests passed: 13 fail-closed controls.");
