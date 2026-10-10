@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Leaf, Briefcase, Stethoscope, Code, Ship, Sprout } from 'lucide-react';
 import Home from './pages/Home';
 import VerticalPage from './pages/Vertical';
+import GlobalBusinessOS from './pages/GlobalBusinessOS';
 
 const verticalsData = {
   rupaykg: {
@@ -108,6 +109,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/global-business-os" element={<GlobalBusinessOS />} />
         <Route path="/rupaykg" element={<VerticalPage data={verticalsData.rupaykg} />} />
         <Route path="/vyaparkendra" element={<VerticalPage data={verticalsData.vyaparkendra} />} />
         <Route path="/ayushkendra" element={<VerticalPage data={verticalsData.ayushkendra} />} />
