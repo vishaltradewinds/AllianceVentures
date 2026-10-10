@@ -5,15 +5,17 @@
 - Repository: https://github.com/vishaltradewinds/AllianceVentures
 - Local working copy: `C:\Users\Vishal\AllianceVentures`
 - Active engineering branch: `assetshakti/phase1.5-multi-auction-source-foundation`
-- Latest committed and pushed head: `acfeddfd26ed09c12a72bf527711a6c5a5595d0d` (document acquisition gate, production startup guard, local-key/evidence ignore rules, and dependency remediation merge).
+- Engineering head before this checkpoint update: `9e164f731c5abe776187b26266a95ea0ba3f2903` (document acquisition gate, production startup/key-pair checks, local-key/evidence ignore rules, dependency remediation merge, and CI dependency installation fix).
 - Phase 1.5 PR #3 remains open/draft and mergeable; Phase 2 PR #2 remains open/draft and GitHub currently reports it not mergeable.
 - Working tree was clean after checkout. No production deployment or certification was performed.
 
 ## Engineering evidence
-GitHub Actions at the observed Phase 1.5 head:
-- Phase 1 Validation run #601 — SUCCESS
-- Dependency Security Gate run #197 — SUCCESS
-- Dependency Remediation run #194 — SUCCESS
+Latest GitHub workflows on engineering head `9e164f731c5abe776187b26266a95ea0ba3f2903`:
+- [Phase 1 Validation](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38037048764) — SUCCESS.
+- [Dependency Security Gate](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38037048780) — SUCCESS.
+- [Dependency Remediation](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38037048740) — SUCCESS.
+- [Authoritative evidence acquisition](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38037045786) — FAIL-CLOSED as designed after 4 of 12 IBBI-linked PDFs failed debtor/round identity extraction; the hashed manifest artifact was published.
+- [Controlled evidence recovery](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38037045800) — FAIL-CLOSED because 3 of 4 controlled-intake source files failed identity verification; artifact published. This is an unresolved real-world evidence blocker, not a passing evidence certification.
 
 Local checks completed on the current working tree:
 - `npm run lint` — PASS.
@@ -53,7 +55,7 @@ All pilots also require exact source/version identity, SHA-256 binding of origin
 No bypass of login, CAPTCHA, robots, paywalls or access controls. No unauthorised scraping/reuse. No automated bids/payments. Reserve price is not valuation. Missing or contradicted evidence remains missing/contradicted; no positive decision is inferred.
 
 ## Production hardening update
-- Server now refuses production startup if RSA keys, MongoDB URI, absolute evidence-volume path, persistent-volume mode, or explicit storage confirmation are missing.
+- Server now refuses production startup if RSA keys, MongoDB URI, absolute evidence-volume path, persistent-volume mode, or explicit storage confirmation are missing; it validates that JWT keys are a matching pair and rejects local MongoDB loopback targets.
 - Production-mode negative test failed closed as expected, naming missing JWT keys, MongoDB URI and evidence directory.
 - `.env.example` documents the required production secrets/storage configuration without adding real secret values.
 - Production deployment remains blocked until an operator provisions and verifies durable storage, secret-manager keys, secured MongoDB, backup/restore, rate limiting and other launch controls.
