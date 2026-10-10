@@ -5,7 +5,7 @@
 - Repository: https://github.com/vishaltradewinds/AllianceVentures
 - Local working copy: `C:\Users\Vishal\AllianceVentures`
 - Active engineering branch: `assetshakti/phase1.5-multi-auction-source-foundation`
-- Latest committed and pushed head: `65578e1b4d62477aa8743e4e39a9d11f09cdc0f2` (document acquisition gate hardening).
+- Latest committed and pushed head: `acfeddfd26ed09c12a72bf527711a6c5a5595d0d` (document acquisition gate, production startup guard, local-key/evidence ignore rules, and dependency remediation merge).
 - Phase 1.5 PR #3 remains open/draft and mergeable; Phase 2 PR #2 remains open/draft and GitHub currently reports it not mergeable.
 - Working tree was clean after checkout. No production deployment or certification was performed.
 
@@ -57,7 +57,7 @@ No bypass of login, CAPTCHA, robots, paywalls or access controls. No unauthorise
 - Production-mode negative test failed closed as expected, naming missing JWT keys, MongoDB URI and evidence directory.
 - `.env.example` documents the required production secrets/storage configuration without adding real secret values.
 - Production deployment remains blocked until an operator provisions and verifies durable storage, secret-manager keys, secured MongoDB, backup/restore, rate limiting and other launch controls.
-- The new server guard passed TypeScript lint; production build verification is being repeated after the guard change.
+- The new server guard passed TypeScript lint and the Vite production build (2,087 modules transformed).
 
 ## Status
 `DESKTOP_CONNECTED / LOCAL_TEST_SUITE_PASS / DOCUMENT_ACQUISITION_FAIL_CLOSED / PRODUCTION_STARTUP_GUARD_ADDED / REAL_WORLD_EVIDENCE_BLOCKED / PRODUCTION_CERTIFICATION_OFF`
