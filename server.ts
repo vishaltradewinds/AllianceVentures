@@ -16,6 +16,12 @@ if (IS_PRODUCTION) {
   const required = ["JWT_PRIVATE_KEY", "JWT_PUBLIC_KEY", "MONGO_URI", "ASSETSHAKTI_EVIDENCE_DIR"];
   const missing = required.filter(name => !process.env[name]);
   if (missing.length) throw new Error(`Production startup blocked; missing required environment variables: ${missing.join(", ")}`);
+  if (!(process.env.JWT_PRIVATE_KEY || "").includes("BEGIN PRIVATE KEY") || !(process.env.JWT_PUBLIC_KEY || "").includes("BEGIN PUBLIC KEY")) {
+    throw new Error("Production startup blocked; JWT key environment values must contain valid PEM key material.");
+  }
+  if (["localhost", "127.0.0.1", "::1"].some(host => (process.env.MONGO_URI || "").toLowerCase().includes(host))) {
+    throw new Error("Production startup blocked; MONGO_URI must target a secured non-local production database.");
+  }
   if (process.env.ASSETSHAKTI_EVIDENCE_STORAGE_MODE !== "persistent-volume" || process.env.ASSETSHAKTI_EVIDENCE_STORAGE_CONFIRMED !== "true") {
     throw new Error("Production startup blocked; configure and verify a durable persistent evidence volume before enabling evidence intake.");
   }
