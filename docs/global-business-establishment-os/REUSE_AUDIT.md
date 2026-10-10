@@ -33,9 +33,10 @@ These are separate branches with different ancestry. The Phase 2 PR targets Phas
 - `src/lib/gbeg/gate-engine.test.ts`: negative controls for missing evidence, contradiction, stale/future-dated evidence, missing professional review, partial/uncovered jurisdiction, unsupported source type, and unjustified non-applicability.
 - The engine distinguishes evidence-complete-for-human-review from legal eligibility. A score cannot override mandatory legal-control failure.
 
-## Not yet verified
+## Validation and remaining risks
 
-- Runtime build and TypeScript checks for this branch.
+- The GBEG gate tests, TypeScript check, and Vite production build passed in GitHub Actions for commit `9a6b7152510a161571059ced976e8cffcbb5741a`. Earlier intermediate commits failed a test before the review-evidence fixture was updated; the successful run is linked from the project README.
+- `npm ci` reported 24 dependency vulnerabilities (including 2 critical) in the existing dependency graph. The detailed advisories and production-versus-development exposure still need a dedicated dependency audit and remediation; this branch does not silently change dependency versions.
 - Mergeability or combined behavior of the separate AssetShakti PRs after a rebase/merge.
 - Availability of global official-source adapters or country-specific legal rule sets.
 - Production persistence, tenant isolation, professional credentials, evidence hashing at ingestion, or audit-log immutability for GBEG.
