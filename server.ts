@@ -68,6 +68,20 @@ const publicKey = IS_PRODUCTION
   ? Buffer.from((process.env.JWT_PUBLIC_KEY || "").split(String.fromCharCode(92) + "n").join(String.fromCharCode(10)))
   : fs.readFileSync("./public.pem");
 
+if (IS_PRODUCTION) {
+  try {
+    const privateKeyObject = crypto.createPrivateKey(privateKey);
+    const publicKeyObject = crypto.createPublicKey(publicKey);
+    const probe = crypto.randomBytes(32);
+    const signature = crypto.sign("sha256", probe, privateKeyObject);
+    if (!crypto.verify("sha256", probe, publicKeyObject, signature)) {
+      throw new Error("JWT public/private keys do not match.");
+    }
+  } catch {
+    throw new Error("Production startup blocked; JWT_PRIVATE_KEY and JWT_PUBLIC_KEY must be a valid matching key pair.");
+  }
+}
+
 // ------------------- DATABASE -------------------
 
 if (process.env.MONGO_URI) {

@@ -12,7 +12,7 @@ async function extractPdfText(bytes) {
     const content = await page.getTextContent();
     pages.push(content.items.map(item => typeof item.str === "string" ? item.str : "").join(" "));
   }
-  return pages.join("\\n");
+  return pages.join(String.fromCharCode(10));
 }
 
 // Shakti evidence acquisition: acquisition is never verification.

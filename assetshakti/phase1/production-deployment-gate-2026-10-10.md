@@ -5,7 +5,7 @@ Production deployment is not authorised by this file. The server now fails close
 
 ## Production requirements
 - `NODE_ENV=production`.
-- `JWT_PRIVATE_KEY` and `JWT_PUBLIC_KEY` injected from a secret manager; do not generate or store production signing keys in the repository or ephemeral application filesystem.
+- `JWT_PRIVATE_KEY` and `JWT_PUBLIC_KEY` injected from a secret manager as a valid matching PEM key pair; startup performs a sign/verify challenge. Do not generate or store production signing keys in the repository or ephemeral application filesystem.
 - `MONGO_URI` points to a secured non-local production database with authentication, network restrictions, backups and recovery testing. Localhost, loopback and IPv6 loopback targets are rejected.
 - `ASSETSHAKTI_EVIDENCE_DIR` is an absolute path on a persistent, access-controlled volume.
 - `ASSETSHAKTI_EVIDENCE_STORAGE_MODE=persistent-volume`.
