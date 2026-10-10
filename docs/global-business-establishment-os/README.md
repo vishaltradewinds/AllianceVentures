@@ -14,13 +14,18 @@ The system must not presume that buying land, incorporating a subsidiary, or cho
 
 ## Current implementation status
 
-This branch establishes documentation and implementation contracts. It does **not** claim that a production workflow, jurisdiction database, legal opinion service, or establishment execution engine already exists.
+Implemented on this feature branch: governance/product documentation, a mobile-responsive intake prototype, and a deterministic evidence gate with fail-closed tests. The gate engine is not yet connected to the UI or an API, and the intake is not persisted. This is **not** a production workflow, validated global jurisdiction database, legal opinion service, or establishment execution engine.
 
 - [Product requirements](PRODUCT_REQUIREMENTS.md)
 - [Legal boundaries and source policy](LEGAL_BOUNDARIES.md)
 - [Canonical data model](DATA_MODEL.md)
 - [Shakti gates and acceptance criteria](SHAKTI_GATES.md)
 - [Pilot and validation plan](PILOT_AND_VALIDATION.md)
+- [Existing AssetShakti capability/reuse audit](REUSE_AUDIT.md)
+- [Automated validation plan](VALIDATION_PLAN.md)
+- [Deterministic gate engine](../../src/lib/gbeg/gate-engine.ts)
+- [Gate engine tests](../../src/lib/gbeg/gate-engine.test.ts)
+- [GitHub Actions validation run](https://github.com/vishaltradewinds/AllianceVentures/actions/runs/38064001766) — test, TypeScript check and build passed for commit 9a6b715.
 
 ## Non-negotiable principles
 
