@@ -1,0 +1,70 @@
+{
+  "schemaVersion":"1.1",
+  "capturedAt":"2026-10-07",
+  "sourcePolicy":"DIRECT_AUCTION_PLATFORMS_ONLY",
+  "productionCertification":"OFF",
+  "acquisitionQueue":[
+    {
+      "provider":"MSTC",
+      "sourceUrl":"https://web.mstcecommerce.com/auctionhome/property/index.jsp",
+      "auctionId":"MSTC/CDG/PUNJAB STATE BUS STAND MANAGEMENT COMPANY LIMITED/6/Bus Stand/26-27/34638",
+      "host":"PUNJAB STATE BUS STAND MANAGEMENT COMPANY LIMITED",
+      "eventType":"Auction",
+      "submissionDeadline":"2026-10-07T15:00:00",
+      "state":"CURRENT_SOURCE_RECORD",
+      "evidenceProjection":false
+    },
+    {
+      "provider":"MSTC",
+      "sourceUrl":"https://web.mstcecommerce.com/auctionhome/property/index.jsp",
+      "auctionId":"MSTC/ERO/HOWRAH MUNICIPAL CORPORATION/7/Howrah/26-27/31554",
+      "host":"HOWRAH MUNICIPAL CORPORATION",
+      "eventType":"Auction",
+      "submissionDeadline":"2026-10-09T17:00:00",
+      "state":"CURRENT_SOURCE_RECORD",
+      "evidenceProjection":false
+    },
+    {
+      "provider":"MSTC",
+      "sourceUrl":"https://web.mstcecommerce.com/auctionhome/property/index.jsp",
+      "auctionId":"MSTC/JPR/Real Estate Regulatory Authority Rajasthan Jaipur/4/Jaipur/26-27/34776",
+      "host":"Real Estate Regulatory Authority Rajasthan Jaipur",
+      "eventType":"Auction",
+      "submissionDeadline":"2026-11-04T17:00:00",
+      "state":"CURRENT_SOURCE_RECORD",
+      "evidenceProjection":false
+    },
+    {
+      "provider":"MSTC",
+      "sourceUrl":"https://web.mstcecommerce.com/auctionhome/property/index.jsp",
+      "auctionId":"MSTC/JPR/Real Estate Regulatory Authority Rajasthan Jaipur/5/Jaipur/26-27/34778",
+      "host":"Real Estate Regulatory Authority Rajasthan Jaipur",
+      "eventType":"Auction",
+      "submissionDeadline":"2026-11-04T17:00:00",
+      "state":"CURRENT_SOURCE_RECORD",
+      "evidenceProjection":false
+    },
+    {
+      "provider":"MSTC",
+      "sourceUrl":"https://web.mstcecommerce.com/auctionhome/property/index.jsp",
+      "auctionId":"MSTC/NRO/Energy Efficiency Services Limited/1/Lodhi Road/26-27/23533",
+      "host":"Energy Efficiency Services Limited",
+      "location":"Lodhi Road",
+      "eventType":"Auction",
+      "submissionDeadline":"2026-10-23T17:00:00",
+      "state":"CURRENT_SOURCE_RECORD",
+      "evidenceProjection":false
+    }
+  ],
+  "requiredControls":[
+    "Exact auction ID must remain immutable",
+    "Lot ID required before decision evidence",
+    "Acquire current catalogue/notice/process document",
+    "SHA-256 bind document to exact source/version",
+    "Verify source identity and current version",
+    "Reconcile corrigenda/addenda",
+    "Do not infer valuation from reserve price",
+    "Do not infer title/possession/eligibility from index metadata",
+    "Do not bypass authentication or access restrictions"
+  ]
+}

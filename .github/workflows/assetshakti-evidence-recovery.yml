@@ -1,0 +1,108 @@
+name: AssetShakti Controlled Evidence Recovery
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - assetshakti/phase1.5-multi-auction-source-foundation
+
+permissions:
+  contents: read
+
+jobs:
+  recover-current-round-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install PDF extraction dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends poppler-utils
+
+      - name: Acquire authoritative source bytes
+        shell: bash
+        run: |
+          set -u
+          mkdir -p evidence-input
+          : > evidence-input/acquisition-report.txt
+          acquire() {
+            local url="$1"
+            local out="$2"
+            if curl --fail --location --retry 1 --retry-all-errors --connect-timeout 10 --max-time 45 "$url" -o "$out"; then
+              printf 'ACQUIRED|%s|%s\\n' "$out" "$url" >> evidence-input/acquisition-report.txt
+            else
+              printf 'ACQUISITION_BLOCKED|%s|%s\\n' "$out" "$url" >> evidence-input/acquisition-report.txt
+              rm -f "$out"
+            fi
+          }
+          acquire 'https://ibbi.gov.in/uploads/auction_notice_liquidation/940a63c4be1f9de121521455598e0a3c.pdf' evidence-input/P1-PILOT-001-current-auction-notice.pdf
+          acquire 'https://ibbi.gov.in/uploads/auction_notice_liquidation/fe772b679239565595935c9e91117541.pdf' evidence-input/P1-PILOT-002-current-auction-notice.pdf
+          acquire 'https://ibbi.gov.in/uploads/auction_notice_liquidation/ba9d9feee564079a57f046c62bfd2153.pdf' evidence-input/P1-PILOT-004-current-auction-notice.pdf
+          acquire 'https://www.hallmarklivingspace.co.in/assets/liquidation/EAUCTION%20PROCESS%20INFORMATION%20DOCUMENT%2018.09.2026.pdf' evidence-input/P1-PILOT-002-current-process-document.pdf
+          cat evidence-input/acquisition-report.txt
+
+      - name: Create exact-round evidence manifest
+        shell: bash
+        run: |
+          cat > evidence-metadata.json <<'JSON'
+          {
+            "records": [
+              {
+                "caseId": "P1-PILOT-001",
+                "documentType": "AUCTION_NOTICE",
+                "documentRole": "CURRENT_ROUND_AUTHORITATIVE_NOTICE",
+                "expectedDebtor": "GENERAL COMPOSITES PRIVATE LIMITED",
+                "auctionDate": "2026-10-07",
+                "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/940a63c4be1f9de121521455598e0a3c.pdf",
+                "fileName": "P1-PILOT-001-current-auction-notice.pdf"
+              },
+              {
+                "caseId": "P1-PILOT-002",
+                "documentType": "AUCTION_NOTICE",
+                "documentRole": "CURRENT_ROUND_AUTHORITATIVE_NOTICE",
+                "expectedDebtor": "HALLMARK LIVING SPACE PRIVATE LIMITED",
+                "auctionDate": "2026-10-15",
+                "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/fe772b679239565595935c9e91117541.pdf",
+                "fileName": "P1-PILOT-002-current-auction-notice.pdf"
+              },
+              {
+                "caseId": "P1-PILOT-004",
+                "documentType": "AUCTION_NOTICE",
+                "documentRole": "CURRENT_ROUND_AUTHORITATIVE_NOTICE",
+                "expectedDebtor": "PARAKKOTT INVESTMENTS INDIA PRIVATE LIMITED",
+                "auctionDate": "2026-10-01",
+                "sourceReference": "https://ibbi.gov.in/uploads/auction_notice_liquidation/ba9d9feee564079a57f046c62bfd2153.pdf",
+                "fileName": "P1-PILOT-004-current-auction-notice.pdf"
+              },
+              {
+                "caseId": "P1-PILOT-002",
+                "documentType": "PROCESS_DOCUMENT",
+                "documentRole": "CURRENT_ROUND_AUTHORITATIVE_PROCESS_DOCUMENT",
+                "expectedDebtor": "HALLMARK LIVING SPACE PRIVATE LIMITED",
+                "auctionDate": "2026-10-15",
+                "sourceReference": "https://www.hallmarklivingspace.co.in/assets/liquidation/EAUCTION%20PROCESS%20INFORMATION%20DOCUMENT%2018.09.2026.pdf",
+                "fileName": "P1-PILOT-002-current-process-document.pdf"
+              }
+            ]
+          }
+          JSON
+
+      - name: Run fail-closed controlled intake
+        run: |
+          node assetshakti/phase1/controlled-evidence-intake.mjs \
+            evidence-metadata.json evidence-input evidence-output
+
+      - name: Publish recovery evidence artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: assetshakti-controlled-evidence-recovery
+          path: |
+            evidence-input/
+            evidence-metadata.json
+            evidence-output/
+          if-no-files-found: error
+          retention-days: 14

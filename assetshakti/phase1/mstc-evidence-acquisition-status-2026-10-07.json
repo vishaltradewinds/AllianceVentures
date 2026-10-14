@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"1.0",
+  "capturedAt":"2026-10-07",
+  "provider":"MSTC",
+  "sourceUrl":"https://web.mstcecommerce.com/auctionhome/property/index.jsp",
+  "auctionId":"MSTC/NRO/Energy Efficiency Services Limited/1/Lodhi Road/26-27/23533",
+  "host":"Energy Efficiency Services Limited",
+  "location":"Lodhi Road",
+  "lastDateOfBidSubmission":"2026-10-23T17:00:00",
+  "sourceIdentityState":"PUBLIC_RECORD_CONFIRMED",
+  "evidenceState":"DISCOVERY_ONLY",
+  "decisionEvidenceProjection":false,
+  "documentAcquisitionState":"BLOCKED_BY_SOURCE_ENDPOINT_AVAILABILITY",
+  "sourceEndpointObserved":"https://web.mstcecommerce.com/auctionhome/propsearch/property_search.jsp",
+  "sourceEndpointObservation":"HTTP 502 during attempted retrieval; no document acquisition or lot-level verification is claimed.",
+  "nextAction":"Retry through the authorised MSTC portal when the source endpoint is available; acquire exact lot documents and hash/version-bind them.",
+  "failClosed":true
+}

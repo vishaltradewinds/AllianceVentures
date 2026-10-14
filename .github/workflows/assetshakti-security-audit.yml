@@ -1,0 +1,49 @@
+name: AssetShakti Dependency Security Gate
+
+on:
+  pull_request:
+    paths:
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/assetshakti-security-audit.yml"
+  push:
+    branches:
+      - "assetshakti/phase1.5-multi-auction-source-foundation"
+      - "assetshakti/phase1-property-foundation"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact reviewed commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Clean reproducible install
+        run: npm ci
+
+      - name: Generate npm audit evidence
+        run: npm audit --json > npm-audit-report.json
+
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: assetshakti-npm-audit
+          path: npm-audit-report.json
+          if-no-files-found: error
+
+      - name: Fail on high or critical vulnerabilities
+        run: npm audit --audit-level=high
+
+      - name: Verify npm registry signatures
+        run: npm audit signatures

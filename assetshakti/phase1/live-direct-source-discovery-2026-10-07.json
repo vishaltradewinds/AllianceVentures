@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "capturedAt": "2026-10-07",
+  "status": "DISCOVERY_ONLY",
+  "decisionEvidenceProjection": false,
+  "policy": "DIRECT_AUCTION_PLATFORMS_ONLY",
+  "candidates": [
+    {
+      "provider": "IBBI",
+      "sourceUrl": "https://ibbi.gov.in/liquidation-auction-notices/lists",
+      "auctionDate": "2026-10-07",
+      "debtor": "GENERAL COMPOSITES PRIVATE LIMITED",
+      "reservePrice": 927000000,
+      "assetDescription": "Composite sale of Land, Building and Plant & Machinery",
+      "identityState": "PUBLIC_RECORD_CONFIRMED",
+      "nextGate": "Acquire current notice/process document and reconcile all applicable corrigenda/addenda"
+    },
+    {
+      "provider": "BAANKNET",
+      "sourceUrl": "https://baanknet.com/property-listing",
+      "sourceRecordId": "SBIN200050822721",
+      "location": "Ghana, Khamariya, Jabalpur, Madhya Pradesh",
+      "assetDescription": "Individual House",
+      "identityState": "PUBLIC_LISTING_CONFIRMED",
+      "nextGate": "Bind exact auction ID/lot and acquire authoritative auction documents"
+    },
+    {
+      "provider": "SAMIL",
+      "sourceUrl": "https://www.samil.in/shriram-automall-agra-agryd",
+      "auctionDate": "2026-10-13",
+      "auctionMechanism": "Physical",
+      "location": "Shriram Automall Agra-Gwalior Road",
+      "assetCategory": "Commercial Vehicles, Trucks, Construction Equipment & Cars",
+      "identityState": "PUBLIC_EVENT_CONFIRMED",
+      "nextGate": "Obtain exact lot/inventory identifiers and applicable bidding/document terms"
+    },
+    {
+      "provider": "EAUCTION_INDIA",
+      "sourceUrl": "https://www.eauction.gov.in/eAuction/app",
+      "auctionId": "2026_WB_5859",
+      "auctionEnd": "2026-10-30T15:00:00",
+      "identityState": "PUBLIC_AUCTION_ID_CONFIRMED",
+      "nextGate": "Acquire auction detail/documents from the inviting authority and bind exact lot"
+    }
+  ],
+  "notYetConfirmedInThisCapture": [
+    "INDIAN_RAILWAYS exact current auction lot",
+    "MSTC exact current lot with authoritative document package"
+  ],
+  "controls": [
+    "Discovery does not project to decision evidence",
+    "Do not infer lot identity from property/event title alone",
+    "Do not treat reserve price as valuation",
+    "Do not bypass authentication, CAPTCHA, robots controls, paywalls or access restrictions"
+  ]
+}

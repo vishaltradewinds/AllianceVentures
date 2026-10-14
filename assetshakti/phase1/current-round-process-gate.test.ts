@@ -36,4 +36,10 @@ assert.equal(
   false,
 );
 
+assert.equal(
+  evaluateCurrentRoundProcessDocument({ ...base, contentSha256: "abc123" }).readyForDecisionEvidence,
+  false,
+  "a non-empty placeholder is not a SHA-256 digest",
+);
+
 console.log("AssetShakti current-round process-document gate: PASS");
