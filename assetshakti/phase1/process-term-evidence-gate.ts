@@ -42,7 +42,9 @@ export function evaluateProcessTermEvidence(
   if (!evidence.auctionId.trim()) reasons.push("auctionId is required");
   if (!evidence.lotId.trim()) reasons.push("lotId is required");
   if (!evidence.sourceUrl.startsWith("https://")) reasons.push("HTTPS sourceUrl is required");
-  if (!evidence.contentSha256.trim()) reasons.push("content SHA-256 is required");
+  if (!/^[a-f0-9]{64}$/i.test(evidence.contentSha256)) {
+    reasons.push("content SHA-256 must be a 64-character hexadecimal digest");
+  }
   if (!evidence.pageOrSection.trim()) reasons.push("page/section reference is required");
   if (!evidence.publicationDate.trim()) reasons.push("publication date is required");
   const authority = evidence.sourceAuthority ?? (evidence.publishedByIbbI ? "IBBI" : undefined);
