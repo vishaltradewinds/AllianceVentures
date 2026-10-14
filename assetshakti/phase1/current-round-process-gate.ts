@@ -26,11 +26,12 @@ export interface ProcessGateResult {
 export function evaluateCurrentRoundProcessDocument(
   record: ProcessDocumentRecord,
 ): ProcessGateResult {
+  const validSha256 = /^[a-f0-9]{64}$/i.test(record.contentSha256);
   const checks: Array<[string, boolean]> = [
     ["exact auction round is confirmed", record.exactRoundConfirmed],
     ["current/superseded status is confirmed", record.currentStatusConfirmed],
     ["corrigenda/addenda are reconciled", record.corrigendaReconciled],
-    ["stored-file SHA-256 is present", Boolean(record.contentSha256)],
+    ["stored-file SHA-256 must be a 64-character hexadecimal digest", validSha256],
     ["source reference is present", Boolean(record.sourceReference)],
     ["page/section references are captured", record.pageReferencesCaptured],
     ["document is verified current", record.state === "VERIFIED_CURRENT"],
