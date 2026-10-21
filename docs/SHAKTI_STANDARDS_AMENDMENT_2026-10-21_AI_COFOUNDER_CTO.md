@@ -144,3 +144,29 @@ At each project decision, refresh the source register for that project's actual 
 This amendment records the user's standing instruction that ChatGPT must operate as AI Co-Founder and CTO across all projects, review relevant ecosystems against the current scenario using official and contextual sources, and design/execute work accordingly under Shakti Standards.
 
 **Core principle:** discover reality before designing; ground material decisions in evidence; engineer for the intended real-world outcome; validate what was actually built; and never release past an unmet mandatory gate.
+
+
+## 12. Mandatory engineering batching and final-state validation rule
+
+For every Shakti-governed project, **audit the complete related problem first; implement the coherent set of safe, dependency-linked changes together; then run comprehensive validation against the final combined change set. Do not create unnecessary cycles of one small change followed by a full test run.**
+
+This is a binding execution rule across all current and future AllianceVentures projects. It governs engineering efficiency and sequencing; it does not weaken any safety, security, statutory, independent-verification, approval, or release gate.
+
+### Required practice
+
+1. **Discover before changing:** inspect relevant code, data models, migrations, permissions, integrations, tests, operational procedures, official requirements and existing evidence; map dependencies and root causes before deciding the batch.
+2. **Group coherent changes:** implement related code, schema/migrations, authorization, regression tests, documentation, telemetry and runbook changes together where safe. Keep batches reviewable, reversible and dependency-aware; do not combine unrelated changes merely to reduce test count.
+3. **Use targeted checks when they reduce risk:** narrow checks during implementation are appropriate for security-sensitive, destructive, data-integrity, financial/environmental calculation, safety-critical or external-side-effect changes. They must not turn into needless full-suite reruns after every minor edit.
+4. **Run full validation on the final combined state:** after the planned batch is complete, run the applicable dependency/security checks, typecheck, build, unit/integration/regression tests, migration validation/application in disposable databases, authorization/tenant-isolation acceptance, browser/runtime smoke tests, container builds, and operational tests.
+5. **Fix root causes in coherent follow-up batches:** if a gate fails, inspect related failures together, correct the underlying cause, and rerun affected checks plus the full required suite. A green run for an earlier commit never validates a later commit.
+6. **Record exact evidence:** capture the final commit SHA, CI run, commands, pass/fail/skipped results, environment boundaries, migration outcomes, known limitations and outstanding external approvals.
+7. **Never bypass real-world gates:** green CI is engineering evidence only. It is not legal approval, independent certification, official integration authorization, production readiness, or permission to deploy. Destructive or production operations still require the applicable explicit authorization.
+8. **Protect real data and truthfulness:** use disposable or approved isolated environments for acceptance; do not mutate inherited staging/production records to make tests pass. Never claim a change or test was completed unless it actually was.
+
+### Definition of done
+
+A batch is complete only when its related implementation and supporting migrations/configuration/tests are present, applicable positive/negative/boundary cases pass against the exact final commit, documentation matches the implementation, and unresolved risks/dependencies are recorded. If an external credential, official contract, approval or environment is unavailable, continue safe preparatory work and report the exact blocker without fabricating evidence.
+
+**Operational shorthand:** Audit holistically → batch coherent implementation → validate the final combined commit → resolve root causes → record evidence → release only when all applicable Shakti gates pass.
+
+This rule must be applied alongside the existing Shakti lifecycle and project-specific operating systems. It changes the efficiency of engineering execution, not the standard of safety or proof.
