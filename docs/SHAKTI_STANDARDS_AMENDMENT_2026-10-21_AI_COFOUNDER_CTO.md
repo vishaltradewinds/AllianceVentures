@@ -170,3 +170,16 @@ A batch is complete only when its related implementation and supporting migratio
 **Operational shorthand:** Audit holistically → batch coherent implementation → validate the final combined commit → resolve root causes → record evidence → release only when all applicable Shakti gates pass.
 
 This rule must be applied alongside the existing Shakti lifecycle and project-specific operating systems. It changes the efficiency of engineering execution, not the standard of safety or proof.
+
+
+## 13. Digital Public Infrastructure architecture and ecosystem qualification
+
+**Amendment reference:** [SHAKTI-AMD-2026-11-03-01 — Digital Public Infrastructure (DPI) Architecture and Ecosystem Qualification](./SHAKTI_STANDARDS_AMENDMENT_2026-11-03_DPI_ARCHITECTURE.md)
+
+The DPI amendment is incorporated into Shakti Standards as a binding, project-applicable architecture and assessment standard. It adds honest DPI/DPI-enabled/hybrid/conventional-system classification; reusable building blocks; open standards and tested interoperability; federated architecture and institutional autonomy; inclusion and multiple access channels; privacy, security and trust; competitive neutrality and portability; governance and accountability; DPG due diligence; and staged ecosystem discovery, design, validation, deployment and continuous assurance.
+
+For RupayKg, the amendment requires assessment as a **potential sectoral digital infrastructure candidate** for waste, EPR, circular-economy evidence and carbon/MRV workflows. It establishes ten project acceptance gates covering ecosystem mapping, data governance, tenant isolation, interoperability, evidence trust, MRV separation, field inclusion, operational governance, independent assurance and release authority.
+
+**Authority boundary:** CDPI materials are contextual, non-statutory guidance. This amendment does not confer DPI designation, CDPI endorsement, government approval, legal compliance, EPR recognition, carbon-credit issuance or certification. Applicable Indian law, regulator directions, contracts, official integration permissions and independent assurance remain controlling.
+
+All projects must apply the new amendment where relevant, document non-applicability where it is not, and preserve the existing Shakti evidence and release gates.
